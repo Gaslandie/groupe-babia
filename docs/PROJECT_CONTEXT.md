@@ -7,6 +7,9 @@
 - Public : acheteurs internationaux, partenaires commerciaux, acteurs BTP, acteurs miniers, institutions et visiteurs locaux.
 - Probleme : le site actuel ne reflete pas l'envergure du groupe, melange produits et secteurs, contient des incoherences de contact et n'a pas de vraie presence bilingue.
 - Proposition de valeur : presenter clairement les poles Agroalimentaire, BTP et Minier, rassurer les partenaires avec une image professionnelle, faciliter les demandes de devis et soutenir le referencement export.
+- Produits agroalimentaires confirmes par le client :
+  - Exportation : feves de cacao, grains de cafe, noix de cajou brutes, graines de soja, miel, fruits.
+  - Importation : jus, riz, tomates, oignons, huile alimentaire.
 
 ## Sources
 

@@ -778,6 +778,38 @@ a {
   object-fit: cover;
 }
 
+.product-visual {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(19, 92, 67, 0.92), rgba(208, 155, 43, 0.82)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0 12px, transparent 12px 24px);
+}
+
+.product-visual span {
+  display: inline-grid;
+  min-width: 112px;
+  min-height: 112px;
+  place-items: center;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.13);
+  font-size: 1.02rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.import-visual {
+  background:
+    linear-gradient(135deg, rgba(15, 70, 122, 0.9), rgba(208, 155, 43, 0.78)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.11) 0 12px, transparent 12px 24px);
+}
+
 .product-card div,
 .news-card div {
   padding: 22px;

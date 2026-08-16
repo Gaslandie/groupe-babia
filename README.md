@@ -37,7 +37,7 @@ Aucun build requis.
 - `agroalimentaire.html` : pole agroalimentaire et logique export.
 - `btp.html` : pole Construction / BTP.
 - `mines.html` : pole minier.
-- `catalogue.html` : catalogue export avec filtres et selection devis.
+- `catalogue.html` : catalogue agroalimentaire avec filtres et selection devis.
 - `actualites.html` : rubrique actualites.
 - `contact.html` : contact et demande de devis.
 

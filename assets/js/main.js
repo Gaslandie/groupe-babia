@@ -18,9 +18,9 @@ if (navToggle && nav) {
 const slides = [
   {
     kicker: "Agroalimentaire",
-    title: "Export de produits agricoles",
-    text: "Noix de cajou, cacao, café, sésame, soja, miel et boissons, avec une logique de qualité, traçabilité et conditionnement export.",
-    copy: "Un partenaire de confiance pour l'export agroalimentaire, les infrastructures durables et la valorisation responsable des ressources locales."
+    title: "Exportation et importation agroalimentaire",
+    text: "Fèves de cacao, grains de café, noix de cajou brutes, graines de soja, miel, fruits, riz, tomates, oignons, jus et huile alimentaire.",
+    copy: "Un partenaire de confiance pour le commerce agroalimentaire, les infrastructures durables et la valorisation responsable des ressources locales."
   },
   {
     kicker: "Construction / BTP",
@@ -111,7 +111,7 @@ function syncQuoteActions() {
   const body = encodeURIComponent(
     products.length
       ? `Bonjour,\n\nJe souhaite recevoir une offre pour : ${products.join(", ")}.\n\nMerci de me contacter.`
-      : "Bonjour,\n\nJe souhaite recevoir une offre export.\n\nMerci de me contacter."
+      : "Bonjour,\n\nJe souhaite recevoir une offre commerciale.\n\nMerci de me contacter."
   );
   const whatsappText = encodeURIComponent(
     products.length
