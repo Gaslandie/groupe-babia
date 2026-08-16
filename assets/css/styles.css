@@ -212,7 +212,7 @@ textarea:focus-visible {
   grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
   align-items: end;
   gap: clamp(24px, 5vw, 64px);
-  padding: 112px max(24px, calc((100vw - var(--content)) / 2)) 54px;
+  padding: 112px max(24px, calc((100vw - var(--content)) / 2)) 92px;
   isolation: isolate;
 }
 
