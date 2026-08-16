@@ -23,6 +23,5 @@
 ## Contenus
 
 - Textes definitifs :
-- Textes provisoires :
+- Textes a finaliser :
 - Images necessaires :
-

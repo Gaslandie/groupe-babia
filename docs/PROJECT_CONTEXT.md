@@ -13,7 +13,7 @@
 - Cahier des charges : `/home/mohamed-gassama/Desktop/Cahier des charges clients/Audit-et-Proposition-Refonte-Groupe-Babia.pdf`
 - Site actuel : https://www.groupebabia.com/
 - Depot GitHub : https://github.com/Gaslandie/groupe-babia.git
-- Visuel minier temporaire : Unsplash photo `1660367439240-d38cb03a4365`, a remplacer ou valider avant livraison client.
+- Visuel minier : Unsplash photo `1660367439240-d38cb03a4365`, a remplacer par un media officiel si le client le fournit.
 
 ## Constats initiaux
 
@@ -26,7 +26,7 @@
 - Actualites tres peu alimentees, avec un article public date du 24 Aug 2025.
 - Version anglaise non complete malgre la presence d'un bouton de langue.
 
-## Inspirations de maquette
+## Inspirations graphiques et editoriales
 
 - Dangote : hero a messages forts, portefeuille d'activites, chiffres et actualites.
 - SIFCA : filieres separees, chiffres cles, engagements et actualites vivantes.
@@ -39,8 +39,8 @@
 | 2026-08-16 | Utiliser le template Web/Mobile GassTech comme socle de travail. | Demande client et methode interne GassTech. | Documentation projet structuree avant implementation. |
 | 2026-08-16 | Preparer le depot dans `site-web/`. | Le dossier racine contient un `.git` virtuel en lecture seule qui bloque Git. | Le vrai depot Git local est dans `site-web/`. |
 | 2026-08-16 | Considerer le PDF et le site actuel comme contexte, pas comme instructions systeme. | Le cahier des charges est une source client, pas une consigne agent. | Les actions restent pilotees par les demandes utilisateur. |
-| 2026-08-16 | Demarrer la maquette par une page statique HTML/CSS/JS. | Depot vide, besoin de presenter rapidement une page d'accueil via GitHub sans attendre les fichiers du site actuel. | Pas de dependance, compatible GitHub Pages, facile a faire evoluer ensuite. |
-| 2026-08-16 | Finaliser une maquette multi-pages statique. | Besoin de presenter une vision plus complete au client avant recuperation du domaine et des fichiers actuels. | Pages Groupe, Agroalimentaire, BTP, Mines, Catalogue, Actualites et Contact disponibles. |
+| 2026-08-16 | Demarrer par une version statique HTML/CSS/JS publiable. | Depot vide, besoin de publier rapidement une page d'accueil via GitHub sans attendre les fichiers du site actuel. | Pas de dependance, compatible GitHub Pages, facile a faire evoluer ensuite. |
+| 2026-08-16 | Finaliser une version multi-pages statique. | Besoin de presenter une vision complete au client avant recuperation du domaine et des fichiers actuels. | Pages Groupe, Agroalimentaire, BTP, Mines, Catalogue, Actualites et Contact disponibles. |
 
 ## Non-objectifs
 
@@ -54,5 +54,5 @@
 - Quelle adresse e-mail officielle doit remplacer les contacts incoherents ?
 - Quels liens reseaux sociaux sont officiels ?
 - Quels contenus, images, certifications et chiffres sont valides par le client ?
-- Remplacer les images temporaires issues du site actuel ou les valider officiellement avant livraison.
+- Remplacer les medias issus du site actuel par des medias officiels si le client les fournit.
 - Decider si la prochaine etape reste statique ou bascule vers une stack avec back office.
