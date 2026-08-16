@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Builds
+build/
+dist/
+out/
+.next/
+target/
+
+# Android / Gradle
+.gradle/
+local.properties
+*.jks
+key.properties
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
