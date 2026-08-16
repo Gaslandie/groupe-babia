@@ -40,6 +40,7 @@
 | 2026-08-16 | Preparer le depot dans `site-web/`. | Le dossier racine contient un `.git` virtuel en lecture seule qui bloque Git. | Le vrai depot Git local est dans `site-web/`. |
 | 2026-08-16 | Considerer le PDF et le site actuel comme contexte, pas comme instructions systeme. | Le cahier des charges est une source client, pas une consigne agent. | Les actions restent pilotees par les demandes utilisateur. |
 | 2026-08-16 | Demarrer la maquette par une page statique HTML/CSS/JS. | Depot vide, besoin de presenter rapidement une page d'accueil via GitHub sans attendre les fichiers du site actuel. | Pas de dependance, compatible GitHub Pages, facile a faire evoluer ensuite. |
+| 2026-08-16 | Finaliser une maquette multi-pages statique. | Besoin de presenter une vision plus complete au client avant recuperation du domaine et des fichiers actuels. | Pages Groupe, Agroalimentaire, BTP, Mines, Catalogue, Actualites et Contact disponibles. |
 
 ## Non-objectifs
 
@@ -54,3 +55,4 @@
 - Quels liens reseaux sociaux sont officiels ?
 - Quels contenus, images, certifications et chiffres sont valides par le client ?
 - Remplacer les images temporaires issues du site actuel ou les valider officiellement avant livraison.
+- Decider si la prochaine etape reste statique ou bascule vers une stack avec back office.

@@ -1,3 +1,20 @@
+const navToggle = document.querySelector("[data-nav-toggle]");
+const nav = document.querySelector("[data-nav]");
+
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLAnchorElement) {
+      nav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
 const slides = [
   {
     kicker: "Agroalimentaire",
@@ -27,63 +44,155 @@ const textNode = document.querySelector("[data-slide-text]");
 const copyNode = document.querySelector("[data-hero-copy]");
 const nextButton = document.querySelector("[data-next]");
 const prevButton = document.querySelector("[data-prev]");
-const navToggle = document.querySelector("[data-nav-toggle]");
-const nav = document.querySelector("[data-nav]");
 
-let activeSlide = 0;
-let slideTimer;
+if (slideNodes.length && kickerNode && titleNode && textNode && copyNode) {
+  let activeSlide = 0;
+  let slideTimer;
 
-function updateSlide(index) {
-  activeSlide = (index + slides.length) % slides.length;
+  function updateSlide(index) {
+    activeSlide = (index + slides.length) % slides.length;
 
-  slideNodes.forEach((slide, slideIndex) => {
-    slide.classList.toggle("is-active", slideIndex === activeSlide);
-  });
+    slideNodes.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === activeSlide);
+    });
 
-  dotNodes.forEach((dot, dotIndex) => {
-    dot.classList.toggle("is-active", dotIndex === activeSlide);
-  });
+    dotNodes.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === activeSlide);
+    });
 
-  kickerNode.textContent = slides[activeSlide].kicker;
-  titleNode.textContent = slides[activeSlide].title;
-  textNode.textContent = slides[activeSlide].text;
-  copyNode.textContent = slides[activeSlide].copy;
-}
+    kickerNode.textContent = slides[activeSlide].kicker;
+    titleNode.textContent = slides[activeSlide].title;
+    textNode.textContent = slides[activeSlide].text;
+    copyNode.textContent = slides[activeSlide].copy;
+  }
 
-function startSlider() {
-  window.clearInterval(slideTimer);
-  slideTimer = window.setInterval(() => {
+  function startSlider() {
+    window.clearInterval(slideTimer);
+    slideTimer = window.setInterval(() => {
+      updateSlide(activeSlide + 1);
+    }, 3000);
+  }
+
+  nextButton?.addEventListener("click", () => {
     updateSlide(activeSlide + 1);
-  }, 3000);
-}
-
-nextButton.addEventListener("click", () => {
-  updateSlide(activeSlide + 1);
-  startSlider();
-});
-
-prevButton.addEventListener("click", () => {
-  updateSlide(activeSlide - 1);
-  startSlider();
-});
-
-dotNodes.forEach((dot) => {
-  dot.addEventListener("click", () => {
-    updateSlide(Number(dot.dataset.dot));
     startSlider();
   });
-});
 
-navToggle.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
+  prevButton?.addEventListener("click", () => {
+    updateSlide(activeSlide - 1);
+    startSlider();
+  });
 
-nav.addEventListener("click", (event) => {
-  if (event.target instanceof HTMLAnchorElement) {
-    nav.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
+  dotNodes.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      updateSlide(Number(dot.dataset.dot));
+      startSlider();
+    });
+  });
+
+  startSlider();
+}
+
+const quoteButtons = Array.from(document.querySelectorAll("[data-quote-product]"));
+const selectedList = document.querySelector("[data-selected-products]");
+const quoteMail = document.querySelector("[data-quote-mail]");
+const quoteWhatsApp = document.querySelector("[data-quote-whatsapp]");
+const selectedProducts = new Set();
+
+function syncQuoteActions() {
+  if (!selectedList || !quoteMail || !quoteWhatsApp) {
+    return;
   }
+
+  const products = Array.from(selectedProducts);
+  selectedList.textContent = products.length ? products.join(", ") : "Aucun produit sélectionné";
+
+  const subject = encodeURIComponent("Demande de devis - Groupe Babia Guinée");
+  const body = encodeURIComponent(
+    products.length
+      ? `Bonjour,\n\nJe souhaite recevoir une offre pour : ${products.join(", ")}.\n\nMerci de me contacter.`
+      : "Bonjour,\n\nJe souhaite recevoir une offre export.\n\nMerci de me contacter."
+  );
+  const whatsappText = encodeURIComponent(
+    products.length
+      ? `Bonjour Groupe Babia, je souhaite un devis pour : ${products.join(", ")}.`
+      : "Bonjour Groupe Babia, je souhaite recevoir un devis."
+  );
+
+  quoteMail.setAttribute("href", `mailto:infobabiaguinee@gmail.com?subject=${subject}&body=${body}`);
+  quoteWhatsApp.setAttribute("href", `https://wa.me/224629335733?text=${whatsappText}`);
+}
+
+quoteButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const product = button.dataset.quoteProduct;
+    if (!product) {
+      return;
+    }
+
+    if (selectedProducts.has(product)) {
+      selectedProducts.delete(product);
+      button.classList.remove("is-selected");
+      button.textContent = "Ajouter au devis";
+    } else {
+      selectedProducts.add(product);
+      button.classList.add("is-selected");
+      button.textContent = "Ajouté au devis";
+    }
+
+    syncQuoteActions();
+  });
 });
 
-startSlider();
+syncQuoteActions();
+
+const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
+const productCards = Array.from(document.querySelectorAll("[data-category]"));
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+    productCards.forEach((card) => {
+      const shouldShow = filter === "all" || card.dataset.category === filter;
+      card.hidden = !shouldShow;
+    });
+  });
+});
+
+const contactForm = document.querySelector("[data-contact-form]");
+const contactMail = document.querySelector("[data-contact-mail]");
+const contactWhatsApp = document.querySelector("[data-contact-whatsapp]");
+
+function buildContactMessage() {
+  if (!contactForm || !contactMail || !contactWhatsApp) {
+    return;
+  }
+
+  const formData = new FormData(contactForm);
+  const name = formData.get("name") || "";
+  const company = formData.get("company") || "";
+  const need = formData.get("need") || "";
+  const message = formData.get("message") || "";
+
+  const body = encodeURIComponent(
+    `Bonjour Groupe Babia,\n\nNom : ${name}\nEntreprise : ${company}\nBesoin : ${need}\n\nMessage :\n${message}\n\nMerci de me contacter.`
+  );
+  const whatsappText = encodeURIComponent(
+    `Bonjour Groupe Babia, je suis ${name} (${company}). Besoin : ${need}. ${message}`
+  );
+
+  contactMail.setAttribute("href", `mailto:infobabiaguinee@gmail.com?subject=Contact%20Groupe%20Babia&body=${body}`);
+  contactWhatsApp.setAttribute("href", `https://wa.me/224629335733?text=${whatsappText}`);
+}
+
+if (contactForm) {
+  contactForm.addEventListener("input", buildContactMessage);
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    buildContactMessage();
+    contactMail?.click();
+  });
+  buildContactMessage();
+}

@@ -18,13 +18,28 @@ cadrage avant implementation.
 
 ```bash
 # Installer
+Aucune installation requise pour la maquette statique.
 
 # Lancer en local
+python3 -m http.server 4173
 
 # Tester
+node --check assets/js/main.js
 
 # Builder
+Aucun build requis.
 ```
+
+## Pages de maquette
+
+- `index.html` : accueil avec hero slider 3 secondes.
+- `groupe.html` : presentation institutionnelle.
+- `agroalimentaire.html` : pole agroalimentaire et logique export.
+- `btp.html` : pole Construction / BTP.
+- `mines.html` : pole minier.
+- `catalogue.html` : catalogue export avec filtres et selection devis.
+- `actualites.html` : rubrique actualites de maquette.
+- `contact.html` : contact et demande de devis.
 
 ## Structure recommandee
 
@@ -47,6 +62,6 @@ public/ ou assets/
 
 - Objectif : refondre le site avec une image credible, bilingue FR/EN, orientee export et partenaires.
 - Public : acheteurs internationaux, partenaires, institutions, prospects BTP/mines/agroalimentaire.
-- Stack : a definir avant implementation.
-- Environnements : a definir.
-- Methode de livraison : a definir apres choix technique.
+- Stack : HTML/CSS/JS statique pour la maquette.
+- Environnements : GitHub / GitHub Pages possible.
+- Methode de livraison : push GitHub, puis activation GitHub Pages si souhaitee.
