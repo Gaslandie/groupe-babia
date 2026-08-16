@@ -194,7 +194,7 @@ function syncQuoteActions() {
   );
 
   quoteMail.setAttribute("href", `mailto:infobabiaguinee@gmail.com?subject=${subject}&body=${body}`);
-  quoteWhatsApp.setAttribute("href", `https://wa.me/224629335733?text=${whatsappText}`);
+  quoteWhatsApp.setAttribute("href", `https://wa.me/224620903333?text=${whatsappText}`);
 }
 
 quoteButtons.forEach((button) => {
@@ -270,7 +270,7 @@ function buildContactMessage() {
   );
 
   contactEmailLink = `mailto:infobabiaguinee@gmail.com?subject=Contact%20Groupe%20Babia&body=${body}`;
-  contactWhatsApp.setAttribute("href", `https://wa.me/224629335733?text=${whatsappText}`);
+  contactWhatsApp.setAttribute("href", `https://wa.me/224620903333?text=${whatsappText}`);
 }
 
 if (contactForm) {
