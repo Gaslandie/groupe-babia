@@ -9,6 +9,7 @@
 | 2026-08-16 | Version multi-pages | Codex | Pages internes, catalogue interactif et contact ajoutés, vérifiés et prêts à pousser | Pousser sur GitHub |
 | 2026-08-16 | Footer type carte blanche | Codex | Footer remplace sur toutes les pages selon la reference fournie | Pousser si demande |
 | 2026-08-16 | Produits agroalimentaires | Codex | Liste client traduite en francais et integree au catalogue agroalimentaire | Attendre validation visuelle client |
+| 2026-08-16 | Experience institutionnelle internationale | Codex | Systeme visuel, contenus, navigation, accessibilite, contact et pages legales renforces | Publier sur GitHub |
 
 ## A faire
 
@@ -39,3 +40,7 @@
 - Verification footer : 8 pages en HTTP 200, capture Chrome headless desktop/mobile sur `contact.html`.
 - Nettoyage des formulations internes pour aligner le depot sur une version publiable.
 - Integration des produits client : exportation agricole et importation alimentaire.
+- Evolution du systeme visuel global : typographie editoriale, palette, espacements, cartes, hero et responsive.
+- Reecriture des contenus auto-referentiels en discours institutionnel destine aux partenaires.
+- Amelioration de la navigation mobile, de l'accessibilite clavier et des interactions du catalogue.
+- Ajout des pages de mentions legales et de confidentialite.

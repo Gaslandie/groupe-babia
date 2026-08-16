@@ -1,11 +1,11 @@
 # Groupe Babia
 
-Refonte du site web de Groupe Babia Guinee, entreprise multisectorielle active
+Site web institutionnel de Groupe Babia Guinee, entreprise multisectorielle active
 dans l'agroalimentaire, le BTP et le secteur minier en Guinee et en Afrique de
 l'Ouest.
 
-Le projet suit le template Web/Mobile GassTech et demarre par une phase de
-cadrage avant implementation.
+Le projet suit le template Web/Mobile GassTech et fournit une experience statique,
+responsive et directement publiable sur GitHub Pages ou un hebergement classique.
 
 ## Sources initiales
 
@@ -40,6 +40,8 @@ Aucun build requis.
 - `catalogue.html` : catalogue agroalimentaire avec filtres et selection devis.
 - `actualites.html` : rubrique actualites.
 - `contact.html` : contact et demande de devis.
+- `mentions-legales.html` : informations legales de l'editeur.
+- `confidentialite.html` : politique de confidentialite et traitement des demandes.
 
 ## Structure recommandee
 
@@ -60,7 +62,7 @@ public/ ou assets/
 
 ## A remplir
 
-- Objectif : refondre le site avec une image credible, bilingue FR/EN, orientee export et partenaires.
+- Objectif : proposer une presence institutionnelle credible, orientee export, projets et partenaires.
 - Public : acheteurs internationaux, partenaires, institutions, prospects BTP/mines/agroalimentaire.
 - Stack : HTML/CSS/JS statique pret pour GitHub Pages ou hebergement web classique.
 - Environnements : GitHub / GitHub Pages possible.

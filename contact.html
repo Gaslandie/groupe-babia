@@ -28,13 +28,13 @@
     </header>
 
     <main>
-      <section class="page-hero" style="--hero-image: url('../images/btp.jpg')">
+      <section class="page-hero" style="--hero-image: url('assets/images/btp.jpg')">
         <div>
           <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Contact</span></div>
           <p class="eyebrow">Contact & qualification</p>
-          <h1>Un parcours de demande simple, direct et exploitable</h1>
+          <h1>Parlons de votre besoin et de vos objectifs</h1>
           <p>
-            Cette page centralise les demandes agroalimentaires, BTP, mines et corporate. Les boutons e-mail et WhatsApp utilisent les informations saisies pour préparer un message clair.
+            Produits agroalimentaires, projet BTP, services miniers ou partenariat institutionnel : partagez les informations essentielles et notre équipe vous orientera.
           </p>
           <div class="page-actions">
             <a class="button button-primary" href="#formulaire">Remplir le formulaire</a>
@@ -43,7 +43,7 @@
         </div>
         <aside class="page-hero-card">
           <strong>Contact commercial</strong>
-          <p>Les coordonnées sont regroupées sur une seule page pour faciliter les demandes de devis et les prises de contact.</p>
+          <p>Un point d'entrée unique pour vos demandes commerciales, opérationnelles et institutionnelles.</p>
         </aside>
       </section>
 
@@ -52,7 +52,7 @@
           <p class="eyebrow">Coordonnées</p>
           <h2>Joindre Groupe Babia Guinée</h2>
           <p>
-            Une adresse unique et des liens actifs permettent aux visiteurs de joindre rapidement l'équipe selon leur besoin.
+            Choisissez le canal qui vous convient. Pour une réponse plus précise, indiquez votre entreprise, le besoin, les volumes ou le calendrier concerné.
           </p>
           <div class="contact-list">
             <div class="contact-item"><strong>Adresse</strong><span>Kaloum, Conakry, République de Guinée</span></div>
@@ -66,21 +66,21 @@
           <div class="field-grid">
             <div class="field">
               <label for="name">Nom du contact</label>
-              <input id="name" name="name" type="text" placeholder="Votre nom">
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Votre nom" required>
             </div>
             <div class="field">
               <label for="company">Entreprise</label>
-              <input id="company" name="company" type="text" placeholder="Nom de l'entreprise">
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="Nom de l'entreprise" required>
             </div>
           </div>
           <div class="field-grid">
             <div class="field">
               <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" placeholder="contact@entreprise.com">
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="contact@entreprise.com" required>
             </div>
             <div class="field">
               <label for="phone">Téléphone / WhatsApp</label>
-              <input id="phone" name="phone" type="tel" placeholder="+224 ...">
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+224 ...">
             </div>
           </div>
           <div class="field">
@@ -94,11 +94,10 @@
           </div>
           <div class="field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Décrivez le produit, la quantité, le projet, la destination ou le calendrier."></textarea>
+            <textarea id="message" name="message" placeholder="Décrivez le produit, la quantité, le projet, la destination ou le calendrier." required></textarea>
           </div>
           <div class="form-actions">
-            <button class="button button-primary" type="submit">Préparer l'e-mail</button>
-            <a class="button button-ghost" href="mailto:infobabiaguinee@gmail.com" data-contact-mail>Envoyer par e-mail</a>
+            <button class="button button-primary" type="submit">Envoyer par e-mail</button>
             <a class="button button-dark" href="https://wa.me/224629335733" data-contact-whatsapp>WhatsApp</a>
           </div>
         </form>
@@ -124,11 +123,9 @@
               <img src="assets/images/logo.png" alt="">
               <strong>Groupe Babia</strong>
             </a>
-            <p>Groupe multisectoriel guinéen actif dans l'agroalimentaire, le BTP et le secteur minier, avec une présentation claire pour les partenaires et acheteurs.</p>
-            <div class="footer-socials" aria-label="Réseaux sociaux">
-              <a href="contact.html" aria-label="X">X</a>
-              <a href="contact.html" aria-label="Instagram">IG</a>
-              <a href="contact.html" aria-label="LinkedIn">in</a>
+            <p>Groupe multisectoriel guinéen actif dans l'agroalimentaire, le BTP et les services au secteur minier, au service de partenaires locaux et internationaux.</p>
+            <div class="footer-socials" aria-label="Contacts directs">
+              <a href="mailto:infobabiaguinee@gmail.com" aria-label="E-mail">@</a>
               <a href="https://wa.me/224629335733" aria-label="WhatsApp">wa</a>
             </div>
           </div>
@@ -159,9 +156,8 @@
         <div class="footer-bottom">
           <p>© 2026 Groupe Babia Guinée. Tous droits réservés.</p>
           <div>
-            <a href="contact.html">Confidentialité</a>
-            <a href="contact.html">Conditions</a>
-            <a href="contact.html">Cookies</a>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="confidentialite.html">Confidentialité</a>
           </div>
         </div>
       </div>
