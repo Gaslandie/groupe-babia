@@ -249,7 +249,7 @@ fonctionne toujours.
 
 **Depend de :** lot 0.
 
-1. `app/data/products.php` retourne les 11 produits. Champs : `id`, `slug`, `categorie`
+1. `app/data/products.php` retourne les 13 produits. Champs : `id`, `slug`, `categorie`
    (`exportation` / `importation`), `image`, `largeur`, `hauteur`, `cle_nom`,
    `cle_description`, `tags`. **Les libelles sont des cles de traduction, pas du texte** —
    c'est ce qui rendra le lot 3 mecanique.

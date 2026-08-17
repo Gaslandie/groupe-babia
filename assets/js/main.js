@@ -140,7 +140,7 @@ const slides = [
   {
     kicker: "Agroalimentaire",
     title: "Exportation et importation agroalimentaire",
-    text: "Fèves de cacao, grains de café, noix de cajou brutes, graines de soja, miel, fruits, riz, tomates, oignons, jus et huile alimentaire."
+    text: "Fèves de cacao, grains de café, noix de cajou brutes, graines de soja, beurre de karité, miel, graines de sésame et fruits."
   },
   {
     kicker: "Construction / BTP",
@@ -151,6 +151,16 @@ const slides = [
     kicker: "Secteur minier",
     title: "Valorisation des ressources locales",
     text: "Exploration, logistique et approvisionnement au service d'opérations minières responsables et structurées."
+  },
+  {
+    kicker: "Pêche",
+    title: "Une filière halieutique structurée",
+    text: "Approvisionnement et commercialisation de produits de la pêche dans une démarche responsable et adaptée aux marchés."
+  },
+  {
+    kicker: "Agro-industrie",
+    title: "Transformer pour créer plus de valeur",
+    text: "Transformation, contrôle qualité et conditionnement des matières premières agricoles pour les marchés locaux et internationaux."
   }
 ];
 
@@ -500,6 +510,8 @@ if (contactForm) {
     agro: "Demande agroalimentaire export/import",
     btp: "Projet BTP",
     mines: "Partenariat minier",
+    peche: "Activité de pêche",
+    "agro-industrie": "Projet agro-industriel",
     corporate: "Information corporate"
   };
 

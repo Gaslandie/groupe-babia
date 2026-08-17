@@ -5,10 +5,11 @@
 - Nom : Groupe Babia Guinee
 - Proprietaire : Groupe Babia Guinee / GassTech Solutions
 - Public : acheteurs internationaux, partenaires commerciaux, acteurs BTP, acteurs miniers, institutions et visiteurs locaux.
+- Langue du client : anglais. Le site français doit préparer une future version anglaise complète et naturelle.
 - Probleme : le site actuel ne reflete pas l'envergure du groupe, melange produits et secteurs, contient des incoherences de contact et n'a pas de vraie presence bilingue.
-- Proposition de valeur : presenter clairement les poles Agroalimentaire, BTP et Minier, rassurer les partenaires avec une image professionnelle, faciliter les demandes de devis et soutenir le referencement export.
+- Proposition de valeur : presenter clairement les poles Agriculture, Agro-industrie, BTP, Mines et Peche, rassurer les partenaires avec une image professionnelle, faciliter les demandes de devis et soutenir le referencement export.
 - Produits agroalimentaires confirmes par le client :
-  - Exportation : feves de cacao, grains de cafe, noix de cajou brutes, graines de soja, miel, fruits.
+  - Exportation : feves de cacao, grains de cafe, noix de cajou brutes, graines de soja, beurre de karite, miel, graines de sesame, fruits.
   - Importation : jus, riz, tomates, oignons, huile alimentaire.
 
 ## Sources
@@ -59,7 +60,7 @@
 ## Non-objectifs
 
 - Ne pas inventer de stack technique sans cadrage.
-- Ne pas pousser sur GitHub sans demande explicite.
+- Publier sur GitHub après chaque étape validée par l'utilisateur.
 
 ## Questions ouvertes
 
