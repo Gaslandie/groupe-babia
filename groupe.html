@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Accueil Groupe Babia Guinée">
-        <img src="assets/images/logo.png" alt="" class="brand-logo">
+        <img src="assets/images/logo.png" alt="" class="brand-logo" width="256" height="256" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinée</small></span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span></button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>
         <a href="index.html">Accueil</a>
         <a class="is-active" href="groupe.html">Le groupe</a>
@@ -27,17 +28,19 @@
       </nav>
     </header>
 
-    <main>
-      <section class="page-hero" style="--hero-image: url('assets/images/agro-cacao.jpg')">
+    <main id="contenu" tabindex="-1">
+      <section class="page-hero">
+        <img class="page-hero-media" src="assets/images/agro-cacao.jpg" alt="" width="1080" height="656" fetchpriority="high" decoding="async">
+        <div class="page-hero-overlay"></div>
         <div>
-          <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Le groupe</span></div>
+          <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><span aria-current="page">Le groupe</span></li></ol></nav>
           <p class="eyebrow">Vision & positionnement</p>
           <h1>Un groupe guinéen tourné vers les marchés régionaux et internationaux</h1>
           <p>
             Groupe Babia Guinée rassemble des activités complémentaires autour de l'agroalimentaire, des infrastructures et des ressources locales, avec une même exigence : créer de la confiance et de la valeur durable.
           </p>
           <div class="page-actions">
-            <a class="button button-primary" href="contact.html">Entrer en relation</a>
+            <a class="button button-primary" href="contact.html?besoin=corporate">Entrer en relation</a>
             <a class="button button-secondary" href="catalogue.html">Voir le catalogue</a>
           </div>
         </div>
@@ -123,7 +126,7 @@
           <h2>Un accès direct pour échanger avec Groupe Babia Guinée.</h2>
           <p>Notre équipe commerciale oriente chaque demande vers le pôle et l'interlocuteur appropriés.</p>
         </div>
-        <a class="button button-primary" href="contact.html">Préparer une demande</a>
+        <a class="button button-primary" href="contact.html?besoin=corporate">Préparer une demande</a>
       </section>
     </main>
     <footer class="site-footer">
@@ -131,14 +134,11 @@
         <div class="footer-main">
           <div class="footer-brand">
             <a class="footer-logo" href="index.html" aria-label="Accueil Groupe Babia Guinée">
-              <img src="assets/images/logo.png" alt="">
+              <img src="assets/images/logo.png" alt="" width="256" height="256" decoding="async">
               <strong>Groupe Babia</strong>
             </a>
             <p>Groupe multisectoriel guinéen actif dans l'agroalimentaire, le BTP et les services au secteur minier, au service de partenaires locaux et internationaux.</p>
-            <div class="footer-socials" aria-label="Contacts directs">
-              <a href="mailto:infobabiaguinee@gmail.com" aria-label="E-mail">@</a>
-              <a href="https://wa.me/224620903333" aria-label="WhatsApp">wa</a>
-            </div>
+            <div class="footer-socials" aria-label="Contacts directs"><a href="mailto:infobabiaguinee@gmail.com" aria-label="Nous écrire par e-mail" title="E-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="Appeler le +224 655 903 333" title="Téléphone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="Écrire sur WhatsApp au +224 620 903 333" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="Navigation pied de page">
             <div>

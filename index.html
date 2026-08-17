@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
     <header class="site-header" data-header>
       <a class="brand" href="index.html" aria-label="Accueil Groupe Babia Guinée">
-        <img src="assets/images/logo.png" alt="" class="brand-logo">
+        <img src="assets/images/logo.png" alt="" class="brand-logo" width="256" height="256" decoding="async">
         <span>
           <strong>Groupe Babia</strong>
           <small>Guinée</small>
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu" data-nav-toggle>
         <span></span>
         <span></span>
         <span></span>
@@ -39,16 +40,16 @@
       </nav>
     </header>
 
-    <main>
+    <main id="contenu" tabindex="-1">
       <section class="hero" id="accueil" aria-label="Présentation Groupe Babia Guinée">
         <div class="hero-slide is-active" data-slide>
-          <img src="assets/images/agro-cacao.jpg" alt="Produits agricoles destinés à l'export">
+          <img src="assets/images/agro-cacao.jpg" alt="Produits agricoles destinés à l'export" width="1080" height="656" fetchpriority="high" decoding="async">
         </div>
         <div class="hero-slide" data-slide>
-          <img src="assets/images/btp.jpg" alt="Chantier de construction et casque de sécurité">
+          <img src="assets/images/btp.jpg" alt="Chantier de construction et casque de sécurité" width="626" height="417" decoding="async">
         </div>
         <div class="hero-slide" data-slide>
-          <img src="assets/images/mines.jpg" alt="Engin d'exploitation minière sur site">
+          <img src="assets/images/mines.jpg" alt="Engin d'exploitation minière sur site" width="1600" height="1064" decoding="async">
         </div>
 
         <div class="hero-overlay"></div>
@@ -56,7 +57,7 @@
         <div class="hero-content">
           <p class="eyebrow">Groupe multisectoriel basé à Conakry</p>
           <h1>Groupe Babia Guinée</h1>
-          <p class="hero-copy" data-hero-copy>
+          <p class="hero-copy">
             Un partenaire de confiance pour le commerce agroalimentaire, les infrastructures durables et la valorisation responsable des ressources locales.
           </p>
           <div class="hero-actions">
@@ -65,20 +66,32 @@
           </div>
         </div>
 
-        <div class="hero-panel" aria-label="Activité mise en avant">
-          <div class="slide-kicker" data-slide-kicker>Agroalimentaire</div>
-          <h2 data-slide-title>Exportation et importation agroalimentaire</h2>
-          <p data-slide-text>
-            Fèves de cacao, grains de café, noix de cajou brutes, graines de soja, miel, fruits, riz, tomates, oignons, jus et huile alimentaire.
-          </p>
+        <div class="hero-panel" role="group" aria-roledescription="carrousel" aria-label="Pôles d'activité">
+          <div class="hero-panel-copy" aria-live="polite" aria-atomic="true">
+            <div class="slide-kicker" data-slide-kicker>Agroalimentaire</div>
+            <h2 data-slide-title>Exportation et importation agroalimentaire</h2>
+            <p data-slide-text>
+              Fèves de cacao, grains de café, noix de cajou brutes, graines de soja, miel, fruits, riz, tomates, oignons, jus et huile alimentaire.
+            </p>
+          </div>
           <div class="slider-controls">
-            <button class="slider-button" type="button" aria-label="Activité précédente" data-prev>‹</button>
-            <div class="slider-dots" aria-label="Navigation du hero">
+            <div class="slider-dots" role="group" aria-label="Choisir un pôle">
               <button class="is-active" type="button" aria-label="Afficher Agroalimentaire" data-dot="0"></button>
               <button type="button" aria-label="Afficher BTP" data-dot="1"></button>
               <button type="button" aria-label="Afficher Mines" data-dot="2"></button>
             </div>
-            <button class="slider-button" type="button" aria-label="Activité suivante" data-next>›</button>
+            <div class="slider-nav">
+              <button class="slider-button" type="button" aria-label="Activité précédente" data-prev>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+              </button>
+              <button class="slider-button" type="button" aria-label="Activité suivante" data-next>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+              </button>
+              <button class="slider-button slider-play" type="button" aria-label="Mettre le défilement en pause" data-state="playing" data-slide-play>
+                <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
+                <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -125,7 +138,7 @@
 
         <div class="activity-grid">
           <article class="activity-card">
-            <img src="assets/images/agro-cajou.jpg" alt="Noix de cajou prêtes pour l'export">
+            <img src="assets/images/agro-cajou.jpg" alt="Noix de cajou prêtes pour l'export" width="736" height="736" loading="lazy" decoding="async">
             <div>
               <span>01</span>
               <h3>Agroalimentaire, export & import</h3>
@@ -137,7 +150,7 @@
           </article>
 
           <article class="activity-card">
-            <img src="assets/images/btp.jpg" alt="Infrastructure en construction">
+            <img src="assets/images/btp.jpg" alt="Infrastructure en construction" width="626" height="417" loading="lazy" decoding="async">
             <div>
               <span>02</span>
               <h3>Construction & BTP</h3>
@@ -149,7 +162,7 @@
           </article>
 
           <article class="activity-card">
-            <img src="assets/images/mines.jpg" alt="Site minier en exploitation">
+            <img src="assets/images/mines.jpg" alt="Site minier en exploitation" width="1600" height="1064" loading="lazy" decoding="async">
             <div>
               <span>03</span>
               <h3>Secteur minier</h3>
@@ -164,7 +177,7 @@
 
       <section class="section export-section" id="export">
         <div class="export-media">
-          <img src="assets/images/agro-cacao.jpg" alt="Cacao conditionné pour les marchés internationaux">
+          <img src="assets/images/agro-cacao.jpg" alt="Cacao conditionné pour les marchés internationaux" width="1080" height="656" loading="lazy" decoding="async">
         </div>
         <div class="export-content">
           <p class="eyebrow">Catalogue agroalimentaire</p>
@@ -218,7 +231,7 @@
         </div>
         <div class="news-grid">
           <article class="news-card">
-            <img src="assets/images/agro-cajou.jpg" alt="Produits agroalimentaires">
+            <img src="assets/images/agro-cajou.jpg" alt="Produits agroalimentaires" width="736" height="736" loading="lazy" decoding="async">
             <div>
               <small>Export</small>
               <h3>Une offre export et import structurée</h3>
@@ -227,7 +240,7 @@
             </div>
           </article>
           <article class="news-card">
-            <img src="assets/images/btp.jpg" alt="Chantier BTP">
+            <img src="assets/images/btp.jpg" alt="Chantier BTP" width="626" height="417" loading="lazy" decoding="async">
             <div>
               <small>BTP</small>
               <h3>Des projets d'infrastructure ancrés dans les usages</h3>
@@ -236,7 +249,7 @@
             </div>
           </article>
           <article class="news-card">
-            <img src="assets/images/mines.jpg" alt="Site minier">
+            <img src="assets/images/mines.jpg" alt="Site minier" width="1600" height="1064" loading="lazy" decoding="async">
             <div>
               <small>Mines</small>
               <h3>Des partenariats miniers responsables</h3>
@@ -263,14 +276,11 @@
         <div class="footer-main">
           <div class="footer-brand">
             <a class="footer-logo" href="index.html" aria-label="Accueil Groupe Babia Guinée">
-              <img src="assets/images/logo.png" alt="">
+              <img src="assets/images/logo.png" alt="" width="256" height="256" decoding="async">
               <strong>Groupe Babia</strong>
             </a>
             <p>Groupe multisectoriel guinéen actif dans l'agroalimentaire, le BTP et les services au secteur minier, au service de partenaires locaux et internationaux.</p>
-            <div class="footer-socials" aria-label="Contacts directs">
-              <a href="mailto:infobabiaguinee@gmail.com" aria-label="E-mail">@</a>
-              <a href="https://wa.me/224620903333" aria-label="WhatsApp">wa</a>
-            </div>
+            <div class="footer-socials" aria-label="Contacts directs"><a href="mailto:infobabiaguinee@gmail.com" aria-label="Nous écrire par e-mail" title="E-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="Appeler le +224 655 903 333" title="Téléphone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="Écrire sur WhatsApp au +224 620 903 333" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="Navigation pied de page">
             <div>
