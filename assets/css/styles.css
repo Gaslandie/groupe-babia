@@ -770,8 +770,9 @@ textarea:focus-visible {
 }
 
 .site-footer {
-  padding: 72px max(20px, calc((100vw - var(--content)) / 2));
-  background: #edf0ed;
+  padding: 0;
+  background: #fff;
+  border-top: 1px solid var(--line);
   font-size: 0.9rem;
 }
 
@@ -1656,15 +1657,11 @@ textarea:focus-visible {
   font-weight: 700;
 }
 
+/* Pied de page pleine largeur, aligne sur la meme gouttiere que les sections. */
 .footer-card {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 58px 64px;
+  padding: clamp(44px, 5vw, 72px) var(--gutter);
   color: #151a16;
   background: #fff;
-  border: 1px solid rgba(16, 32, 25, 0.12);
-  border-radius: 28px;
-  box-shadow: 0 24px 55px rgba(11, 25, 20, 0.09);
 }
 
 .footer-main {
@@ -2087,13 +2084,8 @@ textarea:focus-visible {
     border-bottom: 0;
   }
 
-  .site-footer {
-    padding: 26px 12px;
-  }
-
   .footer-card {
-    padding: 28px 22px;
-    border-radius: 18px;
+    padding: 36px 16px;
     text-align: center;
   }
 
