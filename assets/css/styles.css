@@ -582,7 +582,10 @@ textarea:focus-visible {
 }
 
 .activity-card {
+  display: flex;
+  height: 100%;
   overflow: hidden;
+  flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -597,7 +600,8 @@ textarea:focus-visible {
 
 .activity-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 240px;
+  flex: 0 0 240px;
   object-fit: cover;
   transition: transform 500ms ease;
 }
@@ -606,7 +610,10 @@ textarea:focus-visible {
   transform: scale(1.035);
 }
 
-.activity-card div {
+.activity-card > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 24px;
 }
 
@@ -630,8 +637,9 @@ textarea:focus-visible {
 }
 
 .activity-card a {
-  display: inline-block;
-  margin-top: 22px;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 22px;
   color: var(--forest);
   font-weight: 800;
   text-decoration: none;
@@ -993,6 +1001,13 @@ textarea:focus-visible {
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
+.news-card,
+.product-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
 .metric-card:hover,
 .service-card:hover,
 .news-card:hover,
@@ -1149,7 +1164,8 @@ textarea:focus-visible {
 .product-card img,
 .news-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 240px;
+  flex: 0 0 240px;
   object-fit: cover;
   transition: transform 500ms ease;
 }
@@ -1162,7 +1178,8 @@ textarea:focus-visible {
 .product-visual {
   display: grid;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 240px;
+  flex: 0 0 240px;
   place-items: center;
   background: linear-gradient(135deg, #07533b, #c3952c);
 }
@@ -1187,9 +1204,22 @@ textarea:focus-visible {
   background: linear-gradient(135deg, #174d68, #be8731);
 }
 
-.product-card div,
-.news-card div {
+.product-card > div:last-child,
+.news-card > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 22px;
+}
+
+.news-card .button,
+.product-card .card-actions {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.product-card .card-actions {
+  padding-top: 24px;
 }
 
 .tag-list {
@@ -1983,6 +2013,14 @@ textarea:focus-visible {
   .hero-copy {
     font-size: 1rem;
     line-height: 1.6;
+  }
+
+  .activity-card img,
+  .product-card img,
+  .news-card img,
+  .product-visual {
+    height: 220px;
+    flex-basis: 220px;
   }
 
   .hero-panel {
