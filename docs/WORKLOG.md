@@ -12,7 +12,7 @@
 | 2026-08-16 | Experience institutionnelle internationale | Codex | Systeme visuel, contenus, navigation, accessibilite, contact et pages legales renforces | Publier sur GitHub |
 | 2026-08-17 | Passe UX | Claude | Correctifs UX codes, verifies en local sur 11 pages, pousses sur `main` | Recette visuelle client, puis remplacement des medias |
 | 2026-08-17 | Benchmark SGS | Claude | Analyse structurelle et plan priorise redige dans `docs/design-ux/BENCHMARK_SGS.md` | Debloquer les contenus client pour les lots P0 |
-| 2026-08-17 | Migration PHP + version EN | Claude | Plan d'execution redige dans `docs/technique/MIGRATION_PHP.md`, non demarre. Voie retenue : PHP ecrit, HTML genere, publie par GitHub Actions | Installer `php-cli`, puis lot 0 |
+| 2026-08-17 | Migration PHP + version EN | Claude | Plan d'execution redige dans `docs/technique/MIGRATION_PHP.md`. Voie retenue : PHP ecrit, HTML genere, publie par GitHub Actions. Tache du lot 0 cadree | Codex execute `docs/taches/LOT-0-SOCLE-PHP.md` |
 
 ## A faire
 
