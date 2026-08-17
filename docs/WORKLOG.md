@@ -10,7 +10,9 @@
 | 2026-08-16 | Footer type carte blanche | Codex | Footer remplace sur toutes les pages selon la reference fournie | Pousser si demande |
 | 2026-08-16 | Produits agroalimentaires | Codex | Liste client traduite en francais et integree au catalogue agroalimentaire | Attendre validation visuelle client |
 | 2026-08-16 | Experience institutionnelle internationale | Codex | Systeme visuel, contenus, navigation, accessibilite, contact et pages legales renforces | Publier sur GitHub |
-| 2026-08-17 | Passe UX | Claude | Correctifs UX codes et verifies en local sur 11 pages, sans commit | Recette visuelle client, puis remplacement des medias |
+| 2026-08-17 | Passe UX | Claude | Correctifs UX codes, verifies en local sur 11 pages, pousses sur `main` | Recette visuelle client, puis remplacement des medias |
+| 2026-08-17 | Benchmark SGS | Claude | Analyse structurelle et plan priorise redige dans `docs/design-ux/BENCHMARK_SGS.md` | Debloquer les contenus client pour les lots P0 |
+| 2026-08-17 | Migration PHP + version EN | Claude | Plan d'execution redige dans `docs/technique/MIGRATION_PHP.md`, non demarre | Installer `php-cli`, choisir l'hebergeur, puis lot 0 |
 
 ## A faire
 

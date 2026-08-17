@@ -47,6 +47,9 @@
 | 2026-08-17 | Porter les visuels de hero interne dans un `<img>` plutot qu'un `url()` place dans une custom property. | Le navigateur resout ce type d'URL relative par rapport a la feuille de style, ce qui pointait vers `assets/css/assets/images/` et cassait les 8 heros. | Heros fiables quel que soit le chemin de publication, et priorite de chargement controlable. |
 | 2026-08-17 | Conserver la selection du catalogue en `sessionStorage` et la reinjecter dans le formulaire de contact. | La selection etait perdue des que l'acheteur quittait le catalogue, ce qui cassait le parcours de demande de devis. | Parcours catalogue vers contact continu, sans back office ni dependance. |
 | 2026-08-17 | Assumer que l'envoi du formulaire reste un `mailto:` mais toujours annoncer le resultat et offrir un repli. | Sans backend, l'envoi peut echouer silencieusement selon le poste du visiteur. | Statut visible, copie du message et WhatsApp en solution de repli. |
+| 2026-08-17 | Passer le site en PHP, sans framework ni dependance. | Demande client, et le site actuel en production est deja en PHP. | GitHub Pages n'est plus utilisable : hebergeur PHP a choisir, mention legale d'hebergement a corriger. Voir `docs/technique/MIGRATION_PHP.md`. |
+| 2026-08-17 | Faire la migration PHP avant la version anglaise, pas en parallele. | Dupliquer 11 pages HTML en anglais produirait 22 fichiers jetes des la mise en place des gabarits, et une traduction a refaire. | La version anglaise devient 2 fichiers de traduction au lieu de 11 pages dupliquees. |
+| 2026-08-17 | Valider la migration PHP par un test de rendu identique au HTML actuel. | La passe UX du 2026-08-17 vit dans la structure HTML : une reecriture libre la perdrait sans que cela se voie dans un diff. | Le lot 0 ne modifie aucun rendu ; les `.html` ne sont supprimes qu'une fois le test vert. |
 
 ## Non-objectifs
 
