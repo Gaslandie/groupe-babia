@@ -3,7 +3,7 @@ document.documentElement.classList.add("js");
 const CONTACT_EMAIL = "infobabiaguinee@gmail.com";
 const WHATSAPP_NUMBER = "224620903333";
 const SELECTION_KEY = "babia:selection";
-const SLIDE_DURATION = 7000;
+const SLIDE_DURATION = 5000;
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 

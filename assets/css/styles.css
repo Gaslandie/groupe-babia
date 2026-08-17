@@ -295,7 +295,7 @@ textarea:focus-visible {
   object-fit: cover;
   filter: saturate(0.88) contrast(1.04);
   transform: scale(1.025);
-  transition: transform 6s ease;
+  transition: transform 5s ease;
 }
 
 .hero-slide.is-active img {
@@ -492,7 +492,7 @@ textarea:focus-visible {
 }
 
 .hero.is-playing .slider-dots button.is-active::after {
-  animation: slide-progress var(--slide-duration, 7000ms) linear forwards;
+  animation: slide-progress var(--slide-duration, 5000ms) linear forwards;
 }
 
 @keyframes slide-progress {
@@ -1854,6 +1854,12 @@ textarea:focus-visible {
 .footer-bottom a {
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+@media (min-width: 981px) {
+  .hero {
+    padding-bottom: clamp(110px, 9vw, 148px);
+  }
 }
 
 @media (max-width: 980px) {
