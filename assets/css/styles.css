@@ -1860,6 +1860,11 @@ textarea:focus-visible {
   .hero {
     padding-bottom: clamp(110px, 9vw, 148px);
   }
+
+  .hero-content,
+  .hero-panel {
+    transform: translateY(-96px);
+  }
 }
 
 @media (max-width: 980px) {
