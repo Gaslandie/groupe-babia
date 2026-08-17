@@ -58,8 +58,16 @@ simple formatage), l'en-tete ne differe que par le lien actif. **Environ 40 % de
 
 ```bash
 sudo apt install php-cli
-php -v            # attendu : PHP 8.1 ou superieur
+php -v
 ```
+
+Fait le 2026-08-17 : **PHP 8.5.4** installe et fonctionnel.
+
+**Ecrire le code en visant PHP 8.1**, pas 8.5. Les hebergements mutualises tournent
+couramment en 8.1 ou 8.2 ; du code utilisant une nouveaute de 8.3+ passerait en local et
+echouerait a la mise en ligne. Concretement : pas de constantes typees dans les traits, pas
+de `json_validate()`, pas de nouveaux modificateurs de propriete. En cas de doute, s'en
+tenir a la syntaxe 8.0.
 
 ## 3. Architecture cible
 
@@ -292,9 +300,64 @@ et mentiront des que le catalogue evoluera.
    `JSON_HEX_TAG` est obligatoire : sans lui, une chaine contenant `</script>` casse la
    page. Dans `main.js`, remplacer les litteraux par `window.BABIA.messages.*` avec un repli
    si l'objet est absent.
-8. Pages legales : **mentions legales et confidentialite ont une portee juridique.** Une
-   traduction approximative cree un risque. Les faire valider, ou publier la version
-   anglaise avec une mention indiquant que la version francaise fait foi.
+8. Pages legales traduites en anglais comme le reste du site. **Ajouter en fin de page une
+   mention indiquant que la version francaise prevaut en cas de divergence** — une ligne,
+   dans les deux langues. C'est la pratique courante et cela evite qu'une nuance de
+   traduction devienne opposable.
+
+### 3 bis — Detection de la langue du navigateur
+
+**Decision du 2026-08-17 : suggerer la langue, ne jamais la forcer.**
+
+L'intention — eviter qu'un acheteur anglophone tombe sur une page francaise — est juste.
+Mais une redirection automatique sur la langue du navigateur pose quatre problemes reels,
+d'autant plus sur un site statique ou la detection ne peut se faire qu'en JavaScript, apres
+chargement :
+
+- **Referencement.** Google deconseille explicitement la redirection automatique fondee sur
+  la langue percue : elle empeche les utilisateurs et les robots de voir toutes les versions
+  du site. Sur un site dont l'enjeu est la visibilite export, c'est un cout direct.
+- **Piege du bouton retour.** L'utilisateur clique sur `FR`, la redirection le ramene en
+  `EN`, il ne peut plus en sortir. C'est le defaut classique de ce mecanisme.
+- **Scintillement.** La page francaise s'affiche, puis bascule : mauvaise impression et
+  aller-retour inutile.
+- **`navigator.language` n'est pas une preference de contenu.** C'est la langue de
+  l'interface du navigateur. Un acheteur guineen sous Windows anglophone peut vouloir lire
+  en francais, et l'inverse est tout aussi frequent.
+
+**Comportement retenu :**
+
+1. La langue par defaut du site reste le **francais**. `hreflang="x-default"` pointe vers la
+   version francaise.
+2. Aucune redirection automatique, jamais. L'URL demandee est servie telle quelle.
+3. Au **premier chargement seulement**, si la langue preferee du navigateur differe de celle
+   de la page, afficher une **banniere discrete et non bloquante** sous l'en-tete :
+   « This page is also available in English → View in English ».
+4. La banniere lit l'URL de destination dans la balise `hreflang` deja presente en `<head>`
+   — aucune logique d'URL dupliquee.
+5. Tout choix explicite — clic sur la banniere, sur sa fermeture, ou sur le selecteur de
+   langue — est memorise dans `localStorage` et la banniere ne reapparait plus.
+
+```js
+const CHOIX = "babia:lang";
+if (!localStorage.getItem(CHOIX)) {
+  const languePage = document.documentElement.lang;
+  const preferees = (navigator.languages || [navigator.language]).map((l) => l.split("-")[0]);
+  const trouvee = preferees.find((l) => ["fr", "en"].includes(l));
+  if (trouvee && trouvee !== languePage) {
+    const alt = document.querySelector(`link[rel="alternate"][hreflang="${trouvee}"]`);
+    if (alt) afficherBanniere(trouvee, alt.href);
+  }
+}
+```
+
+**Criteres d'acceptation :**
+
+- ouvrir `/en/catalogue` avec un navigateur configure en francais **ne redirige pas** ;
+- apres un clic sur le selecteur de langue, la banniere ne reapparait sur aucune page ;
+- la banniere possede un bouton de fermeture, cible tactile de 44 px, et sa fermeture vaut
+  choix explicite ;
+- JavaScript desactive : aucune banniere, aucune degradation, le selecteur reste utilisable.
 
 **Criteres d'acceptation :**
 
@@ -371,6 +434,13 @@ Aucune ne bloque les lots 0 a 3.
 | # | Decision | Impact | Recommandation |
 | --- | --- | --- | --- |
 | 1 | Qui traduit | Une traduction automatique sur un site export institutionnel se voit | Traducteur humain, ou au minimum relecture |
-| 2 | Portee juridique des pages legales EN | Risque si approximatif | Version francaise faisant foi, mention explicite |
-| 3 | Hebergeur PHP | Bloque les lots 4 et 5 uniquement | A arbitrer plus tard, comme convenu |
-| 4 | Adresse e-mail officielle | L'expediteur devra etre sur le domaine ; `infobabiaguinee@gmail.com` ne conviendra pas en `From` | `contact@groupebabia.com` |
+| 2 | Hebergeur PHP | Bloque les lots 4 et 5 uniquement | A arbitrer plus tard, comme convenu |
+| 3 | Adresse e-mail officielle | L'expediteur devra etre sur le domaine ; `infobabiaguinee@gmail.com` ne conviendra pas en `From` | `contact@groupebabia.com` |
+
+### Decisions prises le 2026-08-17
+
+- **Langue par defaut : francais**, avec suggestion non bloquante si le navigateur est
+  configure autrement. Detail au lot 3, section « Detection de la langue du navigateur ».
+- **Pages legales bilingues**, avec mention que la version francaise prevaut en cas de
+  divergence.
+- **Cible PHP 8.1** malgre un PHP 8.5 en local, pour ne pas dependre de l'hebergeur.
