@@ -2029,6 +2029,22 @@ body.hero-overlay .site-header.is-scrolled {
 }
 
 /* Pied de page pleine largeur, aligne sur la meme gouttiere que les sections. */
+/* Sortie des pages legales : elles sont indexees, donc atteignables
+   directement depuis une recherche, et doivent offrir une suite. */
+.legal-outro {
+  background: #e8efeb;
+  text-align: center;
+}
+
+.legal-outro .section-heading {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.legal-outro .page-actions {
+  justify-content: center;
+}
+
 .footer-card {
   padding: clamp(44px, 5vw, 72px) var(--gutter);
   color: #151a16;

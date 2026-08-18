@@ -1,0 +1,8 @@
+# Groupe Babia Guinee
+User-agent: *
+Allow: /
+
+# La page d'erreur porte deja une balise noindex.
+Disallow: /404.html
+
+Sitemap: https://gaslandie.github.io/groupe-babia/sitemap.xml
