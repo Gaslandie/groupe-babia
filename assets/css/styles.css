@@ -1758,15 +1758,137 @@ textarea:focus-visible {
   transform: translateX(3px);
 }
 
-.js [data-reveal] {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 620ms ease, transform 620ms ease;
+/* ------------------------------------------------------------------ */
+/* Apparitions au defilement                                           */
+/* ------------------------------------------------------------------ */
+
+/* Rien n'est masque si l'utilisateur demande a limiter les animations.
+   L'etat cache est enferme dans `no-preference` plutot qu'annule ensuite :
+   une media query n'ajoute pas de specificite, un bloc d'annulation aurait
+   perdu contre les selecteurs ci-dessous. */
+@media (prefers-reduced-motion: no-preference) {
+  /* L'etat cache est declare ici, en CSS, et non pose par JavaScript : sinon le
+     contenu s'affiche une fraction de seconde avant que le script ne le masque,
+     ce qui produit un clignotement visible sur machine lente.
+     `no-reveal` est pose par le garde-fou du <head> si le script ne demarre
+     jamais : aucun contenu ne peut rester invisible a cause d'une erreur JS. */
+  html.js:not(.no-reveal) .section-heading,
+  html.js:not(.no-reveal) .intro-copy,
+  html.js:not(.no-reveal) .content-panel,
+  html.js:not(.no-reveal) .export-content,
+  html.js:not(.no-reveal) .export-media,
+  html.js:not(.no-reveal) .media-band > img,
+  html.js:not(.no-reveal) .form-card,
+  html.js:not(.no-reveal) .activity-grid > *,
+  html.js:not(.no-reveal) .service-grid > *,
+  html.js:not(.no-reveal) .metric-grid > *,
+  html.js:not(.no-reveal) .news-grid > *,
+  html.js:not(.no-reveal) .product-grid > *,
+  html.js:not(.no-reveal) .commitment-grid > *,
+  html.js:not(.no-reveal) .trust-strip > *,
+  html.js:not(.no-reveal) .timeline > *,
+  html.js:not(.no-reveal) .contact-list > * {
+    opacity: 0;
+    /* translate3d plutot que translateY : la composition passe sur le GPU sans
+       avoir a declarer will-change sur des dizaines d'elements. */
+    transform: translate3d(var(--rv-x, 0), var(--rv-y, 22px), 0) scale(var(--rv-s, 1));
+    transition:
+      opacity var(--rv-dur, 620ms) cubic-bezier(0.22, 0.61, 0.36, 1) var(--rv-delay, 0ms),
+      transform var(--rv-dur, 620ms) cubic-bezier(0.22, 0.61, 0.36, 1) var(--rv-delay, 0ms);
+  }
+
+  /* Variantes : chaque famille ne redefinit que ses parametres, l'effet et la
+     transition restent declares une seule fois ci-dessus. */
+
+  /* Cartes : deplacement un peu plus ample et infime mise a l'echelle, ce qui
+     donne l'impression qu'elles avancent vers le lecteur. */
+  html.js:not(.no-reveal) .activity-grid > *,
+  html.js:not(.no-reveal) .service-grid > *,
+  html.js:not(.no-reveal) .metric-grid > *,
+  html.js:not(.no-reveal) .news-grid > *,
+  html.js:not(.no-reveal) .product-grid > * {
+    --rv-y: 28px;
+    --rv-s: 0.985;
+  }
+
+  /* Visuels : leger recadrage qui se stabilise, sans deplacement vertical. */
+  html.js:not(.no-reveal) .export-media,
+  html.js:not(.no-reveal) .media-band > img {
+    --rv-y: 0px;
+    --rv-s: 1.05;
+    --rv-dur: 900ms;
+  }
+
+  /* Lignes de liste et blocs pleine largeur : glissement lateral court. */
+  html.js:not(.no-reveal) .timeline > *,
+  html.js:not(.no-reveal) .contact-list > * {
+    --rv-y: 0px;
+    --rv-x: -18px;
+    --rv-dur: 520ms;
+  }
+
+  /* Bande de reperes : deplacement discret, elle est dense et proche du hero. */
+  html.js:not(.no-reveal) .trust-strip > *,
+  html.js:not(.no-reveal) .commitment-grid > * {
+    --rv-y: 16px;
+    --rv-dur: 520ms;
+  }
+
+  /* Etat revele. Meme specificite que l'etat cache, place apres pour l'emporter. */
+  html.js:not(.no-reveal) .is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.js [data-reveal].is-visible {
-  opacity: 1;
-  transform: translateY(0);
+/* ------------------------------------------------------------------ */
+/* Effets pilotes par le defilement                                    */
+/* ------------------------------------------------------------------ */
+
+/* Ces deux effets utilisent les animations liees au defilement natives : elles
+   tournent hors du fil principal, donc sans risque de saccade, et ne coutent
+   aucune ligne de JavaScript. La ou elles ne sont pas supportees, il ne se
+   passe simplement rien : les deux effets sont decoratifs. */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Barre de progression de lecture, sous l'en-tete fixe.
+       En absolu, donc retiree du flux flex de l'en-tete. */
+    .site-header::after {
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      height: 2px;
+      content: "";
+      background: linear-gradient(90deg, var(--forest), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left center;
+      animation: lecture-progression linear;
+      animation-timeline: scroll(root block);
+    }
+
+    @keyframes lecture-progression {
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    /* Parallaxe des heros internes : le visuel derive plus lentement que la
+       page. L'echelle de depart cree la marge necessaire pour que le
+       deplacement ne decouvre jamais le bord de l'image. */
+    .page-hero-media {
+      transform: scale(1.12);
+      animation: hero-parallaxe linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 100vh;
+    }
+
+    @keyframes hero-parallaxe {
+      to {
+        transform: scale(1.12) translate3d(0, 7%, 0);
+      }
+    }
+  }
 }
 
 .to-top {
@@ -2190,11 +2312,6 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-  }
-
-  .js [data-reveal] {
-    opacity: 1;
-    transform: none;
   }
 
   .hero-slide.is-active img {

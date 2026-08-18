@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      /* Pose la classe `js` avant le premier rendu : l'etat cache des elements
+         animes est alors applique d'emblee, sans que le contenu clignote.
+         Le minuteur revele tout si assets/js/main.js ne demarre pas ; il est
+         desamorce des la premiere ligne de ce fichier. */
+      (function (racine) {
+        racine.classList.add("js");
+        window.__babiaReveal = window.setTimeout(function () {
+          racine.classList.add("no-reveal");
+        }, 2000);
+      })(document.documentElement);
+    </script>
     <meta name="description" content="Contact Groupe Babia Guinée : agriculture, agro-industrie, projet BTP, partenariat minier, pêche ou information corporate.">
     <title>Contact & devis | Groupe Babia Guinée</title>
     <link rel="icon" href="assets/images/logo.png">

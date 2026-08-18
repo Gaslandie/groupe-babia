@@ -1,5 +1,9 @@
 document.documentElement.classList.add("js");
 
+// Le <head> arme un garde-fou qui revele tout le contenu si ce script ne
+// demarre pas. Il est desamorce ici, en toute premiere instruction.
+window.clearTimeout(window.__babiaReveal);
+
 const CONTACT_EMAIL = "infobabiaguinee@gmail.com";
 const WHATSAPP_NUMBER = "224620903333";
 const SELECTION_KEY = "babia:selection";
@@ -723,24 +727,83 @@ window.addEventListener("scroll", syncToTop, { passive: true });
 /* Apparitions au defilement                                           */
 /* ------------------------------------------------------------------ */
 
-const revealTargets = document.querySelectorAll(
-  ".section-heading, .intro-copy, .content-panel, .activity-card, .service-card, .metric-card, .product-card, .news-card, .timeline article, .commitment-grid article, .contact-item, .form-card"
-);
+/* L'etat cache vient du CSS. Ce script ne fait que deux choses : calculer le
+   decalage de chaque element au sein de son groupe, et poser `is-visible`
+   quand le groupe entre dans le champ. */
 
-if ("IntersectionObserver" in window && !reduceMotionQuery.matches) {
-  revealTargets.forEach((target) => target.setAttribute("data-reveal", ""));
+// Conteneurs dont les enfants apparaissent en cascade.
+const REVEAL_GROUPES = [
+  ".activity-grid",
+  ".service-grid",
+  ".metric-grid",
+  ".news-grid",
+  ".product-grid",
+  ".commitment-grid",
+  ".trust-strip",
+  ".timeline",
+  ".contact-list"
+].join(", ");
 
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+// Elements qui apparaissent seuls.
+const REVEAL_SEULS = [
+  ".section-heading",
+  ".intro-copy",
+  ".content-panel",
+  ".export-content",
+  ".export-media",
+  ".media-band > img",
+  ".form-card"
+].join(", ");
+
+const REVEAL_PAS = 70;
+const REVEAL_PAS_MAX = 5;
+
+if (!("IntersectionObserver" in window)) {
+  // Navigateur trop ancien : on affiche tout plutot que de risquer du contenu
+  // invisible.
+  document.documentElement.classList.add("no-reveal");
+} else if (!reduceMotionQuery.matches) {
+  const reveler = (element) => element.classList.add("is-visible");
+
+  const observateur = new IntersectionObserver(
+    (entrees, observer) => {
+      entrees.forEach((entree) => {
+        if (!entree.isIntersecting) {
+          return;
+        }
+
+        const cible = entree.target;
+        observer.unobserve(cible);
+
+        // Un groupe revele tous ses enfants d'un coup : la cascade se lit comme
+        // un seul geste, au lieu de dependre du moment ou chaque carte entre.
+        if (cible.dataset.revealGroupe !== undefined) {
+          Array.from(cible.children).forEach(reveler);
+        } else {
+          reveler(cible);
         }
       });
     },
-    { rootMargin: "0px 0px -8%", threshold: 0.08 }
+    // Seuil a 0 et marge fixe plutot qu'en pourcentage : le declenchement ne
+    // depend plus de la hauteur de l'element. Avec un seuil en pourcentage, une
+    // grille tres haute attendait qu'une grande partie soit visible, et un titre
+    // arrete dans la bande basse de l'ecran pouvait rester invisible.
+    { rootMargin: "0px 0px -64px 0px", threshold: 0 }
   );
 
-  revealTargets.forEach((target) => revealObserver.observe(target));
+  document.querySelectorAll(REVEAL_GROUPES).forEach((groupe) => {
+    Array.from(groupe.children).forEach((enfant, index) => {
+      // Le decalage est plafonne : au-dela de quelques elements, attendre plus
+      // longtemps ne se lit plus comme une cascade mais comme une lenteur.
+      const rang = Math.min(index, REVEAL_PAS_MAX);
+      enfant.style.setProperty("--rv-delay", `${rang * REVEAL_PAS}ms`);
+    });
+
+    groupe.dataset.revealGroupe = "";
+    observateur.observe(groupe);
+  });
+
+  document.querySelectorAll(REVEAL_SEULS).forEach((element) => {
+    observateur.observe(element);
+  });
 }
