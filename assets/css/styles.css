@@ -353,7 +353,7 @@ textarea:focus-visible {
   font-family: var(--font-primary);
   font-weight: 500;
   line-height: 0.86;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 
@@ -382,7 +382,30 @@ textarea:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 32px;
+  margin-top: 24px;
+}
+
+.hero-audience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 720px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-audience li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 
@@ -2385,6 +2408,17 @@ body.hero-overlay .site-header.is-scrolled {
   .hero-copy {
     font-size: 1rem;
     line-height: 1.6;
+  }
+
+  .hero-audience {
+    gap: 6px;
+    margin-top: 16px;
+  }
+
+  .hero-audience li {
+    min-height: 30px;
+    padding: 6px 10px;
+    font-size: 0.74rem;
   }
 
   .activity-card img,

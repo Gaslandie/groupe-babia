@@ -144,7 +144,7 @@ const slides = [
   {
     kicker: "Agroalimentaire",
     title: "Exportation et importation agroalimentaire",
-    text: "Fèves de cacao, grains de café, noix de cajou brutes, graines de soja, beurre de karité, miel, graines de sésame et fruits."
+    text: "Export : cacao, café, cajou, soja, karité, miel, sésame et fruits. Import : jus, riz, tomates, oignons et huile alimentaire."
   },
   {
     kicker: "Construction / BTP",
