@@ -414,7 +414,7 @@ explicitement apres migration :
 - le panneau de devis n'apparait qu'a partir d'un produit selectionne ;
 - la selection du catalogue survit au passage vers la page contact ;
 - lien d'evitement, piege de focus du menu mobile, cibles tactiles de 44 px ;
-- bouton pause du hero et cadence de 7 secondes ;
+- bouton pause du hero et cadence actuelle de 5 secondes ;
 - pied de page pleine largeur, identique sur toutes les pages.
 
 Detail dans `docs/design-ux/AUDIT_UI_UX.md`.

@@ -1190,6 +1190,19 @@ body.hero-overlay .site-header.is-scrolled {
   line-height: 1.7;
 }
 
+.page-hero .update-note {
+  display: inline-flex;
+  width: auto;
+  margin: 4px 0 0;
+  padding: 7px 10px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 .page-hero-card {
   padding: 24px 0 0 26px;
   background: transparent;
@@ -1354,6 +1367,21 @@ body.hero-overlay .site-header.is-scrolled {
   color: var(--gold);
   font-weight: 850;
   text-transform: uppercase;
+}
+
+.news-date {
+  display: block;
+  margin: -4px 0 12px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.editorial-rhythm {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-weight: 700;
 }
 
 .dark-section {

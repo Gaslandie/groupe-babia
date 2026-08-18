@@ -5,7 +5,7 @@
 | Date | Sujet | Responsable | Niveau atteint | Prochaine etape |
 | --- | --- | --- | --- | --- |
 | 2026-08-16 | Preparation du dossier projet | Codex | Depot vide clone dans `site-web/`, template GassTech copie, contexte initial documente | Attendre les consignes pour le cadrage ou le choix technique |
-| 2026-08-16 | Page d'accueil | Codex | Page statique creee, hero slider 3 secondes, rendu desktop/mobile verifie | Publie sur GitHub |
+| 2026-08-16 | Page d'accueil | Codex | Page statique creee, hero slider ajuste ; cadence actuelle : 5 secondes | Publie sur GitHub |
 | 2026-08-16 | Version multi-pages | Codex | Pages internes, catalogue interactif et contact ajoutés, vérifiés et prêts à pousser | Pousser sur GitHub |
 | 2026-08-16 | Footer type carte blanche | Codex | Footer remplace sur toutes les pages selon la reference fournie | Pousser si demande |
 | 2026-08-16 | Produits agroalimentaires | Codex | Liste client traduite en francais et integree au catalogue agroalimentaire | Attendre validation visuelle client |
@@ -30,9 +30,9 @@
 - Verification du depot GitHub : depot accessible mais vide au demarrage.
 - Installation du squelette `modele-projet` du template Web/Mobile GassTech.
 - Ajout des modeles de cadrage, UX, technique, qualite/securite et livraison dans `docs/`.
-- Creation d'une premiere page d'accueil statique avec hero a images defilantes toutes les 3 secondes.
+- Creation d'une premiere page d'accueil statique avec hero a images defilantes ; cadence actuelle : 5 secondes.
 - Verification syntaxe JS avec `node --check assets/js/main.js`.
-- Verification visuelle avec Chrome headless en desktop, mobile et slide Mines apres 7 secondes.
+- Verification visuelle avec Chrome headless en desktop, mobile et slide Mines apres defilement du hero.
 - Optimisation du logo de 1024 px vers 256 px.
 - Ajout des pages Groupe, Agroalimentaire, BTP, Mines, Catalogue, Actualites et Contact.
 - Ajout des filtres catalogue, boutons de selection devis et liens e-mail/WhatsApp prepares automatiquement.
@@ -48,7 +48,7 @@
 - Amelioration de la navigation mobile, de l'accessibilite clavier et des interactions du catalogue.
 - Ajout des pages de mentions legales et de confidentialite.
 - Passe UX 2026-08-17 : correction des heros internes casses (image en `<img>` au lieu d'un `url()` en custom property), typographie fluide, lien d'evitement, fil d'Ariane semantique, menu mobile avec piege de focus et icone d'etat.
-- Passe UX 2026-08-17 : hero d'accueil a 7 s avec bouton pause, balayage tactile, barre de progression et texte d'accroche stable.
+- Passe UX 2026-08-17 : hero d'accueil avec bouton pause, balayage tactile, barre de progression et texte d'accroche stable ; cadence actuelle : 5 secondes.
 - Passe UX 2026-08-17 : catalogue avec compteurs de filtres, etat vide, panneau de devis conditionnel a puces retirables et selection persistee entre pages.
 - Passe UX 2026-08-17 : formulaire de contact avec champs obligatoires marques, validation en ligne, statut d'envoi, repli copier/WhatsApp et pre-remplissage par `?besoin=`.
 - Passe UX 2026-08-17 : page `404.html`, bouton retour en haut, icones SVG au pied de page, dimensions et chargement differe sur les images.

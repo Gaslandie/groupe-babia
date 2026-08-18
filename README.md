@@ -25,6 +25,7 @@ python3 -m http.server 4173
 
 # Tester
 node --check assets/js/main.js
+node -e "const fs=require('fs');const path=require('path');let ok=true;for(const file of fs.readdirSync('.').filter(f=>f.endsWith('.html'))){const html=fs.readFileSync(file,'utf8');for(const m of html.matchAll(/(?:href|src)=\\\"([^\\\"]+)\\\"/g)){let u=m[1];if(/^(https?:|mailto:|tel:|#|data:)/.test(u)) continue;u=u.split('#')[0].split('?')[0];if(!u) continue;const target=path.join(path.dirname(file),u);if(!fs.existsSync(target)){console.log(file+' -> missing '+m[1]);ok=false;}}}process.exit(ok?0:1)"
 
 # Builder
 Aucun build requis.
@@ -32,7 +33,7 @@ Aucun build requis.
 
 ## Pages du site
 
-- `index.html` : accueil avec hero slider 3 secondes.
+- `index.html` : accueil avec hero slider 5 secondes.
 - `groupe.html` : presentation institutionnelle.
 - `agroalimentaire.html` : pole agroalimentaire et logique export.
 - `btp.html` : pole Construction / BTP.
@@ -67,3 +68,12 @@ public/ ou assets/
 - Stack : HTML/CSS/JS statique pret pour GitHub Pages ou hebergement web classique.
 - Environnements : GitHub / GitHub Pages possible.
 - Methode de livraison : push GitHub, puis activation GitHub Pages si souhaitee.
+
+## Maintenance
+
+- Plan de maintenance : `docs/livraison-maintenance/PLAN_MAINTENANCE.md`
+- Livraison production : `docs/livraison-maintenance/LIVRAISON_PRODUCTION.md`
+- Suivi incident : `docs/livraison-maintenance/SUIVI_INCIDENT.md`
+- Rythme conseille : revue mensuelle des contenus, des coordonnees, des liens et
+  des images ; publication immediate lorsqu'une disponibilite produit, un
+  partenariat ou une annonce importante est confirmee par le client.
