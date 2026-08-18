@@ -39,7 +39,6 @@ Aucun build requis.
 - `btp.html` : pole Construction / BTP.
 - `mines.html` : pole minier.
 - `catalogue.html` : catalogue agroalimentaire avec filtres et selection devis.
-- `actualites.html` : rubrique actualites.
 - `contact.html` : contact et demande de devis.
 - `mentions-legales.html` : informations legales de l'editeur.
 - `confidentialite.html` : politique de confidentialite et traitement des demandes.

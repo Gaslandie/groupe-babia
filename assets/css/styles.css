@@ -572,13 +572,13 @@ textarea:focus-visible {
 }
 
 /* ------------------------------------------------------------------ */
-/* Bande d'actualites ancree en bas du hero                            */
+/* Bande d'acces rapide ancree en bas du hero                          */
 /* ------------------------------------------------------------------ */
 
 /* Elle occupe la derniere rangee de la grille du hero : elle est donc posee
    sur le visuel sans jamais recouvrir le titre, quelle que soit la hauteur
    de l'ecran. */
-.hero-news {
+.hero-access {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -589,18 +589,18 @@ textarea:focus-visible {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.hero-news-item {
+.hero-access-item {
   position: relative;
   padding: 0 clamp(18px, 2.2vw, 34px);
   border-left: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.hero-news-item:first-of-type {
+.hero-access-item:first-of-type {
   padding-left: 0;
   border-left: 0;
 }
 
-.hero-news-meta {
+.hero-access-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -612,7 +612,7 @@ textarea:focus-visible {
   text-transform: uppercase;
 }
 
-.hero-news-item h3 {
+.hero-access-item h3 {
   margin: 0;
   color: #fff;
   font-family: var(--font-primary);
@@ -621,19 +621,19 @@ textarea:focus-visible {
   line-height: 1.32;
 }
 
-.hero-news-item h3 a {
+.hero-access-item h3 a {
   text-decoration: none;
 }
 
 /* Lien etire : toute la carte devient cliquable sans multiplier les liens
    pour les technologies d'assistance. */
-.hero-news-item h3 a::after {
+.hero-access-item h3 a::after {
   position: absolute;
   inset: 0;
   content: "";
 }
 
-.hero-news-more {
+.hero-access-more {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -643,7 +643,7 @@ textarea:focus-visible {
   font-weight: 800;
 }
 
-.hero-news-more::after {
+.hero-access-more::after {
   width: 26px;
   height: 1px;
   content: "";
@@ -651,8 +651,8 @@ textarea:focus-visible {
   transition: width 220ms ease;
 }
 
-.hero-news-item:hover .hero-news-more::after,
-.hero-news-item:focus-within .hero-news-more::after {
+.hero-access-item:hover .hero-access-more::after,
+.hero-access-item:focus-within .hero-access-more::after {
   width: 44px;
 }
 
@@ -2440,7 +2440,7 @@ body.hero-overlay .site-header.is-scrolled {
     grid-template-columns: 1fr;
   }
 
-  .hero-news {
+  .hero-access {
     grid-template-columns: repeat(3, minmax(230px, 1fr));
     gap: 0;
     overflow-x: auto;
@@ -2448,7 +2448,7 @@ body.hero-overlay .site-header.is-scrolled {
     scrollbar-width: none;
   }
 
-  .hero-news-item {
+  .hero-access-item {
     scroll-snap-align: start;
   }
 
@@ -2535,17 +2535,17 @@ body.hero-overlay .site-header.is-scrolled {
     padding-top: 14px;
   }
 
-  .hero-news {
+  .hero-access {
     padding: 18px 16px;
   }
 
-  .hero-news-item {
+  .hero-access-item {
     padding: 0 16px 0 0;
     border-left: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.16);
   }
 
-  .hero-news-item:last-of-type {
+  .hero-access-item:last-of-type {
     border-right: 0;
   }
 
@@ -2820,7 +2820,7 @@ body.hero-overlay .site-header.is-scrolled {
     padding-bottom: 8px;
   }
 
-  .hero-news {
+  .hero-access {
     padding: 14px 16px;
   }
 }
