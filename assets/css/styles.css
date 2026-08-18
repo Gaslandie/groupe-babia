@@ -211,6 +211,12 @@ textarea:focus-visible {
   border: 1px solid var(--forest);
 }
 
+.site-nav .nav-cta:hover,
+.site-nav .nav-cta:focus-visible,
+.site-nav .nav-cta.is-active {
+  color: #fff;
+}
+
 .button-primary {
   color: #fff;
   background: var(--forest);
