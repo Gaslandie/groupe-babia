@@ -270,7 +270,7 @@ textarea:focus-visible {
 .hero {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr;
   min-height: 100svh;
   overflow: hidden;
   padding: calc(var(--header-height) + clamp(24px, 5vw, 56px)) 0 0;
@@ -372,8 +372,6 @@ textarea:focus-visible {
 
 
 
-
-
 .slider-button,
 .slider-dots button {
   cursor: pointer;
@@ -422,6 +420,41 @@ textarea:focus-visible {
   display: none;
 }
 
+/* Legende du visuel, calee a droite juste au-dessus de la bande d'actualites :
+   elle decrit le pole affiche sans disputer sa place au titre de marque. */
+.hero-caption {
+  justify-self: end;
+  max-width: min(460px, 100%);
+  margin: 0 var(--gutter) clamp(22px, 3vw, 38px);
+  padding-top: 18px;
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.hero-caption-kicker {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-caption h2 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero-caption p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
 /* Rail vertical colle au bord droit du hero, a la maniere de reperes de
    chapitre : il indique le pole affiche sans occuper de place dans la page. */
 .hero-rail {
@@ -436,18 +469,6 @@ textarea:focus-visible {
   transform: translateY(-50%);
 }
 
-.hero-rail-label {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.72rem;
-  font-weight: 850;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  /* Ecrit de bas en haut, le long du rail. */
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-}
 
 .slider-dots {
   display: flex;
@@ -2275,6 +2296,13 @@ body.hero-overlay .site-header.is-scrolled {
     padding: 0 16px;
   }
 
+  .hero-caption {
+    justify-self: stretch;
+    max-width: 100%;
+    margin: 0 16px 18px;
+    padding-top: 14px;
+  }
+
   .hero-news {
     padding: 18px 16px;
   }
@@ -2299,11 +2327,6 @@ body.hero-overlay .site-header.is-scrolled {
     justify-content: flex-end;
     gap: 10px;
     padding: 0 16px 14px;
-    transform: none;
-  }
-
-  .hero-rail-label {
-    writing-mode: horizontal-tb;
     transform: none;
   }
 
@@ -2495,6 +2518,55 @@ body.hero-overlay .site-header.is-scrolled {
 
   .export-media img {
     min-height: 300px;
+  }
+}
+
+/* Ecrans courts : le hero porte titre, accroche, deux actions, la legende du
+   pole et la bande d'actualites. On resserre le rythme vertical plutot que de
+   masquer du contenu ; la bande peut alors demander un leger defilement. */
+@media (max-width: 640px) and (max-height: 720px) {
+  .hero {
+    padding-top: calc(var(--header-height) + 12px);
+  }
+
+  .hero-copy {
+    margin-top: 16px;
+    font-size: 0.94rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 10px;
+    font-size: 0.86rem;
+  }
+
+  .hero-caption {
+    margin-bottom: 12px;
+    padding-top: 12px;
+  }
+
+  .hero-caption h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-caption p {
+    font-size: 0.88rem;
+  }
+
+  .hero-rail {
+    padding-bottom: 8px;
+  }
+
+  .hero-news {
+    padding: 14px 16px;
   }
 }
 
