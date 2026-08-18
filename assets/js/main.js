@@ -177,7 +177,7 @@ const nextButton = document.querySelector("[data-next]");
 const prevButton = document.querySelector("[data-prev]");
 const playButton = document.querySelector("[data-slide-play]");
 
-if (slideNodes.length && kickerNode && titleNode && textNode) {
+if (slideNodes.length && kickerNode) {
   const hero = document.querySelector(".hero");
   let activeSlide = 0;
   let slideTimer;
@@ -200,8 +200,14 @@ if (slideNodes.length && kickerNode && titleNode && textNode) {
     });
 
     kickerNode.textContent = slides[activeSlide].kicker;
-    titleNode.textContent = slides[activeSlide].title;
-    textNode.textContent = slides[activeSlide].text;
+
+    // Presents seulement si le gabarit affiche un panneau descriptif.
+    if (titleNode) {
+      titleNode.textContent = slides[activeSlide].title;
+    }
+    if (textNode) {
+      textNode.textContent = slides[activeSlide].text;
+    }
   }
 
   function canAutoplay() {
