@@ -476,7 +476,7 @@ textarea:focus-visible {
   color: var(--gold);
   font-size: 0.72rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -608,7 +608,7 @@ textarea:focus-visible {
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.7rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -768,6 +768,36 @@ body.hero-overlay .site-header.is-scrolled {
 
 .intro-copy p:first-child {
   margin-top: 0;
+}
+
+.brand-proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 30px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.brand-proof div {
+  min-height: 132px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.brand-proof strong {
+  display: block;
+  color: var(--forest);
+  font-size: 0.92rem;
+  font-weight: 850;
+}
+
+.brand-proof span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .activities-section {
@@ -2472,6 +2502,7 @@ body.hero-overlay .site-header.is-scrolled {
   .news-grid,
   .product-grid,
   .field-grid,
+  .brand-proof,
   .footer-columns {
     grid-template-columns: 1fr;
   }
