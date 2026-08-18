@@ -1563,6 +1563,35 @@ body.hero-overlay .site-header.is-scrolled {
   background: var(--forest);
 }
 
+.content-questions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 28px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.content-questions article {
+  min-height: 170px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.content-questions h3 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.24;
+}
+
+.content-questions p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
 /* Le panneau de devis n'apparait qu'a partir d'un produit selectionne : il ne
    recouvre plus le catalogue quand la selection est vide. */
 .quote-dock {
@@ -2593,6 +2622,7 @@ body.hero-overlay .site-header.is-scrolled {
   .field-grid,
   .brand-proof,
   .quick-access-grid,
+  .content-questions,
   .footer-columns {
     grid-template-columns: 1fr;
   }
