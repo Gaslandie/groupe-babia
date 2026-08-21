@@ -27,15 +27,23 @@ admin_shell_start('Réalisations');
           <div>
             <p class="eyebrow">Réalisations</p>
             <h1>Activités réalisées par l'entreprise</h1>
-            <p class="muted">Cette liste prépare le futur CRUD : ajout, modification, publication et mise en avant.</p>
+            <p class="muted">Ajoutez, modifiez, publiez ou archivez les activités réalisées par l'entreprise.</p>
           </div>
-          <a class="button" href="#">Ajouter bientôt</a>
+          <a class="button" href="realisation-new.php">Ajouter une réalisation</a>
         </header>
 
         <?php if (!database_is_configured()): ?>
           <p class="notice">MySQL n'est pas encore configuré. Le module sera activé après création de la base et application de la migration.</p>
         <?php elseif ($databaseError !== null): ?>
           <p class="notice"><?= e($databaseError) ?></p>
+        <?php elseif (isset($_GET['created'])): ?>
+          <p class="notice success">Réalisation ajoutée.</p>
+        <?php elseif (isset($_GET['updated'])): ?>
+          <p class="notice success">Réalisation mise à jour.</p>
+        <?php elseif (isset($_GET['deleted'])): ?>
+          <p class="notice success">Réalisation supprimée.</p>
+        <?php elseif (isset($_GET['missing'])): ?>
+          <p class="notice">Réalisation introuvable.</p>
         <?php elseif ($items === []): ?>
           <p class="notice">Aucune réalisation enregistrée pour le moment.</p>
         <?php else: ?>
@@ -47,6 +55,7 @@ admin_shell_start('Réalisations');
                 <th>Statut</th>
                 <th>Date</th>
                 <th>Mise en avant</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -60,6 +69,12 @@ admin_shell_start('Réalisations');
                   <td><?= e($statuses[(string) $item['status']] ?? (string) $item['status']) ?></td>
                   <td><?= e((string) ($item['realised_at'] ?? $item['published_at'] ?? '-')) ?></td>
                   <td><?= ((int) $item['is_featured']) === 1 ? 'Oui' : 'Non' ?></td>
+                  <td class="actions-cell">
+                    <div class="button-row">
+                      <a class="button secondary" href="realisation-edit.php?id=<?= e((string) $item['id']) ?>">Modifier</a>
+                      <a class="button danger" href="realisation-delete.php?id=<?= e((string) $item['id']) ?>">Supprimer</a>
+                    </div>
+                  </td>
                 </tr>
               <?php endforeach; ?>
             </tbody>

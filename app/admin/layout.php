@@ -35,16 +35,27 @@ function admin_header(string $title): void
       .metric strong { display: block; color: var(--forest); font-size: 2.4rem; line-height: 1; }
       .metric span { color: var(--muted); }
       .notice { padding: 16px 18px; border: 1px solid rgba(173,79,53,.28); border-radius: 8px; background: #fff8f5; color: #703322; }
+      .notice.success { border-color: rgba(6,75,53,.22); background: #f1faf5; color: var(--forest); }
       .button { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; padding: 0 16px; border: 1px solid var(--forest); border-radius: 8px; color: #fff; background: var(--forest); font-weight: 700; text-decoration: none; }
+      .button.secondary { color: var(--forest); background: #fff; }
+      .button.danger { border-color: #ad4f35; background: #ad4f35; }
+      .button-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
       table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); }
       th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
       th { color: var(--forest); font-size: .78rem; text-transform: uppercase; }
       .muted { color: var(--muted); }
+      .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .field-full { grid-column: 1 / -1; }
       .login-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
       .login-card { width: min(420px, 100%); padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 20px 60px rgba(11,25,20,.12); }
       label { display: grid; gap: 8px; margin-bottom: 16px; color: var(--forest); font-weight: 750; }
-      input { min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
-      @media (max-width: 800px) { .admin-shell { grid-template-columns: 1fr; } .admin-sidebar { position: static; } .grid { grid-template-columns: 1fr; } .admin-topbar { display: grid; } }
+      input, select, textarea { width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: #fff; }
+      input[type="checkbox"] { width: auto; min-height: 0; margin-right: 8px; }
+      textarea { min-height: 180px; padding: 12px; resize: vertical; }
+      .field-error { margin: -8px 0 14px; color: #ad4f35; font-size: .9rem; font-weight: 700; }
+      .actions-cell { white-space: nowrap; }
+      .inline-form { display: inline; }
+      @media (max-width: 800px) { .admin-shell { grid-template-columns: 1fr; } .admin-sidebar { position: static; } .grid, .form-grid { grid-template-columns: 1fr; } .field-full { grid-column: auto; } .admin-topbar { display: grid; } }
     </style>
   </head>
   <body>

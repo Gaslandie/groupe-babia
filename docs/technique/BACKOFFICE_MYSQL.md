@@ -46,4 +46,5 @@ Table creee : `realisations`.
 - Connexion admin par variables d'environnement.
 - Tableau de bord admin.
 - Liste des realisations lue depuis MySQL si la base est configuree.
-- Ajout/modification/suppression a implementer dans le prochain lot.
+- Ajout, modification et suppression des realisations.
+- Upload d'image non implemente dans ce lot : le champ `cover_image` attend un chemin existant ou futur.

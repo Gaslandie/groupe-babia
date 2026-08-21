@@ -77,3 +77,32 @@ function admin_require_auth(): void
     header('Location: login.php');
     exit;
 }
+
+function admin_csrf_token(): string
+{
+    admin_session_start();
+
+    if (!isset($_SESSION['csrf_token']) || !is_string($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+
+    return $_SESSION['csrf_token'];
+}
+
+function admin_csrf_field(): string
+{
+    return '<input type="hidden" name="csrf_token" value="' . e(admin_csrf_token()) . '">';
+}
+
+function admin_verify_csrf(): bool
+{
+    admin_session_start();
+
+    $expected = $_SESSION['csrf_token'] ?? '';
+    $actual = $_POST['csrf_token'] ?? '';
+
+    return is_string($expected)
+        && is_string($actual)
+        && $expected !== ''
+        && hash_equals($expected, $actual);
+}

@@ -15,7 +15,7 @@
 | 2026-08-17 | Migration PHP + version EN | Claude | Plan d'execution redige dans `docs/technique/MIGRATION_PHP.md`. Voie retenue : PHP ecrit, HTML genere, publie par GitHub Actions. Tache du lot 0 cadree | Codex execute `docs/taches/LOT-0-SOCLE-PHP.md` |
 | 2026-08-21 | Renforcement credibilite vitrine | Codex | Blocs de preuve commerciale, qualification BTP/mines/agro, formulaire enrichi et contenus de confiance ajoutes en statique | Verifier puis deployer sur Bluehost |
 | 2026-08-21 | Migration PHP progressive | Codex | Lot 0A cree : config PHP, registre des pages, build `dist/` identique et script de verification | Extraire les premiers partials sans changer le rendu |
-| 2026-08-21 | Back office MySQL | Codex | Schema realisations, configuration `.env`, authentification admin et ecrans dashboard/liste ajoutes hors production | Implementer le CRUD realisations |
+| 2026-08-21 | Back office MySQL | Codex | CRUD realisations ajoute hors production : creation, edition, suppression, statuts, mise en avant, CSRF | Brancher le front public sur les realisations publiees |
 
 ## A faire
 
@@ -61,3 +61,4 @@
 - Migration PHP 2026-08-21 : ajout du build statique PHP initial, generation de `dist/`, verification byte a byte des pages et fichiers publies.
 - Back office 2026-08-21 : MySQL retenu ; premier perimetre admin limite aux activites/realisations publiees par l'entreprise.
 - Back office 2026-08-21 : ajout de `database/migrations/001_create_realisations.sql`, configuration MySQL par `.env`, login admin par hash et ecrans de lecture.
+- Back office 2026-08-21 : CRUD realisations ajoute avec validation serveur, slug automatique, statut publie/brouillon/archive et protection CSRF.
