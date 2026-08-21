@@ -6,8 +6,8 @@ require dirname(__DIR__) . '/app/helpers.php';
 
 $pages = [
     'index' => [
-        'file' => 'index.html',
-        'fr' => '../index.html',
+        'file' => 'index.php',
+        'fr' => '../index.php',
         'title' => 'Groupe Babia Guinea | Agriculture, Construction, Mining and Fishing',
         'description' => 'Groupe Babia Guinea is a multisector partner based in Conakry, active in agricultural trade, food imports, construction, mining services, fishing and agro-industry.',
         'active' => 'home',
@@ -21,8 +21,8 @@ $pages = [
               <h1>Groupe Babia Guinea</h1>
               <p>We export agricultural products, import food commodities and support construction, mining, fishing and agro-industrial projects for buyers, distributors, institutions and companies.</p>
               <div class="hero-actions">
-                <a class="button button-primary" href="catalog.html">Explore products</a>
-                <a class="button button-secondary" href="contact.html#formulaire">Request a quotation</a>
+                <a class="button button-primary" href="catalog.php">Explore products</a>
+                <a class="button button-secondary" href="contact.php#formulaire">Request a quotation</a>
               </div>
             </div>
           </section>
@@ -34,9 +34,9 @@ $pages = [
               <p>Groupe Babia works across complementary sectors where reliability, sourcing capacity and operational follow-up matter.</p>
             </div>
             <div class="activity-grid">
-              <article class="activity-card"><img src="../assets/images/agro-cajou.webp" alt="Raw cashew nuts" width="800" height="1000" loading="lazy" decoding="async"><div><small>Export</small><h3>Agricultural products</h3><p>Cocoa beans, coffee beans, raw cashew nuts, soya beans, shea butter, honey, sesame seeds and fruits.</p><a href="agri-food.html">View agri-food trade</a></div></article>
-              <article class="activity-card"><img src="../assets/images/btp.webp" alt="Construction site" width="626" height="417" loading="lazy" decoding="async"><div><small>Projects</small><h3>Construction and public works</h3><p>Support for construction and infrastructure projects with attention to scope, deadlines and coordination.</p><a href="construction.html">View construction</a></div></article>
-              <article class="activity-card"><img src="../assets/images/mines.webp" alt="Mining operations" width="1600" height="1064" loading="lazy" decoding="async"><div><small>Mining</small><h3>Mining services and partnerships</h3><p>Operational support, supply and partnership opportunities for responsible mining activities.</p><a href="mining.html">View mining</a></div></article>
+              <article class="activity-card"><img src="../assets/images/agro-cajou.webp" alt="Raw cashew nuts" width="800" height="1000" loading="lazy" decoding="async"><div><small>Export</small><h3>Agricultural products</h3><p>Cocoa beans, coffee beans, raw cashew nuts, soya beans, shea butter, honey, sesame seeds and fruits.</p><a href="agri-food.php">View agri-food trade</a></div></article>
+              <article class="activity-card"><img src="../assets/images/btp.webp" alt="Construction site" width="626" height="417" loading="lazy" decoding="async"><div><small>Projects</small><h3>Construction and public works</h3><p>Support for construction and infrastructure projects with attention to scope, deadlines and coordination.</p><a href="construction.php">View construction</a></div></article>
+              <article class="activity-card"><img src="../assets/images/mines.webp" alt="Mining operations" width="1600" height="1064" loading="lazy" decoding="async"><div><small>Mining</small><h3>Mining services and partnerships</h3><p>Operational support, supply and partnership opportunities for responsible mining activities.</p><a href="mining.php">View mining</a></div></article>
             </div>
           </section>
 
@@ -54,8 +54,8 @@ $pages = [
 HTML,
     ],
     'company' => [
-        'file' => 'company.html',
-        'fr' => '../groupe.html',
+        'file' => 'company.php',
+        'fr' => '../groupe.php',
         'title' => 'Company | Groupe Babia Guinea',
         'description' => 'Discover Groupe Babia Guinea, a multisector company based in Conakry serving local and international partners.',
         'active' => 'company',
@@ -71,33 +71,33 @@ HTML,
 HTML,
     ],
     'agri-food' => [
-        'file' => 'agri-food.html',
-        'fr' => '../agroalimentaire.html',
+        'file' => 'agri-food.php',
+        'fr' => '../agroalimentaire.php',
         'title' => 'Agri-food Export and Import | Groupe Babia Guinea',
         'description' => 'Agricultural exports and food imports: cocoa beans, coffee beans, raw cashew nuts, soya beans, shea butter, honey, sesame seeds, fruits, rice, juice, tomatoes, onions and edible oil.',
         'active' => 'agri-food',
         'hero' => 'assets/images/hero-agro-export-import.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Agri-food export and import products" width="1600" height="900" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Agri-food trade</p><h1>Agricultural exports and food imports</h1><p>Groupe Babia supports buyers and distributors looking for agricultural products from Guinea and food commodities for the local market.</p><div class="hero-actions"><a class="button button-primary" href="catalog.html">View products</a><a class="button button-secondary" href="contact.html#formulaire">Request a quotation</a></div></div></section>
+          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Agri-food export and import products" width="1600" height="900" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Agri-food trade</p><h1>Agricultural exports and food imports</h1><p>Groupe Babia supports buyers and distributors looking for agricultural products from Guinea and food commodities for the local market.</p><div class="hero-actions"><a class="button button-primary" href="catalog.php">View products</a><a class="button button-secondary" href="contact.php#formulaire">Request a quotation</a></div></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Exports</p><h2>Agricultural products confirmed by the client</h2></div><div class="product-grid"><article class="product-card"><h3>Cocoa beans</h3><p>Requests are qualified by quantity, destination, timing and documentation needs.</p></article><article class="product-card"><h3>Coffee beans</h3><p>Supply discussions can include volumes, quality expectations and logistics.</p></article><article class="product-card"><h3>Raw cashew nuts</h3><p>Commercial requests should specify crop, quantity, packaging and destination.</p></article><article class="product-card"><h3>Soya beans</h3><p>Structured requests help prepare a relevant first response.</p></article><article class="product-card"><h3>Shea butter, honey and sesame seeds</h3><p>Available as part of the confirmed agricultural export range.</p></article><article class="product-card"><h3>Fruits</h3><p>Requests must include destination, freshness constraints and desired timing.</p></article></div></section>
           <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Imports</p><h2>Food products for local demand</h2><p>Juice, rice, tomatoes, onions and edible oil are part of the import scope shared by the client.</p></div></section>
 HTML,
     ],
     'construction' => [
-        'file' => 'construction.html',
-        'fr' => '../btp.html',
+        'file' => 'construction.php',
+        'fr' => '../btp.php',
         'title' => 'Construction and Public Works | Groupe Babia Guinea',
         'description' => 'Groupe Babia supports construction and public works opportunities in Guinea through project qualification, coordination and partner follow-up.',
         'active' => 'construction',
         'hero' => 'assets/images/btp.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/btp.webp" alt="Construction and public works" width="626" height="417" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Construction</p><h1>Construction and public works</h1><p>For construction and infrastructure requests, Groupe Babia helps clarify the scope, location, timing, constraints and available documents before commercial follow-up.</p><div class="hero-actions"><a class="button button-primary" href="contact.html?need=construction#formulaire">Discuss a project</a></div></div></section>
+          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/btp.webp" alt="Construction and public works" width="626" height="417" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Construction</p><h1>Construction and public works</h1><p>For construction and infrastructure requests, Groupe Babia helps clarify the scope, location, timing, constraints and available documents before commercial follow-up.</p><div class="hero-actions"><a class="button button-primary" href="contact.php?need=construction#formulaire">Discuss a project</a></div></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Project requests</p><h2>What helps the team respond faster</h2></div><div class="service-grid"><article class="service-card"><small>01</small><h3>Scope</h3><p>Type of work, expected result, location and responsibilities.</p></article><article class="service-card"><small>02</small><h3>Timing</h3><p>Target dates, urgency, available plans or site information.</p></article><article class="service-card"><small>03</small><h3>Partners</h3><p>Organizations involved and documents already available.</p></article></div></section>
 HTML,
     ],
     'mining' => [
-        'file' => 'mining.html',
-        'fr' => '../mines.html',
+        'file' => 'mining.php',
+        'fr' => '../mines.php',
         'title' => 'Mining Services and Partnerships | Groupe Babia Guinea',
         'description' => 'Mining-related support, supply and partnership opportunities handled with attention to reliability, safety and responsible local value.',
         'active' => 'mining',
@@ -108,20 +108,20 @@ HTML,
 HTML,
     ],
     'catalog' => [
-        'file' => 'catalog.html',
-        'fr' => '../catalogue.html',
+        'file' => 'catalog.php',
+        'fr' => '../catalogue.php',
         'title' => 'Product Catalog | Groupe Babia Guinea',
         'description' => 'Browse the confirmed agri-food export and import product scope of Groupe Babia Guinea.',
         'active' => 'catalog',
         'hero' => 'assets/images/agro-cajou.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/agro-cajou.webp" alt="Agricultural products catalog" width="800" height="1000" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Catalog</p><h1>Products handled by Groupe Babia</h1><p>The catalog presents the agricultural export products and food import products confirmed by the client. For a quotation, share product, volume, destination and timing.</p><div class="hero-actions"><a class="button button-primary" href="contact.html#formulaire">Request a quotation</a></div></div></section>
+          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/agro-cajou.webp" alt="Agricultural products catalog" width="800" height="1000" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Catalog</p><h1>Products handled by Groupe Babia</h1><p>The catalog presents the agricultural export products and food import products confirmed by the client. For a quotation, share product, volume, destination and timing.</p><div class="hero-actions"><a class="button button-primary" href="contact.php#formulaire">Request a quotation</a></div></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Exports</p><h2>Agricultural products</h2></div><div class="product-grid"><article class="product-card"><h3>Cocoa beans</h3><p>Export request</p></article><article class="product-card"><h3>Coffee beans</h3><p>Export request</p></article><article class="product-card"><h3>Raw cashew nuts</h3><p>Export request</p></article><article class="product-card"><h3>Soya beans</h3><p>Export request</p></article><article class="product-card"><h3>Shea butter</h3><p>Export request</p></article><article class="product-card"><h3>Honey</h3><p>Export request</p></article><article class="product-card"><h3>Sesame seeds</h3><p>Export request</p></article><article class="product-card"><h3>Fruits</h3><p>Export request</p></article></div></section>
           <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Imports</p><h2>Food commodities</h2></div><div class="product-grid"><article class="product-card"><h3>Juice</h3><p>Import request</p></article><article class="product-card"><h3>Rice</h3><p>Import request</p></article><article class="product-card"><h3>Tomatoes</h3><p>Import request</p></article><article class="product-card"><h3>Onions</h3><p>Import request</p></article><article class="product-card"><h3>Edible oil</h3><p>Import request</p></article></div></section>
 HTML,
     ],
     'projects' => [
-        'file' => 'projects.html',
+        'file' => 'projects.php',
         'fr' => '../realisations.php',
         'title' => 'Projects | Groupe Babia Guinea',
         'description' => 'Future verified projects and company references from Groupe Babia Guinea.',
@@ -133,8 +133,8 @@ HTML,
 HTML,
     ],
     'contact' => [
-        'file' => 'contact.html',
-        'fr' => '../contact.html',
+        'file' => 'contact.php',
+        'fr' => '../contact.php',
         'title' => 'Contact | Groupe Babia Guinea',
         'description' => 'Contact Groupe Babia Guinea for agri-food trade, construction, mining, fishing and partnership requests.',
         'active' => 'contact',
@@ -157,8 +157,8 @@ HTML,
 HTML,
     ],
     'legal' => [
-        'file' => 'legal.html',
-        'fr' => '../mentions-legales.html',
+        'file' => 'legal.php',
+        'fr' => '../mentions-legales.php',
         'title' => 'Legal Notice | Groupe Babia Guinea',
         'description' => 'Legal notice for the Groupe Babia Guinea website.',
         'active' => '',
@@ -166,8 +166,8 @@ HTML,
         'body' => '<section class="section legal-page"><div class="section-heading"><p class="eyebrow">Legal notice</p><h1>Legal notice</h1><p>This English version is provided for convenience. The French legal version remains the reference version.</p></div><div class="content-questions"><article><h3>Website publisher</h3><p>Groupe Babia Guinea, Conakry, Guinea. Email: infobabiaguinee@gmail.com. Phone: +224 655 903 333.</p></article><article><h3>Hosting</h3><p>The website is hosted on Bluehost infrastructure for the domain groupebabia.com.</p></article><article><h3>Intellectual property</h3><p>Texts, structure, visuals and brand elements may not be reused without authorization.</p></article></div></section>',
     ],
     'privacy' => [
-        'file' => 'privacy.html',
-        'fr' => '../confidentialite.html',
+        'file' => 'privacy.php',
+        'fr' => '../confidentialite.php',
         'title' => 'Privacy Policy | Groupe Babia Guinea',
         'description' => 'Privacy policy for contact requests sent through the Groupe Babia Guinea website.',
         'active' => '',
@@ -175,27 +175,27 @@ HTML,
         'body' => '<section class="section legal-page"><div class="section-heading"><p class="eyebrow">Privacy</p><h1>Privacy policy</h1><p>This English version is provided for convenience. The French privacy policy remains the reference version.</p></div><div class="content-questions"><article><h3>Data collected</h3><p>The contact form may collect name, company, email, phone number, request type, destination, timing and message.</p></article><article><h3>Purpose</h3><p>Data is used only to process commercial requests and follow up with the sender.</p></article><article><h3>Retention</h3><p>Archived contact messages are permanently deleted after 30 days.</p></article></div></section>',
     ],
     '404' => [
-        'file' => '404.html',
-        'fr' => '../404.html',
+        'file' => '404.php',
+        'fr' => '../404.php',
         'title' => 'Page Not Found | Groupe Babia Guinea',
         'description' => 'The requested page could not be found.',
         'active' => '',
         'hero' => 'assets/images/hero-agro-export-import.webp',
-        'body' => '<section class="section legal-page"><div class="section-heading"><p class="eyebrow">404</p><h1>Page not found</h1><p>The page you requested does not exist or has moved.</p><div class="hero-actions"><a class="button button-primary" href="index.html">Back to home</a><a class="button button-secondary" href="contact.html">Contact the team</a></div></div></section>',
+        'body' => '<section class="section legal-page"><div class="section-heading"><p class="eyebrow">404</p><h1>Page not found</h1><p>The page you requested does not exist or has moved.</p><div class="hero-actions"><a class="button button-primary" href="index.php">Back to home</a><a class="button button-secondary" href="contact.php">Contact the team</a></div></div></section>',
     ],
 ];
 
 function nav(array $page): string
 {
     $items = [
-        'home' => ['Home', 'index.html'],
-        'company' => ['Company', 'company.html'],
-        'agri-food' => ['Agri-food', 'agri-food.html'],
-        'construction' => ['Construction', 'construction.html'],
-        'mining' => ['Mining', 'mining.html'],
-        'catalog' => ['Catalog', 'catalog.html'],
-        'projects' => ['Projects', 'projects.html'],
-        'contact' => ['Contact', 'contact.html'],
+        'home' => ['Home', 'index.php'],
+        'company' => ['Company', 'company.php'],
+        'agri-food' => ['Agri-food', 'agri-food.php'],
+        'construction' => ['Construction', 'construction.php'],
+        'mining' => ['Mining', 'mining.php'],
+        'catalog' => ['Catalog', 'catalog.php'],
+        'projects' => ['Projects', 'projects.php'],
+        'contact' => ['Contact', 'contact.php'],
     ];
     $html = '';
     foreach ($items as $key => [$label, $href]) {
@@ -203,7 +203,7 @@ function nav(array $page): string
         $html .= "        <a{$class} href=\"{$href}\">{$label}</a>\n";
     }
     $html .= "        <a class=\"language-link\" href=\"{$page['fr']}\" hreflang=\"fr\">FR</a>\n";
-    $html .= "        <a class=\"nav-cta\" href=\"contact.html#formulaire\">Request a quote</a>\n";
+    $html .= "        <a class=\"nav-cta\" href=\"contact.php#formulaire\">Request a quote</a>\n";
 
     return $html;
 }
@@ -211,14 +211,14 @@ function nav(array $page): string
 function page_html(array $page): string
 {
     $canonical = 'https://www.groupebabia.com/en/' . $page['file'];
-    if ($page['file'] === 'index.html') {
+    if ($page['file'] === 'index.php') {
         $canonical = 'https://www.groupebabia.com/en/';
     }
     $frenchPath = ltrim((string) $page['fr'], './');
     if (str_starts_with($frenchPath, '../')) {
         $frenchPath = substr($frenchPath, 3);
     }
-    if ($frenchPath === 'index.html') {
+    if ($frenchPath === 'index.php') {
         $frenchPath = '';
     }
     $frenchCanonical = 'https://www.groupebabia.com/' . $frenchPath;
@@ -254,7 +254,7 @@ function page_html(array $page): string
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>
     <header class="site-header" data-header>
-      <a class="brand" href="index.html" aria-label="Groupe Babia Guinea home">
+      <a class="brand" href="index.php" aria-label="Groupe Babia Guinea home">
         <img src="../assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinea</small></span>
       </a>
@@ -272,17 +272,17 @@ HTML
       <div class="footer-card">
         <div class="footer-main">
           <div class="footer-brand">
-            <a class="footer-logo" href="index.html" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
+            <a class="footer-logo" href="index.php" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
             <p>A Guinean multisector group active in agriculture, agri-food, construction, fishing and mining-related services for local and international partners.</p>
             <div class="footer-socials" aria-label="Direct contacts"><a href="mailto:infobabiaguinee@gmail.com" aria-label="Email Groupe Babia" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="Call +224 655 903 333" title="Phone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="WhatsApp +224 620 903 333" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="Footer navigation">
-            <div><strong>Company</strong><a href="index.html">Home</a><a href="company.html">Company</a><a href="contact.html">Contact</a></div>
-            <div><strong>Activities</strong><a href="agri-food.html">Agri-food</a><a href="construction.html">Construction</a><a href="mining.html">Mining</a><a href="catalog.html">Catalog</a><a href="projects.html">Projects</a></div>
-            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.html#formulaire">Request a quote</a><a href="legal.html">Legal notice</a></div>
+            <div><strong>Company</strong><a href="index.php">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
+            <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">Projects</a></div>
+            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="legal.php">Legal notice</a></div>
           </nav>
         </div>
-        <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><div><a href="legal.html">Legal notice</a><a href="privacy.html">Privacy</a></div></div>
+        <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
     <script src="../assets/js/main.js"></script>

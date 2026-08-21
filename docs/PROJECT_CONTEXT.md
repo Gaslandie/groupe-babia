@@ -79,6 +79,7 @@
 | 2026-08-21 | Enregistrer les demandes de contact en base avant tout envoi e-mail. | Le `mailto:` seul depend du poste visiteur et peut echouer silencieusement ; la base garantit une trace consultable. | `contact-submit.php` stocke les demandes dans `contact_messages`, le back office expose `espace-gb/messages.php`, WhatsApp/e-mail restent des replis. |
 | 2026-08-21 | Envoyer les demandes formulaire a `infobabiaguinee@gmail.com` et purger les archives apres 30 jours. | Le client veut recevoir les demandes par e-mail tout en conservant une trace back office ; les messages supprimes ne doivent pas rester indefiniment. | `CONTACT_RECIPIENT_EMAIL` pilote le destinataire, les messages archives recoivent `archived_at`, puis sont supprimes automatiquement apres 30 jours. |
 | 2026-08-21 | Demarrer la version anglaise par des pages statiques dans `/en/`. | Les contenus officiels de realisations ne sont pas encore disponibles ; il faut une version anglophone presentable sans inventer de references. | Pages anglaises publiques generees par `scripts/generate-en-pages.php`, liens FR/EN dans la navigation, formulaire anglophone branche sur le meme endpoint. |
+| 2026-08-21 | Basculer les pages publiques vers PHP comme cible canonique. | Le site dispose maintenant d'un socle PHP/MySQL fonctionnel ; conserver les liens `.html` comme cible principale limiterait l'evolution dynamique. | Les menus, canoniques, sitemap et redirections pointent vers `.php` ou `/`; les anciennes URLs `.html` redirigent en 301 vers les pages PHP. |
 
 ## Non-objectifs
 

@@ -28,18 +28,18 @@
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>
     <header class="site-header" data-header>
-      <a class="brand" href="/" aria-label="Groupe Babia Guinea home">
+      <a class="brand" href="index.php" aria-label="Groupe Babia Guinea home">
         <img src="../assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinea</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
-      <nav class="site-nav" id="site-nav" data-nav>        <a href="/">Home</a>
-        <a href="company.html">Company</a>
-        <a href="agri-food.html">Agri-food</a>
-        <a href="construction.html">Construction</a>
-        <a class="is-active" href="mining.html">Mining</a>
-        <a href="catalog.html">Catalog</a>
-        <a href="projects.html">Projects</a>
+      <nav class="site-nav" id="site-nav" data-nav>        <a href="index.php">Home</a>
+        <a href="company.php">Company</a>
+        <a href="agri-food.php">Agri-food</a>
+        <a href="construction.php">Construction</a>
+        <a class="is-active" href="mining.php">Mining</a>
+        <a href="catalog.php">Catalog</a>
+        <a href="projects.php">Projects</a>
         <a href="contact.php">Contact</a>
         <a class="language-link" href="../mines.php" hreflang="fr">FR</a>
         <a class="nav-cta" href="contact.php#formulaire">Request a quote</a>
@@ -53,17 +53,17 @@
       <div class="footer-card">
         <div class="footer-main">
           <div class="footer-brand">
-            <a class="footer-logo" href="/" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
+            <a class="footer-logo" href="index.php" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
             <p>A Guinean multisector group active in agriculture, agri-food, construction, fishing and mining-related services for local and international partners.</p>
             <div class="footer-socials" aria-label="Direct contacts"><a href="mailto:infobabiaguinee@gmail.com" aria-label="Email Groupe Babia" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="Call +224 655 903 333" title="Phone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="WhatsApp +224 620 903 333" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="Footer navigation">
-            <div><strong>Company</strong><a href="/">Home</a><a href="company.html">Company</a><a href="contact.php">Contact</a></div>
-            <div><strong>Activities</strong><a href="agri-food.html">Agri-food</a><a href="construction.html">Construction</a><a href="mining.html">Mining</a><a href="catalog.html">Catalog</a><a href="projects.html">Projects</a></div>
-            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="legal.html">Legal notice</a></div>
+            <div><strong>Company</strong><a href="index.php">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
+            <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">Projects</a></div>
+            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="legal.php">Legal notice</a></div>
           </nav>
         </div>
-        <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><div><a href="legal.html">Legal notice</a><a href="privacy.html">Privacy</a></div></div>
+        <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
     <script src="../assets/js/main.js"></script>
