@@ -980,3 +980,228 @@ if (!("IntersectionObserver" in window)) {
     observateur.observe(element);
   });
 }
+
+/* ------------------------------------------------------------------ */
+/* Chargement de page                                                  */
+/* ------------------------------------------------------------------ */
+
+/* Le site sert des pages completes : entre le clic et l'arrivee, le navigateur
+   n'affiche rien et l'ancienne page reste figee. On rend cette attente lisible
+   sans la rallonger — la barre demarre au depart, le voile ne vient qu'apres un
+   delai, et l'arrivee referme la boucle par un balayage court. */
+
+// En-deca de ce delai, la page suivante arrive avant le voile : l'afficher
+// produirait un clignotement plus genant que l'attente qu'il masque.
+const ROUTE_VEIL_DELAY = reduceMotionQuery.matches ? 420 : 220;
+// Navigation abandonnee par le navigateur (telechargement, protocole inconnu,
+// annulation) : sans ce filet, le voile resterait affiche indefiniment.
+const ROUTE_SAFETY_DELAY = 12000;
+const ROUTE_PROGRESS_CEILING = 92;
+
+const routeText = isEnglishPage ? "Loading…" : "Chargement en cours…";
+
+let routeProgressNode;
+let routeBarNode;
+let routeVeilNode;
+let routeVeilTimer;
+let routeCreepTimer;
+let routeSafetyTimer;
+let routeResetTimer;
+let routeValue = 0;
+let routeIsRunning = false;
+
+function buildRouteIndicator() {
+  const progress = document.createElement("div");
+  progress.className = "route-progress";
+  progress.setAttribute("aria-hidden", "true");
+
+  const bar = document.createElement("span");
+  bar.className = "route-progress-bar";
+  progress.append(bar);
+
+  const veil = document.createElement("div");
+  veil.className = "route-veil";
+  veil.setAttribute("role", "status");
+  veil.setAttribute("aria-live", "polite");
+
+  const card = document.createElement("div");
+  card.className = "route-veil-card";
+
+  // Le logo est repris de l'en-tete : sa source est deja correcte pour le
+  // contexte de la page (racine, /en/, ou fiche servie sous <base href>).
+  const headerLogo = document.querySelector(".brand-logo");
+  const logoSource = headerLogo?.getAttribute("src");
+
+  if (logoSource) {
+    const mark = document.createElement("img");
+    mark.className = "route-veil-mark";
+    mark.src = logoSource;
+    mark.alt = "";
+    mark.width = 128;
+    mark.height = 128;
+    mark.decoding = "async";
+    card.append(mark);
+  }
+
+  const title = document.createElement("p");
+  title.className = "route-veil-title";
+  title.textContent = "Groupe Babia";
+
+  const text = document.createElement("p");
+  text.className = "route-veil-text";
+  text.textContent = routeText;
+
+  const line = document.createElement("span");
+  line.className = "route-veil-line";
+
+  card.append(title, text, line);
+  veil.append(card);
+  document.body.append(progress, veil);
+
+  routeProgressNode = progress;
+  routeBarNode = bar;
+  routeVeilNode = veil;
+}
+
+function routeSetWidth(percent) {
+  routeValue = percent;
+  routeBarNode.style.width = `${percent}%`;
+}
+
+/* Progression simulee : le navigateur ne publie aucun avancement pour une
+   navigation de document. On approche donc le plafond sans jamais l'atteindre,
+   par pas decroissants — seule l'arrivee de la page suivante termine la barre. */
+function routeCreep() {
+  const remaining = ROUTE_PROGRESS_CEILING - routeValue;
+  routeSetWidth(routeValue + Math.max(0.4, remaining * 0.12));
+  routeCreepTimer = window.setTimeout(routeCreep, 260);
+}
+
+function routeClearTimers() {
+  window.clearTimeout(routeVeilTimer);
+  window.clearTimeout(routeCreepTimer);
+  window.clearTimeout(routeSafetyTimer);
+  window.clearTimeout(routeResetTimer);
+}
+
+function routeHide() {
+  routeProgressNode.classList.remove("is-active");
+  routeVeilNode.classList.remove("is-active");
+
+  // La remise a zero attend la fin du fondu : sinon on verrait la barre
+  // revenir a gauche avant d'avoir disparu.
+  routeResetTimer = window.setTimeout(() => {
+    routeBarNode.style.transition = "none";
+    routeSetWidth(0);
+    window.requestAnimationFrame(() => {
+      routeBarNode.style.transition = "";
+    });
+  }, 260);
+}
+
+function routeReset() {
+  routeIsRunning = false;
+  routeClearTimers();
+  routeHide();
+}
+
+function routeStart() {
+  if (routeIsRunning) {
+    return;
+  }
+
+  routeIsRunning = true;
+  routeClearTimers();
+
+  routeBarNode.style.transition = "none";
+  routeSetWidth(0);
+  routeProgressNode.classList.add("is-active");
+
+  window.requestAnimationFrame(() => {
+    routeBarNode.style.transition = "";
+    // Depart franc : une barre qui rampe depuis zero se lit comme un blocage.
+    routeSetWidth(18);
+  });
+
+  routeCreepTimer = window.setTimeout(routeCreep, 320);
+  routeVeilTimer = window.setTimeout(() => routeVeilNode.classList.add("is-active"), ROUTE_VEIL_DELAY);
+  routeSafetyTimer = window.setTimeout(routeReset, ROUTE_SAFETY_DELAY);
+}
+
+/* Balayage d'arrivee : la page precedente a laisse une barre en cours, celle-ci
+   la termine. Sur une premiere visite, il se lit comme une entree soignee. */
+function routeComplete() {
+  routeProgressNode.classList.add("is-active");
+
+  window.requestAnimationFrame(() => routeSetWidth(100));
+  routeResetTimer = window.setTimeout(routeHide, 420);
+}
+
+function routeShouldIntercept(event, link) {
+  if (event.defaultPrevented || event.button !== 0) {
+    return false;
+  }
+
+  // Clic modifie : le navigateur ouvre un onglet ou une fenetre, la page
+  // courante reste affichee. Aucun voile a poser.
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+    return false;
+  }
+
+  if (link.hasAttribute("download") || (link.target && link.target !== "_self")) {
+    return false;
+  }
+
+  if ((link.getAttribute("href") || "").startsWith("#")) {
+    return false;
+  }
+
+  let target;
+
+  try {
+    target = new URL(link.href, window.location.href);
+  } catch {
+    return false;
+  }
+
+  // mailto:, tel: et les domaines externes ont une origine differente : ils ne
+  // remplacent pas la page courante.
+  if (target.origin !== window.location.origin) {
+    return false;
+  }
+
+  // Ancre sur la meme page : defilement, pas navigation.
+  return !(
+    target.hash &&
+    target.pathname === window.location.pathname &&
+    target.search === window.location.search
+  );
+}
+
+buildRouteIndicator();
+routeComplete();
+
+document.addEventListener("click", (event) => {
+  const link = event.target instanceof Element ? event.target.closest("a[href]") : null;
+
+  if (link && routeShouldIntercept(event, link)) {
+    routeStart();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  // Echap annule la navigation cote navigateur : sans ce rappel, le voile
+  // resterait pose sur une page qui, elle, ne part plus, jusqu'au filet de
+  // securite. C'est le geste naturel pour renoncer a un chargement trop long.
+  if (event.key === "Escape" && routeIsRunning) {
+    routeReset();
+  }
+});
+
+window.addEventListener("pageshow", (event) => {
+  // Retour arriere depuis le cache : la page revient telle qu'elle etait
+  // partie, voile compris. Il faut la rendre a son etat normal.
+  if (event.persisted) {
+    routeReset();
+  }
+});
