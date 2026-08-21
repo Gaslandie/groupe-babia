@@ -23,6 +23,7 @@ $site = [
     'footer_nav_label' => 'Navigation pied de page',
     'footer_text' => 'Groupe multisectoriel guinéen actif dans l\'agriculture, l\'agro-industrie, le BTP, la pêche et les services au secteur minier, au service de partenaires locaux et internationaux.',
     'copyright' => '© 2026 Groupe Babia Guinée. Tous droits réservés.',
+    'credit' => 'Site conçu par GassTech Solutions.',
     'nav_items' => [
         'home' => ['label' => 'Accueil', 'href' => '/'],
         'groupe' => ['label' => 'Le groupe', 'href' => 'groupe.php'],

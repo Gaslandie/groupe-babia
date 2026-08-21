@@ -23,6 +23,7 @@ $site = [
     'footer_nav_label' => 'Footer navigation',
     'footer_text' => 'A Guinean multisector group active in agriculture, agri-food, construction, fishing and mining-related services for local and international partners.',
     'copyright' => '© 2026 Groupe Babia Guinea. All rights reserved.',
+    'credit' => 'Website designed by GassTech Solutions.',
     'nav_items' => [
         'home' => ['label' => 'Home', 'href' => '/en/'],
         'company' => ['label' => 'Company', 'href' => 'company.php'],

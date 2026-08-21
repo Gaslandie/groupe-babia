@@ -91,7 +91,7 @@ HTML
 {$footerColumns}
           </nav>
         </div>
-        <div class="footer-bottom"><p>{$site['copyright']}</p><div>{$footerBottomLinks}</div></div>
+        <div class="footer-bottom"><p>{$site['copyright']}</p><p>{$site['credit']}</p><div>{$footerBottomLinks}</div></div>
       </div>
     </footer>
     <script src="{$assetPrefix}assets/js/main.js"></script>

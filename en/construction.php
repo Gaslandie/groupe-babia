@@ -161,7 +161,7 @@
             <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="catalog.php">Product selection</a></div>
           </nav>
         </div>
-        <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
+        <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
     <script src="../assets/js/main.js"></script>
