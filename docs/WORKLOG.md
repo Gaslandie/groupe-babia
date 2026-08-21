@@ -23,6 +23,7 @@
 | 2026-08-21 | Chemin back office prive | Codex | Dossier `admin/` renomme en `espace-gb/`, identifiant conserve `admin` | Tester `/espace-gb/login.php` sur Bluehost avant bascule |
 | 2026-08-21 | Durcissement PHP | Codex | Acces direct a `.env`, `app/`, `database/`, SQL/logs et scripts uploades bloque | Valider ces protections sur Apache Bluehost |
 | 2026-08-21 | Formulaire serveur | Codex | Stockage MySQL des demandes et ecran admin messages deployes | Ajouter notification e-mail et purge automatique |
+| 2026-08-21 | Version anglaise | Codex | Pages publiques `/en/` en cours de generation et integration | Verifier, deployer et pousser |
 
 ## A faire
 
@@ -77,3 +78,4 @@
 - Securite 2026-08-21 : protections `.htaccess` ajoutees pour secrets, dossiers techniques, migrations, uploads et back office.
 - Contact 2026-08-21 : formulaire branche sur `contact-submit.php`, stockage MySQL `contact_messages`, consultation et changement de statut dans `espace-gb/messages.php`.
 - Contact 2026-08-21 : notification e-mail vers `infobabiaguinee@gmail.com`, suppression logique par archivage, puis purge automatique des archives apres 30 jours.
+- Version anglaise 2026-08-21 : creation de pages publiques `/en/`, liens de langue FR/EN, sitemap anglophone et formulaire anglais branche sur le meme endpoint.

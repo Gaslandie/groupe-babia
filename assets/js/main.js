@@ -538,6 +538,8 @@ if (contactForm) {
   const prefillNode = document.querySelector("[data-form-prefill]");
   const prefillText = document.querySelector("[data-form-prefill-text]");
   const submitButton = contactForm.querySelector('button[type="submit"]');
+  const submitDefaultText = submitButton?.textContent ?? "";
+  const isEnglishContact = document.documentElement.lang.toLowerCase().startsWith("en");
   const needField = contactForm.elements.namedItem("need");
   const messageField = contactForm.elements.namedItem("message");
 
@@ -551,8 +553,8 @@ if (contactForm) {
   };
 
   const ERROR_MESSAGES = {
-    valueMissing: "Ce champ est nécessaire pour traiter votre demande.",
-    typeMismatch: "Le format saisi ne semble pas valide."
+    valueMissing: isEnglishContact ? "This field is required to process your request." : "Ce champ est nécessaire pour traiter votre demande.",
+    typeMismatch: isEnglishContact ? "The format entered does not look valid." : "Le format saisi ne semble pas valide."
   };
 
   contactForm.setAttribute("novalidate", "");
@@ -636,20 +638,20 @@ if (contactForm) {
     const value = (key) => String(data.get(key) ?? "").trim() || "-";
 
     return [
-      "Bonjour Groupe Babia,",
+      isEnglishContact ? "Hello Groupe Babia," : "Bonjour Groupe Babia,",
       "",
-      `Nom : ${value("name")}`,
-      `Entreprise : ${value("company")}`,
-      `E-mail : ${value("email")}`,
-      `Téléphone : ${value("phone")}`,
-      `Besoin : ${value("need")}`,
-      `Pays / destination : ${value("destination")}`,
-      `Calendrier souhaité : ${value("timeline")}`,
+      `${isEnglishContact ? "Name" : "Nom"} : ${value("name")}`,
+      `${isEnglishContact ? "Company" : "Entreprise"} : ${value("company")}`,
+      `${isEnglishContact ? "Email" : "E-mail"} : ${value("email")}`,
+      `${isEnglishContact ? "Phone" : "Téléphone"} : ${value("phone")}`,
+      `${isEnglishContact ? "Request type" : "Besoin"} : ${value("need")}`,
+      `${isEnglishContact ? "Country / destination" : "Pays / destination"} : ${value("destination")}`,
+      `${isEnglishContact ? "Expected timing" : "Calendrier souhaité"} : ${value("timeline")}`,
       "",
-      "Message :",
+      `${isEnglishContact ? "Message" : "Message"} :`,
       value("message"),
       "",
-      "Merci de me recontacter."
+      isEnglishContact ? "Please contact me back." : "Merci de me recontacter."
     ].join("\n");
   }
 
@@ -706,8 +708,10 @@ if (contactForm) {
     // mailto: peut ne rien declencher si aucun client mail n'est configure :
     // on annonce ce qui vient de se passer et on laisse deux solutions de repli.
     setStatus(
-      "Votre message est prêt",
-      `Votre logiciel de messagerie doit s'ouvrir avec le message pré-rempli, à destination de ${CONTACT_EMAIL}. S'il ne s'ouvre pas, copiez le message ou passez par WhatsApp.`
+      isEnglishContact ? "Your message is ready" : "Votre message est prêt",
+      isEnglishContact
+        ? `Your email software should open with a pre-filled message to ${CONTACT_EMAIL}. If it does not open, copy the message or use WhatsApp.`
+        : `Votre logiciel de messagerie doit s'ouvrir avec le message pré-rempli, à destination de ${CONTACT_EMAIL}. S'il ne s'ouvre pas, copiez le message ou passez par WhatsApp.`
     );
 
     window.location.href = mailtoLink();
@@ -718,8 +722,8 @@ if (contactForm) {
 
     if (!validate({ focusFirst: true })) {
       setStatus(
-        "Quelques informations manquent",
-        "Corrigez les champs signalés en rouge, puis renvoyez votre demande.",
+        isEnglishContact ? "Some information is missing" : "Quelques informations manquent",
+        isEnglishContact ? "Please correct the highlighted fields, then send your request again." : "Corrigez les champs signalés en rouge, puis renvoyez votre demande.",
         "error"
       );
       return;
@@ -729,7 +733,7 @@ if (contactForm) {
 
     if (submitButton) {
       submitButton.disabled = true;
-      submitButton.textContent = "Envoi en cours...";
+      submitButton.textContent = submitButton.dataset.loadingText || (isEnglishContact ? "Sending..." : "Envoi en cours...");
     }
 
     try {
@@ -742,24 +746,24 @@ if (contactForm) {
 
       if (response.ok && payload.ok) {
         setStatus(
-          payload.title || "Demande reçue",
-          payload.message || "Votre demande a été enregistrée. Notre équipe vous recontactera rapidement."
+          payload.title || (isEnglishContact ? "Request received" : "Demande reçue"),
+          payload.message || (isEnglishContact ? "Your request has been recorded. Our team will get back to you shortly." : "Votre demande a été enregistrée. Notre équipe vous recontactera rapidement.")
         );
         return;
       }
 
       if (payload.errors && showServerErrors(payload.errors)) {
         setStatus(
-          payload.title || "Quelques informations manquent",
-          payload.message || "Corrigez les champs signalés, puis renvoyez votre demande.",
+          payload.title || (isEnglishContact ? "Some information is missing" : "Quelques informations manquent"),
+          payload.message || (isEnglishContact ? "Please correct the highlighted fields, then send your request again." : "Corrigez les champs signalés, puis renvoyez votre demande."),
           "error"
         );
         return;
       }
 
       setStatus(
-        payload.title || "Envoi momentanément indisponible",
-        payload.message || "Utilisez l'e-mail ou WhatsApp pour transmettre votre demande.",
+        payload.title || (isEnglishContact ? "Submission temporarily unavailable" : "Envoi momentanément indisponible"),
+        payload.message || (isEnglishContact ? "Please use email or WhatsApp to send your request." : "Utilisez l'e-mail ou WhatsApp pour transmettre votre demande."),
         "error"
       );
       fallbackToEmail();
@@ -768,18 +772,18 @@ if (contactForm) {
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
-        submitButton.textContent = "Envoyer la demande";
+        submitButton.textContent = submitDefaultText;
       }
     }
   });
 
   copyButton?.addEventListener("click", async () => {
-    const text = `À : ${CONTACT_EMAIL}\n\n${messageBody()}`;
+    const text = `${isEnglishContact ? "To" : "À"} : ${CONTACT_EMAIL}\n\n${messageBody()}`;
     try {
       await navigator.clipboard.writeText(text);
-      showToast("Message copié dans le presse-papiers");
+      showToast(isEnglishContact ? "Message copied to clipboard" : "Message copié dans le presse-papiers");
     } catch {
-      showToast(`Copie impossible. Écrivez-nous à ${CONTACT_EMAIL}`);
+      showToast(isEnglishContact ? `Copy failed. Email us at ${CONTACT_EMAIL}` : `Copie impossible. Écrivez-nous à ${CONTACT_EMAIL}`);
     }
   });
 

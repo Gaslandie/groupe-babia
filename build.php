@@ -19,6 +19,7 @@ if ($withAdmin) {
 ensure_empty_directory($dist);
 
 copy_directory(project_path('assets'), $dist . DIRECTORY_SEPARATOR . 'assets');
+copy_directory(project_path('en'), $dist . DIRECTORY_SEPARATOR . 'en');
 
 foreach (['.htaccess', 'robots.txt', 'sitemap.xml'] as $staticFile) {
     copy_file(project_path($staticFile), $dist . DIRECTORY_SEPARATOR . $staticFile);

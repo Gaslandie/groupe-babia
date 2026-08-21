@@ -11,6 +11,18 @@ $files = array_map(
 );
 $files = array_merge($files, ['.htaccess', 'robots.txt', 'sitemap.xml']);
 
+if (is_dir($root . '/en')) {
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($root . '/en', FilesystemIterator::SKIP_DOTS)
+    );
+
+    foreach ($iterator as $item) {
+        if ($item->isFile()) {
+            $files[] = 'en/' . $iterator->getSubPathName();
+        }
+    }
+}
+
 if (is_dir($root . '/dist/app')) {
     foreach ($pages as $page) {
         if (isset($page['php'])) {
