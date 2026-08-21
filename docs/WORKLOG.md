@@ -28,6 +28,7 @@
 | 2026-08-21 | Correction version anglaise | Codex | Miroirs `.html` locaux avec liens `.html`, pages PHP production conservees, catalogue anglais illustre et JS catalogue/formulaire bilingue | Continuer l'enrichissement editorial page par page |
 | 2026-08-21 | Factorisation FR/EN progressive | Codex | Premier template PHP commun EN ajoute, contenus anglais separes, pages EN enrichies sur les patrons visuels FR | Deployer, pousser, puis etendre la factorisation aux pages FR sans changer le rendu |
 | 2026-08-21 | Factorisation FR/EN progressive | Codex | Template commun etendu au FR, fragments `<main>` FR extraits, generateur FR ajoute et build valide | Recette visuelle utilisateur, puis continuer les composants de contenu plus fins |
+| 2026-08-21 | Parite FR/EN | Claude | Corps EN passes en miroir de `app/pages/fr/` dans `app/pages/en/`, accueil EN complete (10 sections au lieu de 5), slider et panneau de devis EN repares, 404 EN en HTTP 404, hreflang sur les pages realisations, sitemap EN complete. Build et liens verifies en local | Recette visuelle utilisateur, puis deployer |
 
 ## A faire
 
@@ -84,5 +85,6 @@
 - Contact 2026-08-21 : notification e-mail vers `infobabiaguinee@gmail.com`, suppression logique par archivage, puis purge automatique des archives apres 30 jours.
 - Version anglaise 2026-08-21 : creation de pages publiques `/en/`, liens de langue FR/EN, sitemap anglophone et formulaire anglais branche sur le meme endpoint.
 - Bascule PHP 2026-08-21 : `DirectoryIndex index.php`, liens internes, canoniques, sitemap et redirections mis a jour pour servir PHP comme version publique principale.
-- Factorisation anglaise 2026-08-21 : extraction du layout EN dans `app/partials/site.php`, contenus EN dans `app/pages/en.php`, fragment catalogue dans `app/pages/en-catalog-body.html`, et generateur anglais reduit a l'assemblage PHP/HTML.
+- Factorisation anglaise 2026-08-21 : extraction du layout EN dans `app/partials/site.php`, metadonnees EN dans `app/pages/en.php`, et generateur anglais reduit a l'assemblage PHP/HTML.
+- Parite FR/EN 2026-08-21 : chaque corps de page anglais vit desormais dans `app/pages/en/<page>.html`, miroir 1:1 de `app/pages/fr/<page>.html`. Les deux dossiers doivent garder la meme structure de sections : c'est ce qui rend un ecart de contenu visible au lieu de laisser deux sites diverger sous un meme habillage. `app/pages/en-catalog-body.html` a ete remplace par `app/pages/en/catalog.html`.
 - Factorisation francaise 2026-08-21 : extraction des contenus `<main>` dans `app/pages/fr/`, configuration FR dans `app/pages/fr.php`, generateur `scripts/generate-fr-pages.php`, regeneration des miroirs HTML et validation du build.

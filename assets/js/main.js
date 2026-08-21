@@ -11,6 +11,10 @@ const SLIDE_DURATION = 5000;
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+// Langue de la page : les libelles rendus par le JS (slider, devis, toasts)
+// doivent suivre le <html lang> et non rester figes en francais.
+const isEnglishPage = document.documentElement.lang?.startsWith("en");
+
 /* ------------------------------------------------------------------ */
 /* Utilitaires partages                                                */
 /* ------------------------------------------------------------------ */
@@ -140,7 +144,7 @@ if (navToggle && nav) {
 /* Hero anime de la page d'accueil                                     */
 /* ------------------------------------------------------------------ */
 
-const slides = [
+const slidesFr = [
   {
     kicker: "Agroalimentaire",
     title: "Exportation et importation agroalimentaire",
@@ -167,6 +171,36 @@ const slides = [
     text: "Transformation, contrôle qualité et conditionnement des matières premières agricoles pour les marchés locaux et internationaux."
   }
 ];
+
+const slidesEn = [
+  {
+    kicker: "Agri-food",
+    title: "Agri-food export and import",
+    text: "Export: cocoa, coffee, cashew, soya, shea, honey, sesame and fruits. Import: juice, rice, tomatoes, onions and edible oil."
+  },
+  {
+    kicker: "Construction",
+    title: "Modern and durable infrastructure",
+    text: "Buildings, public works and infrastructure projects designed to support regional development."
+  },
+  {
+    kicker: "Mining sector",
+    title: "Adding value to local resources",
+    text: "Exploration, logistics and supply serving responsible, well-structured mining operations."
+  },
+  {
+    kicker: "Fishing",
+    title: "A structured fisheries value chain",
+    text: "Supply and marketing of fishing products, handled responsibly and adapted to each market."
+  },
+  {
+    kicker: "Agro-industry",
+    title: "Processing to create more value",
+    text: "Processing, quality control and packaging of agricultural raw materials for local and international markets."
+  }
+];
+
+const slides = isEnglishPage ? slidesEn : slidesFr;
 
 const slideNodes = Array.from(document.querySelectorAll("[data-slide]"));
 const dotNodes = Array.from(document.querySelectorAll("[data-dot]"));
@@ -350,7 +384,6 @@ const quoteClear = document.querySelector("[data-quote-clear]");
 const quoteMail = document.querySelector("[data-quote-mail]");
 const quoteWhatsApp = document.querySelector("[data-quote-whatsapp]");
 const selectedProducts = new Set(readSelection());
-const isEnglishPage = document.documentElement.lang?.startsWith("en");
 
 function quoteBody(products) {
   if (isEnglishPage) {

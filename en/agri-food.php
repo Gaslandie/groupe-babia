@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>(function (root) { root.classList.add("js"); window.__babiaReveal = window.setTimeout(function () { root.classList.add("no-reveal"); }, 2000); })(document.documentElement);</script>
-    <meta name="description" content="Agricultural exports and food imports handled by Groupe Babia Guinea: cocoa, coffee, raw cashew nuts, soya beans, shea butter, honey, sesame seeds, fruits, rice, juice, tomatoes, onions and edible oil.">
-    <title>Agri-food Export and Import | Groupe Babia Guinea</title>
+    <meta name="description" content="Agri-food business area of Groupe Babia Guinea: export of cocoa, coffee, cashew, soya, shea, honey and sesame, import of rice, oil and juice.">
+    <title>Agri-food, export & import | Groupe Babia Guinea</title>
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,24 +17,24 @@
     <meta property="og:site_name" content="Groupe Babia Guinea">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://www.groupebabia.com/en/agri-food.php">
-    <meta property="og:title" content="Agri-food Export and Import | Groupe Babia Guinea">
-    <meta property="og:description" content="Agricultural exports and food imports handled by Groupe Babia Guinea: cocoa, coffee, raw cashew nuts, soya beans, shea butter, honey, sesame seeds, fruits, rice, juice, tomatoes, onions and edible oil.">
+    <meta property="og:title" content="Agri-food, export & import | Groupe Babia Guinea">
+    <meta property="og:description" content="Agri-food business area of Groupe Babia Guinea: export of cocoa, coffee, cashew, soya, shea, honey and sesame, import of rice, oil and juice.">
     <meta property="og:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agri-food Export and Import | Groupe Babia Guinea">
-    <meta name="twitter:description" content="Agricultural exports and food imports handled by Groupe Babia Guinea: cocoa, coffee, raw cashew nuts, soya beans, shea butter, honey, sesame seeds, fruits, rice, juice, tomatoes, onions and edible oil.">
+    <meta name="twitter:title" content="Agri-food, export & import | Groupe Babia Guinea">
+    <meta name="twitter:description" content="Agri-food business area of Groupe Babia Guinea: export of cocoa, coffee, cashew, soya, shea, honey and sesame, import of rice, oil and juice.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
 
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>
     <header class="site-header" data-header>
-      <a class="brand" href="index.php" aria-label="Groupe Babia Guinea home">
+      <a class="brand" href="/en/" aria-label="Groupe Babia Guinea home">
         <img src="../assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinea</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
-      <nav class="site-nav" id="site-nav" data-nav>        <a href="index.php">Home</a>
+      <nav class="site-nav" id="site-nav" data-nav>        <a href="/en/">Home</a>
         <a href="company.php">Company</a>
         <a class="is-active" href="agri-food.php">Agri-food</a>
         <a href="construction.php">Construction</a>
@@ -47,25 +47,132 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-      <section class="page-hero"><img class="page-hero-media" src="../assets/images/agro-cajou.webp" alt="" width="736" height="736" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.php">Home</a></li><li><span aria-current="page">Agri-food</span></li></ol></nav><p class="eyebrow">Agri-food trade</p><h1>Agricultural exports and food imports</h1><p>Groupe Babia supports buyers and distributors looking for agricultural products from Guinea and food commodities for the local market.</p><div class="page-actions"><a class="button button-primary" href="catalog.php">View products</a><a class="button button-secondary" href="contact.php#formulaire">Request a quotation</a></div></div><aside class="page-hero-card"><strong>Confirmed scope</strong><p>The product list is limited to the export and import scope shared by the client.</p></aside></section>
-      <section class="section two-column"><div class="section-heading"><p class="eyebrow">Export and import</p><h2>A structured route for buyers and distributors</h2></div><div class="content-panel"><h3>Clear requests, useful responses</h3><p>The team qualifies product, volume, destination, timing, packaging expectations and documentation needs before commercial follow-up.</p><p>No quality grade, certification or supply volume is displayed unless it has been officially validated.</p></div></section>
-      <section class="section proof-section" aria-labelledby="agro-proof-title"><div class="section-heading"><p class="eyebrow">Buyer preparation</p><h2 id="agro-proof-title">What makes a request actionable</h2></div><div class="proof-grid"><article><span>01</span><h3>Product</h3><p>Name the product, expected quality and any required document.</p></article><article><span>02</span><h3>Volume</h3><p>Share quantity, order frequency and target timing.</p></article><article><span>03</span><h3>Destination</h3><p>Indicate country, port, market or delivery area.</p></article><article><span>04</span><h3>Packaging</h3><p>Specify bags, cartons, drums, pallets or other logistics expectations.</p></article></div></section>
-      <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Product families</p><h2>Confirmed agri-food scope</h2></div><div class="product-grid"><article class="product-card"><h3>Agricultural exports</h3><p>Cocoa beans, coffee beans, raw cashew nuts, soya beans, shea butter, honey, sesame seeds and fruits.</p></article><article class="product-card"><h3>Food imports</h3><p>Juice, rice, tomatoes, onions and edible oil are part of the import scope shared by the client.</p></article><article class="product-card"><h3>Quotation details</h3><p>Useful details include volume, timing, destination, packaging and documentation expectations.</p></article></div></section>
-      <section class="section dark-section"><div class="section-heading"><p class="eyebrow">Method</p><h2>From sourcing discussion to commercial coordination</h2></div><div class="timeline"><article><strong>01. Sourcing</strong><div><h3>Local products and partners</h3><p>Selection discussions start from identified agricultural supply chains.</p></div></article><article><strong>02. Quality</strong><div><h3>Sorting, control and packaging</h3><p>Buyer expectations are clarified before any useful offer.</p></div></article><article><strong>03. Exchange</strong><div><h3>Quotation and coordination</h3><p>Volumes, destination and conditions are qualified before the commercial response.</p></div></article></div></section>
-      <section class="contact-band"><div><p class="eyebrow">Agri-food request</p><h2>Send a clear product, volume and destination request.</h2><p>The catalog can prefill your product selection before you submit the form.</p></div><a class="button button-primary" href="catalog.php">Select products</a></section>
+      <section class="page-hero">
+        <img class="page-hero-media" src="../assets/images/agro-cajou.webp" alt="" width="736" height="736" fetchpriority="high" decoding="async">
+        <div class="page-hero-overlay"></div>
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Agri-food</span></li></ol></nav>
+          <p class="eyebrow">Agri-food business area</p>
+          <h1>Agri-food trade between export and import</h1>
+          <p>
+            An offer structured around products in strong demand: cocoa beans, coffee beans, raw cashew nuts, soya beans, shea butter, honey, sesame seeds, fruits, juice, rice, tomatoes, onions and edible oil.
+          </p>
+          <div class="page-actions">
+            <a class="button button-primary" href="catalog.php">Browse the catalog</a>
+            <a class="button button-secondary" href="contact.php?need=agro">Request a quotation</a>
+          </div>
+        </div>
+        <aside class="page-hero-card">
+          <strong>Buyers &amp; distributors</strong>
+          <p>Origin, packaging, availability and volumes are qualified according to the requirements of each request.</p>
+        </aside>
+      </section>
+
+      <section class="section two-column">
+        <div class="section-heading">
+          <p class="eyebrow">Commercial approach</p>
+          <h2>An offer designed for professional trade</h2>
+        </div>
+        <div class="content-panel">
+          <h3>Product sheets you can act on</h3>
+          <p>
+            Our catalog separates agricultural products intended for export from food products offered for import. Each request is qualified according to volumes, packaging, quality requirements and destination.
+          </p>
+          <ul class="check-list">
+            <li>Request path by email or WhatsApp, with your catalog selection carried over automatically.</li>
+            <li>Qualification of the useful criteria: origin, moisture, grading, purity, availability, volume and packaging.</li>
+            <li>Exchanges adapted to buyers, importers, wholesalers, distributors and industrial partners.</li>
+          </ul>
+          <div class="page-actions">
+            <a class="button button-primary" href="catalog.php">Select products</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof-section" aria-labelledby="agro-proof-title">
+        <div class="section-heading">
+          <p class="eyebrow">Commercial requirements</p>
+          <h2 id="agro-proof-title">What we check before making an offer</h2>
+        </div>
+        <div class="proof-grid">
+          <article>
+            <span>01</span>
+            <h3>Product</h3>
+            <p>Family, expected quality, origin, seasonality and the specifications requested by the buyer.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Volume</h3>
+            <p>Estimated quantity, frequency, desired availability and the option of progressive orders.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Packaging</h3>
+            <p>Bags, cartons, drums, pallets or specific formats depending on the product and the destination.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Logistics</h3>
+            <p>Destination country, timeline, expected documents and transport constraints to anticipate.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section soft-section">
+        <div class="section-heading">
+          <p class="eyebrow">Flagship products</p>
+          <h2>A range presented by real product families</h2>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="../assets/images/agro-cajou.webp" alt="Cashew nuts" width="736" height="736" loading="lazy" decoding="async">
+            <div><small>Export</small><h3>Raw cashew nuts</h3><p>A flagship product for processors, distributors and bulk buyers.</p></div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/agro-cacao.webp" alt="Cocoa" width="1080" height="656" loading="lazy" decoding="async">
+            <div><small>Export</small><h3>Cocoa, coffee, soya, shea and sesame</h3><p>Agricultural products to be valued with origin, drying, processing, packaging and available volumes.</p></div>
+          </article>
+          <article class="product-card">
+            <div class="product-visual import-visual"><span>Import</span></div>
+            <div><small>Import</small><h3>Rice, juice, tomatoes, onions and oil</h3><p>A food offer designed for distributors, retail outlets and local partners.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dark-section">
+        <div class="section-heading">
+          <p class="eyebrow">Value chain</p>
+          <h2>From local sourcing to the quotation request</h2>
+        </div>
+        <div class="timeline">
+          <article><strong>01. Sourcing</strong><div><h3>Local producers and partners</h3><p>Selection of products from identified agricultural supply chains.</p></div></article>
+          <article><strong>02. Quality</strong><div><h3>Sorting, control and packaging</h3><p>A clear presentation of quality expectations and of the information the buyer needs.</p></div></article>
+          <article><strong>03. Exchange</strong><div><h3>Quotation and commercial coordination</h3><p>Volumes, destination and conditions are qualified before any offer.</p></div></article>
+        </div>
+      </section>
+
+      <section class="contact-band">
+        <div>
+          <p class="eyebrow">Buyers &amp; partners</p>
+          <h2>Receive a quotation on the products you are interested in.</h2>
+          <p>Select products in the catalog or send us your requirement sheet directly.</p>
+        </div>
+        <a class="button button-primary" href="catalog.php">Open the catalog</a>
+      </section>
+
     </main>
     <footer class="site-footer">
       <div class="footer-card">
         <div class="footer-main">
           <div class="footer-brand">
-            <a class="footer-logo" href="index.php" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
+            <a class="footer-logo" href="/en/" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
             <p>A Guinean multisector group active in agriculture, agri-food, construction, fishing and mining-related services for local and international partners.</p>
             <div class="footer-socials" aria-label="Direct contacts"><a href="mailto:infobabiaguinee@gmail.com" aria-label="Email Groupe Babia" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="Call +224 655 903 333" title="Phone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="WhatsApp +224 620 903 333" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="Footer navigation">
-            <div><strong>Company</strong><a href="index.php">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
+            <div><strong>Company</strong><a href="/en/">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
             <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">Projects</a></div>
-            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="legal.php">Legal notice</a></div>
+            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="catalog.php">Product selection</a></div>
           </nav>
         </div>
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>

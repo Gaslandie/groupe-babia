@@ -45,6 +45,8 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
     <?php if ($realisation !== null): ?>
       <link rel="canonical" href="https://www.groupebabia.com/realisations/<?= e($canonicalSlug) ?>">
     <?php endif; ?>
+    <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/projects.php">
+    <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/realisations.php">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Groupe Babia Guinée">
     <meta property="og:locale" content="fr_FR">
@@ -70,6 +72,7 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
         <a href="catalogue.html">Catalogue</a>
         <a class="is-active" href="realisations.php">Réalisations</a>
         <a href="contact.html">Contact</a>
+        <a class="language-link" href="en/projects.php" hreflang="en">EN</a>
         <a class="nav-cta" href="contact.html#formulaire">Demander un devis</a>
       </nav>
     </header>

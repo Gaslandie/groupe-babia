@@ -16,7 +16,14 @@ if (!is_dir($directory) && !mkdir($directory, 0775, true) && !is_dir($directory)
 
 foreach ($pages as $page) {
     $html = babia_render_page($page, $site);
-    write_file($directory . DIRECTORY_SEPARATOR . $page['file'], $html);
+
+    // La page 404 anglaise doit repondre 404, comme son equivalent francais :
+    // servie en 200, elle serait indexee comme une page normale.
+    $statusPrefix = isset($page['status_code'])
+        ? sprintf('<?php http_response_code(%d); ?>', (int) $page['status_code']) . "\n"
+        : '';
+
+    write_file($directory . DIRECTORY_SEPARATOR . $page['file'], $statusPrefix . $html);
     echo 'Generated en/' . $page['file'] . PHP_EOL;
 
     $previewFile = preg_replace('/\.php$/', '.html', (string) $page['file']);

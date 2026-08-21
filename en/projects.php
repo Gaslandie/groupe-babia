@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>(function (root) { root.classList.add("js"); window.__babiaReveal = window.setTimeout(function () { root.classList.add("no-reveal"); }, 2000); })(document.documentElement);</script>
-    <meta name="description" content="Future verified projects and company references from Groupe Babia Guinea.">
+    <meta name="description" content="References and activities published by Groupe Babia Guinea across agri-food, construction, mining, fishing and agro-industry.">
     <title>Projects | Groupe Babia Guinea</title>
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -18,23 +18,23 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://www.groupebabia.com/en/projects.php">
     <meta property="og:title" content="Projects | Groupe Babia Guinea">
-    <meta property="og:description" content="Future verified projects and company references from Groupe Babia Guinea.">
+    <meta property="og:description" content="References and activities published by Groupe Babia Guinea across agri-food, construction, mining, fishing and agro-industry.">
     <meta property="og:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Projects | Groupe Babia Guinea">
-    <meta name="twitter:description" content="Future verified projects and company references from Groupe Babia Guinea.">
+    <meta name="twitter:description" content="References and activities published by Groupe Babia Guinea across agri-food, construction, mining, fishing and agro-industry.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
 
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>
     <header class="site-header" data-header>
-      <a class="brand" href="index.php" aria-label="Groupe Babia Guinea home">
+      <a class="brand" href="/en/" aria-label="Groupe Babia Guinea home">
         <img src="../assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinea</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
-      <nav class="site-nav" id="site-nav" data-nav>        <a href="index.php">Home</a>
+      <nav class="site-nav" id="site-nav" data-nav>        <a href="/en/">Home</a>
         <a href="company.php">Company</a>
         <a href="agri-food.php">Agri-food</a>
         <a href="construction.php">Construction</a>
@@ -47,21 +47,68 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-      <section class="page-hero"><img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.php">Home</a></li><li><span aria-current="page">Projects</span></li></ol></nav><p class="eyebrow">Projects</p><h1>Verified company projects</h1><p>Client-approved projects and references will be published here when Groupe Babia provides the official information, images and authorization to display them.</p></div><aside class="page-hero-card"><strong>No invented references</strong><p>This page is ready for official content without presenting unverified client names, figures or achievements.</p></aside></section>
-      <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Coming next</p><h2>Prepared for the future back office</h2><p>The French and English public pages will later be connected to verified projects published from the back office.</p></div></section>
+      <section class="page-hero">
+        <img class="page-hero-media" src="../assets/images/agro-industrie.webp" alt="" width="1704" height="923" fetchpriority="high" decoding="async">
+        <div class="page-hero-overlay"></div>
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Projects</span></li></ol></nav>
+          <p class="eyebrow">References &amp; activities</p>
+          <h1>Projects published as the group's activity develops</h1>
+          <p>This page brings together the operations, references and activities that Groupe Babia Guinea chooses to make public across its agri-food, construction, mining, fishing and agro-industrial areas.</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="contact.php#formulaire">Present a project</a>
+            <a class="button button-secondary" href="catalog.php">View the catalog</a>
+          </div>
+        </div>
+        <aside class="page-hero-card">
+          <strong>Updates</strong>
+          <p>The content published here comes from the back office and stays visible only after validation.</p>
+        </aside>
+      </section>
+
+      <section class="section soft-section">
+        <div class="section-heading">
+          <p class="eyebrow">Publications</p>
+          <h2>Completed activities</h2>
+          <p>A structured overview of the references the company wishes to share with its partners.</p>
+        </div>
+
+        <div class="empty-state">
+          <p class="eyebrow">Coming soon</p>
+          <h3>The first public projects will be added from the back office.</h3>
+          <p>
+            No project has been published yet. Drafts stay invisible until they are validated. The
+            <a href="../realisations.php">French version of this page</a> lists the published references as soon as they go live.
+          </p>
+          <div class="page-actions">
+            <a class="button button-primary" href="contact.php#formulaire">Contact the team</a>
+            <a class="button button-secondary" href="company.php">Discover the group</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-band">
+        <div>
+          <p class="eyebrow">Partnership</p>
+          <h2>Would you like to present an operation or qualify a request?</h2>
+          <p>The Groupe Babia team directs every exchange to the relevant business area.</p>
+        </div>
+        <a class="button button-primary" href="contact.php#formulaire">Request a discussion</a>
+      </section>
+
     </main>
     <footer class="site-footer">
       <div class="footer-card">
         <div class="footer-main">
           <div class="footer-brand">
-            <a class="footer-logo" href="index.php" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
+            <a class="footer-logo" href="/en/" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
             <p>A Guinean multisector group active in agriculture, agri-food, construction, fishing and mining-related services for local and international partners.</p>
             <div class="footer-socials" aria-label="Direct contacts"><a href="mailto:infobabiaguinee@gmail.com" aria-label="Email Groupe Babia" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="Call +224 655 903 333" title="Phone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="WhatsApp +224 620 903 333" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="Footer navigation">
-            <div><strong>Company</strong><a href="index.php">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
+            <div><strong>Company</strong><a href="/en/">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
             <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">Projects</a></div>
-            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="legal.php">Legal notice</a></div>
+            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="catalog.php">Product selection</a></div>
           </nav>
         </div>
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>

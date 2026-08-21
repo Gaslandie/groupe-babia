@@ -149,7 +149,6 @@ function babia_local_preview_html(string $html): string
         '../btp.php' => '../btp.html',
         '../mines.php' => '../mines.html',
         '../catalogue.php' => '../catalogue.html',
-        '../realisations.php' => '../realisations.html',
         '../mentions-legales.php' => '../mentions-legales.html',
         '../confidentialite.php' => '../confidentialite.html',
         '../contact.php' => '../contact.html',

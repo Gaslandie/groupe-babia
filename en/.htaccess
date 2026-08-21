@@ -1,0 +1,4 @@
+# Les URLs cassees sous /en/ doivent afficher le 404 anglais. Sans cette
+# directive, ErrorDocument de la racine renvoie la page francaise a un
+# visiteur anglophone.
+ErrorDocument 404 /en/404.php
