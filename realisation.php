@@ -68,6 +68,7 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
         <a href="btp.html">BTP</a>
         <a href="mines.html">Mines</a>
         <a href="catalogue.html">Catalogue</a>
+        <a class="is-active" href="realisations.php">Réalisations</a>
         <a href="contact.html">Contact</a>
         <a class="nav-cta" href="contact.html#formulaire">Demander un devis</a>
       </nav>
@@ -148,7 +149,7 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
           </div>
           <nav class="footer-columns" aria-label="Navigation pied de page">
             <div><strong>Groupe</strong><a href="index.html">Accueil</a><a href="groupe.html">Le groupe</a><a href="contact.html">Contact</a></div>
-            <div><strong>Activités</strong><a href="agroalimentaire.html">Agroalimentaire</a><a href="btp.html">BTP</a><a href="mines.html">Mines</a><a href="catalogue.html">Catalogue</a></div>
+            <div><strong>Activités</strong><a href="agroalimentaire.html">Agroalimentaire</a><a href="btp.html">BTP</a><a href="mines.html">Mines</a><a href="catalogue.html">Catalogue</a><a href="realisations.php">Réalisations</a></div>
             <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">E-mail</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.html">Demander un devis</a><a href="catalogue.html">Sélection produits</a></div>
           </nav>
         </div>

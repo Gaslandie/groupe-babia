@@ -51,6 +51,7 @@ $publicReadError = $publicationState['error'];
         <a href="btp.html">BTP</a>
         <a href="mines.html">Mines</a>
         <a href="catalogue.html">Catalogue</a>
+        <a class="is-active" href="realisations.php">Réalisations</a>
         <a href="contact.html">Contact</a>
         <a class="nav-cta" href="contact.html#formulaire">Demander un devis</a>
       </nav>
@@ -140,6 +141,7 @@ $publicReadError = $publicationState['error'];
               <a href="btp.html">BTP</a>
               <a href="mines.html">Mines</a>
               <a href="catalogue.html">Catalogue</a>
+              <a href="realisations.php">Réalisations</a>
             </div>
             <div>
               <strong>Contact</strong>
