@@ -41,7 +41,7 @@ jobs:
             **/.git*
             **/.git*/**
             .github/**
-            admin/**
+            espace-gb/**
             app/**
             database/**
             docs/**

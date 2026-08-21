@@ -47,7 +47,7 @@ if ($withPhp) {
     copy_directory(project_path('uploads'), $dist . DIRECTORY_SEPARATOR . 'uploads');
 
     if ($withAdmin) {
-        copy_directory(project_path('admin'), $dist . DIRECTORY_SEPARATOR . 'admin');
+        copy_directory(project_path('espace-gb'), $dist . DIRECTORY_SEPARATOR . 'espace-gb');
         copy_directory(project_path('database'), $dist . DIRECTORY_SEPARATOR . 'database');
         copy_file(project_path('.env.example'), $dist . DIRECTORY_SEPARATOR . '.env.example');
     }

@@ -71,7 +71,7 @@ Le paquet de future bascule avec back office et migrations :
 php build.php --with-admin
 ```
 
-`--with-admin` implique `--with-php` et ajoute `admin/`, `database/` et `.env.example` dans `dist/`.
+`--with-admin` implique `--with-php` et ajoute `espace-gb/`, `database/` et `.env.example` dans `dist/`.
 Le vrai `.env` doit toujours etre cree directement sur le serveur.
 
 ## Statuts
@@ -83,6 +83,8 @@ Le vrai `.env` doit toujours etre cree directement sur le serveur.
 ## Etat actuel
 
 - Connexion admin par variables d'environnement.
+- Identifiant retenu : `admin`.
+- URL de back office retenue : `/espace-gb/login.php`.
 - Tableau de bord admin.
 - Liste des realisations lue depuis MySQL si la base est configuree.
 - Ajout, modification et suppression des realisations.
@@ -92,4 +94,5 @@ Le vrai `.env` doit toujours etre cree directement sur le serveur.
 - Upload d'image implemente : JPG, PNG ou WebP, 3 Mo maximum, stockage dans `uploads/realisations/`.
 - Une seule image de couverture par realisation dans cette version.
 - Champ `client_partner` affichable publiquement quand le nom du client ou partenaire est valide.
-- Le workflow FTP exclut encore `*.php`, `admin/`, `app/` et `database/` : cette page n'est pas publiee sur Bluehost tant que la bascule PHP n'est pas validee.
+- Le workflow FTP exclut encore `*.php`, `espace-gb/`, `app/` et `database/` : cette page n'est pas publiee sur Bluehost tant que la bascule PHP n'est pas validee.
+- La bascule PHP/admin ne doit etre activee qu'apres test manuel sur Bluehost.

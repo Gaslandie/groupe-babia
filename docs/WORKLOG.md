@@ -20,6 +20,7 @@
 | 2026-08-21 | Fiches realisations et upload | Codex | Fiche detail publique, apercu accueil PHP et upload image admin ajoutes hors deploiement FTP | Tester avec une vraie base MySQL Bluehost |
 | 2026-08-21 | URLs propres realisations | Codex | URL `/realisations/{slug}` et champ client/partenaire ajoutes | Appliquer les migrations 001 puis 002 sur Bluehost |
 | 2026-08-21 | Activation back office | Codex | Runner migrations CLI, generateur de hash admin et build `--with-admin` ajoutes | Creer la base MySQL Bluehost et le `.env` serveur |
+| 2026-08-21 | Chemin back office prive | Codex | Dossier `admin/` renomme en `espace-gb/`, identifiant conserve `admin` | Tester `/espace-gb/login.php` sur Bluehost avant bascule |
 
 ## A faire
 
@@ -70,3 +71,4 @@
 - Front PHP 2026-08-21 : ajout de `realisation.php?slug=...`, apercu des 3 dernieres realisations dans `index.php` lorsque MySQL est disponible, upload image admin vers `uploads/realisations/`.
 - Front PHP 2026-08-21 : URL propre `/realisations/{slug}`, canonical associe et champ `client_partner` administrable puis affichable.
 - Back office 2026-08-21 : ajout de `database/migrate.php`, `scripts/create-admin-password-hash.php` et du build explicite `php build.php --with-admin`.
+- Back office 2026-08-21 : chemin public retenu `/espace-gb/login.php`; bascule PHP/admin uniquement apres test manuel Bluehost.

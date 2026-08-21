@@ -25,10 +25,10 @@ if (is_dir($root . '/dist/app')) {
     $files[] = 'uploads/.htaccess';
     $files[] = 'uploads/realisations/.gitkeep';
 
-    if (is_dir($root . '/dist/admin')) {
+    if (is_dir($root . '/dist/espace-gb')) {
         $files[] = '.env.example';
 
-        foreach (['admin', 'database'] as $directory) {
+        foreach (['espace-gb', 'database'] as $directory) {
             $iterator = new RecursiveIteratorIterator(
                 new RecursiveDirectoryIterator($root . DIRECTORY_SEPARATOR . $directory, FilesystemIterator::SKIP_DOTS)
             );
