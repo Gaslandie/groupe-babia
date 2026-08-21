@@ -31,6 +31,7 @@
 | 2026-08-21 | Parite FR/EN | Claude | Corps EN passes en miroir de `app/pages/fr/` dans `app/pages/en/`, accueil EN complete (10 sections au lieu de 5), slider et panneau de devis EN repares, 404 EN en HTTP 404, hreflang sur les pages realisations, sitemap EN complete. Build et liens verifies en local | Recette visuelle utilisateur, puis deployer |
 | 2026-08-21 | Transition de chargement | Claude | Barre de progression et voile de marque au changement de page, injectes par `main.js` donc actifs sur toutes les pages FR, EN et dynamiques. Bilingue, mouvement reduit respecte, retour arriere et touche Echap geres. 37 cas verifies au protocole DevTools | Recette visuelle utilisateur, puis deployer |
 | 2026-08-21 | Deploiement production | Claude | Parite FR/EN et transition de chargement mises en ligne par FTPS : 52 fichiers envoyes, 0 supprime, `.env` serveur intact, sauvegarde prealable des 27 fichiers ecrases. Verifie en ligne sur les 12 pages FR et EN | Recette visuelle client |
+| 2026-08-21 | En-tete uniforme et hero allege | Claude | Traitement superpose de l'en-tete d'accueil supprime : meme fond, meme position partout. `--header-height` mobile corrige (68 -> 72px reels), bande d'acces rapide du hero retiree, hero mobile reduit a la promesse, une phrase et deux actions. 21 controles de rendu, deploye et verifie en ligne | Recette visuelle client |
 
 ## A faire
 
