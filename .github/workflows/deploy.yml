@@ -45,6 +45,7 @@ jobs:
             docs/**
             scripts/**
             build.php
+            *.php
             README.md
             AGENTS.md
             CLAUDE.md

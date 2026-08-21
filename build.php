@@ -8,6 +8,7 @@ $config = require project_path('app/config.php');
 $pages = require project_path('app/data/pages.php');
 
 $dist = project_path('dist');
+$withPhp = in_array('--with-php', $argv, true);
 
 ensure_empty_directory($dist);
 
@@ -25,11 +26,20 @@ foreach ($pages as $page) {
     $source = project_path((string) $page['source']);
     $target = $dist . DIRECTORY_SEPARATOR . (string) $page['target'];
     copy_file($source, $target);
+
+    if ($withPhp && isset($page['php'])) {
+        copy_file(project_path((string) $page['php']), $dist . DIRECTORY_SEPARATOR . (string) $page['php']);
+    }
+}
+
+if ($withPhp) {
+    copy_directory(project_path('app'), $dist . DIRECTORY_SEPARATOR . 'app');
 }
 
 echo sprintf(
-    "Build terminé: %d pages générées dans %s pour %s\n",
+    "Build terminé: %d pages générées dans %s pour %s%s\n",
     count($pages),
     $dist,
-    $config['base_url']
+    $config['base_url'],
+    $withPhp ? ' avec les points d’entrée PHP' : ''
 );

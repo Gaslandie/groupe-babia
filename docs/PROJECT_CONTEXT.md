@@ -64,6 +64,9 @@
 | 2026-08-17 | Valider la migration PHP par un test de rendu identique au HTML actuel. | La passe UX du 2026-08-17 vit dans la structure HTML : une reecriture libre la perdrait sans que cela se voie dans un diff. | Le lot 0 ne modifie aucun rendu ; les `.html` ne sont supprimes qu'une fois le test vert. |
 | 2026-08-21 | Renforcer la preuve commerciale sans inventer de chiffres, certificats ou references client. | Le site doit gagner en credibilite internationale avant la version anglaise et le back office, mais les contenus officiels restent limites. | Ajout de blocs de qualification, preuves de methode, informations attendues et champs de contact plus exploitables. |
 | 2026-08-21 | Demarrer la migration PHP par un build statique identique. | Le site est deja en production sur Bluehost ; il faut une premiere marche sans risque avant de factoriser les gabarits. | `build.php` genere `dist/` depuis les fichiers publies, `scripts/verify-build.php` compare les sorties byte a byte. |
+| 2026-08-21 | Retenir MySQL pour le back office. | Le back office devra gerer des contenus dynamiques et rester evolutif. | Prevoir une couche donnees MySQL pour les prochaines activites/realisations, puis les contenus plus larges. |
+| 2026-08-21 | Premier perimetre back office : activites realisees par l'entreprise. | Le besoin prioritaire n'est pas encore de tout administrer, mais d'ajouter des references/realisations recentes. | Creer ensuite un module admin `realisations` avec titre, secteur, date, description, images, statut et mise en avant. |
+| 2026-08-21 | Basculer le site vers PHP progressivement. | La production actuelle est stable ; une bascule brutale augmenterait le risque. | Ajouter d'abord des pages PHP miroir, puis factoriser les partials, puis brancher MySQL et le back office. |
 
 ## Non-objectifs
 
@@ -73,7 +76,7 @@
 ## Questions ouvertes
 
 - Quelle stack utiliser pour le nouveau site ?
-- Faut-il un back office complet des le premier lot ou un lot vitrine/catalogue d'abord ?
+- Le premier back office doit gerer les activites/realisations de l'entreprise, avant un back office complet.
 - Quelle adresse e-mail officielle doit remplacer les contacts incoherents ?
 - Quels liens reseaux sociaux sont officiels ?
 - Quels contenus, images, certifications et chiffres sont valides par le client ?

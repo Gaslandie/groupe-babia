@@ -10,6 +10,14 @@ $files = array_map(
 );
 $files = array_merge($files, ['.htaccess', 'robots.txt', 'sitemap.xml']);
 
+if (is_dir($root . '/dist/app')) {
+    foreach ($pages as $page) {
+        if (isset($page['php'])) {
+            $files[] = (string) $page['php'];
+        }
+    }
+}
+
 $hasDiff = false;
 
 foreach ($files as $file) {
