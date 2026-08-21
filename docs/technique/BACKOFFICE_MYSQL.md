@@ -96,3 +96,11 @@ Le vrai `.env` doit toujours etre cree directement sur le serveur.
 - Champ `client_partner` affichable publiquement quand le nom du client ou partenaire est valide.
 - Le workflow FTP exclut encore `*.php`, `espace-gb/`, `app/` et `database/` : cette page n'est pas publiee sur Bluehost tant que la bascule PHP n'est pas validee.
 - La bascule PHP/admin ne doit etre activee qu'apres test manuel sur Bluehost.
+
+## Protections HTTP
+
+- `.env`, fichiers SQL et logs sont refuses par le `.htaccess` racine.
+- `app/` est refuse en acces web direct.
+- `database/` est refuse en acces web direct.
+- `uploads/` refuse les scripts PHP et interdit l'indexation de dossier.
+- `espace-gb/` ajoute `X-Robots-Tag: noindex` et des en-tetes no-cache.

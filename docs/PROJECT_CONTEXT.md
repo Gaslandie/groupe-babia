@@ -75,6 +75,7 @@
 | 2026-08-21 | Une seule image de couverture par realisation. | Suffisant pour la premiere version du back office et plus simple a administrer. | Pas de galerie dans ce lot ; le champ `client_partner` devient affichable quand le nom est valide. |
 | 2026-08-21 | Preparer un build d'activation admin separe. | Le site statique reste en production ; l'admin ne doit etre embarque que lors de la bascule PHP. | `php build.php --with-admin` ajoute `espace-gb/`, `database/` et `.env.example`; `database/migrate.php` applique les migrations en CLI. |
 | 2026-08-21 | Conserver `admin` comme identifiant, mais pas comme URL. | L'identifiant reste simple pour l'utilisateur ; le chemin public ne doit pas etre le chemin evident `/admin/`. | Le back office vit dans `espace-gb/`. La bascule PHP/admin ne se fait qu'apres test manuel Bluehost. |
+| 2026-08-21 | Durcir les dossiers techniques avant bascule PHP. | Les fichiers d'application, migrations et secrets ne doivent jamais etre servis directement par Apache. | `.env`, SQL/logs, `app/`, `database/` et scripts PHP dans `uploads/` sont bloques ; `espace-gb/` ajoute noindex et no-cache. |
 
 ## Non-objectifs
 

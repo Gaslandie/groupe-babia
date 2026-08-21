@@ -22,6 +22,7 @@ if (is_dir($root . '/dist/app')) {
         $files[] = (string) $phpPage;
     }
 
+    $files[] = 'app/.htaccess';
     $files[] = 'uploads/.htaccess';
     $files[] = 'uploads/realisations/.gitkeep';
 
