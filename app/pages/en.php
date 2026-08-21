@@ -118,7 +118,6 @@ $pages = [
         'title' => 'Groupe Babia Guinea | Agriculture, Construction, Mining and Fishing',
         'description' => 'Groupe Babia Guinea, a multisector partner in agriculture, agri-food, construction, mining and fishing in Guinea and West Africa.',
         'active' => 'home',
-        'body_class' => 'hero-overlay',
         'extra_head' => '    <link rel="preload" href="../assets/images/hero-agro-export-import.webp" as="image" type="image/webp" fetchpriority="high">' . "\n" . $structuredData,
         'body' => $body('index.html'),
     ],

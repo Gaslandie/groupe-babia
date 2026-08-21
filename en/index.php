@@ -55,7 +55,7 @@
 }
     </script>
   </head>
-  <body class="hero-overlay">
+  <body>
     <a class="skip-link" href="#content">Skip to main content</a>
     <header class="site-header" data-header>
       <a class="brand" href="/en/" aria-label="Groupe Babia Guinea home">
@@ -136,27 +136,6 @@
             <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
             <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
           </button>
-        </div>
-
-        <!-- Quick access band anchored at the bottom of the hero: visitors enter
-             through their own need, not through the group org chart. -->
-        <div class="hero-access">
-          <h2 class="visually-hidden">Quick access by profile</h2>
-          <article class="hero-access-item">
-            <p class="hero-access-meta">Buyers<span aria-hidden="true">·</span>Importers</p>
-            <h3><a href="catalog.php">Agricultural products ready for export</a></h3>
-            <span class="hero-access-more" aria-hidden="true">View the catalog</span>
-          </article>
-          <article class="hero-access-item">
-            <p class="hero-access-meta">Project owners<span aria-hidden="true">·</span>Construction</p>
-            <h3><a href="construction.php">Buildings, infrastructure and public works</a></h3>
-            <span class="hero-access-more" aria-hidden="true">View the construction area</span>
-          </article>
-          <article class="hero-access-item">
-            <p class="hero-access-meta">Partners<span aria-hidden="true">·</span>Institutions</p>
-            <h3><a href="company.php">Mining, fishing and agro-industry</a></h3>
-            <span class="hero-access-more" aria-hidden="true">Discover the group</span>
-          </article>
         </div>
       </section>
 

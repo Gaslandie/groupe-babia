@@ -299,9 +299,9 @@ textarea:focus-visible {
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
-  min-height: 100svh;
+  min-height: calc(100svh - var(--header-height));
   overflow: hidden;
-  padding: calc(var(--header-height) + clamp(24px, 5vw, 56px)) 0 0;
+  padding: clamp(24px, 5vw, 56px) 0 0;
   isolation: isolate;
 }
 
@@ -585,132 +585,6 @@ textarea:focus-visible {
 /* ------------------------------------------------------------------ */
 /* Bande d'acces rapide ancree en bas du hero                          */
 /* ------------------------------------------------------------------ */
-
-/* Elle occupe la derniere rangee de la grille du hero : elle est donc posee
-   sur le visuel sans jamais recouvrir le titre, quelle que soit la hauteur
-   de l'ecran. */
-.hero-access {
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-self: end;
-  padding: clamp(20px, 2.4vw, 30px) var(--gutter);
-  background: rgba(6, 20, 15, 0.42);
-  backdrop-filter: blur(14px);
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-}
-
-.hero-access-item {
-  position: relative;
-  padding: 0 clamp(18px, 2.2vw, 34px);
-  border-left: 1px solid rgba(255, 255, 255, 0.16);
-}
-
-.hero-access-item:first-of-type {
-  padding-left: 0;
-  border-left: 0;
-}
-
-.hero-access-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 10px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.7rem;
-  font-weight: 850;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.hero-access-item h3 {
-  margin: 0;
-  color: #fff;
-  font-family: var(--font-primary);
-  font-size: clamp(1rem, 1.15vw, 1.18rem);
-  font-weight: 500;
-  line-height: 1.32;
-}
-
-.hero-access-item h3 a {
-  text-decoration: none;
-}
-
-/* Lien etire : toute la carte devient cliquable sans multiplier les liens
-   pour les technologies d'assistance. */
-.hero-access-item h3 a::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-}
-
-.hero-access-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 14px;
-  color: var(--gold);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.hero-access-more::after {
-  width: 26px;
-  height: 1px;
-  content: "";
-  background: var(--gold);
-  transition: width 220ms ease;
-}
-
-.hero-access-item:hover .hero-access-more::after,
-.hero-access-item:focus-within .hero-access-more::after {
-  width: 44px;
-}
-
-/* ------------------------------------------------------------------ */
-/* En-tete superpose au hero (page d'accueil)                          */
-/* ------------------------------------------------------------------ */
-
-/* Fixe plutot que collant : le hero demarre alors en haut de la fenetre et
-   occupe toute la hauteur, le visuel passant sous l'en-tete. */
-body.hero-overlay .site-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  background: transparent;
-  backdrop-filter: none;
-  border-bottom-color: transparent;
-}
-
-body.hero-overlay .site-header:not(.is-scrolled) .brand strong,
-body.hero-overlay .site-header:not(.is-scrolled) .site-nav > a:not(.nav-cta) {
-  color: #fff;
-}
-
-body.hero-overlay .site-header:not(.is-scrolled) .brand small {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-body.hero-overlay .site-header:not(.is-scrolled) .site-nav > a:not(.nav-cta):hover {
-  color: var(--gold);
-}
-
-body.hero-overlay .site-header:not(.is-scrolled) .nav-toggle {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.4);
-}
-
-body.hero-overlay .site-header:not(.is-scrolled) .nav-toggle span {
-  background: #fff;
-}
-
-/* Des que la page defile, l'en-tete redevient opaque et lisible. */
-body.hero-overlay .site-header.is-scrolled {
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(18px);
-  border-bottom-color: var(--line);
-}
 
 .trust-strip {
   display: grid;
@@ -2538,10 +2412,6 @@ body.hero-overlay .site-header.is-scrolled {
     display: flex;
   }
 
-  body.hero-overlay .site-header:not(.is-scrolled) .site-nav.is-open > a:not(.nav-cta) {
-    color: var(--ink);
-  }
-
   /* Cible tactile pleine largeur et etat actif lisible en menu deroulant. */
   .site-nav > a:not(.nav-cta) {
     display: flex;
@@ -2587,18 +2457,6 @@ body.hero-overlay .site-header.is-scrolled {
   .media-band,
   .form-layout {
     grid-template-columns: 1fr;
-  }
-
-  .hero-access {
-    grid-template-columns: repeat(3, minmax(230px, 1fr));
-    gap: 0;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .hero-access-item {
-    scroll-snap-align: start;
   }
 
   .trust-strip,
@@ -2652,7 +2510,11 @@ body.hero-overlay .site-header.is-scrolled {
 
 @media (max-width: 640px) {
   :root {
-    --header-height: 68px;
+    /* Hauteur reelle de l'en-tete a cette taille : c'est le bouton menu, pas
+       le logo, qui la fixe. La variable servant a calculer la hauteur du hero
+       et la position du menu deroulant, une valeur sous-estimee decalait les
+       deux. */
+    --header-height: 72px;
   }
 
   .site-header {
@@ -2670,33 +2532,19 @@ body.hero-overlay .site-header.is-scrolled {
   }
 
   .hero {
-    min-height: 100svh;
-    padding: calc(var(--header-height) + 20px) 0 0;
+    min-height: calc(100svh - var(--header-height));
+    padding: 20px 0 0;
   }
 
   .hero-content {
     padding: 0 16px;
   }
 
+  /* Hero allege sur mobile : on garde la promesse, la phrase d'appui et les
+     deux actions. La legende du visuel et la liste des publics sortent — le
+     defilement reste pilotable par les puces, qui portent le nom du pole. */
   .hero-caption {
-    justify-self: stretch;
-    max-width: 100%;
-    margin: 0 16px 18px;
-    padding-top: 14px;
-  }
-
-  .hero-access {
-    padding: 18px 16px;
-  }
-
-  .hero-access-item {
-    padding: 0 16px 0 0;
-    border-left: 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.16);
-  }
-
-  .hero-access-item:last-of-type {
-    border-right: 0;
+    display: none;
   }
 
   /* Le rail passe a l'horizontale : en vertical il chevaucherait le titre.
@@ -2753,14 +2601,7 @@ body.hero-overlay .site-header.is-scrolled {
   }
 
   .hero-audience {
-    gap: 6px;
-    margin-top: 16px;
-  }
-
-  .hero-audience li {
-    min-height: 30px;
-    padding: 6px 10px;
-    font-size: 0.74rem;
+    display: none;
   }
 
   .activity-card img,
@@ -2937,7 +2778,7 @@ body.hero-overlay .site-header.is-scrolled {
    masquer du contenu ; la bande peut alors demander un leger defilement. */
 @media (max-width: 640px) and (max-height: 720px) {
   .hero {
-    padding-top: calc(var(--header-height) + 12px);
+    padding-top: 12px;
   }
 
   .hero-copy {
@@ -2959,25 +2800,8 @@ body.hero-overlay .site-header.is-scrolled {
     font-size: 0.86rem;
   }
 
-  .hero-caption {
-    margin-bottom: 12px;
-    padding-top: 12px;
-  }
-
-  .hero-caption h2 {
-    font-size: 1.1rem;
-  }
-
-  .hero-caption p {
-    font-size: 0.88rem;
-  }
-
   .hero-rail {
     padding-bottom: 8px;
-  }
-
-  .hero-access {
-    padding: 14px 16px;
   }
 }
 

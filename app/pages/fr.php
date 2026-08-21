@@ -111,7 +111,6 @@ $pages = [
         'active' => 'home',
         'alternate_href' => 'en/',
         'alternate_canonical' => 'https://www.groupebabia.com/en/',
-        'body_class' => 'hero-overlay',
         'extra_head' => '    <link rel="preload" href="assets/images/hero-agro-export-import.webp" as="image" type="image/webp" fetchpriority="high">' . "\n" . $structuredData,
         'body' => file_get_contents(__DIR__ . '/fr/index.html') ?: '',
     ],
