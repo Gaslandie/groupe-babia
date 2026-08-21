@@ -2538,6 +2538,10 @@ body.hero-overlay .site-header.is-scrolled {
     display: flex;
   }
 
+  body.hero-overlay .site-header:not(.is-scrolled) .site-nav.is-open > a:not(.nav-cta) {
+    color: var(--ink);
+  }
+
   /* Cible tactile pleine largeur et etat actif lisible en menu deroulant. */
   .site-nav > a:not(.nav-cta) {
     display: flex;
