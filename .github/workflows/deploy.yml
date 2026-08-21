@@ -1,0 +1,38 @@
+name: Deploy Groupe Babia to Bluehost
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: FTP deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy static site by FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          # A confirmer apres creation du compte FTP cloisonne.
+          # Repertoire serveur reel : /home2/fnksrwmy/groupebabia.com
+          # Si le compte FTP est bien cloisonne sur ce repertoire, le server-dir
+          # vu par ce compte devrait etre "/" ; ne pas deviner avant test.
+          server-dir: __CONFIRMER_SERVER_DIR_FTP_CLOISONNE__/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            docs/**
+            scripts/**
+            README.md
+            AGENTS.md
+            CLAUDE.md

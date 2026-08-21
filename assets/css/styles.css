@@ -1071,7 +1071,7 @@ body.hero-overlay .site-header.is-scrolled {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(23, 63, 97, 0.94), rgba(23, 75, 54, 0.92)),
-    url("../images/btp.jpg") center / cover;
+    url("../images/btp.webp") center / cover;
 }
 
 .contact-band div {

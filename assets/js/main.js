@@ -185,8 +185,32 @@ if (slideNodes.length && kickerNode) {
 
   hero?.style.setProperty("--slide-duration", `${SLIDE_DURATION}ms`);
 
+  /* Les visuels des diapositives 2 a 5 sont retires du balisage et rebranches
+     ici : positionnes dans la fenetre mais invisibles, `loading="lazy"` ne les
+     differait pas, et ils pesaient sur le premier affichage sans etre vus. */
+  function chargerVisuel(slide) {
+    const img = slide?.querySelector("img[data-src]");
+    if (img) {
+      img.src = img.dataset.src;
+      delete img.dataset.src;
+    }
+  }
+
+  function chargerVisuelsDifferes() {
+    slideNodes.forEach(chargerVisuel);
+  }
+
+  if (document.readyState === "complete") {
+    chargerVisuelsDifferes();
+  } else {
+    window.addEventListener("load", chargerVisuelsDifferes, { once: true });
+  }
+
   function updateSlide(index) {
     activeSlide = (index + slides.length) % slides.length;
+
+    // L'utilisateur peut devancer le chargement differe en cliquant une puce.
+    chargerVisuel(slideNodes[activeSlide]);
 
     slideNodes.forEach((slide, slideIndex) => {
       slide.classList.toggle("is-active", slideIndex === activeSlide);
