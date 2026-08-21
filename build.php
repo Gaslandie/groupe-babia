@@ -6,6 +6,7 @@ require __DIR__ . '/app/helpers.php';
 
 $config = require project_path('app/config.php');
 $pages = require project_path('app/data/pages.php');
+$phpPages = require project_path('app/data/php_pages.php');
 
 $dist = project_path('dist');
 $withPhp = in_array('--with-php', $argv, true);
@@ -33,6 +34,10 @@ foreach ($pages as $page) {
 }
 
 if ($withPhp) {
+    foreach ($phpPages as $phpPage) {
+        copy_file(project_path((string) $phpPage), $dist . DIRECTORY_SEPARATOR . (string) $phpPage);
+    }
+
     copy_directory(project_path('app'), $dist . DIRECTORY_SEPARATOR . 'app');
 }
 

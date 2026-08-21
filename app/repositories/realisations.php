@@ -69,6 +69,21 @@ function find_realisation(int $id): ?array
     return $item === false ? null : $item;
 }
 
+function list_published_realisations(int $limit = 12): array
+{
+    $limit = max(1, min($limit, 48));
+
+    $statement = db()->prepare(
+        'SELECT * FROM realisations
+        WHERE status = :status
+        ORDER BY is_featured DESC, COALESCE(realised_at, published_at, created_at) DESC, id DESC
+        LIMIT ' . $limit
+    );
+    $statement->execute(['status' => 'published']);
+
+    return $statement->fetchAll();
+}
+
 function realisation_slugify(string $value): string
 {
     $value = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $value) ?: $value;

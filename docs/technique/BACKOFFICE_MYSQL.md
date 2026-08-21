@@ -47,4 +47,6 @@ Table creee : `realisations`.
 - Tableau de bord admin.
 - Liste des realisations lue depuis MySQL si la base est configuree.
 - Ajout, modification et suppression des realisations.
+- Page publique `realisations.php` : lit les contenus `published` si MySQL est configure, sinon affiche un etat d'attente propre.
 - Upload d'image non implemente dans ce lot : le champ `cover_image` attend un chemin existant ou futur.
+- Le workflow FTP exclut encore `*.php`, `admin/`, `app/` et `database/` : cette page n'est pas publiee sur Bluehost tant que la bascule PHP n'est pas validee.

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $pages = require $root . '/app/data/pages.php';
+$phpPages = require $root . '/app/data/php_pages.php';
 $files = array_map(
     static fn (array $page): string => (string) $page['target'],
     $pages
@@ -15,6 +16,10 @@ if (is_dir($root . '/dist/app')) {
         if (isset($page['php'])) {
             $files[] = (string) $page['php'];
         }
+    }
+
+    foreach ($phpPages as $phpPage) {
+        $files[] = (string) $phpPage;
     }
 }
 
