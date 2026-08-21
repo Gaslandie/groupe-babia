@@ -13,12 +13,18 @@ $databaseError = null;
 $statuses = contact_message_statuses();
 $requestedStatus = isset($_GET['status']) ? (string) $_GET['status'] : null;
 $statusFilter = $requestedStatus !== null && array_key_exists($requestedStatus, $statuses) ? $requestedStatus : null;
+$purged = 0;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && database_is_configured()) {
     $id = (int) ($_POST['id'] ?? 0);
-    $status = (string) ($_POST['status'] ?? '');
+    $action = (string) ($_POST['action'] ?? 'status');
     try {
-        update_contact_message_status($id, $status);
+        if ($action === 'archive') {
+            archive_contact_message($id);
+        } else {
+            $status = (string) ($_POST['status'] ?? '');
+            update_contact_message_status($id, $status);
+        }
         header('Location: messages.php?updated=1');
         exit;
     } catch (Throwable $exception) {
@@ -28,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && database_is_configured()) {
 
 if (database_is_configured()) {
     try {
+        $purged = purge_old_archived_contact_messages(30);
         $items = list_contact_messages($statusFilter, 100);
     } catch (Throwable $exception) {
         $databaseError = $exception->getMessage();
@@ -51,6 +58,9 @@ admin_shell_start('Messages');
           <p class="notice"><?= e($databaseError) ?></p>
         <?php elseif (isset($_GET['updated'])): ?>
           <p class="notice success">Statut du message mis à jour.</p>
+        <?php endif; ?>
+        <?php if ($purged > 0): ?>
+          <p class="notice success"><?= e((string) $purged) ?> message<?= $purged > 1 ? 's' : '' ?> archivé<?= $purged > 1 ? 's' : '' ?> depuis plus de 30 jours supprimé<?= $purged > 1 ? 's' : '' ?> définitivement.</p>
         <?php endif; ?>
 
         <div class="button-row" style="margin-bottom: 18px;">
@@ -97,6 +107,7 @@ admin_shell_start('Messages');
                   <td><?= e((string) $item['created_at']) ?></td>
                   <td>
                     <form class="inline-form" method="post" action="messages.php">
+                      <input type="hidden" name="action" value="status">
                       <input type="hidden" name="id" value="<?= e((string) $item['id']) ?>">
                       <select name="status" aria-label="Statut du message">
                         <?php foreach ($statuses as $key => $label): ?>
@@ -105,6 +116,15 @@ admin_shell_start('Messages');
                       </select>
                       <button class="button secondary" type="submit" style="margin-top: 8px;">Mettre à jour</button>
                     </form>
+                    <?php if ((string) $item['status'] !== 'archived'): ?>
+                      <form class="inline-form" method="post" action="messages.php">
+                        <input type="hidden" name="action" value="archive">
+                        <input type="hidden" name="id" value="<?= e((string) $item['id']) ?>">
+                        <button class="button danger" type="submit" style="margin-top: 8px;">Supprimer</button>
+                      </form>
+                    <?php elseif (!empty($item['archived_at'])): ?>
+                      <div class="muted" style="margin-top: 8px;">Suppression définitive après 30 jours.</div>
+                    <?php endif; ?>
                   </td>
                 </tr>
               <?php endforeach; ?>

@@ -77,6 +77,7 @@
 | 2026-08-21 | Conserver `admin` comme identifiant, mais pas comme URL. | L'identifiant reste simple pour l'utilisateur ; le chemin public ne doit pas etre le chemin evident `/admin/`. | Le back office vit dans `espace-gb/`. La bascule PHP/admin ne se fait qu'apres test manuel Bluehost. |
 | 2026-08-21 | Durcir les dossiers techniques avant bascule PHP. | Les fichiers d'application, migrations et secrets ne doivent jamais etre servis directement par Apache. | `.env`, SQL/logs, `app/`, `database/` et scripts PHP dans `uploads/` sont bloques ; `espace-gb/` ajoute noindex et no-cache. |
 | 2026-08-21 | Enregistrer les demandes de contact en base avant tout envoi e-mail. | Le `mailto:` seul depend du poste visiteur et peut echouer silencieusement ; la base garantit une trace consultable. | `contact-submit.php` stocke les demandes dans `contact_messages`, le back office expose `espace-gb/messages.php`, WhatsApp/e-mail restent des replis. |
+| 2026-08-21 | Envoyer les demandes formulaire a `infobabiaguinee@gmail.com` et purger les archives apres 30 jours. | Le client veut recevoir les demandes par e-mail tout en conservant une trace back office ; les messages supprimes ne doivent pas rester indefiniment. | `CONTACT_RECIPIENT_EMAIL` pilote le destinataire, les messages archives recoivent `archived_at`, puis sont supprimes automatiquement apres 30 jours. |
 
 ## Non-objectifs
 

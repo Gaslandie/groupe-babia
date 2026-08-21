@@ -121,6 +121,15 @@ function create_contact_message(array $data): int
     return (int) db()->lastInsertId();
 }
 
+function find_contact_message(int $id): ?array
+{
+    $statement = db()->prepare('SELECT * FROM contact_messages WHERE id = :id LIMIT 1');
+    $statement->execute(['id' => $id]);
+    $item = $statement->fetch();
+
+    return $item === false ? null : $item;
+}
+
 function list_contact_messages(?string $status = null, int $limit = 80): array
 {
     $limit = max(1, min($limit, 200));
@@ -162,9 +171,30 @@ function update_contact_message_status(int $id, string $status): void
         throw new RuntimeException('Statut de message invalide.');
     }
 
-    $statement = db()->prepare('UPDATE contact_messages SET status = :status WHERE id = :id');
+    $archivedAt = $status === 'archived' ? date('Y-m-d H:i:s') : null;
+    $statement = db()->prepare('UPDATE contact_messages SET status = :status, archived_at = :archived_at WHERE id = :id');
     $statement->execute([
         'id' => $id,
         'status' => $status,
+        'archived_at' => $archivedAt,
     ]);
+}
+
+function archive_contact_message(int $id): void
+{
+    update_contact_message_status($id, 'archived');
+}
+
+function purge_old_archived_contact_messages(int $days = 30): int
+{
+    $days = max(1, min($days, 365));
+    $statement = db()->prepare(
+        'DELETE FROM contact_messages
+        WHERE status = :status
+          AND archived_at IS NOT NULL
+          AND archived_at < DATE_SUB(NOW(), INTERVAL ' . $days . ' DAY)'
+    );
+    $statement->execute(['status' => 'archived']);
+
+    return $statement->rowCount();
 }
