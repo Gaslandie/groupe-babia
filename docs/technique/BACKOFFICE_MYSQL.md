@@ -1,0 +1,49 @@
+# Back office MySQL
+
+## Perimetre initial
+
+Le premier module admin gere les activites/realisations publiees par Groupe Babia.
+Le reste du site reste vitrine tant que la bascule PHP n'est pas terminee.
+
+## Configuration
+
+1. Creer une base MySQL dans Bluehost/cPanel.
+2. Copier `.env.example` vers `.env` sur le serveur.
+3. Renseigner :
+   - `DB_HOST`
+   - `DB_PORT`
+   - `DB_NAME`
+   - `DB_USER`
+   - `DB_PASSWORD`
+   - `ADMIN_USERNAME`
+   - `ADMIN_PASSWORD_HASH`
+4. Generer le hash admin avec :
+
+```bash
+php -r 'echo password_hash("votre-mot-de-passe", PASSWORD_DEFAULT), PHP_EOL;'
+```
+
+Ne jamais committer le vrai `.env`.
+
+## Migration initiale
+
+Appliquer le fichier :
+
+```text
+database/migrations/001_create_realisations.sql
+```
+
+Table creee : `realisations`.
+
+## Statuts
+
+- `draft` : brouillon non publie ;
+- `published` : visible lorsque le front sera branche ;
+- `archived` : conserve en admin, retire de l'affichage public.
+
+## Etat actuel
+
+- Connexion admin par variables d'environnement.
+- Tableau de bord admin.
+- Liste des realisations lue depuis MySQL si la base est configuree.
+- Ajout/modification/suppression a implementer dans le prochain lot.

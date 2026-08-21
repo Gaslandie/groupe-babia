@@ -67,6 +67,7 @@
 | 2026-08-21 | Retenir MySQL pour le back office. | Le back office devra gerer des contenus dynamiques et rester evolutif. | Prevoir une couche donnees MySQL pour les prochaines activites/realisations, puis les contenus plus larges. |
 | 2026-08-21 | Premier perimetre back office : activites realisees par l'entreprise. | Le besoin prioritaire n'est pas encore de tout administrer, mais d'ajouter des references/realisations recentes. | Creer ensuite un module admin `realisations` avec titre, secteur, date, description, images, statut et mise en avant. |
 | 2026-08-21 | Basculer le site vers PHP progressivement. | La production actuelle est stable ; une bascule brutale augmenterait le risque. | Ajouter d'abord des pages PHP miroir, puis factoriser les partials, puis brancher MySQL et le back office. |
+| 2026-08-21 | Ne pas deployer l'admin tant que MySQL et les secrets ne sont pas prets. | Un back office incomplet ou sans configuration de secrets ne doit pas apparaitre en production. | Le workflow FTP exclut `admin/`, `app/`, `database/`, `.env.example`, `build.php` et les `*.php` jusqu'a la bascule. |
 
 ## Non-objectifs
 

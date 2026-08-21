@@ -41,9 +41,12 @@ jobs:
             **/.git*
             **/.git*/**
             .github/**
+            admin/**
             app/**
+            database/**
             docs/**
             scripts/**
+            .env.example
             build.php
             *.php
             README.md

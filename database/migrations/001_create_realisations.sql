@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS realisations (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(180) NOT NULL,
+  slug VARCHAR(190) NOT NULL,
+  sector ENUM('agroalimentaire', 'btp', 'mines', 'peche', 'agro-industrie', 'corporate') NOT NULL DEFAULT 'corporate',
+  summary VARCHAR(320) NOT NULL,
+  body TEXT NOT NULL,
+  location VARCHAR(160) DEFAULT NULL,
+  realised_at DATE DEFAULT NULL,
+  cover_image VARCHAR(255) DEFAULT NULL,
+  cover_alt VARCHAR(255) DEFAULT NULL,
+  is_featured TINYINT(1) NOT NULL DEFAULT 0,
+  status ENUM('draft', 'published', 'archived') NOT NULL DEFAULT 'draft',
+  published_at DATETIME DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uniq_realisations_slug (slug),
+  KEY idx_realisations_status_date (status, published_at),
+  KEY idx_realisations_sector (sector),
+  KEY idx_realisations_featured (is_featured)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
