@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Groupe Babia Guinea | Agriculture, Construction, Mining and Fishing">
     <meta name="twitter:description" content="Groupe Babia Guinea is a multisector partner based in Conakry, active in agricultural trade, food imports, construction, mining services, fishing and agro-industry.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>

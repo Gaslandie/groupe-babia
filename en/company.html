@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Company | Groupe Babia Guinea">
     <meta name="twitter:description" content="Discover Groupe Babia Guinea, a multisector company based in Conakry serving local and international partners.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>

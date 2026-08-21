@@ -24,7 +24,14 @@ function babia_render_page(array $page, array $site): string
     $canonical = (string) $page['canonical'];
     $alternateHref = (string) $page['alternate_canonical'];
     $navItems = $site['nav_items'];
+    $assetPrefix = (string) ($site['asset_prefix'] ?? '../');
+    $brandSmall = (string) ($site['brand_small'] ?? 'Guinea');
+    $contentId = (string) ($site['content_id'] ?? 'content');
+    $bodyClass = isset($page['body_class']) && $page['body_class'] !== '' ? ' class="' . e((string) $page['body_class']) . '"' : '';
+    $extraHead = (string) ($page['extra_head'] ?? '');
     $body = (string) $page['body'];
+    $footerColumns = babia_render_footer_columns($site['footer_columns']);
+    $footerBottomLinks = babia_render_footer_bottom_links($site['footer_bottom_links']);
 
     return <<<HTML
 <!doctype html>
@@ -35,10 +42,10 @@ function babia_render_page(array $page, array $site): string
     <script>(function (root) { root.classList.add("js"); window.__babiaReveal = window.setTimeout(function () { root.classList.add("no-reveal"); }, 2000); })(document.documentElement);</script>
     <meta name="description" content="{$page['description']}">
     <title>{$page['title']}</title>
-    <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
-    <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="{$assetPrefix}assets/images/favicon.png" sizes="32x32">
+    <link rel="preload" href="{$assetPrefix}assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{$assetPrefix}assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{$assetPrefix}assets/css/styles.css">
     <link rel="canonical" href="{$canonical}">
     <link rel="alternate" hreflang="{$page['alternate_lang']}" href="{$alternateHref}">
     <link rel="alternate" hreflang="{$site['lang']}" href="{$canonical}">
@@ -53,13 +60,14 @@ function babia_render_page(array $page, array $site): string
     <meta name="twitter:title" content="{$page['title']}">
     <meta name="twitter:description" content="{$page['description']}">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+{$extraHead}
   </head>
-  <body>
-    <a class="skip-link" href="#content">{$site['skip_label']}</a>
+  <body{$bodyClass}>
+    <a class="skip-link" href="#{$contentId}">{$site['skip_label']}</a>
     <header class="site-header" data-header>
       <a class="brand" href="{$site['home_href']}" aria-label="{$site['home_label']}">
-        <img src="../assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
-        <span><strong>Groupe Babia</strong><small>Guinea</small></span>
+        <img src="{$assetPrefix}assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
+        <span><strong>Groupe Babia</strong><small>{$brandSmall}</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{$site['menu_label']}" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>
@@ -68,30 +76,52 @@ HTML
     <<<HTML
       </nav>
     </header>
-    <main id="content" tabindex="-1">
+    <main id="{$contentId}" tabindex="-1">
 {$body}
     </main>
     <footer class="site-footer">
       <div class="footer-card">
         <div class="footer-main">
           <div class="footer-brand">
-            <a class="footer-logo" href="{$site['home_href']}" aria-label="{$site['home_label']}"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
+            <a class="footer-logo" href="{$site['home_href']}" aria-label="{$site['home_label']}"><img src="{$assetPrefix}assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
             <p>{$site['footer_text']}</p>
-            <div class="footer-socials" aria-label="{$site['direct_contacts_label']}"><a href="mailto:infobabiaguinee@gmail.com" aria-label="{$site['email_label']}" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="{$site['phone_label']}" title="Phone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="{$site['whatsapp_label']}" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
+            <div class="footer-socials" aria-label="{$site['direct_contacts_label']}"><a href="mailto:infobabiaguinee@gmail.com" aria-label="{$site['email_label']}" title="{$site['email_title']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="{$site['phone_label']}" title="{$site['phone_title']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="{$site['whatsapp_label']}" title="{$site['whatsapp_title']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="{$site['footer_nav_label']}">
-            <div><strong>Company</strong><a href="index.php">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
-            <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">Projects</a></div>
-            <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="legal.php">Legal notice</a></div>
+{$footerColumns}
           </nav>
         </div>
-        <div class="footer-bottom"><p>{$site['copyright']}</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
+        <div class="footer-bottom"><p>{$site['copyright']}</p><div>{$footerBottomLinks}</div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js"></script>
+    <script src="{$assetPrefix}assets/js/main.js"></script>
   </body>
 </html>
 HTML;
+}
+
+function babia_render_footer_columns(array $columns): string
+{
+    $html = '';
+    foreach ($columns as $column) {
+        $html .= '            <div><strong>' . e((string) $column['title']) . '</strong>';
+        foreach ($column['links'] as $link) {
+            $html .= '<a href="' . e((string) $link['href']) . '">' . e((string) $link['label']) . '</a>';
+        }
+        $html .= "</div>\n";
+    }
+
+    return rtrim($html, "\n");
+}
+
+function babia_render_footer_bottom_links(array $links): string
+{
+    $html = '';
+    foreach ($links as $link) {
+        $html .= '<a href="' . e((string) $link['href']) . '">' . e((string) $link['label']) . '</a>';
+    }
+
+    return $html;
 }
 
 function babia_local_preview_html(string $html): string

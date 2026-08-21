@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Construction and Public Works | Groupe Babia Guinea">
     <meta name="twitter:description" content="Groupe Babia supports construction and public works opportunities in Guinea through project qualification, coordination and partner follow-up.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>

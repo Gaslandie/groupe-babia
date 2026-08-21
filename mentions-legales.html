@@ -3,73 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-      /* Pose la classe `js` avant le premier rendu : l'etat cache des elements
-         animes est alors applique d'emblee, sans que le contenu clignote.
-         Le minuteur revele tout si assets/js/main.js ne demarre pas ; il est
-         desamorce des la premiere ligne de ce fichier. */
-      (function (racine) {
-        racine.classList.add("js");
-        window.__babiaReveal = window.setTimeout(function () {
-          racine.classList.add("no-reveal");
-        }, 2000);
-      })(document.documentElement);
-    </script>
+    <script>(function (root) { root.classList.add("js"); window.__babiaReveal = window.setTimeout(function () { root.classList.add("no-reveal"); }, 2000); })(document.documentElement);</script>
     <meta name="description" content="Mentions légales de Groupe Babia Guinée : éditeur du site, hébergement, propriété intellectuelle et limites de responsabilité des informations publiées.">
     <title>Mentions légales | Groupe Babia Guinée</title>
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
+    <link rel="preload" href="assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
-    
-        <!-- URL canonique de production. -->
     <link rel="canonical" href="https://www.groupebabia.com/mentions-legales.php">
-    
-        <!-- Apercu de partage : WhatsApp est le canal de contact principal du groupe. -->
-    <meta property="og:type" content="article">
+    <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/legal.php">
+    <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/mentions-legales.php">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Groupe Babia Guinée">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:url" content="https://www.groupebabia.com/mentions-legales.php">
     <meta property="og:title" content="Mentions légales | Groupe Babia Guinée">
     <meta property="og:description" content="Mentions légales de Groupe Babia Guinée : éditeur du site, hébergement, propriété intellectuelle et limites de responsabilité des informations publiées.">
     <meta property="og:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Produits agroalimentaires de Groupe Babia Guinée prêts à l'expédition">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mentions légales | Groupe Babia Guinée">
     <meta name="twitter:description" content="Mentions légales de Groupe Babia Guinée : éditeur du site, hébergement, propriété intellectuelle et limites de responsabilité des informations publiées.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
-    
-        <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Accueil",
-      "item": "https://www.groupebabia.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Mentions légales",
-      "item": "https://www.groupebabia.com/mentions-legales.php"
-    }
-  ]
-}
-    </script>
+
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu principal</a>
-    <header class="site-header">
+    <header class="site-header" data-header>
       <a class="brand" href="/" aria-label="Accueil Groupe Babia Guinée">
         <img src="assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinée</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu" data-nav-toggle><span></span><span></span><span></span></button>
-      <nav class="site-nav" id="site-nav" data-nav>
-        <a href="/">Accueil</a>
+      <nav class="site-nav" id="site-nav" data-nav>        <a href="/">Accueil</a>
         <a href="groupe.php">Le groupe</a>
         <a href="agroalimentaire.php">Agroalimentaire</a>
         <a href="btp.php">BTP</a>
@@ -81,7 +46,6 @@
         <a class="nav-cta" href="contact.php#formulaire">Demander un devis</a>
       </nav>
     </header>
-
     <main id="contenu" tabindex="-1">
       <section class="page-hero legal-hero">
         <img class="page-hero-media" src="assets/images/agro-cacao.webp" alt="" width="1080" height="656" fetchpriority="high" decoding="async">
@@ -125,8 +89,8 @@
           <a class="button button-ghost" href="/">Retour à l'accueil</a>
         </div>
       </section>
-    </main>
 
+    </main>
     <footer class="site-footer">
       <div class="footer-card">
         <div class="footer-main">

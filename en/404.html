@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Page Not Found | Groupe Babia Guinea">
     <meta name="twitter:description" content="The requested page could not be found.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>

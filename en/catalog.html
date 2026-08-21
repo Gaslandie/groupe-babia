@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Product Catalog | Groupe Babia Guinea">
     <meta name="twitter:description" content="Browse the confirmed agri-food export and import product scope of Groupe Babia Guinea.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>

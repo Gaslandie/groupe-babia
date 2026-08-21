@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Agri-food Export and Import | Groupe Babia Guinea">
     <meta name="twitter:description" content="Agricultural exports and food imports handled by Groupe Babia Guinea: cocoa, coffee, raw cashew nuts, soya beans, shea butter, honey, sesame seeds, fruits, rice, juice, tomatoes, onions and edible oil.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>

@@ -81,6 +81,7 @@
 | 2026-08-21 | Demarrer la version anglaise par des pages statiques dans `/en/`. | Les contenus officiels de realisations ne sont pas encore disponibles ; il faut une version anglophone presentable sans inventer de references. | Pages anglaises publiques generees par `scripts/generate-en-pages.php`, liens FR/EN dans la navigation, formulaire anglophone branche sur le meme endpoint. |
 | 2026-08-21 | Basculer les pages publiques vers PHP comme cible canonique. | Le site dispose maintenant d'un socle PHP/MySQL fonctionnel ; conserver les liens `.html` comme cible principale limiterait l'evolution dynamique. | Les menus, canoniques, sitemap et redirections pointent vers `.php` ou `/`; les anciennes URLs `.html` redirigent en 301 vers les pages PHP. |
 | 2026-08-21 | Factoriser progressivement la version anglaise via un template PHP commun. | Le generateur anglais contenait le layout et les contenus dans un seul fichier, ce qui rendait l'alignement UI/UX avec la reference francaise fragile. | `app/partials/site.php` porte le chrome commun EN, `app/pages/en.php` porte les contenus par langue et `scripts/generate-en-pages.php` assemble les pages PHP plus miroirs HTML. |
+| 2026-08-21 | Etendre le template commun a la version francaise sans refonte visuelle. | La version francaise reste la reference UI/UX, mais elle devait rejoindre progressivement l'architecture partagee pour eviter deux sites divergents. | Les contenus `<main>` FR vivent dans `app/pages/fr/`, `app/pages/fr.php` porte la configuration francaise et `scripts/generate-fr-pages.php` regenere les miroirs HTML canoniques. |
 
 ## Non-objectifs
 
@@ -96,4 +97,4 @@
 - Quels contenus, images, certifications et chiffres sont valides par le client ?
 - Remplacer les medias issus du site actuel par des medias officiels si le client les fournit.
 - Brancher les realisations dynamiques en anglais quand le client aura fourni les contenus officiels.
-- Etendre progressivement le meme modele de contenu/template aux pages francaises lorsque le rendu identique peut etre garanti.
+- Continuer a reduire les differences purement historiques de markup entre FR et EN, en gardant la FR comme reference visuelle.

@@ -27,6 +27,7 @@
 | 2026-08-21 | Bascule PHP publique | Codex | Pages publiques basculees en URLs PHP canoniques en local | Deployer, verifier production et pousser |
 | 2026-08-21 | Correction version anglaise | Codex | Miroirs `.html` locaux avec liens `.html`, pages PHP production conservees, catalogue anglais illustre et JS catalogue/formulaire bilingue | Continuer l'enrichissement editorial page par page |
 | 2026-08-21 | Factorisation FR/EN progressive | Codex | Premier template PHP commun EN ajoute, contenus anglais separes, pages EN enrichies sur les patrons visuels FR | Deployer, pousser, puis etendre la factorisation aux pages FR sans changer le rendu |
+| 2026-08-21 | Factorisation FR/EN progressive | Codex | Template commun etendu au FR, fragments `<main>` FR extraits, generateur FR ajoute et build valide | Recette visuelle utilisateur, puis continuer les composants de contenu plus fins |
 
 ## A faire
 
@@ -84,3 +85,4 @@
 - Version anglaise 2026-08-21 : creation de pages publiques `/en/`, liens de langue FR/EN, sitemap anglophone et formulaire anglais branche sur le meme endpoint.
 - Bascule PHP 2026-08-21 : `DirectoryIndex index.php`, liens internes, canoniques, sitemap et redirections mis a jour pour servir PHP comme version publique principale.
 - Factorisation anglaise 2026-08-21 : extraction du layout EN dans `app/partials/site.php`, contenus EN dans `app/pages/en.php`, fragment catalogue dans `app/pages/en-catalog-body.html`, et generateur anglais reduit a l'assemblage PHP/HTML.
+- Factorisation francaise 2026-08-21 : extraction des contenus `<main>` dans `app/pages/fr/`, configuration FR dans `app/pages/fr.php`, generateur `scripts/generate-fr-pages.php`, regeneration des miroirs HTML et validation du build.

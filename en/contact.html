@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Contact | Groupe Babia Guinea">
     <meta name="twitter:description" content="Contact Groupe Babia Guinea for agri-food trade, construction, mining, fishing and partnership requests.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>

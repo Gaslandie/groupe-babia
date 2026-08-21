@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Privacy Policy | Groupe Babia Guinea">
     <meta name="twitter:description" content="Privacy policy for contact requests sent through the Groupe Babia Guinea website.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>

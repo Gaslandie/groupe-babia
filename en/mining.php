@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Mining Services and Partnerships | Groupe Babia Guinea">
     <meta name="twitter:description" content="Mining-related support, supply and partnership opportunities handled with attention to reliability, safety and responsible local value.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
+
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>
