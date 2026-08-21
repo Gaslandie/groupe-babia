@@ -76,13 +76,50 @@ Ce point ne bloque pas la mise en ligne : le formulaire reste en `mailto:` d'ici
 
 ## 5. A faire cote Bluehost — cPanel
 
-1. **Domaines** → ajouter `groupebabia.com` (domaine additionnel, ou principal selon le
-   compte). Noter le **repertoire racine** cree, en general `public_html/groupebabia.com`.
-2. **MultiPHP Manager** → passer le domaine en **PHP 8.1 ou superieur**.
-3. **Comptes FTP** → creer un compte dedie au deploiement, limite au repertoire racine du
-   site. Conserver hote, identifiant et mot de passe : ils alimenteront les secrets GitHub.
-4. Une fois le DNS propage : **SSL/TLS Status** → lancer **Run AutoSSL** pour obtenir le
-   certificat gratuit. Cette etape echoue tant que le domaine ne pointe pas sur Bluehost.
+### 5.1 Contrainte majeure : le compte heberge deja d'autres sites
+
+Le compte Bluehost heberge deja d'autres sites clients, dont `cipsarlu.com` et
+`ecgplusgn.com`. `groupebabia.com` sera donc un **domaine additionnel**, et toute erreur de
+chemin lors d'un deploiement automatique ecrirait dans le repertoire d'un autre client.
+
+Trois garde-fous, dans cet ordre d'importance :
+
+1. **Compte FTP cloisonne.** Creer un compte FTP dont le repertoire de base est celui de
+   `groupebabia.com`, et non `public_html`. C'est le seul garde-fou qui tient meme si le
+   workflow est mal configure : un compte cloisonne ne peut physiquement pas ecrire ailleurs.
+   Ne jamais utiliser le compte FTP principal du compte d'hebergement.
+2. **`server-dir` explicite** dans le workflow de deploiement. Jamais `/`.
+3. **Jamais d'option d'effacement prealable** du repertoire distant. Sur
+   `SamKirkland/FTP-Deploy-Action`, cela signifie ne jamais activer `dangerous-clean-slate`.
+
+### 5.2 Le fichier `.htaccess` ne doit jamais remonter d'un cran
+
+Le `.htaccess` prevu contient une redirection vers `https://www.groupebabia.com/`. Depose
+par erreur dans `public_html/`, il redirigerait **tous les sites du compte** vers
+Groupe Babia. Il doit rester dans le repertoire du domaine additionnel.
+
+Verifier egalement qu'un `.htaccess` existant dans `public_html/`, appartenant au site
+principal, ne perturbe pas le nouveau domaine.
+
+### 5.3 Duplication d'adresse — deja couverte
+
+Sur Bluehost, le repertoire d'un domaine additionnel est generalement cree **a l'interieur**
+de `public_html`. Le site devient alors aussi accessible via
+`domaine-principal.com/groupebabia.com/`, ce qui constitue un contenu duplique.
+
+Les balises canoniques posees le 2026-08-18 pointent vers `https://www.groupebabia.com/` :
+le probleme est deja neutralise, sans action supplementaire.
+
+### 5.4 Marche a suivre
+
+1. **Domaines** → ajouter `groupebabia.com` en domaine additionnel. Noter le **repertoire
+   racine** cree et **verifier qu'il est vide**.
+2. **MultiPHP Manager** → passer **ce domaine** en PHP 8.1 ou superieur. Verifier que le
+   reglage est bien applique par domaine et non au compte entier, sous peine de modifier la
+   version PHP des autres sites.
+3. **Comptes FTP** → creer le compte cloisonne decrit en 5.1.
+4. Une fois le DNS propage : **SSL/TLS Status** → **Run AutoSSL**. Cette etape echoue tant
+   que le domaine ne pointe pas sur Bluehost.
 5. **Ne pas** creer de compte e-mail chez Bluehost : la messagerie reste chez OVH.
 
 ## 6. A faire dans le depot

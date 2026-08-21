@@ -64,7 +64,12 @@ l'execution, utiliser la sienne : ne pas inventer.
 
 ## 3. Fichier `.htaccess`
 
-A creer a la racine du site. Bluehost tourne sous Apache, `mod_rewrite` est disponible.
+A creer a la racine du depot, pour etre deploye dans le repertoire du domaine. Bluehost
+tourne sous Apache, `mod_rewrite` est disponible.
+
+**Attention :** ce fichier redirige vers `https://www.groupebabia.com/`. Depose par erreur
+dans le `public_html/` du compte, il redirigerait **tous les sites du compte** vers Groupe
+Babia. C'est la raison pour laquelle le `server-dir` du workflow doit etre explicite.
 
 Contenu attendu, dans cet ordre :
 
@@ -105,11 +110,24 @@ done
 Creer `.github/workflows/deploy.yml` : a chaque `push` sur `main`, envoyer le site par FTP
 vers Bluehost.
 
-Contraintes :
+### Le compte Bluehost heberge d'autres sites clients
+
+`cipsarlu.com` et `ecgplusgn.com` vivent sur le meme compte. Une erreur de chemin dans ce
+workflow ecrirait dans le repertoire d'un autre client. Trois regles, non negociables :
+
+1. **`server-dir` explicite**, pointant sur le repertoire de `groupebabia.com` communique
+   par l'utilisateur. **Jamais `/`**, jamais une valeur devinee : si le chemin n'a pas ete
+   fourni, s'arreter et le demander.
+2. **Ne jamais activer `dangerous-clean-slate`** ni aucune option d'effacement prealable du
+   repertoire distant.
+3. Le compte FTP utilise est **cloisonne** au repertoire du domaine, cree par l'utilisateur.
+   Ne jamais suggerer d'utiliser le compte FTP principal de l'hebergement.
+
+### Autres contraintes
 
 - N'envoyer que ce qui doit etre publie : les `*.html`, `assets/`, `sitemap.xml`,
-  `robots.txt`, `.htaccess`. **Exclure** `docs/`, `.git/`, `README.md`, `AGENTS.md`,
-  `CLAUDE.md`, `scripts/`.
+  `robots.txt`, `.htaccess`. **Exclure** `docs/`, `.git/`, `.github/`, `README.md`,
+  `AGENTS.md`, `CLAUDE.md`, `scripts/`.
 - Identifiants en **secrets GitHub** — jamais dans le depot :
   `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
 - Prevoir un declenchement manuel (`workflow_dispatch`) en plus du `push`.
@@ -117,8 +135,9 @@ Contraintes :
 L'action `SamKirkland/FTP-Deploy-Action` couvre ce besoin. C'est une dependance de chaine
 de publication, pas une dependance du site : elle ne modifie pas le code livre.
 
-**Ne pas pousser le workflow avant que l'utilisateur ait cree les trois secrets** — sinon
-chaque `push` produira un echec bruyant.
+**Ne pas pousser le workflow avant que l'utilisateur ait cree les trois secrets et
+communique le chemin exact du repertoire** — sinon chaque `push` produira un echec bruyant,
+ou pire, un envoi au mauvais endroit.
 
 ## Criteres d'acceptation
 
