@@ -617,6 +617,8 @@ if (contactForm) {
       `E-mail : ${value("email")}`,
       `Téléphone : ${value("phone")}`,
       `Besoin : ${value("need")}`,
+      `Pays / destination : ${value("destination")}`,
+      `Calendrier souhaité : ${value("timeline")}`,
       "",
       "Message :",
       value("message"),

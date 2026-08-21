@@ -884,6 +884,48 @@ body.hero-overlay .site-header.is-scrolled {
   line-height: 1.55;
 }
 
+.proof-section {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 38px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.proof-grid article {
+  min-height: 220px;
+  padding: 26px;
+  background: #f8faf7;
+}
+
+.proof-grid span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.proof-grid h3 {
+  margin: 0 0 12px;
+  color: var(--forest);
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.proof-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .activities-section {
   background: #e8efeb;
 }
@@ -1620,6 +1662,27 @@ body.hero-overlay .site-header.is-scrolled {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.soft-section .content-questions,
+.section:not(.dark-section) .content-questions {
+  background: var(--line);
+  border-color: var(--line);
+}
+
+.soft-section .content-questions article,
+.section:not(.dark-section) .content-questions article {
+  background: var(--surface);
+}
+
+.soft-section .content-questions h3,
+.section:not(.dark-section) .content-questions h3 {
+  color: var(--forest);
+}
+
+.soft-section .content-questions p,
+.section:not(.dark-section) .content-questions p {
+  color: var(--muted);
+}
+
 /* Le panneau de devis n'apparait qu'a partir d'un produit selectionne : il ne
    recouvre plus le catalogue quand la selection est vide. */
 .quote-dock {
@@ -1755,6 +1818,28 @@ body.hero-overlay .site-header.is-scrolled {
   border: 1px dashed var(--line-strong);
   border-radius: var(--radius);
   font-size: 0.92rem;
+}
+
+.catalogue-note {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.26fr) 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-top: 14px;
+  padding: 18px 20px;
+  color: #fff;
+  background: var(--forest);
+  border-radius: var(--radius);
+}
+
+.catalogue-note strong {
+  color: var(--gold);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+}
+
+.catalogue-note span {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .is-selected {
@@ -2454,6 +2539,7 @@ body.hero-overlay .site-header.is-scrolled {
 
   .trust-strip,
   .activity-grid,
+  .proof-grid,
   .commitment-grid,
   .metric-grid,
   .service-grid,
@@ -2658,6 +2744,7 @@ body.hero-overlay .site-header.is-scrolled {
   }
 
   .activity-grid,
+  .proof-grid,
   .commitment-grid,
   .metric-grid,
   .service-grid,
@@ -2673,6 +2760,11 @@ body.hero-overlay .site-header.is-scrolled {
 
   .quick-access {
     padding: 38px 16px;
+  }
+
+  .catalogue-note {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .quick-access-grid a {

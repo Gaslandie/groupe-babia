@@ -13,6 +13,7 @@
 | 2026-08-17 | Passe UX | Claude | Correctifs UX codes, verifies en local sur 11 pages, pousses sur `main` | Recette visuelle client, puis remplacement des medias |
 | 2026-08-17 | Benchmark SGS | Claude | Analyse structurelle et plan priorise redige dans `docs/design-ux/BENCHMARK_SGS.md` | Debloquer les contenus client pour les lots P0 |
 | 2026-08-17 | Migration PHP + version EN | Claude | Plan d'execution redige dans `docs/technique/MIGRATION_PHP.md`. Voie retenue : PHP ecrit, HTML genere, publie par GitHub Actions. Tache du lot 0 cadree | Codex execute `docs/taches/LOT-0-SOCLE-PHP.md` |
+| 2026-08-21 | Renforcement credibilite vitrine | Codex | Blocs de preuve commerciale, qualification BTP/mines/agro, formulaire enrichi et contenus de confiance ajoutes en statique | Verifier puis deployer sur Bluehost |
 
 ## A faire
 
@@ -53,3 +54,5 @@
 - Passe UX 2026-08-17 : formulaire de contact avec champs obligatoires marques, validation en ligne, statut d'envoi, repli copier/WhatsApp et pre-remplissage par `?besoin=`.
 - Passe UX 2026-08-17 : page `404.html`, bouton retour en haut, icones SVG au pied de page, dimensions et chargement differe sur les images.
 - Verifications 2026-08-17 : `node --check assets/js/main.js`, 11 pages en HTTP 200, aucune requete 404, structure HTML equilibree, parcours catalogue/contact et slider pilotes via Chrome DevTools Protocol.
+- Mise en ligne Bluehost 2026-08-21 : FTP GitHub Actions fonctionnel, domaine `https://www.groupebabia.com/` servi en HTTPS, apex redirige vers `www`.
+- Renforcement 2026-08-21 : ajout de preuves de methode, informations attendues pour cotation, champs destination/calendrier et nettoyage des commentaires canoniques.

@@ -20,7 +20,7 @@
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
     <link rel="stylesheet" href="assets/css/styles.css">
     
-        <!-- URL de reference. A mettre a jour le jour du passage sur le domaine propre. -->
+        <!-- URL canonique de production. -->
     <link rel="canonical" href="https://www.groupebabia.com/contact.html">
     
         <!-- Apercu de partage : WhatsApp est le canal de contact principal du groupe. -->
@@ -175,6 +175,18 @@
               <option value="Information corporate">Information corporate</option>
             </select>
           </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="destination">Pays / destination <span class="optional">(facultatif)</span></label>
+              <input id="destination" name="destination" type="text" autocomplete="country-name" placeholder="Guinée, pays de destination ou site du projet">
+              <p class="field-error" id="destination-error"></p>
+            </div>
+            <div class="field">
+              <label for="timeline">Calendrier souhaité <span class="optional">(facultatif)</span></label>
+              <input id="timeline" name="timeline" type="text" placeholder="Urgent, ce mois-ci, trimestre, date cible...">
+              <p class="field-error" id="timeline-error"></p>
+            </div>
+          </div>
           <div class="field">
             <label for="message">Message <span class="required-mark" aria-hidden="true">*</span></label>
             <textarea id="message" name="message" placeholder="Décrivez le produit, la quantité, le projet, la destination ou le calendrier." required></textarea>
@@ -204,6 +216,20 @@
           <article class="service-card"><small>Agro</small><h3>Produit, quantité, destination</h3><p>Ajoutez les volumes, le calendrier, le pays et les attentes de conditionnement.</p></article>
           <article class="service-card"><small>BTP</small><h3>Type de projet et localisation</h3><p>Précisez la nature des travaux, la ville, le délai souhaité et les documents disponibles.</p></article>
           <article class="service-card"><small>Mines</small><h3>Périmètre et contexte</h3><p>Décrivez le besoin, les partenaires concernés et les contraintes opérationnelles.</p></article>
+        </div>
+        <div class="content-questions" aria-label="Aide à la préparation de demande">
+          <article>
+            <h3>Demande agroalimentaire</h3>
+            <p>Produit, volume, conditionnement, destination, fréquence d'achat et documents attendus facilitent une cotation utile.</p>
+          </article>
+          <article>
+            <h3>Projet BTP ou minier</h3>
+            <p>Localisation, périmètre, calendrier, responsabilités, plans ou photos disponibles permettent un premier cadrage sérieux.</p>
+          </article>
+          <article>
+            <h3>Partenariat</h3>
+            <p>Présentez l'entreprise, le rôle attendu de Groupe Babia et les contraintes commerciales ou opérationnelles connues.</p>
+          </article>
         </div>
       </section>
     </main>

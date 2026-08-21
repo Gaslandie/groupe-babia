@@ -19,11 +19,11 @@
 
 ## Deploiement
 
-- Environnement : GitHub Pages ou hebergement web classique.
-- Commande ou procedure : commit puis `git push origin main`.
+- Environnement : Bluehost, domaine `https://www.groupebabia.com/`.
+- Commande ou procedure : commit puis `git push origin main`, puis workflow GitHub Actions `Deploy Groupe Babia to Bluehost`.
 - Heure de debut :
 - Heure de fin :
-- URL / artefact : https://gaslandie.github.io/groupe-babia/
+- URL / artefact : https://www.groupebabia.com/
 
 ## Post-check
 
