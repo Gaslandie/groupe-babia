@@ -96,15 +96,32 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-          <p class="eyebrow" data-slide-kicker>Agri-food</p>
-          <h1 class="hero-title" data-slide-title>Agri-food export and import</h1>
-          <p class="hero-copy" data-slide-text>
-            Export: cocoa, coffee, cashew, soya, shea, honey, sesame and fruits. Import: juice, rice, tomatoes, onions and edible oil.
+          <p class="eyebrow">Trade, projects and partnerships from Conakry</p>
+          <h1 class="hero-title">
+            <span class="hero-title-lead">Groupe</span>
+            <span class="hero-title-strong">Babia Guinea</span>
+          </h1>
+          <p class="hero-copy">
+            We export agricultural products, import food commodities and support construction, mining, fishing and agro-industrial projects for buyers, distributors, institutions and companies.
           </p>
+          <ul class="hero-audience" aria-label="Who we work with">
+            <li>Buyers &amp; importers</li>
+            <li>Companies &amp; institutions</li>
+            <li>Industrial partners</li>
+          </ul>
           <div class="hero-actions">
             <a class="button button-primary" href="#activities">View our activities</a>
             <a class="button button-secondary" href="contact.php">Request a quotation</a>
           </div>
+        </div>
+
+        <!-- Slide caption: describes the business area shown by the current slide. -->
+        <div class="hero-caption" aria-live="polite" aria-atomic="true">
+          <p class="hero-caption-kicker" data-slide-kicker>Agri-food</p>
+          <h2 data-slide-title>Agri-food export and import</h2>
+          <p data-slide-text>
+            Export: cocoa, coffee, cashew, soya, shea, honey, sesame and fruits. Import: juice, rice, tomatoes, onions and edible oil.
+          </p>
         </div>
 
         <div class="hero-rail" role="group" aria-roledescription="carousel" aria-label="Business areas">
@@ -120,28 +137,24 @@
             <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
           </button>
         </div>
+      </section>
 
-        <div class="hero-marquee" aria-label="Groupe Babia highlights">
-          <div class="hero-marquee-track" aria-hidden="true">
-            <div class="hero-marquee-group">
-              <span>Buyers &amp; importers</span>
-              <span>Companies &amp; institutions</span>
-              <span>Industrial partners</span>
-              <span>5 structured business areas</span>
-              <span>Conakry</span>
-              <span>West Africa</span>
-              <span>Export / import</span>
-            </div>
-            <div class="hero-marquee-group">
-              <span>Buyers &amp; importers</span>
-              <span>Companies &amp; institutions</span>
-              <span>Industrial partners</span>
-              <span>5 structured business areas</span>
-              <span>Conakry</span>
-              <span>West Africa</span>
-              <span>Export / import</span>
-            </div>
-          </div>
+      <section class="trust-strip" aria-label="Groupe Babia key figures">
+        <div>
+          <strong>5</strong>
+          <span>Structured business areas</span>
+        </div>
+        <div>
+          <strong>Conakry</strong>
+          <span>Operational headquarters</span>
+        </div>
+        <div>
+          <strong>West Africa</strong>
+          <span>Regional footprint</span>
+        </div>
+        <div>
+          <strong>Export / import</strong>
+          <span>International orientation</span>
         </div>
       </section>
 

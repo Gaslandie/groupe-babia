@@ -6,6 +6,7 @@ window.clearTimeout(window.__babiaReveal);
 
 const CONTACT_EMAIL = "infobabiaguinee@gmail.com";
 const WHATSAPP_NUMBER = "224620903333";
+const SELECTION_KEY = "babia:selection";
 const SLIDE_DURATION = 5000;
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -34,6 +35,23 @@ function showToast(message) {
   toastNode.classList.add("is-visible");
   window.clearTimeout(toastTimer);
   toastTimer = window.setTimeout(() => toastNode.classList.remove("is-visible"), 2600);
+}
+
+function readSelection() {
+  try {
+    const raw = window.sessionStorage.getItem(SELECTION_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeSelection(products) {
+  try {
+    window.sessionStorage.setItem(SELECTION_KEY, JSON.stringify(products));
+  } catch {
+    /* navigation privee ou stockage indisponible : la selection reste en memoire. */
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -354,23 +372,152 @@ if (slideNodes.length && kickerNode) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Catalogue : contact direct par produit                              */
+/* Catalogue : selection produits et panneau de devis                  */
 /* ------------------------------------------------------------------ */
 
-const productWhatsAppLinks = Array.from(document.querySelectorAll("[data-product-whatsapp]"));
+const quoteButtons = Array.from(document.querySelectorAll("[data-quote-product]"));
+const quoteDock = document.querySelector("[data-quote-dock]");
+const quoteChips = document.querySelector("[data-quote-chips]");
+const quoteCount = document.querySelector("[data-quote-count]");
+const quoteSummary = document.querySelector("[data-selected-products]");
+const quoteClear = document.querySelector("[data-quote-clear]");
+const quoteMail = document.querySelector("[data-quote-mail]");
+const quoteWhatsApp = document.querySelector("[data-quote-whatsapp]");
+const selectedProducts = new Set(readSelection());
 
-productWhatsAppLinks.forEach((link) => {
-  const product = link.dataset.productWhatsapp;
-  if (!product) {
+function quoteBody(products) {
+  if (isEnglishPage) {
+    return products.length
+      ? `Hello,\n\nI would like to receive a quotation for:\n- ${products.join("\n- ")}\n\nPlease specify availability, packaging and commercial conditions.`
+      : "Hello,\n\nI would like to receive a commercial quotation.\n\nPlease contact me.";
+  }
+
+  return products.length
+    ? `Bonjour,\n\nJe souhaite recevoir une offre pour :\n- ${products.join("\n- ")}\n\nMerci de me préciser la disponibilité, le conditionnement et les conditions commerciales.`
+    : "Bonjour,\n\nJe souhaite recevoir une offre commerciale.\n\nMerci de me contacter.";
+}
+
+function updateDockSpace() {
+  if (!quoteDock) {
+    return;
+  }
+  const isEmpty = quoteDock.dataset.empty === "true";
+  const space = isEmpty ? 0 : quoteDock.offsetHeight + 32;
+  document.body.style.setProperty("--dock-space", `${space}px`);
+}
+
+function syncQuoteButtons() {
+  quoteButtons.forEach((button) => {
+    const isSelected = selectedProducts.has(button.dataset.quoteProduct);
+    button.classList.toggle("is-selected", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+    button.textContent = isSelected
+      ? isEnglishPage
+        ? "Added to quote"
+        : "Ajouté au devis"
+      : isEnglishPage
+        ? "Add to quote"
+        : "Ajouter au devis";
+  });
+}
+
+function renderChips(products) {
+  if (!quoteChips) {
     return;
   }
 
-  const message = isEnglishPage
-    ? `Hello Groupe Babia, I would like information about ${product}. Please contact me.`
-    : `Bonjour Groupe Babia, je souhaite avoir des informations sur ${product}. Merci de me recontacter.`;
+  quoteChips.replaceChildren(
+    ...products.map((product) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = product;
+      button.setAttribute("aria-label", isEnglishPage ? `Remove ${product} from selection` : `Retirer ${product} de la sélection`);
+      button.addEventListener("click", () => toggleProduct(product));
+      item.append(button);
+      return item;
+    })
+  );
+}
 
-  link.setAttribute("href", `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`);
+function syncQuoteActions() {
+  const products = Array.from(selectedProducts);
+  writeSelection(products);
+  syncQuoteButtons();
+
+  if (quoteSummary) {
+    quoteSummary.textContent = products.length
+      ? isEnglishPage
+        ? `${products.length} product${products.length > 1 ? "s" : ""} selected`
+        : `${products.length} produit${products.length > 1 ? "s" : ""} sélectionné${products.length > 1 ? "s" : ""}`
+      : isEnglishPage
+        ? "No product selected"
+        : "Aucun produit sélectionné";
+  }
+
+  if (quoteCount) {
+    quoteCount.textContent = String(products.length);
+  }
+
+  renderChips(products);
+
+  if (quoteDock) {
+    quoteDock.dataset.empty = String(products.length === 0);
+    updateDockSpace();
+  }
+
+  if (quoteMail) {
+    const subject = encodeURIComponent(isEnglishPage ? "Quotation request - Groupe Babia Guinea" : "Demande de devis - Groupe Babia Guinée");
+    quoteMail.setAttribute(
+      "href",
+      `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${encodeURIComponent(quoteBody(products))}`
+    );
+  }
+
+  if (quoteWhatsApp) {
+    const whatsappText = encodeURIComponent(
+      isEnglishPage
+        ? products.length
+          ? `Hello Groupe Babia, I would like a quotation for: ${products.join(", ")}.`
+          : "Hello Groupe Babia, I would like to receive a quotation."
+        : products.length
+        ? `Bonjour Groupe Babia, je souhaite un devis pour : ${products.join(", ")}.`
+        : "Bonjour Groupe Babia, je souhaite recevoir un devis."
+    );
+    quoteWhatsApp.setAttribute("href", `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`);
+  }
+}
+
+function toggleProduct(product) {
+  if (selectedProducts.has(product)) {
+    selectedProducts.delete(product);
+    showToast(isEnglishPage ? `${product} removed from selection` : `${product} retiré de la sélection`);
+  } else {
+    selectedProducts.add(product);
+    showToast(isEnglishPage ? `${product} added to quote` : `${product} ajouté au devis`);
+  }
+  syncQuoteActions();
+}
+
+quoteButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const product = button.dataset.quoteProduct;
+    if (product) {
+      toggleProduct(product);
+    }
+  });
 });
+
+quoteClear?.addEventListener("click", () => {
+  selectedProducts.clear();
+  syncQuoteActions();
+  showToast(isEnglishPage ? "Selection cleared" : "Sélection vidée");
+});
+
+if (quoteButtons.length || quoteDock) {
+  syncQuoteActions();
+  window.addEventListener("resize", updateDockSpace);
+}
 
 /* ------------------------------------------------------------------ */
 /* Catalogue : filtres                                                 */
@@ -444,6 +591,8 @@ if (contactForm) {
   const statusTitle = document.querySelector("[data-form-status-title]");
   const statusText = document.querySelector("[data-form-status-text]");
   const copyButton = document.querySelector("[data-copy-message]");
+  const prefillNode = document.querySelector("[data-form-prefill]");
+  const prefillText = document.querySelector("[data-form-prefill-text]");
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const submitDefaultText = submitButton?.textContent ?? "";
   const isEnglishContact = document.documentElement.lang.toLowerCase().startsWith("en");
@@ -698,12 +847,27 @@ if (contactForm) {
     }
   });
 
-  // Pre-remplissage : pole d'origine (?besoin=btp).
+  // Pre-remplissage : pole d'origine (?besoin=btp) et selection du catalogue.
   const params = new URLSearchParams(window.location.search);
   const requestedNeed = NEED_BY_PARAM[params.get("besoin") ?? params.get("need") ?? ""];
 
   if (requestedNeed && needField instanceof HTMLSelectElement) {
     needField.value = requestedNeed;
+  }
+
+  const savedSelection = readSelection();
+
+  if (savedSelection.length && messageField instanceof HTMLTextAreaElement && !messageField.value) {
+    messageField.value = isEnglishContact
+      ? `Products I am interested in:\n- ${savedSelection.join("\n- ")}\n\nVolumes, destination and timeline: `
+      : `Produits qui m'intéressent :\n- ${savedSelection.join("\n- ")}\n\nVolumes, destination et calendrier : `;
+
+    if (prefillNode && prefillText) {
+      prefillText.textContent = isEnglishContact
+        ? `${savedSelection.length} product${savedSelection.length > 1 ? "s" : ""} carried over from the catalog.`
+        : `${savedSelection.length} produit${savedSelection.length > 1 ? "s" : ""} repris depuis le catalogue.`;
+      prefillNode.hidden = false;
+    }
   }
 
   syncWhatsApp();

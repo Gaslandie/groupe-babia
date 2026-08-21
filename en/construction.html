@@ -53,7 +53,7 @@
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Construction</span></li></ol></nav>
           <p class="eyebrow">Construction &amp; public works</p>
-          <h1>Useful, durable infrastructure</h1>
+          <h1>Modern, useful and durable infrastructure</h1>
           <p>
             Groupe Babia supports construction and infrastructure projects in Guinea and the wider region, from understanding the need through to operational coordination.
           </p>

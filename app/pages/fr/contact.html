@@ -4,13 +4,13 @@
         <div>
           <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li><span aria-current="page">Contact</span></li></ol></nav>
           <p class="eyebrow">Contact & qualification</p>
-          <h1>Parlons de votre besoin</h1>
+          <h1>Parlons de votre besoin et de vos objectifs</h1>
           <p>
             Produits agricoles, projet agro-industriel, BTP, services miniers, pêche ou partenariat institutionnel : partagez les informations essentielles et notre équipe vous orientera.
           </p>
           <div class="page-actions">
             <a class="button button-primary" href="#formulaire">Remplir le formulaire</a>
-            <a class="button button-secondary" href="catalogue.php">Consulter le catalogue</a>
+            <a class="button button-secondary" href="catalogue.php">Sélectionner des produits</a>
           </div>
         </div>
         <aside class="page-hero-card">
@@ -52,6 +52,10 @@
         </div>
 
         <form class="form-card" method="post" action="contact-submit.php" data-contact-form>
+          <p class="form-prefill" data-form-prefill hidden>
+            <span data-form-prefill-text></span>
+            <a href="catalogue.php">Modifier la sélection</a>
+          </p>
           <p class="form-legend">Les champs suivis de <span class="required-mark">*</span> sont obligatoires.</p>
           <div class="field-grid">
             <div class="field">
