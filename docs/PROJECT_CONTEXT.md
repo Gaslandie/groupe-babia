@@ -73,6 +73,7 @@
 | 2026-08-21 | Stocker les images de realisations dans `uploads/realisations/`. | Les images ajoutees par le back office ne doivent pas etre melees aux assets sources du site. | Upload JPG/PNG/WebP limite a 3 Mo, scripts interdits par `.htaccess`, fichiers uploades ignores par Git. |
 | 2026-08-21 | Utiliser des URL propres pour les fiches realisations. | Les liens partageables doivent etre professionnels et lisibles. | `/realisations/{slug}` est reecrit vers `realisation.php?slug={slug}` par `.htaccess`; le canonical utilise l'URL propre. |
 | 2026-08-21 | Une seule image de couverture par realisation. | Suffisant pour la premiere version du back office et plus simple a administrer. | Pas de galerie dans ce lot ; le champ `client_partner` devient affichable quand le nom est valide. |
+| 2026-08-21 | Preparer un build d'activation admin separe. | Le site statique reste en production ; l'admin ne doit etre embarque que lors de la bascule PHP. | `php build.php --with-admin` ajoute `admin/`, `database/` et `.env.example`; `database/migrate.php` applique les migrations en CLI. |
 
 ## Non-objectifs
 

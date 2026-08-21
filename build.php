@@ -10,6 +10,11 @@ $phpPages = require project_path('app/data/php_pages.php');
 
 $dist = project_path('dist');
 $withPhp = in_array('--with-php', $argv, true);
+$withAdmin = in_array('--with-admin', $argv, true);
+
+if ($withAdmin) {
+    $withPhp = true;
+}
 
 ensure_empty_directory($dist);
 
@@ -40,6 +45,12 @@ if ($withPhp) {
 
     copy_directory(project_path('app'), $dist . DIRECTORY_SEPARATOR . 'app');
     copy_directory(project_path('uploads'), $dist . DIRECTORY_SEPARATOR . 'uploads');
+
+    if ($withAdmin) {
+        copy_directory(project_path('admin'), $dist . DIRECTORY_SEPARATOR . 'admin');
+        copy_directory(project_path('database'), $dist . DIRECTORY_SEPARATOR . 'database');
+        copy_file(project_path('.env.example'), $dist . DIRECTORY_SEPARATOR . '.env.example');
+    }
 }
 
 echo sprintf(
@@ -47,5 +58,5 @@ echo sprintf(
     count($pages),
     $dist,
     $config['base_url'],
-    $withPhp ? ' avec les points d’entrée PHP' : ''
+    $withAdmin ? ' avec les points d’entrée PHP et le back office' : ($withPhp ? ' avec les points d’entrée PHP' : '')
 );

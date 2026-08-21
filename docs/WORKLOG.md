@@ -19,6 +19,7 @@
 | 2026-08-21 | Front public realisations | Codex | Page PHP `realisations.php` branchee sur les realisations publiees, avec repli propre sans MySQL | Creer la base Bluehost et activer les secrets avant de deployer PHP |
 | 2026-08-21 | Fiches realisations et upload | Codex | Fiche detail publique, apercu accueil PHP et upload image admin ajoutes hors deploiement FTP | Tester avec une vraie base MySQL Bluehost |
 | 2026-08-21 | URLs propres realisations | Codex | URL `/realisations/{slug}` et champ client/partenaire ajoutes | Appliquer les migrations 001 puis 002 sur Bluehost |
+| 2026-08-21 | Activation back office | Codex | Runner migrations CLI, generateur de hash admin et build `--with-admin` ajoutes | Creer la base MySQL Bluehost et le `.env` serveur |
 
 ## A faire
 
@@ -68,3 +69,4 @@
 - Front PHP 2026-08-21 : ajout de `realisations.php`, affichage public des realisations `published`, repli sans erreur si MySQL n'est pas encore configure.
 - Front PHP 2026-08-21 : ajout de `realisation.php?slug=...`, apercu des 3 dernieres realisations dans `index.php` lorsque MySQL est disponible, upload image admin vers `uploads/realisations/`.
 - Front PHP 2026-08-21 : URL propre `/realisations/{slug}`, canonical associe et champ `client_partner` administrable puis affichable.
+- Back office 2026-08-21 : ajout de `database/migrate.php`, `scripts/create-admin-password-hash.php` et du build explicite `php build.php --with-admin`.

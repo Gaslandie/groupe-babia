@@ -24,6 +24,22 @@ if (is_dir($root . '/dist/app')) {
 
     $files[] = 'uploads/.htaccess';
     $files[] = 'uploads/realisations/.gitkeep';
+
+    if (is_dir($root . '/dist/admin')) {
+        $files[] = '.env.example';
+
+        foreach (['admin', 'database'] as $directory) {
+            $iterator = new RecursiveIteratorIterator(
+                new RecursiveDirectoryIterator($root . DIRECTORY_SEPARATOR . $directory, FilesystemIterator::SKIP_DOTS)
+            );
+
+            foreach ($iterator as $item) {
+                if ($item->isFile()) {
+                    $files[] = $directory . '/' . $iterator->getSubPathName();
+                }
+            }
+        }
+    }
 }
 
 $hasDiff = false;

@@ -20,7 +20,7 @@ Le reste du site reste vitrine tant que la bascule PHP n'est pas terminee.
 4. Generer le hash admin avec :
 
 ```bash
-php -r 'echo password_hash("votre-mot-de-passe", PASSWORD_DEFAULT), PHP_EOL;'
+php scripts/create-admin-password-hash.php "votre-mot-de-passe"
 ```
 
 Ne jamais committer le vrai `.env`.
@@ -42,6 +42,37 @@ database/migrations/002_add_realisation_client_partner.sql
 ```
 
 Colonne ajoutee : `client_partner`.
+
+En CLI serveur, le runner applique uniquement les migrations non encore passees :
+
+```bash
+php database/migrate.php
+```
+
+Le fichier `database/.htaccess` interdit l'acces web au dossier des migrations.
+
+## Build d'activation
+
+Le build statique courant reste :
+
+```bash
+php build.php
+```
+
+Le paquet de future bascule PHP sans admin :
+
+```bash
+php build.php --with-php
+```
+
+Le paquet de future bascule avec back office et migrations :
+
+```bash
+php build.php --with-admin
+```
+
+`--with-admin` implique `--with-php` et ajoute `admin/`, `database/` et `.env.example` dans `dist/`.
+Le vrai `.env` doit toujours etre cree directement sur le serveur.
 
 ## Statuts
 
