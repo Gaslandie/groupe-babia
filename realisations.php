@@ -67,7 +67,7 @@ $publicReadError = $publicationState['error'];
         <div>
           <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><span aria-current="page">Réalisations</span></li></ol></nav>
           <p class="eyebrow">Références & activités</p>
-          <h1>Des réalisations publiées au fil de l'activité du groupe</h1>
+          <h1>Réalisations publiées</h1>
           <p>Cette page rassemble les opérations, références et activités que Groupe Babia Guinée choisit de rendre publiques dans ses pôles agroalimentaire, BTP, mines, pêche et agro-industrie.</p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.html#formulaire">Présenter un projet</a>

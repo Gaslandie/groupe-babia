@@ -53,7 +53,7 @@
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">The group</span></li></ol></nav>
           <p class="eyebrow">Vision &amp; positioning</p>
-          <h1>A Guinean group turned towards regional and international markets</h1>
+          <h1>Local roots, regional ambition</h1>
           <p>
             Groupe Babia Guinea brings together complementary activities in agriculture, agro-industry, construction, mining and fishing, with one shared requirement: creating trust and durable value.
           </p>

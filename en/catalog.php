@@ -53,7 +53,7 @@
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Catalog</span></li></ol></nav>
           <p class="eyebrow">Agri-food catalog</p>
-          <h1>Export and import products</h1>
+          <h1>Export / import catalog</h1>
           <p>
             Agri-food products are presented according to two clear operations: export of agricultural products and import of food products.
           </p>
