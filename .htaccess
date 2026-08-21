@@ -3,12 +3,19 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Domaine canonique : HTTPS + www, en evitant les chaines de redirection.
-  RewriteCond %{HTTPS} !=on [OR]
+  # Protocole. Sur un hebergement mutualise, le SSL est souvent termine par un
+  # proxy en amont : %{HTTPS} vaut alors "off" meme sur une requete HTTPS, ce qui
+  # produit une boucle de redirection infinie. On teste donc aussi l'en-tete
+  # transmise par le proxy.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://www.groupebabia.com%{REQUEST_URI} [R=301,L,NE]
+
+  # Domaine canonique : apex et alias vers www, en une seule redirection.
   RewriteCond %{HTTP_HOST} !^www\.groupebabia\.com$ [NC]
   RewriteRule ^ https://www.groupebabia.com%{REQUEST_URI} [R=301,L,NE]
 
-  # Anciennes URL PHP de l'ancien site.
+  # Anciennes URL de l'ancien site, recuperees dans les archives du web.
   RewriteRule ^index\.php$ / [R=301,L]
   RewriteRule ^apropos\.php$ /groupe.html [R=301,L]
   RewriteRule ^agriculture\.php$ /agroalimentaire.html [R=301,L]
@@ -28,8 +35,19 @@ ErrorDocument 404 /404.html
   Header always set X-Frame-Options "SAMEORIGIN"
 </IfModule>
 
+# Compression du texte. La feuille de styles fait 55 Ko brut et environ 12 Ko
+# compressee : c'est le plus gros gain restant sur le chemin critique.
+# Les images et les polices sont deja compressees, on ne les repasse pas.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE text/javascript application/javascript
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE application/ld+json image/svg+xml
+</IfModule>
+
 <IfModule mod_expires.c>
   ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
   ExpiresByType text/css "access plus 7 days"
   ExpiresByType application/javascript "access plus 7 days"
   ExpiresByType text/javascript "access plus 7 days"
@@ -38,4 +56,7 @@ ErrorDocument 404 /404.html
   ExpiresByType image/webp "access plus 6 months"
   ExpiresByType image/svg+xml "access plus 6 months"
   ExpiresByType image/x-icon "access plus 6 months"
+  # Les polices ne changent jamais et sont sur le chemin critique.
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
 </IfModule>

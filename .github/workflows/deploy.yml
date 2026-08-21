@@ -1,9 +1,13 @@
 name: Deploy Groupe Babia to Bluehost
 
 on:
-  push:
-    branches:
-      - main
+  # Declenchement automatique volontairement desactive tant que le compte FTP
+  # cloisonne et les secrets ne sont pas crees : sans eux, chaque push produit
+  # un echec. A reactiver en retirant les commentaires ci-dessous, une fois le
+  # premier envoi manuel valide.
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 jobs:
@@ -14,6 +18,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Verifier la destination avant tout envoi
+        run: |
+          if grep -q '__CONFIRMER_SERVER_DIR_FTP_CLOISONNE__' .github/workflows/deploy.yml; then
+            echo "::error::server-dir non configure. Le compte Bluehost heberge d'autres sites clients : un envoi vers un repertoire non confirme ecrirait chez eux. Renseigner server-dir avant de relancer."
+            exit 1
+          fi
 
       - name: Deploy static site by FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
