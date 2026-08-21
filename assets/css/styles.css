@@ -144,6 +144,7 @@ textarea:focus-visible {
 
 .brand {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 12px;
   text-decoration: none;
@@ -159,6 +160,7 @@ textarea:focus-visible {
 .brand strong,
 .brand small {
   display: block;
+  white-space: nowrap;
 }
 
 .brand strong {
@@ -299,7 +301,7 @@ textarea:focus-visible {
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
-  min-height: calc(100svh - var(--header-height));
+  min-height: min(720px, calc(100svh - var(--header-height)));
   overflow: hidden;
   padding: clamp(24px, 5vw, 56px) 0 0;
   isolation: isolate;
@@ -343,7 +345,10 @@ textarea:focus-visible {
 
 .hero-content {
   align-self: center;
-  max-width: min(1100px, 100%);
+  /* Le gutter est un padding : s'il est compte dans le max-width, la colonne
+     de texte retrecit quand l'ecran s'elargit (620px a 1920, contre 1052 a
+     1440). On l'ajoute pour garder 1100px de texte quelle que soit la taille. */
+  max-width: calc(1100px + 2 * var(--gutter));
   padding: 0 var(--gutter);
   color: #fff;
 }
@@ -357,28 +362,31 @@ textarea:focus-visible {
   letter-spacing: 0;
 }
 
-/* Titre empile a fort contraste d'echelle : la premiere ligne annonce, la
-   seconde porte le nom. C'est ce decalage qui donne l'echelle monumentale. */
+/* Titre empile a fort contraste d'echelle : "Groupe" annonce, le nom en
+   capitales porte le poids sur une seule ligne. */
 .hero-title {
   margin: 0;
   font-family: var(--font-primary);
   font-weight: 500;
-  line-height: 0.86;
+  /* Un peu plus d'air qu'avant : l'accent des capitales (GUINEE) monte plus
+     haut que les minuscules et un 0.86 le rognait. */
+  line-height: 0.94;
   letter-spacing: 0;
   text-wrap: balance;
-}
-
-.hero-title-lead,
-.hero-title-strong {
-  display: block;
 }
 
 .hero-title-lead {
   font-size: clamp(2.2rem, 5.4vw, 5.4rem);
 }
 
+/* Nom de marque en capitales, sur sa propre ligne et jamais coupe : le
+   plafond de taille est cale sur la largeur de la colonne (1100px), sans quoi
+   `nowrap` ferait deborder au lieu de renvoyer a la ligne. */
 .hero-title-strong {
-  font-size: clamp(3rem, 9vw, 9.5rem);
+  display: block;
+  font-size: clamp(1.9rem, 8.4vw, 8.6rem);
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-copy {
@@ -2384,7 +2392,7 @@ textarea:focus-visible {
   text-underline-offset: 2px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1000px) {
   .nav-toggle {
     display: block;
   }
@@ -2491,7 +2499,7 @@ textarea:focus-visible {
   }
 }
 
-@media (max-width: 1180px) and (min-width: 981px) {
+@media (max-width: 1300px) and (min-width: 1001px) {
   .site-header {
     gap: 16px;
     padding-left: 24px;
@@ -2532,7 +2540,7 @@ textarea:focus-visible {
   }
 
   .hero {
-    min-height: calc(100svh - var(--header-height));
+    min-height: min(600px, calc(100svh - var(--header-height)));
     padding: 20px 0 0;
   }
 
