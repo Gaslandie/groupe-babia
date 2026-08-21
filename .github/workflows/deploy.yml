@@ -41,8 +41,10 @@ jobs:
             **/.git*
             **/.git*/**
             .github/**
+            app/**
             docs/**
             scripts/**
+            build.php
             README.md
             AGENTS.md
             CLAUDE.md
