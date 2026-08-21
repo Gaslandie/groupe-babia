@@ -362,31 +362,25 @@ textarea:focus-visible {
   letter-spacing: 0;
 }
 
-/* Titre empile a fort contraste d'echelle : "Groupe" annonce, le nom en
-   capitales porte le poids sur une seule ligne. */
+/* Titre empile a fort contraste, mais assez contenu pour rester lisible sur
+   desktop large et ne pas deborder quand la promesse est longue. */
 .hero-title {
   margin: 0;
   font-family: var(--font-primary);
   font-weight: 500;
-  /* Un peu plus d'air qu'avant : l'accent des capitales (GUINEE) monte plus
-     haut que les minuscules et un 0.86 le rognait. */
-  line-height: 0.94;
+  line-height: 1.04;
   letter-spacing: 0;
   text-wrap: balance;
 }
 
 .hero-title-lead {
-  font-size: clamp(2.2rem, 5.4vw, 5.4rem);
+  font-size: clamp(2rem, 4vw, 4.5rem);
 }
 
-/* Nom de marque en capitales, sur sa propre ligne et jamais coupe : le
-   plafond de taille est cale sur la largeur de la colonne (1100px), sans quoi
-   `nowrap` ferait deborder au lieu de renvoyer a la ligne. */
 .hero-title-strong {
   display: block;
-  font-size: clamp(1.9rem, 8.4vw, 8.6rem);
-  text-transform: uppercase;
-  white-space: nowrap;
+  max-width: 980px;
+  font-size: clamp(2.15rem, 5.2vw, 5.8rem);
 }
 
 .hero-copy {
