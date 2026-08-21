@@ -1,5 +1,11 @@
 # Migration PHP avec generation statique — plan d'execution
 
+> Note 2026-08-21 : le site est maintenant en production sur Bluehost a
+> `https://www.groupebabia.com/`. La generation statique reste utile comme
+> filet de securite pendant la migration progressive, mais la publication
+> cible n'est plus GitHub Pages. Le premier lot effectif cree donc un build
+> `dist/` identique aux fichiers publies avant d'extraire les gabarits.
+
 Decision du 2026-08-17 : le site est ecrit en PHP, mais **publie sous forme de HTML
 genere**, afin que le lien de demonstration client reste disponible sur GitHub Pages tant
 que l'hebergement n'est pas arbitre. Ce document est le plan d'execution destine a Codex.

@@ -63,6 +63,7 @@
 | 2026-08-18 | Rediriger en 301 les neuf anciennes URL `.php` recuperees dans les archives du web. | L'ancien site a disparu et toutes ses URL renvoient 404 ; sans redirection, le referencement acquis sur le domaine est perdu. | Table de correspondance dans `docs/technique/MISE_EN_LIGNE_BLUEHOST.md`, mise en oeuvre dans `.htaccess`. |
 | 2026-08-17 | Valider la migration PHP par un test de rendu identique au HTML actuel. | La passe UX du 2026-08-17 vit dans la structure HTML : une reecriture libre la perdrait sans que cela se voie dans un diff. | Le lot 0 ne modifie aucun rendu ; les `.html` ne sont supprimes qu'une fois le test vert. |
 | 2026-08-21 | Renforcer la preuve commerciale sans inventer de chiffres, certificats ou references client. | Le site doit gagner en credibilite internationale avant la version anglaise et le back office, mais les contenus officiels restent limites. | Ajout de blocs de qualification, preuves de methode, informations attendues et champs de contact plus exploitables. |
+| 2026-08-21 | Demarrer la migration PHP par un build statique identique. | Le site est deja en production sur Bluehost ; il faut une premiere marche sans risque avant de factoriser les gabarits. | `build.php` genere `dist/` depuis les fichiers publies, `scripts/verify-build.php` compare les sorties byte a byte. |
 
 ## Non-objectifs
 

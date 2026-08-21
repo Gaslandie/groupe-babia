@@ -14,6 +14,7 @@
 | 2026-08-17 | Benchmark SGS | Claude | Analyse structurelle et plan priorise redige dans `docs/design-ux/BENCHMARK_SGS.md` | Debloquer les contenus client pour les lots P0 |
 | 2026-08-17 | Migration PHP + version EN | Claude | Plan d'execution redige dans `docs/technique/MIGRATION_PHP.md`. Voie retenue : PHP ecrit, HTML genere, publie par GitHub Actions. Tache du lot 0 cadree | Codex execute `docs/taches/LOT-0-SOCLE-PHP.md` |
 | 2026-08-21 | Renforcement credibilite vitrine | Codex | Blocs de preuve commerciale, qualification BTP/mines/agro, formulaire enrichi et contenus de confiance ajoutes en statique | Verifier puis deployer sur Bluehost |
+| 2026-08-21 | Migration PHP progressive | Codex | Lot 0A cree : config PHP, registre des pages, build `dist/` identique et script de verification | Extraire les premiers partials sans changer le rendu |
 
 ## A faire
 
@@ -56,3 +57,4 @@
 - Verifications 2026-08-17 : `node --check assets/js/main.js`, 11 pages en HTTP 200, aucune requete 404, structure HTML equilibree, parcours catalogue/contact et slider pilotes via Chrome DevTools Protocol.
 - Mise en ligne Bluehost 2026-08-21 : FTP GitHub Actions fonctionnel, domaine `https://www.groupebabia.com/` servi en HTTPS, apex redirige vers `www`.
 - Renforcement 2026-08-21 : ajout de preuves de methode, informations attendues pour cotation, champs destination/calendrier et nettoyage des commentaires canoniques.
+- Migration PHP 2026-08-21 : ajout du build statique PHP initial, generation de `dist/`, verification byte a byte des pages et fichiers publies.
