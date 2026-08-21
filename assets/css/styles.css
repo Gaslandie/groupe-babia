@@ -1674,131 +1674,7 @@ textarea:focus-visible {
   color: var(--muted);
 }
 
-/* Le panneau de devis n'apparait qu'a partir d'un produit selectionne : il ne
-   recouvre plus le catalogue quand la selection est vide. */
-.quote-dock {
-  position: fixed;
-  z-index: 15;
-  right: max(16px, calc((100vw - var(--content)) / 2));
-  bottom: 16px;
-  left: max(16px, calc((100vw - var(--content)) / 2));
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 18px;
-  align-items: center;
-  padding: 16px 20px;
-  color: #fff;
-  background: rgba(11, 27, 21, 0.97);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-  transition: opacity 240ms ease, transform 240ms ease, visibility 240ms;
-}
-
-.quote-dock[data-empty="true"] {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(24px);
-  pointer-events: none;
-}
-
-.quote-dock .card-actions {
-  margin-top: 0;
-}
-
-.quote-dock-title {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  margin: 0;
-  font-weight: 800;
-}
-
-.quote-count {
-  display: inline-grid;
-  place-items: center;
-  min-width: 26px;
-  height: 26px;
-  padding: 0 8px;
-  color: var(--ink);
-  background: var(--gold);
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 900;
-}
-
-/* Une seule ligne defilante : la hauteur du panneau ne depend pas du nombre
-   de produits selectionnes, donc il ne mange jamais l'ecran. */
-.quote-chips {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 8px;
-  margin: 10px 0 0;
-  padding: 0 0 4px;
-  overflow-x: auto;
-  list-style: none;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
-}
-
-.quote-chips:empty {
-  display: none;
-}
-
-.quote-chips li {
-  flex: 0 0 auto;
-}
-
-.quote-chips button {
-  display: inline-flex;
-  white-space: nowrap;
-  align-items: center;
-  gap: 8px;
-  min-height: 34px;
-  padding: 0 8px 0 12px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 999px;
-  font: inherit;
-  font-size: 0.85rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 180ms ease, border-color 180ms ease;
-}
-
-.quote-chips button:hover {
-  background: rgba(212, 166, 58, 0.24);
-  border-color: var(--gold);
-}
-
-.quote-chips button::after {
-  content: "\00d7";
-  font-size: 1.1rem;
-  line-height: 1;
-}
-
-.quote-clear {
-  margin-left: auto;
-  padding: 4px 0;
-  color: rgba(255, 255, 255, 0.72);
-  background: none;
-  border: 0;
-  font: inherit;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  cursor: pointer;
-}
-
-.quote-clear:hover {
-  color: #fff;
-}
-
-.quote-hint {
+.catalogue-hint {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1831,18 +1707,6 @@ textarea:focus-visible {
 
 .catalogue-note span {
   color: rgba(255, 255, 255, 0.82);
-}
-
-.is-selected {
-  color: #fff;
-  background: var(--forest);
-  border-color: var(--forest);
-}
-
-.button-ghost.is-selected::before {
-  content: "\2713";
-  margin-right: 8px;
-  font-weight: 900;
 }
 
 .form-layout {
@@ -2527,10 +2391,6 @@ textarea:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .quote-dock {
-    grid-template-columns: 1fr;
-  }
-
   .footer-main {
     grid-template-columns: 1fr;
   }
@@ -2691,23 +2551,9 @@ textarea:focus-visible {
     text-align: center;
   }
 
-  /* Deux actions cote a cote : le panneau reste bas et laisse voir le catalogue. */
-  .quote-dock .card-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .quote-dock .button {
-    width: 100%;
-    padding: 0 10px;
-    font-size: 0.9rem;
-  }
-
   .to-top {
     right: 14px;
-    bottom: calc(14px + var(--dock-space));
+    bottom: 14px;
   }
 
   .contact-band {
@@ -2815,14 +2661,6 @@ textarea:focus-visible {
 
   .timeline article {
     grid-template-columns: 1fr;
-  }
-
-  .quote-dock {
-    right: 12px;
-    bottom: 12px;
-    left: 12px;
-    grid-template-columns: 1fr;
-    padding: 14px 16px;
   }
 
   .export-media img {
@@ -3053,7 +2891,6 @@ textarea:focus-visible {
   }
 
   .to-top,
-  .quote-dock,
   .toast {
     transition: none;
   }
