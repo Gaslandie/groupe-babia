@@ -537,6 +537,7 @@ if (contactForm) {
   const copyButton = document.querySelector("[data-copy-message]");
   const prefillNode = document.querySelector("[data-form-prefill]");
   const prefillText = document.querySelector("[data-form-prefill-text]");
+  const submitButton = contactForm.querySelector('button[type="submit"]');
   const needField = contactForm.elements.namedItem("need");
   const messageField = contactForm.elements.namedItem("message");
 
@@ -566,7 +567,7 @@ if (contactForm) {
     control.removeAttribute("aria-invalid");
   }
 
-  function showError(control) {
+  function showError(control, message) {
     const wrapper = fieldWrapper(control);
     if (!wrapper) {
       return;
@@ -574,9 +575,9 @@ if (contactForm) {
 
     const errorNode = wrapper.querySelector(".field-error");
     if (errorNode) {
-      errorNode.textContent = control.validity.valueMissing
+      errorNode.textContent = message || (control.validity.valueMissing
         ? ERROR_MESSAGES.valueMissing
-        : ERROR_MESSAGES.typeMismatch;
+        : ERROR_MESSAGES.typeMismatch);
       control.setAttribute("aria-describedby", errorNode.id);
     }
 
@@ -603,6 +604,31 @@ if (contactForm) {
     }
 
     return !firstInvalid;
+  }
+
+  function showServerErrors(errors) {
+    if (!errors || typeof errors !== "object") {
+      return false;
+    }
+
+    let firstInvalid = null;
+
+    Object.entries(errors).forEach(([name, message]) => {
+      const control = contactForm.elements.namedItem(name);
+      if (!(control instanceof HTMLElement)) {
+        return;
+      }
+
+      showError(control, String(message));
+      firstInvalid = firstInvalid ?? control;
+    });
+
+    if (firstInvalid) {
+      firstInvalid.focus();
+      firstInvalid.scrollIntoView({ block: "center", behavior: reduceMotionQuery.matches ? "auto" : "smooth" });
+    }
+
+    return Boolean(firstInvalid);
   }
 
   function messageBody() {
@@ -676,7 +702,18 @@ if (contactForm) {
     true
   );
 
-  contactForm.addEventListener("submit", (event) => {
+  function fallbackToEmail() {
+    // mailto: peut ne rien declencher si aucun client mail n'est configure :
+    // on annonce ce qui vient de se passer et on laisse deux solutions de repli.
+    setStatus(
+      "Votre message est prêt",
+      `Votre logiciel de messagerie doit s'ouvrir avec le message pré-rempli, à destination de ${CONTACT_EMAIL}. S'il ne s'ouvre pas, copiez le message ou passez par WhatsApp.`
+    );
+
+    window.location.href = mailtoLink();
+  }
+
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!validate({ focusFirst: true })) {
@@ -690,14 +727,50 @@ if (contactForm) {
 
     syncWhatsApp();
 
-    // mailto: peut ne rien declencher si aucun client mail n'est configure :
-    // on annonce ce qui vient de se passer et on laisse deux solutions de repli.
-    setStatus(
-      "Votre message est prêt",
-      `Votre logiciel de messagerie doit s'ouvrir avec le message pré-rempli, à destination de ${CONTACT_EMAIL}. S'il ne s'ouvre pas, copiez le message ou passez par WhatsApp.`
-    );
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Envoi en cours...";
+    }
 
-    window.location.href = mailtoLink();
+    try {
+      const response = await fetch(contactForm.action || "contact-submit.php", {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" }
+      });
+      const payload = await response.json();
+
+      if (response.ok && payload.ok) {
+        setStatus(
+          payload.title || "Demande reçue",
+          payload.message || "Votre demande a été enregistrée. Notre équipe vous recontactera rapidement."
+        );
+        return;
+      }
+
+      if (payload.errors && showServerErrors(payload.errors)) {
+        setStatus(
+          payload.title || "Quelques informations manquent",
+          payload.message || "Corrigez les champs signalés, puis renvoyez votre demande.",
+          "error"
+        );
+        return;
+      }
+
+      setStatus(
+        payload.title || "Envoi momentanément indisponible",
+        payload.message || "Utilisez l'e-mail ou WhatsApp pour transmettre votre demande.",
+        "error"
+      );
+      fallbackToEmail();
+    } catch {
+      fallbackToEmail();
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Envoyer la demande";
+      }
+    }
   });
 
   copyButton?.addEventListener("click", async () => {

@@ -134,7 +134,7 @@
           </div>
         </div>
 
-        <form class="form-card" data-contact-form>
+        <form class="form-card" method="post" action="contact-submit.php" data-contact-form>
           <p class="form-prefill" data-form-prefill hidden>
             <span data-form-prefill-text></span>
             <a href="catalogue.html">Modifier la sélection</a>
@@ -192,8 +192,12 @@
             <textarea id="message" name="message" placeholder="Décrivez le produit, la quantité, le projet, la destination ou le calendrier." required></textarea>
             <p class="field-error" id="message-error"></p>
           </div>
+          <div class="visually-hidden" aria-hidden="true">
+            <label for="website">Site web</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <div class="form-actions">
-            <button class="button button-primary" type="submit">Envoyer par e-mail</button>
+            <button class="button button-primary" type="submit">Envoyer la demande</button>
             <a class="button button-dark" href="https://wa.me/224620903333" data-contact-whatsapp>Envoyer sur WhatsApp</a>
           </div>
           <div class="form-status" role="status" aria-live="polite" data-form-status hidden>

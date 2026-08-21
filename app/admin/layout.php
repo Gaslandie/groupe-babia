@@ -83,6 +83,7 @@ function admin_shell_start(string $title): void
         <nav class="admin-nav" aria-label="Navigation administration">
           <a href="index.php">Tableau de bord</a>
           <a href="realisations.php">Réalisations</a>
+          <a href="messages.php">Messages</a>
           <a href="logout.php">Déconnexion</a>
         </nav>
       </aside>

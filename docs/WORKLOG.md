@@ -22,6 +22,7 @@
 | 2026-08-21 | Activation back office | Codex | Runner migrations CLI, generateur de hash admin et build `--with-admin` ajoutes | Creer la base MySQL Bluehost et le `.env` serveur |
 | 2026-08-21 | Chemin back office prive | Codex | Dossier `admin/` renomme en `espace-gb/`, identifiant conserve `admin` | Tester `/espace-gb/login.php` sur Bluehost avant bascule |
 | 2026-08-21 | Durcissement PHP | Codex | Acces direct a `.env`, `app/`, `database/`, SQL/logs et scripts uploades bloque | Valider ces protections sur Apache Bluehost |
+| 2026-08-21 | Formulaire serveur | Codex | Stockage MySQL des demandes et ecran admin messages en cours | Tester, migrer Bluehost puis deployer |
 
 ## A faire
 
@@ -74,3 +75,4 @@
 - Back office 2026-08-21 : ajout de `database/migrate.php`, `scripts/create-admin-password-hash.php` et du build explicite `php build.php --with-admin`.
 - Back office 2026-08-21 : chemin public retenu `/espace-gb/login.php`; bascule PHP/admin uniquement apres test manuel Bluehost.
 - Securite 2026-08-21 : protections `.htaccess` ajoutees pour secrets, dossiers techniques, migrations, uploads et back office.
+- Contact 2026-08-21 : formulaire branche sur `contact-submit.php`, stockage MySQL `contact_messages`, consultation et changement de statut dans `espace-gb/messages.php`.
