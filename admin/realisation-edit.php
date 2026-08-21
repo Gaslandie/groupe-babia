@@ -38,6 +38,7 @@ $values = $item ?? [
     'sector' => 'corporate',
     'summary' => '',
     'body' => '',
+    'client_partner' => '',
     'location' => '',
     'realised_at' => '',
     'cover_image' => '',

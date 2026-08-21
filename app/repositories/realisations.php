@@ -156,6 +156,7 @@ function realisation_validate(array $input): array
     $sector = trim((string) ($input['sector'] ?? 'corporate'));
     $summary = trim((string) ($input['summary'] ?? ''));
     $body = trim((string) ($input['body'] ?? ''));
+    $clientPartner = trim((string) ($input['client_partner'] ?? ''));
     $location = trim((string) ($input['location'] ?? ''));
     $realisedAt = trim((string) ($input['realised_at'] ?? ''));
     $coverImage = trim((string) ($input['cover_image'] ?? ''));
@@ -183,6 +184,10 @@ function realisation_validate(array $input): array
         $errors['body'] = 'Le contenu est obligatoire.';
     }
 
+    if ($clientPartner !== '' && realisation_text_length($clientPartner) > 180) {
+        $errors['client_partner'] = 'Le client ou partenaire ne doit pas dépasser 180 caractères.';
+    }
+
     if ($realisedAt !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $realisedAt)) {
         $errors['realised_at'] = 'La date doit être au format AAAA-MM-JJ.';
     }
@@ -198,6 +203,7 @@ function realisation_validate(array $input): array
             'sector' => $sector,
             'summary' => $summary,
             'body' => $body,
+            'client_partner' => $clientPartner === '' ? null : $clientPartner,
             'location' => $location === '' ? null : $location,
             'realised_at' => $realisedAt === '' ? null : $realisedAt,
             'cover_image' => $coverImage === '' ? null : $coverImage,
@@ -215,9 +221,9 @@ function create_realisation(array $data): int
 
     $statement = db()->prepare(
         'INSERT INTO realisations
-        (title, slug, sector, summary, body, location, realised_at, cover_image, cover_alt, is_featured, status, published_at)
+        (title, slug, sector, summary, body, client_partner, location, realised_at, cover_image, cover_alt, is_featured, status, published_at)
         VALUES
-        (:title, :slug, :sector, :summary, :body, :location, :realised_at, :cover_image, :cover_alt, :is_featured, :status, :published_at)'
+        (:title, :slug, :sector, :summary, :body, :client_partner, :location, :realised_at, :cover_image, :cover_alt, :is_featured, :status, :published_at)'
     );
 
     $statement->execute([
@@ -226,6 +232,7 @@ function create_realisation(array $data): int
         'sector' => $data['sector'],
         'summary' => $data['summary'],
         'body' => $data['body'],
+        'client_partner' => $data['client_partner'],
         'location' => $data['location'],
         'realised_at' => $data['realised_at'],
         'cover_image' => $data['cover_image'],
@@ -260,6 +267,7 @@ function update_realisation(int $id, array $data): void
           sector = :sector,
           summary = :summary,
           body = :body,
+          client_partner = :client_partner,
           location = :location,
           realised_at = :realised_at,
           cover_image = :cover_image,
@@ -277,6 +285,7 @@ function update_realisation(int $id, array $data): void
         'sector' => $data['sector'],
         'summary' => $data['summary'],
         'body' => $data['body'],
+        'client_partner' => $data['client_partner'],
         'location' => $data['location'],
         'realised_at' => $data['realised_at'],
         'cover_image' => $data['cover_image'],

@@ -15,6 +15,9 @@ Options -Indexes
   RewriteCond %{HTTP_HOST} !^www\.groupebabia\.com$ [NC]
   RewriteRule ^ https://www.groupebabia.com%{REQUEST_URI} [R=301,L,NE]
 
+  # URLs publiques propres pour les fiches de realisations.
+  RewriteRule ^realisations/([A-Za-z0-9-]+)/?$ realisation.php?slug=$1 [L,QSA]
+
   # Anciennes URL de l'ancien site, recuperees dans les archives du web.
   RewriteRule ^index\.php$ / [R=301,L]
   RewriteRule ^apropos\.php$ /groupe.html [R=301,L]

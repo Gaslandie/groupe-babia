@@ -65,6 +65,11 @@ function public_fetch_realisation_by_slug(string $slug): ?array
     }
 }
 
+function public_realisation_url(string $slug): string
+{
+    return 'realisations/' . rawurlencode($slug);
+}
+
 function public_render_realisation_card(array $realisation, array $sectors): void
 {
     $sector = (string) ($realisation['sector'] ?? 'corporate');
@@ -74,20 +79,25 @@ function public_render_realisation_card(array $realisation, array $sectors): voi
     $alt = trim((string) ($realisation['cover_alt'] ?? ''));
     $title = (string) $realisation['title'];
     $slug = (string) $realisation['slug'];
+    $url = public_realisation_url($slug);
+    $clientPartner = trim((string) ($realisation['client_partner'] ?? ''));
     ?>
               <article class="news-card realisation-card">
                 <img src="<?= e($cover) ?>" alt="<?= e($alt) ?>" width="720" height="460" loading="lazy" decoding="async">
                 <div>
                   <small><?= e($sectors[$sector] ?? 'Groupe') ?></small>
-                  <h3><a href="realisation.php?slug=<?= e(rawurlencode($slug)) ?>"><?= e($title) ?></a></h3>
+                  <h3><a href="<?= e($url) ?>"><?= e($title) ?></a></h3>
                   <?php if ($date !== '' || $location !== ''): ?>
                     <p class="realisation-meta">
                       <?php if ($date !== ''): ?><span><?= e($date) ?></span><?php endif; ?>
                       <?php if ($location !== ''): ?><span><?= e($location) ?></span><?php endif; ?>
                     </p>
                   <?php endif; ?>
+                  <?php if ($clientPartner !== ''): ?>
+                    <p class="realisation-client">Client / partenaire : <?= e($clientPartner) ?></p>
+                  <?php endif; ?>
                   <p><?= e((string) $realisation['summary']) ?></p>
-                  <a class="button button-ghost" href="realisation.php?slug=<?= e(rawurlencode($slug)) ?>">Voir le détail</a>
+                  <a class="button button-ghost" href="<?= e($url) ?>">Voir le détail</a>
                 </div>
               </article>
 <?php

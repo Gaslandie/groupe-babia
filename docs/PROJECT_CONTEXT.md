@@ -71,6 +71,8 @@
 | 2026-08-21 | Brancher une premiere page publique PHP sur les realisations publiees. | Le back office doit produire une valeur visible sans basculer tout le site d'un coup. | `realisations.php` lit MySQL si configure, affiche seulement les contenus `published`, et reste hors deploiement FTP tant que la bascule PHP n'est pas decidee. |
 | 2026-08-21 | Ajouter une fiche detail par realisation et un apercu sur l'accueil PHP. | Les references doivent pouvoir etre partagees individuellement et servir la credibilite du site. | `realisation.php?slug=...` affiche une fiche publiee, `index.php` remplace la section a la une par les 3 dernieres realisations si MySQL en fournit. |
 | 2026-08-21 | Stocker les images de realisations dans `uploads/realisations/`. | Les images ajoutees par le back office ne doivent pas etre melees aux assets sources du site. | Upload JPG/PNG/WebP limite a 3 Mo, scripts interdits par `.htaccess`, fichiers uploades ignores par Git. |
+| 2026-08-21 | Utiliser des URL propres pour les fiches realisations. | Les liens partageables doivent etre professionnels et lisibles. | `/realisations/{slug}` est reecrit vers `realisation.php?slug={slug}` par `.htaccess`; le canonical utilise l'URL propre. |
+| 2026-08-21 | Une seule image de couverture par realisation. | Suffisant pour la premiere version du back office et plus simple a administrer. | Pas de galerie dans ce lot ; le champ `client_partner` devient affichable quand le nom est valide. |
 
 ## Non-objectifs
 

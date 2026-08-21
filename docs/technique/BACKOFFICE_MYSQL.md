@@ -35,6 +35,14 @@ database/migrations/001_create_realisations.sql
 
 Table creee : `realisations`.
 
+Puis appliquer :
+
+```text
+database/migrations/002_add_realisation_client_partner.sql
+```
+
+Colonne ajoutee : `client_partner`.
+
 ## Statuts
 
 - `draft` : brouillon non publie ;
@@ -48,7 +56,9 @@ Table creee : `realisations`.
 - Liste des realisations lue depuis MySQL si la base est configuree.
 - Ajout, modification et suppression des realisations.
 - Page publique `realisations.php` : lit les contenus `published` si MySQL est configure, sinon affiche un etat d'attente propre.
-- Page detail `realisation.php?slug=...` : affiche uniquement les realisations publiees.
+- Page detail `/realisations/{slug}` : affiche uniquement les realisations publiees via reecriture `.htaccess`.
 - Accueil PHP `index.php` : affiche les 3 dernieres realisations publiees si MySQL est disponible, sinon conserve la section statique.
 - Upload d'image implemente : JPG, PNG ou WebP, 3 Mo maximum, stockage dans `uploads/realisations/`.
+- Une seule image de couverture par realisation dans cette version.
+- Champ `client_partner` affichable publiquement quand le nom du client ou partenaire est valide.
 - Le workflow FTP exclut encore `*.php`, `admin/`, `app/` et `database/` : cette page n'est pas publiee sur Bluehost tant que la bascule PHP n'est pas validee.

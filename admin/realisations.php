@@ -64,6 +64,9 @@ admin_shell_start('Réalisations');
                   <td>
                     <strong><?= e((string) $item['title']) ?></strong>
                     <div class="muted"><?= e((string) $item['summary']) ?></div>
+                    <?php if (!empty($item['client_partner'])): ?>
+                      <div class="muted">Client / partenaire : <?= e((string) $item['client_partner']) ?></div>
+                    <?php endif; ?>
                   </td>
                   <td><?= e($sectors[(string) $item['sector']] ?? (string) $item['sector']) ?></td>
                   <td><?= e($statuses[(string) $item['status']] ?? (string) $item['status']) ?></td>
@@ -72,7 +75,7 @@ admin_shell_start('Réalisations');
                   <td class="actions-cell">
                     <div class="button-row">
                       <?php if ((string) $item['status'] === 'published'): ?>
-                        <a class="button secondary" href="../realisation.php?slug=<?= e(rawurlencode((string) $item['slug'])) ?>">Voir</a>
+                        <a class="button secondary" href="../realisations/<?= e(rawurlencode((string) $item['slug'])) ?>">Voir</a>
                       <?php endif; ?>
                       <a class="button secondary" href="realisation-edit.php?id=<?= e((string) $item['id']) ?>">Modifier</a>
                       <a class="button danger" href="realisation-delete.php?id=<?= e((string) $item['id']) ?>">Supprimer</a>

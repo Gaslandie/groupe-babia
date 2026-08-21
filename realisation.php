@@ -17,6 +17,7 @@ $sector = $realisation === null ? '' : (string) ($realisation['sector'] ?? 'corp
 $sectorLabel = $realisation === null ? 'Réalisations' : ($sectors[$sector] ?? 'Groupe');
 $summary = $realisation === null ? 'Cette réalisation n’est pas disponible ou n’est pas publiée.' : (string) $realisation['summary'];
 $body = $realisation === null ? '' : (string) $realisation['body'];
+$clientPartner = $realisation === null ? '' : trim((string) ($realisation['client_partner'] ?? ''));
 $date = $realisation === null ? '' : public_realisation_date((string) ($realisation['realised_at'] ?? $realisation['published_at'] ?? ''));
 $location = $realisation === null ? '' : trim((string) ($realisation['location'] ?? ''));
 $cover = $realisation === null ? 'assets/images/agro-industrie.webp' : public_realisation_cover((string) ($realisation['cover_image'] ?? ''));
@@ -38,10 +39,11 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
     </script>
     <meta name="description" content="<?= e(public_realisation_excerpt($summary, 155)) ?>">
     <title><?= e($title) ?> | Groupe Babia Guinée</title>
+    <base href="/">
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
     <link rel="stylesheet" href="assets/css/styles.css">
     <?php if ($realisation !== null): ?>
-      <link rel="canonical" href="https://www.groupebabia.com/realisation.php?slug=<?= e($canonicalSlug) ?>">
+      <link rel="canonical" href="https://www.groupebabia.com/realisations/<?= e($canonicalSlug) ?>">
     <?php endif; ?>
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Groupe Babia Guinée">
@@ -87,11 +89,16 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
         </div>
         <aside class="page-hero-card">
           <strong>Repères</strong>
-          <?php if ($date !== '' || $location !== ''): ?>
-            <p class="realisation-meta">
-              <?php if ($date !== ''): ?><span><?= e($date) ?></span><?php endif; ?>
-              <?php if ($location !== ''): ?><span><?= e($location) ?></span><?php endif; ?>
-            </p>
+          <?php if ($clientPartner !== '' || $date !== '' || $location !== ''): ?>
+            <?php if ($clientPartner !== ''): ?>
+              <p class="realisation-client">Client / partenaire : <?= e($clientPartner) ?></p>
+            <?php endif; ?>
+            <?php if ($date !== '' || $location !== ''): ?>
+              <p class="realisation-meta">
+                <?php if ($date !== ''): ?><span><?= e($date) ?></span><?php endif; ?>
+                <?php if ($location !== ''): ?><span><?= e($location) ?></span><?php endif; ?>
+              </p>
+            <?php endif; ?>
           <?php else: ?>
             <p>Information publiée par Groupe Babia Guinée.</p>
           <?php endif; ?>

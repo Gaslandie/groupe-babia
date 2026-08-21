@@ -60,6 +60,13 @@ function render_realisation_form(string $action, array $values, array $errors = 
         </label>
         <?php realisation_form_error($errors, 'summary'); ?>
 
+        <label class="field-full">
+          Client ou partenaire
+          <input name="client_partner" type="text" maxlength="180" value="<?= e(realisation_form_value($values, 'client_partner')) ?>" placeholder="Nom affichable seulement si validé">
+          <span class="field-help">Laissez vide si le nom ne doit pas être public.</span>
+        </label>
+        <?php realisation_form_error($errors, 'client_partner'); ?>
+
         <label>
           Localisation
           <input name="location" type="text" maxlength="160" value="<?= e(realisation_form_value($values, 'location')) ?>" placeholder="Conakry, Guinée...">
