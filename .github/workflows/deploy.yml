@@ -21,7 +21,7 @@ jobs:
 
       - name: Verifier la destination avant tout envoi
         run: |
-          if grep -q '__CONFIRMER_SERVER_DIR_FTP_CLOISONNE__' .github/workflows/deploy.yml; then
+          if awk '$1 == "server-dir:" && $2 ~ /__CONFIRMER_SERVER_DIR_FTP_CLOISONNE__/ { found=1 } END { exit !found }' .github/workflows/deploy.yml; then
             echo "::error::server-dir non configure. Le compte Bluehost heberge d'autres sites clients : un envoi vers un repertoire non confirme ecrirait chez eux. Renseigner server-dir avant de relancer."
             exit 1
           fi
@@ -33,11 +33,10 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          # A confirmer apres creation du compte FTP cloisonne.
-          # Repertoire serveur reel : /home2/fnksrwmy/groupebabia.com
-          # Si le compte FTP est bien cloisonne sur ce repertoire, le server-dir
-          # vu par ce compte devrait etre "/" ; ne pas deviner avant test.
-          server-dir: __CONFIRMER_SERVER_DIR_FTP_CLOISONNE__/
+          # Compte FTP cree pour le repertoire Bluehost confirme :
+          # /home2/fnksrwmy/public_html/groupebabia.com
+          # Le compte etant cloisonne sur ce dossier, sa racine FTP est "/".
+          server-dir: /
           exclude: |
             **/.git*
             **/.git*/**
