@@ -46,8 +46,8 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-          <section class="page-hero"><img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia projects" width="1600" height="900" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Projects</p><h1>Verified company projects</h1><p>Client-approved projects and references will be published here when Groupe Babia provides the official information, images and authorization to display them.</p></div></section>
-          <section class="section"><div class="section-heading"><p class="eyebrow">Coming next</p><h2>No invented references</h2><p>This English page is ready for real projects, but it does not publish unverified client names, figures or achievements.</p></div></section>
+      <section class="page-hero"><img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.php">Home</a></li><li><span aria-current="page">Projects</span></li></ol></nav><p class="eyebrow">Projects</p><h1>Verified company projects</h1><p>Client-approved projects and references will be published here when Groupe Babia provides the official information, images and authorization to display them.</p></div><aside class="page-hero-card"><strong>No invented references</strong><p>This page is ready for official content without presenting unverified client names, figures or achievements.</p></aside></section>
+      <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Coming next</p><h2>Prepared for the future back office</h2><p>The French and English public pages will later be connected to verified projects published from the back office.</p></div></section>
     </main>
     <footer class="site-footer">
       <div class="footer-card">

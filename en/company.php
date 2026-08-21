@@ -46,13 +46,66 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-          <section class="page-hero">
-            <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia business environment" width="1600" height="900" fetchpriority="high" decoding="async">
-            <div class="page-hero-overlay"></div>
-            <div><p class="eyebrow">Company</p><h1>A Guinean group open to international partnerships</h1><p>Groupe Babia brings together trading, project and operational activities with a practical approach: understand the need, qualify the request, mobilize the right business unit and follow through.</p></div>
-          </section>
-          <section class="section"><div class="section-heading"><p class="eyebrow">Positioning</p><h2>Built around useful sectors</h2><p>The group is active in agriculture, agri-food imports, construction and public works, mining support, fishing and agro-industrial opportunities.</p></div><div class="content-questions"><article><h3>Local roots</h3><p>Based in Conakry, Groupe Babia works from Guinea while addressing both local and international needs.</p></article><article><h3>Business clarity</h3><p>The company structures requests by sector so buyers, partners and institutions know where to start.</p></article><article><h3>Long-term view</h3><p>The website is designed to grow with verified projects, references, official documents and a future back office.</p></article></div></section>
-          <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Working method</p><h2>A request is first qualified, then directed</h2></div><div class="timeline"><article><span>01</span><h3>Need received</h3><p>Product, volume, project type, destination and timing are collected.</p></article><article><span>02</span><h3>Scope clarified</h3><p>The team checks whether the request belongs to trade, construction, mining, fishing or agro-industry.</p></article><article><span>03</span><h3>Commercial response</h3><p>The visitor receives a targeted follow-up instead of a generic answer.</p></article></div></section>
+      <section class="page-hero">
+        <img class="page-hero-media" src="../assets/images/agro-cacao.webp" alt="" width="1080" height="656" fetchpriority="high" decoding="async">
+        <div class="page-hero-overlay"></div>
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.php">Home</a></li><li><span aria-current="page">Company</span></li></ol></nav>
+          <p class="eyebrow">Vision and positioning</p>
+          <h1>A Guinean group open to regional and international markets</h1>
+          <p>Groupe Babia brings together agriculture, agro-industry, construction, mining and fishing activities with one requirement: create trust and lasting value.</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="contact.php?need=corporate#formulaire">Start a conversation</a>
+            <a class="button button-secondary" href="catalog.php">View the catalog</a>
+          </div>
+        </div>
+        <aside class="page-hero-card">
+          <strong>Our direction</strong>
+          <p>Connect Guinean opportunities with the needs of companies, buyers and institutions in West Africa and beyond.</p>
+        </aside>
+      </section>
+
+      <section class="section two-column">
+        <div class="section-heading"><p class="eyebrow">Identity</p><h2>A diversified group, one shared vision</h2></div>
+        <div class="content-panel">
+          <h3>Groupe Babia Guinea</h3>
+          <p>Groupe Babia brings together five complementary business areas. Agriculture connects supply chains and markets; agro-industry adds value to raw materials; construction supports infrastructure; mining and fishing develop services and partnerships adapted to field realities.</p>
+          <p>A common governance approach supports consistent commitments, shared expertise and durable relationships with partners.</p>
+        </div>
+      </section>
+
+      <section class="section soft-section">
+        <div class="section-heading"><p class="eyebrow">At a glance</p><h2>Local roots, regional ambition</h2></div>
+        <div class="metric-grid">
+          <article class="metric-card"><strong>5</strong><h3>Business areas</h3><p>Agriculture, agro-industry, construction, mining and fishing under one vision.</p></article>
+          <article class="metric-card"><strong>GN</strong><h3>Guinean base</h3><p>Knowledge of local economic, logistics and operational realities.</p></article>
+          <article class="metric-card"><strong>WA</strong><h3>Regional outlook</h3><p>An ambition oriented toward West Africa and international partners.</p></article>
+        </div>
+      </section>
+
+      <section class="section media-band soft-section" id="fishing">
+        <img src="../assets/images/peche.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+        <div><p class="eyebrow">Fishing</p><h2>Structuring a responsible fisheries value chain</h2><p>Groupe Babia develops its fishing activity around supply, quality, conservation and commercialization of fishery products.</p><ul class="tag-list"><li>Supply</li><li>Quality</li><li>Cold chain</li><li>Commercialization</li></ul><div class="page-actions"><a class="button button-primary" href="contact.php?need=fishing#formulaire">Present a fishing request</a></div></div>
+      </section>
+
+      <section class="section media-band" id="agro-industry">
+        <img src="../assets/images/agro-industrie.webp" alt="" width="1704" height="923" loading="lazy" decoding="async">
+        <div><p class="eyebrow">Agro-industry</p><h2>Turning agricultural resources into durable value</h2><p>The agro-industrial area covers processing, quality control, packaging and preparation of products for local, regional and international markets.</p><ul class="tag-list"><li>Processing</li><li>Packaging</li><li>Quality control</li><li>Local value</li></ul><div class="page-actions"><a class="button button-primary" href="contact.php?need=agro-industry#formulaire">Discuss an agro-industrial project</a></div></div>
+      </section>
+
+      <section class="section dark-section">
+        <div class="section-heading"><p class="eyebrow">How we work</p><h2>From listening to value creation</h2></div>
+        <div class="timeline">
+          <article><strong>01. Understand</strong><div><h3>Start with the real need</h3><p>We qualify expectations, context, volumes and constraints for each request.</p></div></article>
+          <article><strong>02. Structure</strong><div><h3>Mobilize useful expertise</h3><p>Each business area prepares a response adapted to commercial and operational requirements.</p></div></article>
+          <article><strong>03. Support</strong><div><h3>Build a durable relationship</h3><p>We prioritize follow-up, clarity and continuity in partner relationships.</p></div></article>
+        </div>
+      </section>
+
+      <section class="contact-band">
+        <div><p class="eyebrow">Contact</p><h2>A direct access point to Groupe Babia Guinea.</h2><p>Our commercial team routes each request to the relevant business area and contact person.</p></div>
+        <a class="button button-primary" href="contact.php?need=corporate#formulaire">Prepare a request</a>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="footer-card">

@@ -46,44 +46,66 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-          <section class="page-hero" aria-label="Groupe Babia Guinea overview">
-            <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Agricultural products ready for international trade" width="1600" height="900" fetchpriority="high" decoding="async">
-            <div class="page-hero-overlay"></div>
-            <div>
-              <p class="eyebrow">Trade, projects and partnerships from Conakry</p>
-              <h1>Groupe Babia Guinea</h1>
-              <p>We export agricultural products, import food commodities and support construction, mining, fishing and agro-industrial projects for buyers, distributors, institutions and companies.</p>
-              <div class="hero-actions">
-                <a class="button button-primary" href="catalog.php">Explore products</a>
-                <a class="button button-secondary" href="contact.php#formulaire">Request a quotation</a>
-              </div>
-            </div>
-          </section>
+      <section class="page-hero" aria-label="Groupe Babia Guinea overview">
+        <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
+        <div class="page-hero-overlay"></div>
+        <div>
+          <p class="eyebrow">Trade, projects and partnerships from Conakry</p>
+          <h1>Groupe Babia Guinea</h1>
+          <p>We export agricultural products, import food commodities and support construction, mining, fishing and agro-industrial projects for buyers, distributors, institutions and companies.</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="catalog.php">Explore products</a>
+            <a class="button button-secondary" href="contact.php#formulaire">Request a quotation</a>
+          </div>
+        </div>
+        <aside class="page-hero-card">
+          <strong>One entry point</strong>
+          <p>A clear route for buyers and partners looking for agricultural products, project support or institutional contact in Guinea.</p>
+        </aside>
+      </section>
 
-          <section class="section" id="activities">
-            <div class="section-heading">
-              <p class="eyebrow">Activities</p>
-              <h2>A multisector partner for practical business needs</h2>
-              <p>Groupe Babia works across complementary sectors where reliability, sourcing capacity and operational follow-up matter.</p>
-            </div>
-            <div class="activity-grid">
-              <article class="activity-card"><img src="../assets/images/agro-cajou.webp" alt="Raw cashew nuts" width="800" height="1000" loading="lazy" decoding="async"><div><small>Export</small><h3>Agricultural products</h3><p>Cocoa beans, coffee beans, raw cashew nuts, soya beans, shea butter, honey, sesame seeds and fruits.</p><a href="agri-food.php">View agri-food trade</a></div></article>
-              <article class="activity-card"><img src="../assets/images/btp.webp" alt="Construction site" width="626" height="417" loading="lazy" decoding="async"><div><small>Projects</small><h3>Construction and public works</h3><p>Support for construction and infrastructure projects with attention to scope, deadlines and coordination.</p><a href="construction.php">View construction</a></div></article>
-              <article class="activity-card"><img src="../assets/images/mines.webp" alt="Mining operations" width="1600" height="1064" loading="lazy" decoding="async"><div><small>Mining</small><h3>Mining services and partnerships</h3><p>Operational support, supply and partnership opportunities for responsible mining activities.</p><a href="mining.php">View mining</a></div></article>
-            </div>
-          </section>
+      <section class="trust-strip" aria-label="Groupe Babia focus areas">
+        <div><strong>Guinea</strong><span>Conakry-based coordination</span></div>
+        <div><strong>5</strong><span>Business areas</span></div>
+        <div><strong>Export</strong><span>Agricultural products</span></div>
+        <div><strong>Import</strong><span>Food commodities</span></div>
+      </section>
 
-          <section class="section soft-section">
-            <div class="section-heading">
-              <p class="eyebrow">For international buyers</p>
-              <h2>Clear information before any quotation</h2>
-            </div>
-            <div class="service-grid">
-              <article class="service-card"><small>01</small><h3>Products and quantities</h3><p>Share the product, requested volume, packaging expectations, destination and timing.</p></article>
-              <article class="service-card"><small>02</small><h3>Reliable follow-up</h3><p>The team qualifies each request before directing it to the relevant business area.</p></article>
-              <article class="service-card"><small>03</small><h3>Direct contact</h3><p>Requests can be sent through the form, by email or directly through WhatsApp.</p></article>
-            </div>
-          </section>
+      <section class="section proof-section" aria-labelledby="proof-title">
+        <div class="section-heading">
+          <p class="eyebrow">Commercial clarity</p>
+          <h2 id="proof-title">A practical qualification path before any quotation</h2>
+          <p>The English version mirrors the French experience with the same emphasis on clear sectors, reliable request handling and no invented achievements.</p>
+        </div>
+        <div class="proof-grid">
+          <article><span>01</span><h3>Sector routing</h3><p>Each request is directed to agriculture, agri-food import, construction, mining, fishing or agro-industry.</p></article>
+          <article><span>02</span><h3>Useful details first</h3><p>Product, volume, project location, destination, timing and documents make the first response more actionable.</p></article>
+          <article><span>03</span><h3>Verified information only</h3><p>References, certificates and achievements will be published only after official client validation.</p></article>
+          <article><span>04</span><h3>Direct contact</h3><p>The form, email and WhatsApp remain available for buyers and partners who need a fast first exchange.</p></article>
+        </div>
+      </section>
+
+      <section class="section activities-section" id="activities">
+        <div class="section-heading">
+          <p class="eyebrow">Activities</p>
+          <h2>A multisector partner for practical business needs</h2>
+          <p>Groupe Babia works across complementary sectors where reliability, sourcing capacity and operational follow-up matter.</p>
+        </div>
+        <div class="activity-grid">
+          <article class="activity-card"><img src="../assets/images/agro-cajou.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"><div><small>Export</small><h3>Agricultural products</h3><p>Cocoa beans, coffee beans, raw cashew nuts, soya beans, shea butter, honey, sesame seeds and fruits.</p><a href="agri-food.php">View agri-food trade</a></div></article>
+          <article class="activity-card"><img src="../assets/images/btp.webp" alt="" width="626" height="417" loading="lazy" decoding="async"><div><small>Projects</small><h3>Construction and public works</h3><p>Support for construction and infrastructure projects with attention to scope, deadlines and coordination.</p><a href="construction.php">View construction</a></div></article>
+          <article class="activity-card"><img src="../assets/images/mines.webp" alt="" width="1600" height="1064" loading="lazy" decoding="async"><div><small>Mining</small><h3>Mining services and partnerships</h3><p>Operational support, supply and partnership opportunities for responsible mining activities.</p><a href="mining.php">View mining</a></div></article>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contact">
+        <div>
+          <p class="eyebrow">Business request</p>
+          <h2>Share the product, project scope, destination and timing.</h2>
+          <p>The team will qualify your message and direct it to the right business area.</p>
+        </div>
+        <a class="button button-primary" href="contact.php#formulaire">Prepare a request</a>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="footer-card">
