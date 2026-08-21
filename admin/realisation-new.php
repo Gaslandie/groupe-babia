@@ -6,6 +6,7 @@ require __DIR__ . '/../app/admin/auth.php';
 require __DIR__ . '/../app/admin/layout.php';
 require __DIR__ . '/../app/repositories/realisations.php';
 require __DIR__ . '/../app/admin/realisations_form.php';
+require __DIR__ . '/../app/admin/uploads.php';
 
 admin_require_auth();
 
@@ -35,6 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $validation = realisation_validate($_POST);
         $errors = $validation['errors'];
         $values = array_merge($values, $validation['data']);
+
+        if ($errors === []) {
+            $uploadPath = admin_handle_realisation_upload('cover_upload', $errors);
+            if ($uploadPath !== null) {
+                $validation['data']['cover_image'] = $uploadPath;
+                $values['cover_image'] = $uploadPath;
+            }
+        }
 
         if ($errors === []) {
             try {

@@ -17,6 +17,7 @@
 | 2026-08-21 | Migration PHP progressive | Codex | Lot 0A cree : config PHP, registre des pages, build `dist/` identique et script de verification | Extraire les premiers partials sans changer le rendu |
 | 2026-08-21 | Back office MySQL | Codex | CRUD realisations ajoute hors production : creation, edition, suppression, statuts, mise en avant, CSRF | Brancher le front public sur les realisations publiees |
 | 2026-08-21 | Front public realisations | Codex | Page PHP `realisations.php` branchee sur les realisations publiees, avec repli propre sans MySQL | Creer la base Bluehost et activer les secrets avant de deployer PHP |
+| 2026-08-21 | Fiches realisations et upload | Codex | Fiche detail publique, apercu accueil PHP et upload image admin ajoutes hors deploiement FTP | Tester avec une vraie base MySQL Bluehost |
 
 ## A faire
 
@@ -64,3 +65,4 @@
 - Back office 2026-08-21 : ajout de `database/migrations/001_create_realisations.sql`, configuration MySQL par `.env`, login admin par hash et ecrans de lecture.
 - Back office 2026-08-21 : CRUD realisations ajoute avec validation serveur, slug automatique, statut publie/brouillon/archive et protection CSRF.
 - Front PHP 2026-08-21 : ajout de `realisations.php`, affichage public des realisations `published`, repli sans erreur si MySQL n'est pas encore configure.
+- Front PHP 2026-08-21 : ajout de `realisation.php?slug=...`, apercu des 3 dernieres realisations dans `index.php` lorsque MySQL est disponible, upload image admin vers `uploads/realisations/`.

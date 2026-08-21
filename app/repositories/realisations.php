@@ -25,6 +25,11 @@ function realisation_statuses(): array
     ];
 }
 
+function realisation_text_length(string $value): int
+{
+    return function_exists('mb_strlen') ? mb_strlen($value) : strlen($value);
+}
+
 function list_realisations(?string $status = null, int $limit = 30): array
 {
     $limit = max(1, min($limit, 100));
@@ -82,6 +87,22 @@ function list_published_realisations(int $limit = 12): array
     $statement->execute(['status' => 'published']);
 
     return $statement->fetchAll();
+}
+
+function find_published_realisation_by_slug(string $slug): ?array
+{
+    $statement = db()->prepare(
+        'SELECT * FROM realisations
+        WHERE slug = :slug AND status = :status
+        LIMIT 1'
+    );
+    $statement->execute([
+        'slug' => $slug,
+        'status' => 'published',
+    ]);
+    $item = $statement->fetch();
+
+    return $item === false ? null : $item;
 }
 
 function realisation_slugify(string $value): string
@@ -144,7 +165,7 @@ function realisation_validate(array $input): array
 
     if ($title === '') {
         $errors['title'] = 'Le titre est obligatoire.';
-    } elseif (mb_strlen($title) > 180) {
+    } elseif (realisation_text_length($title) > 180) {
         $errors['title'] = 'Le titre ne doit pas dépasser 180 caractères.';
     }
 
@@ -154,7 +175,7 @@ function realisation_validate(array $input): array
 
     if ($summary === '') {
         $errors['summary'] = 'Le résumé est obligatoire.';
-    } elseif (mb_strlen($summary) > 320) {
+    } elseif (realisation_text_length($summary) > 320) {
         $errors['summary'] = 'Le résumé ne doit pas dépasser 320 caractères.';
     }
 

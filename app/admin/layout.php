@@ -50,8 +50,10 @@ function admin_header(string $title): void
       .login-card { width: min(420px, 100%); padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 20px 60px rgba(11,25,20,.12); }
       label { display: grid; gap: 8px; margin-bottom: 16px; color: var(--forest); font-weight: 750; }
       input, select, textarea { width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: #fff; }
+      input[type="file"] { padding: 10px 12px; }
       input[type="checkbox"] { width: auto; min-height: 0; margin-right: 8px; }
       textarea { min-height: 180px; padding: 12px; resize: vertical; }
+      .field-help { color: var(--muted); font-size: .84rem; font-weight: 500; }
       .field-error { margin: -8px 0 14px; color: #ad4f35; font-size: .9rem; font-weight: 700; }
       .actions-cell { white-space: nowrap; }
       .inline-form { display: inline; }

@@ -19,6 +19,10 @@ key.properties
 .env.local
 .env.*.local
 
+# User uploads
+uploads/realisations/*
+!uploads/realisations/.gitkeep
+
 # Logs
 *.log
 
@@ -26,4 +30,3 @@ key.properties
 .DS_Store
 .idea/
 .vscode/
-

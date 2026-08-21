@@ -71,6 +71,9 @@ admin_shell_start('Réalisations');
                   <td><?= ((int) $item['is_featured']) === 1 ? 'Oui' : 'Non' ?></td>
                   <td class="actions-cell">
                     <div class="button-row">
+                      <?php if ((string) $item['status'] === 'published'): ?>
+                        <a class="button secondary" href="../realisation.php?slug=<?= e(rawurlencode((string) $item['slug'])) ?>">Voir</a>
+                      <?php endif; ?>
                       <a class="button secondary" href="realisation-edit.php?id=<?= e((string) $item['id']) ?>">Modifier</a>
                       <a class="button danger" href="realisation-delete.php?id=<?= e((string) $item['id']) ?>">Supprimer</a>
                     </div>

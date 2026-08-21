@@ -48,5 +48,7 @@ Table creee : `realisations`.
 - Liste des realisations lue depuis MySQL si la base est configuree.
 - Ajout, modification et suppression des realisations.
 - Page publique `realisations.php` : lit les contenus `published` si MySQL est configure, sinon affiche un etat d'attente propre.
-- Upload d'image non implemente dans ce lot : le champ `cover_image` attend un chemin existant ou futur.
+- Page detail `realisation.php?slug=...` : affiche uniquement les realisations publiees.
+- Accueil PHP `index.php` : affiche les 3 dernieres realisations publiees si MySQL est disponible, sinon conserve la section statique.
+- Upload d'image implemente : JPG, PNG ou WebP, 3 Mo maximum, stockage dans `uploads/realisations/`.
 - Le workflow FTP exclut encore `*.php`, `admin/`, `app/` et `database/` : cette page n'est pas publiee sur Bluehost tant que la bascule PHP n'est pas validee.

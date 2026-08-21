@@ -2,43 +2,12 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/app/repositories/realisations.php';
+require_once __DIR__ . '/app/public/realisations.php';
 
-function realisation_public_date(?string $date): string
-{
-    if ($date === null || $date === '') {
-        return '';
-    }
-
-    $timestamp = strtotime($date);
-    if ($timestamp === false) {
-        return '';
-    }
-
-    return date('d/m/Y', $timestamp);
-}
-
-function realisation_public_cover(?string $path): string
-{
-    $path = trim((string) $path);
-
-    return $path === '' ? 'assets/images/agro-industrie.webp' : $path;
-}
-
-$realisations = [];
-$databaseAvailable = database_is_configured();
-$publicReadError = false;
-
-if ($databaseAvailable) {
-    try {
-        $realisations = list_published_realisations(12);
-    } catch (Throwable) {
-        $publicReadError = true;
-        $realisations = [];
-    }
-}
-
-$sectors = realisation_sectors();
+$publicationState = public_fetch_realisations(12);
+$realisations = $publicationState['items'];
+$databaseAvailable = $publicationState['available'];
+$publicReadError = $publicationState['error'];
 ?>
 <!doctype html>
 <html lang="fr">
@@ -115,31 +84,7 @@ $sectors = realisation_sectors();
         </div>
 
         <?php if ($realisations !== []): ?>
-          <div class="news-grid realisations-grid">
-            <?php foreach ($realisations as $realisation): ?>
-              <?php
-                $sector = (string) ($realisation['sector'] ?? 'corporate');
-                $date = realisation_public_date((string) ($realisation['realised_at'] ?? $realisation['published_at'] ?? ''));
-                $location = trim((string) ($realisation['location'] ?? ''));
-                $cover = realisation_public_cover((string) ($realisation['cover_image'] ?? ''));
-                $alt = trim((string) ($realisation['cover_alt'] ?? ''));
-              ?>
-              <article class="news-card realisation-card">
-                <img src="<?= e($cover) ?>" alt="<?= e($alt) ?>" width="720" height="460" loading="lazy" decoding="async">
-                <div>
-                  <small><?= e($sectors[$sector] ?? 'Groupe') ?></small>
-                  <h3><?= e((string) $realisation['title']) ?></h3>
-                  <?php if ($date !== '' || $location !== ''): ?>
-                    <p class="realisation-meta">
-                      <?php if ($date !== ''): ?><span><?= e($date) ?></span><?php endif; ?>
-                      <?php if ($location !== ''): ?><span><?= e($location) ?></span><?php endif; ?>
-                    </p>
-                  <?php endif; ?>
-                  <p><?= e((string) $realisation['summary']) ?></p>
-                </div>
-              </article>
-            <?php endforeach; ?>
-          </div>
+          <?php public_render_realisations_grid($realisations); ?>
         <?php else: ?>
           <div class="empty-state">
             <p class="eyebrow">Bientôt</p>

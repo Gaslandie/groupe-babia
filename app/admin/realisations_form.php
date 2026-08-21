@@ -25,7 +25,7 @@ function render_realisation_form(string $action, array $values, array $errors = 
     $sectors = realisation_sectors();
     $statuses = realisation_statuses();
     ?>
-    <form class="panel" method="post" action="<?= e($action) ?>">
+    <form class="panel" method="post" action="<?= e($action) ?>" enctype="multipart/form-data">
       <?= admin_csrf_field() ?>
       <div class="form-grid">
         <label class="field-full">
@@ -72,9 +72,17 @@ function render_realisation_form(string $action, array $values, array $errors = 
         <?php realisation_form_error($errors, 'realised_at'); ?>
 
         <label>
-          Image de couverture
-          <input name="cover_image" type="text" value="<?= e(realisation_form_value($values, 'cover_image')) ?>" placeholder="assets/images/nom-image.webp">
+          Chemin image
+          <input name="cover_image" type="text" value="<?= e(realisation_form_value($values, 'cover_image')) ?>" placeholder="uploads/realisations/image.webp">
+          <span class="field-help">Conservez ce champ pour réutiliser une image déjà en ligne.</span>
         </label>
+
+        <label>
+          Téléverser une image
+          <input name="cover_upload" type="file" accept="image/jpeg,image/png,image/webp">
+          <span class="field-help">JPG, PNG ou WebP. 3 Mo maximum.</span>
+        </label>
+        <?php realisation_form_error($errors, 'cover_image'); ?>
 
         <label>
           Texte alternatif image

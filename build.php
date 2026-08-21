@@ -39,6 +39,7 @@ if ($withPhp) {
     }
 
     copy_directory(project_path('app'), $dist . DIRECTORY_SEPARATOR . 'app');
+    copy_directory(project_path('uploads'), $dist . DIRECTORY_SEPARATOR . 'uploads');
 }
 
 echo sprintf(

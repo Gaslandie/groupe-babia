@@ -21,6 +21,9 @@ if (is_dir($root . '/dist/app')) {
     foreach ($phpPages as $phpPage) {
         $files[] = (string) $phpPage;
     }
+
+    $files[] = 'uploads/.htaccess';
+    $files[] = 'uploads/realisations/.gitkeep';
 }
 
 $hasDiff = false;

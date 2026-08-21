@@ -1419,6 +1419,14 @@ body.hero-overlay .site-header.is-scrolled {
   font-weight: 700;
 }
 
+.news-card h3 a {
+  text-decoration: none;
+}
+
+.news-card h3 a:hover {
+  color: var(--forest);
+}
+
 .realisation-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1440,6 +1448,17 @@ body.hero-overlay .site-header.is-scrolled {
   background: var(--gold);
   border-radius: 50%;
   content: "";
+}
+
+.realisation-detail {
+  font-size: 1.03rem;
+  line-height: 1.82;
+}
+
+.section-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
 }
 
 .editorial-rhythm {
