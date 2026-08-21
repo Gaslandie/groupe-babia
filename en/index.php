@@ -46,10 +46,10 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-          <section class="hero inner-hero" aria-label="Groupe Babia Guinea overview">
-            <img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Agricultural products ready for international trade" width="1600" height="900" fetchpriority="high" decoding="async">
-            <div class="inner-hero-overlay"></div>
-            <div class="inner-hero-content">
+          <section class="page-hero" aria-label="Groupe Babia Guinea overview">
+            <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Agricultural products ready for international trade" width="1600" height="900" fetchpriority="high" decoding="async">
+            <div class="page-hero-overlay"></div>
+            <div>
               <p class="eyebrow">Trade, projects and partnerships from Conakry</p>
               <h1>Groupe Babia Guinea</h1>
               <p>We export agricultural products, import food commodities and support construction, mining, fishing and agro-industrial projects for buyers, distributors, institutions and companies.</p>

@@ -46,10 +46,10 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-          <section class="hero inner-hero">
-            <img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia business environment" width="1600" height="900" fetchpriority="high" decoding="async">
-            <div class="inner-hero-overlay"></div>
-            <div class="inner-hero-content"><p class="eyebrow">Company</p><h1>A Guinean group open to international partnerships</h1><p>Groupe Babia brings together trading, project and operational activities with a practical approach: understand the need, qualify the request, mobilize the right business unit and follow through.</p></div>
+          <section class="page-hero">
+            <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia business environment" width="1600" height="900" fetchpriority="high" decoding="async">
+            <div class="page-hero-overlay"></div>
+            <div><p class="eyebrow">Company</p><h1>A Guinean group open to international partnerships</h1><p>Groupe Babia brings together trading, project and operational activities with a practical approach: understand the need, qualify the request, mobilize the right business unit and follow through.</p></div>
           </section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Positioning</p><h2>Built around useful sectors</h2><p>The group is active in agriculture, agri-food imports, construction and public works, mining support, fishing and agro-industrial opportunities.</p></div><div class="content-questions"><article><h3>Local roots</h3><p>Based in Conakry, Groupe Babia works from Guinea while addressing both local and international needs.</p></article><article><h3>Business clarity</h3><p>The company structures requests by sector so buyers, partners and institutions know where to start.</p></article><article><h3>Long-term view</h3><p>The website is designed to grow with verified projects, references, official documents and a future back office.</p></article></div></section>
           <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Working method</p><h2>A request is first qualified, then directed</h2></div><div class="timeline"><article><span>01</span><h3>Need received</h3><p>Product, volume, project type, destination and timing are collected.</p></article><article><span>02</span><h3>Scope clarified</h3><p>The team checks whether the request belongs to trade, construction, mining, fishing or agro-industry.</p></article><article><span>03</span><h3>Commercial response</h3><p>The visitor receives a targeted follow-up instead of a generic answer.</p></article></div></section>

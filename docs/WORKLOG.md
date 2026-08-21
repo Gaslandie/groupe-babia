@@ -25,6 +25,7 @@
 | 2026-08-21 | Formulaire serveur | Codex | Stockage MySQL des demandes et ecran admin messages deployes | Ajouter notification e-mail et purge automatique |
 | 2026-08-21 | Version anglaise | Codex | Pages publiques `/en/` en cours de generation et integration | Verifier, deployer et pousser |
 | 2026-08-21 | Bascule PHP publique | Codex | Pages publiques basculees en URLs PHP canoniques en local | Deployer, verifier production et pousser |
+| 2026-08-21 | Correction version anglaise | Codex | Miroirs `.html` locaux avec liens `.html`, pages PHP production conservees, catalogue anglais illustre et JS catalogue/formulaire bilingue | Continuer l'enrichissement editorial page par page |
 
 ## A faire
 

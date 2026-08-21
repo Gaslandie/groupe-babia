@@ -13,10 +13,10 @@ $pages = [
         'active' => 'home',
         'hero' => 'assets/images/hero-agro-export-import.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero" aria-label="Groupe Babia Guinea overview">
-            <img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Agricultural products ready for international trade" width="1600" height="900" fetchpriority="high" decoding="async">
-            <div class="inner-hero-overlay"></div>
-            <div class="inner-hero-content">
+          <section class="page-hero" aria-label="Groupe Babia Guinea overview">
+            <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Agricultural products ready for international trade" width="1600" height="900" fetchpriority="high" decoding="async">
+            <div class="page-hero-overlay"></div>
+            <div>
               <p class="eyebrow">Trade, projects and partnerships from Conakry</p>
               <h1>Groupe Babia Guinea</h1>
               <p>We export agricultural products, import food commodities and support construction, mining, fishing and agro-industrial projects for buyers, distributors, institutions and companies.</p>
@@ -61,10 +61,10 @@ HTML,
         'active' => 'company',
         'hero' => 'assets/images/hero-agro-export-import.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero">
-            <img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia business environment" width="1600" height="900" fetchpriority="high" decoding="async">
-            <div class="inner-hero-overlay"></div>
-            <div class="inner-hero-content"><p class="eyebrow">Company</p><h1>A Guinean group open to international partnerships</h1><p>Groupe Babia brings together trading, project and operational activities with a practical approach: understand the need, qualify the request, mobilize the right business unit and follow through.</p></div>
+          <section class="page-hero">
+            <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia business environment" width="1600" height="900" fetchpriority="high" decoding="async">
+            <div class="page-hero-overlay"></div>
+            <div><p class="eyebrow">Company</p><h1>A Guinean group open to international partnerships</h1><p>Groupe Babia brings together trading, project and operational activities with a practical approach: understand the need, qualify the request, mobilize the right business unit and follow through.</p></div>
           </section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Positioning</p><h2>Built around useful sectors</h2><p>The group is active in agriculture, agri-food imports, construction and public works, mining support, fishing and agro-industrial opportunities.</p></div><div class="content-questions"><article><h3>Local roots</h3><p>Based in Conakry, Groupe Babia works from Guinea while addressing both local and international needs.</p></article><article><h3>Business clarity</h3><p>The company structures requests by sector so buyers, partners and institutions know where to start.</p></article><article><h3>Long-term view</h3><p>The website is designed to grow with verified projects, references, official documents and a future back office.</p></article></div></section>
           <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Working method</p><h2>A request is first qualified, then directed</h2></div><div class="timeline"><article><span>01</span><h3>Need received</h3><p>Product, volume, project type, destination and timing are collected.</p></article><article><span>02</span><h3>Scope clarified</h3><p>The team checks whether the request belongs to trade, construction, mining, fishing or agro-industry.</p></article><article><span>03</span><h3>Commercial response</h3><p>The visitor receives a targeted follow-up instead of a generic answer.</p></article></div></section>
@@ -78,7 +78,7 @@ HTML,
         'active' => 'agri-food',
         'hero' => 'assets/images/hero-agro-export-import.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Agri-food export and import products" width="1600" height="900" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Agri-food trade</p><h1>Agricultural exports and food imports</h1><p>Groupe Babia supports buyers and distributors looking for agricultural products from Guinea and food commodities for the local market.</p><div class="hero-actions"><a class="button button-primary" href="catalog.php">View products</a><a class="button button-secondary" href="contact.php#formulaire">Request a quotation</a></div></div></section>
+          <section class="page-hero"><img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Agri-food export and import products" width="1600" height="900" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Agri-food trade</p><h1>Agricultural exports and food imports</h1><p>Groupe Babia supports buyers and distributors looking for agricultural products from Guinea and food commodities for the local market.</p><div class="hero-actions"><a class="button button-primary" href="catalog.php">View products</a><a class="button button-secondary" href="contact.php#formulaire">Request a quotation</a></div></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Exports</p><h2>Agricultural products confirmed by the client</h2></div><div class="product-grid"><article class="product-card"><h3>Cocoa beans</h3><p>Requests are qualified by quantity, destination, timing and documentation needs.</p></article><article class="product-card"><h3>Coffee beans</h3><p>Supply discussions can include volumes, quality expectations and logistics.</p></article><article class="product-card"><h3>Raw cashew nuts</h3><p>Commercial requests should specify crop, quantity, packaging and destination.</p></article><article class="product-card"><h3>Soya beans</h3><p>Structured requests help prepare a relevant first response.</p></article><article class="product-card"><h3>Shea butter, honey and sesame seeds</h3><p>Available as part of the confirmed agricultural export range.</p></article><article class="product-card"><h3>Fruits</h3><p>Requests must include destination, freshness constraints and desired timing.</p></article></div></section>
           <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Imports</p><h2>Food products for local demand</h2><p>Juice, rice, tomatoes, onions and edible oil are part of the import scope shared by the client.</p></div></section>
 HTML,
@@ -91,7 +91,7 @@ HTML,
         'active' => 'construction',
         'hero' => 'assets/images/btp.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/btp.webp" alt="Construction and public works" width="626" height="417" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Construction</p><h1>Construction and public works</h1><p>For construction and infrastructure requests, Groupe Babia helps clarify the scope, location, timing, constraints and available documents before commercial follow-up.</p><div class="hero-actions"><a class="button button-primary" href="contact.php?need=construction#formulaire">Discuss a project</a></div></div></section>
+          <section class="page-hero"><img class="page-hero-media" src="../assets/images/btp.webp" alt="Construction and public works" width="626" height="417" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Construction</p><h1>Construction and public works</h1><p>For construction and infrastructure requests, Groupe Babia helps clarify the scope, location, timing, constraints and available documents before commercial follow-up.</p><div class="hero-actions"><a class="button button-primary" href="contact.php?need=construction#formulaire">Discuss a project</a></div></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Project requests</p><h2>What helps the team respond faster</h2></div><div class="service-grid"><article class="service-card"><small>01</small><h3>Scope</h3><p>Type of work, expected result, location and responsibilities.</p></article><article class="service-card"><small>02</small><h3>Timing</h3><p>Target dates, urgency, available plans or site information.</p></article><article class="service-card"><small>03</small><h3>Partners</h3><p>Organizations involved and documents already available.</p></article></div></section>
 HTML,
     ],
@@ -103,7 +103,7 @@ HTML,
         'active' => 'mining',
         'hero' => 'assets/images/mines.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/mines.webp" alt="Mining operations in an open pit environment" width="1600" height="1064" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Mining</p><h1>Mining services and partnerships</h1><p>Groupe Babia positions itself as a practical partner for mining-related requests, operational support, supply needs and cooperation opportunities.</p></div></section>
+          <section class="page-hero"><img class="page-hero-media" src="../assets/images/mines.webp" alt="Mining operations in an open pit environment" width="1600" height="1064" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Mining</p><h1>Mining services and partnerships</h1><p>Groupe Babia positions itself as a practical partner for mining-related requests, operational support, supply needs and cooperation opportunities.</p></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Approach</p><h2>Responsible support starts with a clear perimeter</h2></div><div class="content-questions"><article><h3>Operational needs</h3><p>Describe the service, supply or support required and the site context.</p></article><article><h3>Compliance and safety</h3><p>Requests must identify the constraints, stakeholders and documentation required.</p></article><article><h3>Local value</h3><p>The objective is to support useful partnerships while respecting operational realities.</p></article></div></section>
 HTML,
     ],
@@ -115,9 +115,49 @@ HTML,
         'active' => 'catalog',
         'hero' => 'assets/images/agro-cajou.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/agro-cajou.webp" alt="Agricultural products catalog" width="800" height="1000" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Catalog</p><h1>Products handled by Groupe Babia</h1><p>The catalog presents the agricultural export products and food import products confirmed by the client. For a quotation, share product, volume, destination and timing.</p><div class="hero-actions"><a class="button button-primary" href="contact.php#formulaire">Request a quotation</a></div></div></section>
-          <section class="section"><div class="section-heading"><p class="eyebrow">Exports</p><h2>Agricultural products</h2></div><div class="product-grid"><article class="product-card"><h3>Cocoa beans</h3><p>Export request</p></article><article class="product-card"><h3>Coffee beans</h3><p>Export request</p></article><article class="product-card"><h3>Raw cashew nuts</h3><p>Export request</p></article><article class="product-card"><h3>Soya beans</h3><p>Export request</p></article><article class="product-card"><h3>Shea butter</h3><p>Export request</p></article><article class="product-card"><h3>Honey</h3><p>Export request</p></article><article class="product-card"><h3>Sesame seeds</h3><p>Export request</p></article><article class="product-card"><h3>Fruits</h3><p>Export request</p></article></div></section>
-          <section class="section soft-section"><div class="section-heading"><p class="eyebrow">Imports</p><h2>Food commodities</h2></div><div class="product-grid"><article class="product-card"><h3>Juice</h3><p>Import request</p></article><article class="product-card"><h3>Rice</h3><p>Import request</p></article><article class="product-card"><h3>Tomatoes</h3><p>Import request</p></article><article class="product-card"><h3>Onions</h3><p>Import request</p></article><article class="product-card"><h3>Edible oil</h3><p>Import request</p></article></div></section>
+          <section class="page-hero"><img class="page-hero-media" src="../assets/images/agro-cajou.webp" alt="Agricultural products catalog" width="800" height="1000" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Catalog</p><h1>Products handled by Groupe Babia</h1><p>The catalog presents the agricultural export products and food import products confirmed by the client. For a quotation, share product, volume, destination and timing.</p><div class="hero-actions"><a class="button button-primary" href="contact.php#formulaire">Request a quotation</a></div></div></section>
+          <section class="section" id="products">
+            <div class="section-heading">
+              <p class="eyebrow">Product selection</p>
+              <h2>A catalog structured by operation</h2>
+              <p>Filter the confirmed scope, select the products you need and send a clearer quotation request.</p>
+            </div>
+            <div class="product-toolbar" role="group" aria-label="Filter products by operation">
+              <button class="filter-button is-active" type="button" data-filter="all">All</button>
+              <button class="filter-button" type="button" data-filter="export">Exports</button>
+              <button class="filter-button" type="button" data-filter="import">Imports</button>
+            </div>
+            <p class="filter-result" role="status" aria-live="polite" data-filter-result>13 products shown</p>
+            <p class="quote-hint">Add the products you are interested in: your selection is automatically included in the contact form.</p>
+            <div class="catalogue-note" role="note">
+              <strong>For an actionable quotation</strong>
+              <span>Please include quantity, destination, timeline, expected packaging and required documents whenever possible.</span>
+            </div>
+            <div class="empty-state" data-filter-empty hidden>
+              <h3>No products in this filter</h3>
+              <p>Return to the full catalog or describe your request directly.</p>
+              <a class="button button-primary" href="contact.php#formulaire">Describe my request</a>
+            </div>
+            <div class="product-grid">
+              <article class="product-card" data-category="export"><img src="../assets/images/agro-cacao.webp" alt="Cocoa beans" width="1080" height="656" loading="lazy" decoding="async"><div><small>Export</small><h3>Cocoa beans</h3><p>Cocoa requests are qualified by drying, sorting, packaging, quantity, destination and timing.</p><ul class="tag-list"><li>Agricultural product</li><li>Sorting</li><li>Export</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Cocoa beans">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="export"><img src="../assets/images/cafe.webp" alt="Coffee beans" width="765" height="573" loading="lazy" decoding="async"><div><small>Export</small><h3>Coffee beans</h3><p>Coffee beans for buyers looking for traceable supply, quality information and reliable follow-up.</p><ul class="tag-list"><li>Agricultural product</li><li>Quality</li><li>Quotation</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Coffee beans">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="export"><img src="../assets/images/agro-cajou.webp" alt="Raw cashew nuts" width="736" height="736" loading="lazy" decoding="async"><div><small>Export</small><h3>Raw cashew nuts</h3><p>Requests should specify origin, grade, humidity, packaging, volume and expected shipping window.</p><ul class="tag-list"><li>Agricultural product</li><li>Export bags</li><li>Volume quote</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Raw cashew nuts">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="export"><img src="../assets/images/soja.webp" alt="Soya beans" width="1080" height="796" loading="lazy" decoding="async"><div><small>Export</small><h3>Soya beans</h3><p>Soya beans for processors, food markets and volume buyers requiring a structured offer.</p><ul class="tag-list"><li>Agricultural product</li><li>Volume</li><li>Traceability</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Soya beans">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="export"><img src="../assets/images/karité.webp" alt="Shea butter" width="1200" height="800" loading="lazy" decoding="async"><div><small>Export</small><h3>Shea butter</h3><p>Shea butter requests are prepared around quality, processing level, packaging and target volume.</p><ul class="tag-list"><li>Processed</li><li>Packaging</li><li>Export</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Shea butter">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="export"><img src="../assets/images/miel.webp" alt="Honey" width="800" height="600" loading="lazy" decoding="async"><div><small>Export</small><h3>Honey</h3><p>Natural honey can be discussed by origin, packaging format, quality expectations and available volume.</p><ul class="tag-list"><li>Agricultural product</li><li>Packaging</li><li>Wholesale</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Honey">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="export"><img src="../assets/images/sesame.webp" alt="Sesame seeds" width="765" height="573" loading="lazy" decoding="async"><div><small>Export</small><h3>Sesame seeds</h3><p>Sesame seed requests should include purity, humidity, packaging and available or required volume.</p><ul class="tag-list"><li>Seeds</li><li>Quality</li><li>Volume quote</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Sesame seeds">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="export"><img src="../assets/images/fruits.jpeg" alt="Fresh fruits" width="570" height="350" loading="lazy" decoding="async"><div><small>Export</small><h3>Fruits</h3><p>Fruit requests depend on seasonality, availability, grade, packaging, freshness constraints and destination.</p><ul class="tag-list"><li>Seasonal</li><li>Fresh</li><li>Quotation</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Fruits">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="import"><img src="../assets/images/boissons.webp" alt="Juice products" width="486" height="365" loading="lazy" decoding="async"><div><small>Import</small><h3>Juice</h3><p>Juice supply for distributors, retail channels and specialized food circuits.</p><ul class="tag-list"><li>Beverages</li><li>Distribution</li><li>Import</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Juice">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="import"><img src="../assets/images/riz.jpeg" alt="Rice" width="554" height="554" loading="lazy" decoding="async"><div><small>Import</small><h3>Rice</h3><p>Rice for distribution, wholesale and food supply needs in the local market.</p><ul class="tag-list"><li>Cereal</li><li>Volume</li><li>Supply</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Rice">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="import"><img src="../assets/images/tomates.jpeg" alt="Tomatoes" width="640" height="479" loading="lazy" decoding="async"><div><small>Import</small><h3>Tomatoes</h3><p>Tomatoes are handled according to availability, formats and food distribution requirements.</p><ul class="tag-list"><li>Fresh</li><li>Volume</li><li>Distribution</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Tomatoes">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="import"><img src="../assets/images/oignons.jpeg" alt="Onions" width="640" height="480" loading="lazy" decoding="async"><div><small>Import</small><h3>Onions</h3><p>Onions for volume buyers, retailers and food distributors.</p><ul class="tag-list"><li>Fresh</li><li>Packaging</li><li>Import</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Onions">Add to quote</button></div></div></article>
+              <article class="product-card" data-category="import"><img src="../assets/images/huile.webp" alt="Edible oil" width="696" height="522" loading="lazy" decoding="async"><div><small>Import</small><h3>Edible oil</h3><p>Edible oil for trade, distribution and professional food supply.</p><ul class="tag-list"><li>Food product</li><li>Packaging</li><li>Quote</li></ul><div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Edible oil">Add to quote</button></div></div></article>
+            </div>
+          </section>
+          <aside class="quote-dock" aria-label="Your product selection" data-quote-dock data-empty="true">
+            <div><p class="quote-dock-title"><span class="quote-count" data-quote-count aria-hidden="true">0</span><span data-selected-products role="status" aria-live="polite">No product selected</span><button class="quote-clear" type="button" data-quote-clear>Clear selection</button></p><p class="quote-dock-list" data-quote-list hidden></p></div>
+            <div class="quote-dock-actions"><a class="button button-primary" href="contact.php#formulaire" data-quote-contact>Send request</a><a class="button button-secondary" href="https://wa.me/224620903333" data-quote-whatsapp>WhatsApp</a></div>
+          </aside>
 HTML,
     ],
     'projects' => [
@@ -128,7 +168,7 @@ HTML,
         'active' => 'projects',
         'hero' => 'assets/images/hero-agro-export-import.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia projects" width="1600" height="900" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Projects</p><h1>Verified company projects</h1><p>Client-approved projects and references will be published here when Groupe Babia provides the official information, images and authorization to display them.</p></div></section>
+          <section class="page-hero"><img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia projects" width="1600" height="900" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Projects</p><h1>Verified company projects</h1><p>Client-approved projects and references will be published here when Groupe Babia provides the official information, images and authorization to display them.</p></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Coming next</p><h2>No invented references</h2><p>This English page is ready for real projects, but it does not publish unverified client names, figures or achievements.</p></div></section>
 HTML,
     ],
@@ -140,7 +180,7 @@ HTML,
         'active' => 'contact',
         'hero' => 'assets/images/btp.webp',
         'body' => <<<HTML
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/btp.webp" alt="Preparing a business request" width="1600" height="900" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Contact</p><h1>Send a clear business request</h1><p>Share your product, quantity, project scope, destination and timing. The team will direct your message to the right business area.</p></div></section>
+          <section class="page-hero"><img class="page-hero-media" src="../assets/images/btp.webp" alt="Preparing a business request" width="1600" height="900" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Contact</p><h1>Send a clear business request</h1><p>Share your product, quantity, project scope, destination and timing. The team will direct your message to the right business area.</p></div></section>
           <section class="section contact-section" id="formulaire"><div class="section-heading"><p class="eyebrow">Request</p><h2>Contact form</h2></div>
             <form class="form-card" method="post" action="../contact-submit.php" data-contact-form>
               <div class="field-grid"><div class="field"><label for="name">Name <span class="required-mark" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required><p class="field-error" id="name-error"></p></div><div class="field"><label for="company">Company <span class="required-mark" aria-hidden="true">*</span></label><input id="company" name="company" type="text" autocomplete="organization" required><p class="field-error" id="company-error"></p></div></div>
@@ -291,12 +331,62 @@ HTML
 HTML;
 }
 
+function local_preview_html(string $html): string
+{
+    $preview = strtr($html, [
+        'contact.php?need=construction#formulaire' => 'contact.html?need=construction#formulaire',
+        'contact.php#formulaire' => 'contact.html#formulaire',
+        'index.php' => 'index.html',
+        'company.php' => 'company.html',
+        'agri-food.php' => 'agri-food.html',
+        'construction.php' => 'construction.html',
+        'mining.php' => 'mining.html',
+        'catalog.php' => 'catalog.html',
+        'projects.php' => 'projects.html',
+        'contact.php' => 'contact.html',
+        'legal.php' => 'legal.html',
+        'privacy.php' => 'privacy.html',
+        '../404.php' => '../404.html',
+        '../groupe.php' => '../groupe.html',
+        '../agroalimentaire.php' => '../agroalimentaire.html',
+        '../btp.php' => '../btp.html',
+        '../mines.php' => '../mines.html',
+        '../catalogue.php' => '../catalogue.html',
+        '../realisations.php' => '../realisations.html',
+        '../mentions-legales.php' => '../mentions-legales.html',
+        '../confidentialite.php' => '../confidentialite.html',
+        '../contact.php' => '../contact.html',
+        '../index.php' => '../index.html',
+    ]);
+
+    return strtr($preview, [
+        'https://www.groupebabia.com/en/404.html' => 'https://www.groupebabia.com/en/404.php',
+        'https://www.groupebabia.com/en/agri-food.html' => 'https://www.groupebabia.com/en/agri-food.php',
+        'https://www.groupebabia.com/en/catalog.html' => 'https://www.groupebabia.com/en/catalog.php',
+        'https://www.groupebabia.com/en/company.html' => 'https://www.groupebabia.com/en/company.php',
+        'https://www.groupebabia.com/en/construction.html' => 'https://www.groupebabia.com/en/construction.php',
+        'https://www.groupebabia.com/en/contact.html' => 'https://www.groupebabia.com/en/contact.php',
+        'https://www.groupebabia.com/en/legal.html' => 'https://www.groupebabia.com/en/legal.php',
+        'https://www.groupebabia.com/en/mining.html' => 'https://www.groupebabia.com/en/mining.php',
+        'https://www.groupebabia.com/en/privacy.html' => 'https://www.groupebabia.com/en/privacy.php',
+        'https://www.groupebabia.com/en/projects.html' => 'https://www.groupebabia.com/en/projects.php',
+    ]);
+}
+
 $directory = project_path('en');
 if (!is_dir($directory) && !mkdir($directory, 0775, true) && !is_dir($directory)) {
     throw new RuntimeException('Unable to create English directory.');
 }
 
 foreach ($pages as $page) {
-    write_file($directory . DIRECTORY_SEPARATOR . $page['file'], page_html($page));
+    $html = page_html($page);
+    write_file($directory . DIRECTORY_SEPARATOR . $page['file'], $html);
     echo 'Generated en/' . $page['file'] . PHP_EOL;
+
+    $previewFile = preg_replace('/\.php$/', '.html', $page['file']);
+    if ($previewFile === null) {
+        throw new RuntimeException('Unable to create preview filename.');
+    }
+    write_file($directory . DIRECTORY_SEPARATOR . $previewFile, local_preview_html($html));
+    echo 'Generated en/' . $previewFile . PHP_EOL;
 }

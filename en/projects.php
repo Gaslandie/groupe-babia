@@ -46,7 +46,7 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia projects" width="1600" height="900" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Projects</p><h1>Verified company projects</h1><p>Client-approved projects and references will be published here when Groupe Babia provides the official information, images and authorization to display them.</p></div></section>
+          <section class="page-hero"><img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="Groupe Babia projects" width="1600" height="900" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Projects</p><h1>Verified company projects</h1><p>Client-approved projects and references will be published here when Groupe Babia provides the official information, images and authorization to display them.</p></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Coming next</p><h2>No invented references</h2><p>This English page is ready for real projects, but it does not publish unverified client names, figures or achievements.</p></div></section>
     </main>
     <footer class="site-footer">

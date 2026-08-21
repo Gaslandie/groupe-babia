@@ -46,7 +46,7 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-          <section class="hero inner-hero"><img class="inner-hero-image" src="../assets/images/mines.webp" alt="Mining operations in an open pit environment" width="1600" height="1064" fetchpriority="high" decoding="async"><div class="inner-hero-overlay"></div><div class="inner-hero-content"><p class="eyebrow">Mining</p><h1>Mining services and partnerships</h1><p>Groupe Babia positions itself as a practical partner for mining-related requests, operational support, supply needs and cooperation opportunities.</p></div></section>
+          <section class="page-hero"><img class="page-hero-media" src="../assets/images/mines.webp" alt="Mining operations in an open pit environment" width="1600" height="1064" fetchpriority="high" decoding="async"><div class="page-hero-overlay"></div><div><p class="eyebrow">Mining</p><h1>Mining services and partnerships</h1><p>Groupe Babia positions itself as a practical partner for mining-related requests, operational support, supply needs and cooperation opportunities.</p></div></section>
           <section class="section"><div class="section-heading"><p class="eyebrow">Approach</p><h2>Responsible support starts with a clear perimeter</h2></div><div class="content-questions"><article><h3>Operational needs</h3><p>Describe the service, supply or support required and the site context.</p></article><article><h3>Compliance and safety</h3><p>Requests must identify the constraints, stakeholders and documentation required.</p></article><article><h3>Local value</h3><p>The objective is to support useful partnerships while respecting operational realities.</p></article></div></section>
     </main>
     <footer class="site-footer">
