@@ -72,31 +72,31 @@ $publicReadError = $publicationState['error'];
           </div>
         </div>
         <aside class="page-hero-card">
-          <strong>Backoffice</strong>
-          <p>Le client pourra publier ici ses actualités depuis le même workflow d'administration.</p>
+          <strong>Information officielle</strong>
+          <p>Les annonces publiques et mises à jour importantes de Groupe Babia Guinée seront regroupées dans cet espace.</p>
         </aside>
       </section>
 
       <section class="section soft-section">
         <div class="section-heading">
           <p class="eyebrow">Publications</p>
-          <h2>Les publications apparaîtront ici</h2>
-          <p>Un espace structuré pour les annonces officielles, les actualités et les futures publications du client.</p>
+          <h2>Les publications officielles seront disponibles ici</h2>
+          <p>Cette rubrique centralise les annonces, communiqués et mises à jour que Groupe Babia Guinée souhaite rendre publics.</p>
         </div>
 
         <?php if ($realisations !== []): ?>
           <?php public_render_realisations_grid($realisations); ?>
         <?php else: ?>
           <div class="empty-state">
-            <p class="eyebrow">Bientôt</p>
-            <h3>Les premières actualités seront ajoutées depuis le back office.</h3>
+            <p class="eyebrow">Actualités</p>
+            <h3>Aucune actualité publiée pour le moment.</h3>
             <p>
               <?php if ($publicReadError): ?>
-                Les contenus ne peuvent pas être chargés pour le moment. La page reste disponible et sera alimentée dès que la connexion MySQL sera rétablie.
+                Les publications ne peuvent pas être affichées pour le moment. Merci de revenir un peu plus tard.
               <?php elseif (!$databaseAvailable): ?>
-                La base MySQL n'est pas encore configurée sur cet environnement. Les publications apparaîtront ici après la mise en service du back office.
+                Les prochaines annonces officielles de Groupe Babia Guinée seront consultables ici dès leur publication.
               <?php else: ?>
-                Aucune actualité n'est encore publiée. Les brouillons restent invisibles jusqu'à validation.
+                Les prochaines annonces officielles de Groupe Babia Guinée seront consultables ici dès leur publication.
               <?php endif; ?>
             </p>
             <div class="page-actions">

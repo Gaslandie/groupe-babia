@@ -58,24 +58,24 @@
           </div>
         </div>
         <aside class="page-hero-card">
-          <strong>Back office</strong>
-          <p>The client will be able to publish news here from the same administration workflow.</p>
+          <strong>Official information</strong>
+          <p>Public announcements and important updates from Groupe Babia Guinea will be gathered in this space.</p>
         </aside>
       </section>
 
       <section class="section soft-section">
         <div class="section-heading">
           <p class="eyebrow">Publications</p>
-          <h2>Updates will appear here</h2>
-          <p>A structured space for official news, announcements and future client publications.</p>
+          <h2>Official publications will be available here</h2>
+          <p>This section centralizes the announcements, statements and updates that Groupe Babia Guinea chooses to make public.</p>
         </div>
 
         <div class="empty-state">
-          <p class="eyebrow">Coming soon</p>
-          <h3>The first news items will be added from the back office.</h3>
+          <p class="eyebrow">News</p>
+          <h3>No news has been published yet.</h3>
           <p>
-            No news item has been published yet. Drafts stay invisible until they are validated. The
-            <a href="../realisations.php">French version of this page</a> will list the same publications as soon as they go live.
+            Official announcements from Groupe Babia Guinea will be available here as soon as they are published. The
+            <a href="../realisations.php">French version of this page</a> will list the same publications.
           </p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.php#formulaire">Contact the team</a>
