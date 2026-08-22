@@ -2556,9 +2556,14 @@ textarea:focus-visible {
     padding: 0 0 46px;
   }
 
+  /* Centrage vertical du texte dans la rangee libre du hero. `margin-block: auto`
+     plutot que `align-self: center` : si le contenu depasse la hauteur de la
+     rangee, les marges auto retombent a 0 et le bloc se cale en haut, au lieu de
+     deborder par le haut et de se faire rogner par l'`overflow: hidden`. */
   .hero-content {
-    align-self: start;
-    padding: 34px 16px 0;
+    align-self: stretch;
+    margin-block: auto;
+    padding: 28px 16px;
   }
 
   .hero-title {
@@ -2699,6 +2704,36 @@ textarea:focus-visible {
     padding: 18px;
   }
 
+  .proof-grid article,
+  .commitment-grid article,
+  .brand-proof div,
+  .metric-card,
+  .service-card {
+    padding: 20px 18px;
+  }
+
+  .content-panel,
+  .content-questions article,
+  .form-card,
+  .legal-content article {
+    padding: 24px 18px;
+  }
+
+  .page-hero-card {
+    padding: 18px 0 0 18px;
+  }
+
+  .catalogue-note,
+  .contact-item {
+    padding: 18px;
+  }
+
+  .activity-card > div,
+  .product-card > div:last-child,
+  .news-card > div {
+    padding: 22px 18px;
+  }
+
   .trust-strip {
     display: none;
   }
@@ -2755,7 +2790,6 @@ textarea:focus-visible {
 
   .legal-content article {
     min-height: 0;
-    padding: 28px 20px;
   }
 
   .page-hero p {
@@ -2779,8 +2813,9 @@ textarea:focus-visible {
     padding-bottom: 46px;
   }
 
+  /* Padding symetrique : un padding haut seul fausserait le centrage. */
   .hero-content {
-    padding-top: 24px;
+    padding-block: 20px;
   }
 
   .hero-title {
@@ -3019,6 +3054,7 @@ textarea:focus-visible {
   .service-card:hover,
   .news-card:hover,
   .product-card:hover,
+  .contact-item:hover,
   .button:hover,
   .nav-cta:hover {
     transform: none;
