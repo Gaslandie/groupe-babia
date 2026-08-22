@@ -82,6 +82,7 @@
 | 2026-08-21 | Basculer les pages publiques vers PHP comme cible canonique. | Le site dispose maintenant d'un socle PHP/MySQL fonctionnel ; conserver les liens `.html` comme cible principale limiterait l'evolution dynamique. | Les menus, canoniques, sitemap et redirections pointent vers `.php` ou `/`; les anciennes URLs `.html` redirigent en 301 vers les pages PHP. |
 | 2026-08-21 | Factoriser progressivement la version anglaise via un template PHP commun. | Le generateur anglais contenait le layout et les contenus dans un seul fichier, ce qui rendait l'alignement UI/UX avec la reference francaise fragile. | `app/partials/site.php` porte le chrome commun EN, `app/pages/en.php` porte les contenus par langue et `scripts/generate-en-pages.php` assemble les pages PHP plus miroirs HTML. |
 | 2026-08-21 | Etendre le template commun a la version francaise sans refonte visuelle. | La version francaise reste la reference UI/UX, mais elle devait rejoindre progressivement l'architecture partagee pour eviter deux sites divergents. | Les contenus `<main>` FR vivent dans `app/pages/fr/`, `app/pages/fr.php` porte la configuration francaise et `scripts/generate-fr-pages.php` regenere les miroirs HTML canoniques. |
+| 2026-08-22 | Publier les chiffres transmis par le client meme sans verification par un tiers. | Ces chiffres viennent du client lui-meme (rizerie 200 T/jour, 70% d'energies renouvelables, 350+ emplois, 2000+ agriculteurs, importations de riz reduites de plusieurs millions USD) : les taire affaiblissait les valeurs et les engagements sans proteger personne. Cela n'annule pas la regle du 2026-08-21 : on ne cree toujours aucun chiffre nous-memes. | Les chiffres apparaissent dans les valeurs et engagements de l'accueil et de Vision & valeurs, FR et EN. Ils sont sous la responsabilite du client : a rectifier s'il revient dessus. Le siege reste ecrit « Kaloum, Conakry » alors que le client a ecrit « Kalou » : correction d'une faute de frappe probable, a confirmer avec lui. |
 
 ## Non-objectifs
 
@@ -98,3 +99,4 @@
 - Remplacer les medias issus du site actuel par des medias officiels si le client les fournit.
 - Brancher les realisations dynamiques en anglais quand le client aura fourni les contenus officiels.
 - Continuer a reduire les differences purement historiques de markup entre FR et EN, en gardant la FR comme reference visuelle.
+- Le siege est-il « Kaloum » ou « Kalou » ? Le client a ecrit « Kalou Conakry », le site publie « Kaloum, Conakry ».

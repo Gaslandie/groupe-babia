@@ -133,7 +133,7 @@ const slidesFr = [
   {
     kicker: "Groupe Babia Guinée SARLU",
     title: "Groupe diversifié au service de la croissance guinéenne",
-    text: "Bâtir dès aujourd'hui l'avenir de la Guinée à travers des secteurs stratégiques, les infrastructures, la sécurité alimentaire et la création d'emplois."
+    text: "Bâtir dès aujourd'hui l'avenir du pays : 7 secteurs stratégiques au service des infrastructures, de la sécurité alimentaire et de l'emploi en Guinée et en Afrique."
   },
   {
     kicker: "Infrastructures",
@@ -161,7 +161,7 @@ const slidesEn = [
   {
     kicker: "Groupe Babia Guinée SARLU",
     title: "Diversified group driving Guinea's growth",
-    text: "Building Guinea's future today through strategic sectors, infrastructure, food security and job creation across Guinea and Africa."
+    text: "Building Guinea's future today: 7 strategic sectors serving infrastructure, food security and job creation across Guinea and Africa."
   },
   {
     kicker: "Infrastructure",
