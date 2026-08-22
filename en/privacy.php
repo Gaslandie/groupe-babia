@@ -35,15 +35,11 @@
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>        <a href="/en/">Home</a>
-        <a href="company.php">Company</a>
-        <a href="agri-food.php">Agri-food</a>
-        <a href="construction.php">Construction</a>
-        <a href="mining.php">Mining</a>
-        <a href="catalog.php">Catalog</a>
-        <a href="projects.php">Projects</a>
-        <a href="contact.php">Contact</a>
-        <a class="language-link" href="../confidentialite.php" hreflang="fr">FR</a>
-        <a class="nav-cta" href="contact.php#formulaire">Request a quote</a>
+        <a href="company.php">About us</a>
+        <a href="projects.php">News</a>
+        <a href="/en/#commitments">Our vision &amp; values</a>
+        <a href="/en/#activities">Our sectors</a>
+        <a href="contact.php">Contact us</a>
       </nav>
     </header>
     <main id="content" tabindex="-1">

@@ -47,16 +47,12 @@ $publicReadError = $publicationState['error'];
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>
-        <a href="index.html">Accueil</a>
-        <a href="groupe.html">Le groupe</a>
-        <a href="agroalimentaire.html">Agroalimentaire</a>
-        <a href="btp.html">BTP</a>
-        <a href="mines.html">Mines</a>
-        <a href="catalogue.html">Catalogue</a>
-        <a class="is-active" href="realisations.php">Réalisations</a>
-        <a href="contact.html">Contact</a>
-        <a class="language-link" href="en/projects.php" hreflang="en">EN</a>
-        <a class="nav-cta" href="contact.html#formulaire">Demander un devis</a>
+        <a href="index.html">Home</a>
+        <a href="groupe.html">About us</a>
+        <a class="is-active" href="realisations.php">News</a>
+        <a href="index.html#engagements">Our vision & values</a>
+        <a href="index.html#activites">Our sectors</a>
+        <a href="contact.html">Contact us</a>
       </nav>
     </header>
 

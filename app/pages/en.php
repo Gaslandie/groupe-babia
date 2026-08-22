@@ -26,13 +26,11 @@ $site = [
     'credit' => 'Website designed by GassTech Solutions.',
     'nav_items' => [
         'home' => ['label' => 'Home', 'href' => '/en/'],
-        'company' => ['label' => 'Company', 'href' => 'company.php'],
-        'agri-food' => ['label' => 'Agri-food', 'href' => 'agri-food.php'],
-        'construction' => ['label' => 'Construction', 'href' => 'construction.php'],
-        'mining' => ['label' => 'Mining', 'href' => 'mining.php'],
-        'catalog' => ['label' => 'Catalog', 'href' => 'catalog.php'],
-        'projects' => ['label' => 'Projects', 'href' => 'projects.php'],
-        'contact' => ['label' => 'Contact', 'href' => 'contact.php'],
+        'about' => ['label' => 'About us', 'href' => 'company.php'],
+        'news' => ['label' => 'News', 'href' => 'projects.php'],
+        'vision-values' => ['label' => 'Our vision & values', 'href' => '/en/#commitments'],
+        'sectors' => ['label' => 'Our sectors', 'href' => '/en/#activities'],
+        'contact' => ['label' => 'Contact us', 'href' => 'contact.php'],
     ],
     'footer_columns' => [
         [
@@ -126,7 +124,7 @@ $pages = [
         'fr' => '../groupe.php',
         'title' => 'The group | Groupe Babia Guinea',
         'description' => 'Discover Groupe Babia Guinea, a multisector group active in agriculture, agri-food, construction, mining and fishing.',
-        'active' => 'company',
+        'active' => 'about',
         'body' => $body('company.html'),
     ],
     'agri-food' => [
@@ -134,7 +132,7 @@ $pages = [
         'fr' => '../agroalimentaire.php',
         'title' => 'Agri-food, export & import | Groupe Babia Guinea',
         'description' => 'Agri-food business area of Groupe Babia Guinea: export of cocoa, coffee, cashew, soya, shea, honey and sesame, import of rice, oil and juice.',
-        'active' => 'agri-food',
+        'active' => 'sectors',
         'body' => $body('agri-food.html'),
     ],
     'construction' => [
@@ -142,7 +140,7 @@ $pages = [
         'fr' => '../btp.php',
         'title' => 'Construction & public works | Groupe Babia Guinea',
         'description' => 'Construction business area of Groupe Babia Guinea: professional buildings, durable infrastructure and public works in Guinea and the wider region.',
-        'active' => 'construction',
+        'active' => 'sectors',
         'body' => $body('construction.html'),
     ],
     'mining' => [
@@ -150,7 +148,7 @@ $pages = [
         'fr' => '../mines.php',
         'title' => 'Mining sector | Groupe Babia Guinea',
         'description' => 'Mining business area of Groupe Babia Guinea: logistics, supply, partnerships and responsible development of resources.',
-        'active' => 'mining',
+        'active' => 'sectors',
         'body' => $body('mining.html'),
     ],
     'catalog' => [
@@ -158,7 +156,7 @@ $pages = [
         'fr' => '../catalogue.php',
         'title' => 'Agri-food catalog | Groupe Babia Guinea',
         'description' => 'Agri-food catalog of Groupe Babia Guinea: agricultural products for export and food commodities for import, with a direct quotation request.',
-        'active' => 'catalog',
+        'active' => 'sectors',
         'body' => $body('catalog.html'),
     ],
     'projects' => [
@@ -166,7 +164,7 @@ $pages = [
         'fr' => '../realisations.php',
         'title' => 'Projects | Groupe Babia Guinea',
         'description' => 'References and activities published by Groupe Babia Guinea across agri-food, construction, mining, fishing and agro-industry.',
-        'active' => 'projects',
+        'active' => 'news',
         'body' => $body('projects.html'),
     ],
     'contact' => [

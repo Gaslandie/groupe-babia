@@ -13,9 +13,6 @@ function babia_render_nav(array $page, array $items): string
         $html .= sprintf("        <a%s href=\"%s\">%s</a>\n", $class, e((string) $item['href']), e((string) $item['label']));
     }
 
-    $html .= sprintf("        <a class=\"language-link\" href=\"%s\" hreflang=\"%s\">%s</a>\n", e((string) $page['alternate_href']), e((string) $page['alternate_lang']), e((string) $page['alternate_label']));
-    $html .= sprintf("        <a class=\"nav-cta\" href=\"%s\">%s</a>\n", e((string) $page['cta_href']), e((string) $page['cta_label']));
-
     return $html;
 }
 
