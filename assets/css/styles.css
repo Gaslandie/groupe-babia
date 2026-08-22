@@ -2031,6 +2031,64 @@ textarea:focus-visible {
   border-radius: var(--radius);
 }
 
+.media-carousel {
+  position: relative;
+  width: 100%;
+  height: clamp(300px, 28vw, 460px);
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper);
+  border-radius: var(--radius);
+}
+
+.media-carousel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 520ms ease, transform 720ms ease;
+}
+
+.media-carousel img.is-active {
+  opacity: 1;
+  transform: none;
+}
+
+.media-carousel-dots {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(11, 25, 20, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.media-carousel-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(11, 25, 20, 0.28);
+  border: 0;
+  border-radius: 50%;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.media-carousel-dots button:hover,
+.media-carousel-dots button.is-active {
+  background: var(--forest);
+  transform: scale(1.2);
+}
+
 .form-layout h2,
 .media-band h2,
 .legal-content h2 {
@@ -2209,6 +2267,7 @@ textarea:focus-visible {
   html.js:not(.no-reveal) .export-content,
   html.js:not(.no-reveal) .export-media,
   html.js:not(.no-reveal) .media-band > img,
+  html.js:not(.no-reveal) .media-band > .media-carousel,
   html.js:not(.no-reveal) .form-card,
   html.js:not(.no-reveal) .activity-grid > *,
   html.js:not(.no-reveal) .service-grid > *,
@@ -2244,7 +2303,8 @@ textarea:focus-visible {
 
   /* Visuels : leger recadrage qui se stabilise, sans deplacement vertical. */
   html.js:not(.no-reveal) .export-media,
-  html.js:not(.no-reveal) .media-band > img {
+  html.js:not(.no-reveal) .media-band > img,
+  html.js:not(.no-reveal) .media-band > .media-carousel {
     --rv-y: 0px;
     --rv-s: 1.05;
     --rv-dur: 900ms;
@@ -2267,7 +2327,8 @@ textarea:focus-visible {
 
   /* Etat revele. Meme specificite que l'etat cache, place apres pour l'emporter. */
   html.js:not(.no-reveal) .is-visible,
-  html.js:not(.no-reveal) .media-band > img.is-visible {
+  html.js:not(.no-reveal) .media-band > img.is-visible,
+  html.js:not(.no-reveal) .media-band > .media-carousel.is-visible {
     opacity: 1;
     transform: none;
   }
@@ -2940,6 +3001,17 @@ textarea:focus-visible {
 
   .media-band img {
     height: clamp(220px, 68vw, 320px);
+  }
+
+  .media-carousel {
+    height: clamp(220px, 68vw, 320px);
+  }
+
+  .media-carousel-dots {
+    right: 12px;
+    bottom: 12px;
+    gap: 7px;
+    padding: 7px;
   }
 }
 

@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260822-menu-lateral">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260822-product-carousel">
     <link rel="canonical" href="https://www.groupebabia.com/en/company.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/groupe.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/company.php">
@@ -120,7 +120,22 @@
       </section>
 
       <section class="section media-band" id="agro-industry">
-        <img src="../assets/images/agro-industrie.webp" alt="Agro-industrial processing and packaging" width="1704" height="923" loading="lazy" decoding="async">
+        <figure class="media-carousel" aria-label="Agro-industrial products" data-media-carousel>
+          <img class="is-active" src="../assets/images/agro-industrie.webp" alt="Agro-industrial processing and packaging" width="1704" height="923" loading="lazy" decoding="async" data-media-slide>
+          <img src="../assets/images/agro-cajou.webp" alt="Cashew nuts prepared for processing" width="1280" height="853" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <img src="../assets/images/agro-cacao.webp" alt="Selected cocoa beans" width="1080" height="656" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <img src="../assets/images/cafe.webp" alt="Coffee beans ready for marketing" width="1280" height="853" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <img src="../assets/images/soja.webp" alt="Packaged soybeans" width="1280" height="853" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <img src="../assets/images/sesame.webp" alt="Sorted sesame seeds" width="1280" height="853" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <div class="media-carousel-dots" aria-label="Choose a product visual">
+            <button class="is-active" type="button" aria-label="Show agro-industrial processing" aria-pressed="true" data-media-dot="0"></button>
+            <button type="button" aria-label="Show cashew nuts" aria-pressed="false" data-media-dot="1"></button>
+            <button type="button" aria-label="Show cocoa" aria-pressed="false" data-media-dot="2"></button>
+            <button type="button" aria-label="Show coffee" aria-pressed="false" data-media-dot="3"></button>
+            <button type="button" aria-label="Show soybeans" aria-pressed="false" data-media-dot="4"></button>
+            <button type="button" aria-label="Show sesame" aria-pressed="false" data-media-dot="5"></button>
+          </div>
+        </figure>
         <div>
           <p class="eyebrow">Agro-industry</p>
           <h2>Turning agricultural resources into durable value</h2>

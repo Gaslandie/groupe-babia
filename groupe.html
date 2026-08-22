@@ -9,7 +9,7 @@
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260822-menu-lateral">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260822-product-carousel">
     <link rel="canonical" href="https://www.groupebabia.com/groupe.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/company.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/groupe.php">
@@ -120,7 +120,22 @@
       </section>
 
       <section class="section media-band" id="agro-industrie">
-        <img src="assets/images/agro-industrie.webp" alt="Transformation et conditionnement agro-industriels" width="1704" height="923" loading="lazy" decoding="async">
+        <figure class="media-carousel" aria-label="Produits agro-industriels" data-media-carousel>
+          <img class="is-active" src="assets/images/agro-industrie.webp" alt="Transformation et conditionnement agro-industriels" width="1704" height="923" loading="lazy" decoding="async" data-media-slide>
+          <img src="assets/images/agro-cajou.webp" alt="Noix de cajou préparées pour la transformation" width="1280" height="853" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <img src="assets/images/agro-cacao.webp" alt="Fèves de cacao sélectionnées" width="1080" height="656" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <img src="assets/images/cafe.webp" alt="Grains de café prêts pour la commercialisation" width="1280" height="853" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <img src="assets/images/soja.webp" alt="Graines de soja conditionnées" width="1280" height="853" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <img src="assets/images/sesame.webp" alt="Graines de sésame triées" width="1280" height="853" loading="lazy" decoding="async" aria-hidden="true" data-media-slide>
+          <div class="media-carousel-dots" aria-label="Choisir un visuel produit">
+            <button class="is-active" type="button" aria-label="Afficher la transformation agro-industrielle" aria-pressed="true" data-media-dot="0"></button>
+            <button type="button" aria-label="Afficher les noix de cajou" aria-pressed="false" data-media-dot="1"></button>
+            <button type="button" aria-label="Afficher le cacao" aria-pressed="false" data-media-dot="2"></button>
+            <button type="button" aria-label="Afficher le café" aria-pressed="false" data-media-dot="3"></button>
+            <button type="button" aria-label="Afficher le soja" aria-pressed="false" data-media-dot="4"></button>
+            <button type="button" aria-label="Afficher le sésame" aria-pressed="false" data-media-dot="5"></button>
+          </div>
+        </figure>
         <div>
           <p class="eyebrow">Agro-industrie</p>
           <h2>Transformer les ressources agricoles en valeur durable</h2>

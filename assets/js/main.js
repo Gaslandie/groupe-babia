@@ -7,6 +7,7 @@ window.clearTimeout(window.__babiaReveal);
 const CONTACT_EMAIL = "infobabiaguinee@gmail.com";
 const WHATSAPP_NUMBER = "224620903333";
 const SLIDE_DURATION = 5000;
+const MEDIA_CAROUSEL_DURATION = 4200;
 
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -352,6 +353,92 @@ if (slideNodes.length && kickerNode) {
   updateSlide(0);
   startSlider();
 }
+
+/* ------------------------------------------------------------------ */
+/* Carousels visuels de section                                        */
+/* ------------------------------------------------------------------ */
+
+const mediaCarousels = Array.from(document.querySelectorAll("[data-media-carousel]"));
+
+mediaCarousels.forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll("[data-media-slide]"));
+  const dots = Array.from(carousel.querySelectorAll("[data-media-dot]"));
+
+  if (slides.length < 2) {
+    return;
+  }
+
+  let activeMedia = 0;
+  let mediaTimer;
+  let isPaused = false;
+
+  function updateMedia(index) {
+    activeMedia = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeMedia;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeMedia;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-pressed", String(isActive));
+    });
+  }
+
+  function canPlayMedia() {
+    return !isPaused && !reduceMotionQuery.matches && !document.hidden;
+  }
+
+  function stopMedia() {
+    window.clearInterval(mediaTimer);
+  }
+
+  function startMedia() {
+    stopMedia();
+    if (canPlayMedia()) {
+      mediaTimer = window.setInterval(() => updateMedia(activeMedia + 1), MEDIA_CAROUSEL_DURATION);
+    }
+  }
+
+  function goToMedia(index) {
+    updateMedia(index);
+    startMedia();
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => goToMedia(Number(dot.dataset.mediaDot)));
+  });
+
+  carousel.addEventListener("mouseenter", stopMedia);
+  carousel.addEventListener("mouseleave", startMedia);
+  carousel.addEventListener("focusin", () => {
+    isPaused = true;
+    stopMedia();
+  });
+  carousel.addEventListener("focusout", (event) => {
+    if (carousel.contains(event.relatedTarget)) {
+      return;
+    }
+    isPaused = false;
+    startMedia();
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopMedia();
+    } else {
+      startMedia();
+    }
+  });
+
+  reduceMotionQuery.addEventListener?.("change", startMedia);
+
+  updateMedia(0);
+  startMedia();
+});
 
 /* ------------------------------------------------------------------ */
 /* Catalogue : contact direct par produit                              */
@@ -761,6 +848,7 @@ const REVEAL_SEULS = [
   ".export-content",
   ".export-media",
   ".media-band > img",
+  ".media-band > .media-carousel",
   ".form-card"
 ].join(", ");
 
