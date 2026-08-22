@@ -44,6 +44,8 @@ function showToast(message) {
 const header = document.querySelector(".site-header");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
+const navOpenLabel = isEnglishPage ? "Open menu" : "Ouvrir le menu";
+const navCloseLabel = isEnglishPage ? "Close menu" : "Fermer le menu";
 
 function syncHeader() {
   header?.classList.toggle("is-scrolled", window.scrollY > 24);
@@ -58,7 +60,7 @@ if (navToggle && nav) {
   function setNavigation(isOpen) {
     nav.classList.toggle("is-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+    navToggle.setAttribute("aria-label", isOpen ? navCloseLabel : navOpenLabel);
     document.body.classList.toggle("nav-open", isOpen);
   }
 
@@ -130,28 +132,28 @@ if (navToggle && nav) {
 const slidesFr = [
   {
     kicker: "Groupe Babia Guinée SARLU",
-    title: "Diversified group driving Guinea's growth",
-    text: "Building Guinea's future today through strategic sectors, infrastructure, food security and job creation across Guinea and Africa."
+    title: "Groupe diversifié au service de la croissance guinéenne",
+    text: "Bâtir dès aujourd'hui l'avenir de la Guinée à travers des secteurs stratégiques, les infrastructures, la sécurité alimentaire et la création d'emplois."
   },
   {
-    kicker: "Infrastructure",
-    title: "Building Guinea's future today",
-    text: "Strategic investments that connect projects, communities and productive capacity."
+    kicker: "Infrastructures",
+    title: "Bâtir l'avenir de la Guinée dès aujourd'hui",
+    text: "Des investissements stratégiques qui relient projets, communautés et capacités productives."
   },
   {
-    kicker: "Food security",
-    title: "From farm to market",
-    text: "Integrated value chains designed to feed Guinea and serve regional markets."
+    kicker: "Sécurité alimentaire",
+    title: "De la ferme au marché",
+    text: "Des chaînes de valeur intégrées pour nourrir la Guinée et servir les marchés régionaux."
   },
   {
-    kicker: "Local impact",
-    title: "Jobs, skills and communities",
-    text: "Every project is designed to create jobs, transfer skills and improve livelihoods."
+    kicker: "Impact local",
+    title: "Emplois, compétences et communautés",
+    text: "Chaque projet est pensé pour créer des emplois, transférer des compétences et améliorer les conditions de vie."
   },
   {
-    kicker: "Industrialization",
-    title: "Made in Guinea, built to global standards",
-    text: "Processing, packaging and adding value locally to create real wealth in Guinea."
+    kicker: "Industrialisation",
+    title: "Fabriqué en Guinée, aux standards mondiaux",
+    text: "Transformer, conditionner et ajouter de la valeur localement pour créer une richesse réelle en Guinée."
   }
 ];
 

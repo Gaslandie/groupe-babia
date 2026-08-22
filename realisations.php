@@ -25,7 +25,7 @@ $publicReadError = $publicationState['error'];
     <meta name="description" content="Découvrez les réalisations de Groupe Babia Guinée dans l'agroalimentaire, le BTP, les mines, la pêche et l'agro-industrie.">
     <title>Réalisations | Groupe Babia Guinée</title>
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260822-client-copy">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260822-language-fix">
     <link rel="canonical" href="https://www.groupebabia.com/realisations.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/projects.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/realisations.php">
@@ -47,12 +47,13 @@ $publicReadError = $publicationState['error'];
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>
-        <a href="index.html">Home</a>
-        <a href="groupe.html">About us</a>
-        <a class="is-active" href="realisations.php">News</a>
-        <a href="index.html#engagements">Our vision & values</a>
-        <a href="index.html#activites">Our sectors</a>
-        <a href="contact.html">Contact us</a>
+        <a href="index.html">Accueil</a>
+        <a href="groupe.html">À propos</a>
+        <a class="is-active" href="realisations.php">Actualités</a>
+        <a href="index.html#engagements">Vision & valeurs</a>
+        <a href="index.html#activites">Nos secteurs</a>
+        <a href="contact.html">Contact</a>
+        <a class="language-link" href="en/projects.php" hreflang="en">EN</a>
       </nav>
     </header>
 
@@ -161,6 +162,6 @@ $publicReadError = $publicationState['error'];
         </div>
       </div>
     </footer>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=20260822-language-fix"></script>
   </body>
 </html>

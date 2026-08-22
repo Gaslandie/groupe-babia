@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260822-client-copy">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260822-language-fix">
     <link rel="canonical" href="https://www.groupebabia.com/en/legal.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/mentions-legales.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/legal.php">
@@ -40,6 +40,7 @@
         <a href="/en/#commitments">Our vision &amp; values</a>
         <a href="/en/#activities">Our sectors</a>
         <a href="contact.php">Contact us</a>
+        <a class="language-link" href="../mentions-legales.php" hreflang="fr">FR</a>
       </nav>
     </header>
     <main id="content" tabindex="-1">
@@ -108,6 +109,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js?v=20260822-language-fix"></script>
   </body>
 </html>

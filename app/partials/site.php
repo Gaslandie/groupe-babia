@@ -13,6 +13,8 @@ function babia_render_nav(array $page, array $items): string
         $html .= sprintf("        <a%s href=\"%s\">%s</a>\n", $class, e((string) $item['href']), e((string) $item['label']));
     }
 
+    $html .= sprintf("        <a class=\"language-link\" href=\"%s\" hreflang=\"%s\">%s</a>\n", e((string) $page['alternate_href']), e((string) $page['alternate_lang']), e((string) $page['alternate_label']));
+
     return $html;
 }
 
@@ -22,8 +24,9 @@ function babia_render_page(array $page, array $site): string
     $alternateHref = (string) $page['alternate_canonical'];
     $navItems = $site['nav_items'];
     $assetPrefix = (string) ($site['asset_prefix'] ?? '../');
-    $assetVersion = (string) ($site['asset_version'] ?? '20260822-client-copy');
+    $assetVersion = (string) ($site['asset_version'] ?? '20260822-language-fix');
     $stylesheetHref = e($assetPrefix . 'assets/css/styles.css?v=' . rawurlencode($assetVersion));
+    $scriptHref = e($assetPrefix . 'assets/js/main.js?v=' . rawurlencode($assetVersion));
     $brandSmall = (string) ($site['brand_small'] ?? 'Guinea');
     $contentId = (string) ($site['content_id'] ?? 'content');
     $bodyClass = isset($page['body_class']) && $page['body_class'] !== '' ? ' class="' . e((string) $page['body_class']) . '"' : '';
@@ -93,7 +96,7 @@ HTML
         <div class="footer-bottom"><p>{$site['copyright']}</p><p>{$site['credit']}</p><div>{$footerBottomLinks}</div></div>
       </div>
     </footer>
-    <script src="{$assetPrefix}assets/js/main.js"></script>
+    <script src="{$scriptHref}"></script>
   </body>
 </html>
 HTML;
