@@ -67,8 +67,8 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
         <a href="index.html">Accueil</a>
         <a href="groupe.html">À propos</a>
         <a class="is-active" href="realisations.php">Actualités</a>
-        <a href="index.html#engagements">Vision & valeurs</a>
-        <a href="index.html#activites">Nos secteurs</a>
+        <a href="vision-valeurs.php">Vision & valeurs</a>
+        <a href="secteurs.php">Nos secteurs</a>
         <a href="contact.html">Contact</a>
         <a class="language-link" href="en/projects.php" hreflang="en">EN</a>
       </nav>

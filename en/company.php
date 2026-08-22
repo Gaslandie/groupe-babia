@@ -37,8 +37,8 @@
       <nav class="site-nav" id="site-nav" data-nav>        <a href="/en/">Home</a>
         <a class="is-active" href="company.php">About us</a>
         <a href="projects.php">News</a>
-        <a href="/en/#commitments">Our vision &amp; values</a>
-        <a href="/en/#activities">Our sectors</a>
+        <a href="vision-values.php">Our vision &amp; values</a>
+        <a href="sectors.php">Our sectors</a>
         <a href="contact.php">Contact us</a>
         <a class="language-link" href="../groupe.php" hreflang="fr">FR</a>
       </nav>
@@ -56,7 +56,7 @@
           </p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.php?need=corporate">Contact us</a>
-            <a class="button button-secondary" href="/en/#commitments">Our vision &amp; values</a>
+            <a class="button button-secondary" href="vision-values.php">Our vision &amp; values</a>
           </div>
         </div>
         <aside class="page-hero-card">

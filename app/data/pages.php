@@ -16,6 +16,18 @@ return [
         'php' => 'groupe.php',
     ],
     [
+        'id' => 'vision-valeurs',
+        'source' => 'vision-valeurs.html',
+        'target' => 'vision-valeurs.html',
+        'php' => 'vision-valeurs.php',
+    ],
+    [
+        'id' => 'secteurs',
+        'source' => 'secteurs.html',
+        'target' => 'secteurs.html',
+        'php' => 'secteurs.php',
+    ],
+    [
         'id' => 'agroalimentaire',
         'source' => 'agroalimentaire.html',
         'target' => 'agroalimentaire.html',

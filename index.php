@@ -21,13 +21,13 @@ if ($realisations !== []) {
     ?>
       <section class="section soft-section">
         <div class="section-heading">
-          <p class="eyebrow">Réalisations</p>
-          <h2>Dernières activités publiées</h2>
-          <p>Quelques opérations et références rendues publiques par Groupe Babia Guinée.</p>
+          <p class="eyebrow">Actualités</p>
+          <h2>Dernières publications</h2>
+          <p>Quelques actualités et mises à jour rendues publiques par Groupe Babia Guinée.</p>
         </div>
         <?php public_render_realisations_grid($realisations); ?>
         <div class="section-more">
-          <a class="button button-primary" href="realisations.php">Voir toutes les réalisations</a>
+          <a class="button button-primary" href="realisations.php">Voir toutes les actualités</a>
         </div>
       </section>
 <?php

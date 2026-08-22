@@ -28,8 +28,8 @@ $site = [
         'home' => ['label' => 'Home', 'href' => '/en/'],
         'about' => ['label' => 'About us', 'href' => 'company.php'],
         'news' => ['label' => 'News', 'href' => 'projects.php'],
-        'vision-values' => ['label' => 'Our vision & values', 'href' => '/en/#commitments'],
-        'sectors' => ['label' => 'Our sectors', 'href' => '/en/#activities'],
+        'vision-values' => ['label' => 'Our vision & values', 'href' => 'vision-values.php'],
+        'sectors' => ['label' => 'Our sectors', 'href' => 'sectors.php'],
         'contact' => ['label' => 'Contact us', 'href' => 'contact.php'],
     ],
     'footer_columns' => [
@@ -126,6 +126,22 @@ $pages = [
         'description' => 'Groupe Babia Guinée SARLU is a leading diversified Guinean company headquartered in Kaloum, Conakry, with local impact and global standards.',
         'active' => 'about',
         'body' => $body('company.html'),
+    ],
+    'vision-values' => [
+        'file' => 'vision-values.php',
+        'fr' => '../vision-valeurs.php',
+        'title' => 'Our vision & values | Groupe Babia Guinea',
+        'description' => 'Vision, mission, values and commitments of Groupe Babia Guinea for industrialization, food security and sustainable prosperity.',
+        'active' => 'vision-values',
+        'body' => $body('vision-values.html'),
+    ],
+    'sectors' => [
+        'file' => 'sectors.php',
+        'fr' => '../secteurs.php',
+        'title' => 'Our sectors | Groupe Babia Guinea',
+        'description' => 'The strategic sectors of Groupe Babia Guinea to build infrastructure, strengthen food security and create jobs.',
+        'active' => 'sectors',
+        'body' => $body('sectors.html'),
     ],
     'agri-food' => [
         'file' => 'agri-food.php',
