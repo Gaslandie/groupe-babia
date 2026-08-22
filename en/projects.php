@@ -53,7 +53,7 @@
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Projects</span></li></ol></nav>
           <p class="eyebrow">References &amp; activities</p>
-          <h1>Projects published as the group's activity develops</h1>
+          <h1>Published company projects</h1>
           <p>This page brings together the operations, references and activities that Groupe Babia Guinea chooses to make public across its agri-food, construction, mining, fishing and agro-industrial areas.</p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.php#formulaire">Present a project</a>

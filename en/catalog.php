@@ -53,24 +53,24 @@
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Catalog</span></li></ol></nav>
           <p class="eyebrow">Agri-food catalog</p>
-          <h1>Export and import products</h1>
+          <h1>Export / import catalog</h1>
           <p>
             Agri-food products are presented according to two clear operations: export of agricultural products and import of food products.
           </p>
           <div class="page-actions">
-            <a class="button button-primary" href="#products">Choose products</a>
+            <a class="button button-primary" href="#products">View products</a>
             <a class="button button-secondary" href="contact.php?need=agro">Send a specific need</a>
           </div>
         </div>
         <aside class="page-hero-card">
           <strong>Commercial path</strong>
-          <p>Select the products, then send the request by email or WhatsApp from the quote panel.</p>
+          <p>Identify the relevant products, then contact the team by WhatsApp or form to qualify your need.</p>
         </aside>
       </section>
 
       <section class="section" id="products">
         <div class="section-heading">
-          <p class="eyebrow">Product selection</p>
+          <p class="eyebrow">Available products</p>
           <h2>A catalog structured by operation</h2>
         </div>
         <div class="product-toolbar" role="group" aria-label="Filter products by operation">
@@ -80,11 +80,11 @@
         </div>
         <p class="filter-result" role="status" aria-live="polite" data-filter-result>13 products shown</p>
 
-        <p class="quote-hint">
-          Add the products you are interested in: your selection is carried over automatically into the contact form.
+        <p class="catalogue-hint">
+          Each product card starts a WhatsApp exchange about that product. For a detailed request, use the contact form.
         </p>
         <div class="catalogue-note" role="note">
-          <strong>For an actionable quotation</strong>
+          <strong>For an actionable commercial request</strong>
           <span>Where possible, specify the quantity, the destination, the timeline, the packaging you expect and the documents required.</span>
         </div>
 
@@ -101,8 +101,8 @@
               <small>Export</small>
               <h3>Raw cashew nuts</h3>
               <p>An agricultural product to qualify by origin, grading, moisture, packaging and volume.</p>
-              <ul class="tag-list"><li>Agricultural product</li><li>Export bags</li><li>Volume quotation</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Raw cashew nuts">Add to quote</button></div>
+              <ul class="tag-list"><li>Agricultural product</li><li>Export bags</li><li>Professional volume</li></ul>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Raw cashew nuts">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -113,7 +113,7 @@
               <h3>Cocoa beans</h3>
               <p>Cocoa to be presented with drying, sorting, packaging and availability information.</p>
               <ul class="tag-list"><li>Agricultural product</li><li>Sorting</li><li>Export</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Cocoa beans">Add to quote</button></div>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Cocoa beans">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -123,8 +123,8 @@
               <small>Export</small>
               <h3>Coffee beans</h3>
               <p>Coffee for roasters, distributors and buyers looking for a traceable offer.</p>
-              <ul class="tag-list"><li>Agricultural product</li><li>Quality</li><li>Quotation</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Coffee beans">Add to quote</button></div>
+              <ul class="tag-list"><li>Agricultural product</li><li>Quality</li><li>Commercial request</li></ul>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Coffee beans">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -135,7 +135,7 @@
               <h3>Soya beans</h3>
               <p>Soya beans for processors, food markets and volume buyers.</p>
               <ul class="tag-list"><li>Agricultural product</li><li>Volume</li><li>Traceability</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Soya beans">Add to quote</button></div>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Soya beans">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -146,7 +146,7 @@
               <h3>Shea butter</h3>
               <p>Shea butter for professional buyers, qualified by quality, processing, packaging and volume.</p>
               <ul class="tag-list"><li>Processed</li><li>Packaging</li><li>Export</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Shea butter">Add to quote</button></div>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Shea butter">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -156,8 +156,8 @@
               <small>Export</small>
               <h3>Sesame seeds</h3>
               <p>Sesame seeds to qualify by origin, purity, moisture, packaging and available volume.</p>
-              <ul class="tag-list"><li>Seeds</li><li>Quality</li><li>Volume quotation</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Sesame seeds">Add to quote</button></div>
+              <ul class="tag-list"><li>Seeds</li><li>Quality</li><li>Professional volume</li></ul>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Sesame seeds">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -168,7 +168,7 @@
               <h3>Honey</h3>
               <p>Natural honey to be presented with packaging, origin and available volumes.</p>
               <ul class="tag-list"><li>Agricultural product</li><li>Packaging</li><li>Wholesalers</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Honey">Add to quote</button></div>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Honey">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -178,8 +178,8 @@
               <small>Export</small>
               <h3>Fruits</h3>
               <p>Fruits offered according to seasonality, availability, grading, packaging and destination.</p>
-              <ul class="tag-list"><li>Seasonality</li><li>Fresh</li><li>Quotation</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Fruits">Add to quote</button></div>
+              <ul class="tag-list"><li>Seasonality</li><li>Fresh</li><li>Commercial request</li></ul>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Fruits">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -190,7 +190,7 @@
               <h3>Juice</h3>
               <p>Juice for distributors, retailers and specialised channels.</p>
               <ul class="tag-list"><li>Juice</li><li>Distribution</li><li>Import</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Juice">Add to quote</button></div>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Juice">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -201,7 +201,7 @@
               <h3>Rice</h3>
               <p>Rice for distribution, wholesale and food supply needs.</p>
               <ul class="tag-list"><li>Cereals</li><li>Volume</li><li>Supply</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Rice">Add to quote</button></div>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Rice">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -212,7 +212,7 @@
               <h3>Tomatoes</h3>
               <p>Tomatoes offered according to availability, formats and the needs of food distribution channels.</p>
               <ul class="tag-list"><li>Fresh</li><li>Volume</li><li>Distribution</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Tomatoes">Add to quote</button></div>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Tomatoes">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -223,7 +223,7 @@
               <h3>Onions</h3>
               <p>Onions for volume buyers, retailers and food distributors.</p>
               <ul class="tag-list"><li>Fresh</li><li>Packaging</li><li>Import</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Onions">Add to quote</button></div>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Onions">Contact on WhatsApp</a></div>
             </div>
           </article>
 
@@ -233,27 +233,12 @@
               <small>Import</small>
               <h3>Edible oil</h3>
               <p>Edible oil for trade, distribution and professional food supply.</p>
-              <ul class="tag-list"><li>Food product</li><li>Packaging</li><li>Quotation</li></ul>
-              <div class="card-actions"><button class="button button-ghost" type="button" data-quote-product="Edible oil">Add to quote</button></div>
+              <ul class="tag-list"><li>Food product</li><li>Packaging</li><li>Professional request</li></ul>
+              <div class="card-actions"><a class="button button-ghost" href="https://wa.me/224620903333" data-product-whatsapp="Edible oil">Contact on WhatsApp</a></div>
             </div>
           </article>
         </div>
       </section>
-
-      <aside class="quote-dock" aria-label="Your product selection" data-quote-dock data-empty="true">
-        <div>
-          <p class="quote-dock-title">
-            <span class="quote-count" data-quote-count aria-hidden="true">0</span>
-            <span data-selected-products role="status" aria-live="polite">No product selected</span>
-            <button class="quote-clear" type="button" data-quote-clear>Clear selection</button>
-          </p>
-          <ul class="quote-chips" data-quote-chips></ul>
-        </div>
-        <div class="card-actions">
-          <a class="button button-light" href="contact.php?need=agro">Request a quote</a>
-          <a class="button button-primary" href="https://wa.me/224620903333" data-quote-whatsapp>WhatsApp</a>
-        </div>
-      </aside>
 
       <section class="section dark-section">
         <div class="section-heading">
@@ -272,7 +257,7 @@
           </article>
           <article>
             <h3>You are looking for several products at once?</h3>
-            <p>Use the catalog buttons to add several products to the quote. Your selection will be carried over into your contact message.</p>
+            <p>Mention them directly in your WhatsApp message or in the form. The team will then qualify volumes, destination and priorities.</p>
           </article>
           <article>
             <h3>You prefer a quick exchange?</h3>
