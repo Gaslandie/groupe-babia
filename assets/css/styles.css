@@ -27,6 +27,7 @@
   --blue: #174d68;
   --line: rgba(11, 25, 20, 0.13);
   --line-strong: rgba(11, 25, 20, 0.24);
+  --line-control: rgba(11, 25, 20, 0.48);
   --shadow: 0 24px 70px rgba(11, 25, 20, 0.14);
   --radius: 8px;
   --content: 1440px;
@@ -1057,18 +1058,109 @@ textarea:focus-visible {
 .button-ghost {
   color: var(--forest);
   background: transparent;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-control);
 }
 
 .button:hover,
 .nav-cta:hover {
   transform: translateY(-2px);
+}
+
+.button-primary:hover,
+.nav-cta:hover {
+  background: #053f2c;
+  border-color: #053f2c;
+  box-shadow: 0 12px 30px rgba(11, 25, 20, 0.18);
+}
+
+.button-ghost:hover {
+  background: rgba(6, 75, 53, 0.08);
+  border-color: var(--forest);
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.78);
+}
+
+.button-light:hover {
+  background: #eef2f0;
+  border-color: #eef2f0;
+  box-shadow: 0 12px 30px rgba(11, 25, 20, 0.18);
+}
+
+.button-dark:hover {
+  background: #16302a;
+  border-color: #16302a;
   box-shadow: 0 12px 30px rgba(11, 25, 20, 0.18);
 }
 
 .button:active,
-.nav-cta:active {
+.nav-cta:active,
+.filter-button:active {
   transform: translateY(0);
+  box-shadow: inset 0 2px 6px rgba(11, 25, 20, 0.22);
+}
+
+.button-primary:active,
+.nav-cta:active {
+  background: #053f2c;
+  border-color: #053f2c;
+}
+
+.button-ghost:active {
+  background: rgba(6, 75, 53, 0.08);
+  border-color: var(--forest);
+}
+
+.button-secondary:active {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.78);
+}
+
+.button-light:active {
+  background: #eef2f0;
+  border-color: #eef2f0;
+}
+
+.button-dark:active {
+  background: #16302a;
+  border-color: #16302a;
+}
+
+.button:disabled,
+.nav-cta:disabled,
+.filter-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.button-primary:disabled:hover,
+.nav-cta:disabled:hover {
+  background: var(--forest);
+  border-color: var(--forest);
+}
+
+.button-ghost:disabled:hover {
+  background: transparent;
+  border-color: var(--line-control);
+}
+
+.button-secondary:disabled:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.52);
+}
+
+.button-light:disabled:hover {
+  background: #fff;
+  border-color: #fff;
+}
+
+.button-dark:disabled:hover {
+  background: var(--ink);
+  border-color: var(--ink);
 }
 
 .page-hero {
@@ -1427,7 +1519,7 @@ textarea:focus-visible {
 .filter-button {
   min-height: 44px;
   padding: 0 16px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-control);
   border-radius: 999px;
   color: var(--forest);
   background: #fff;
@@ -1438,6 +1530,12 @@ textarea:focus-visible {
 }
 
 .filter-button:hover {
+  background: rgba(6, 75, 53, 0.08);
+  border-color: var(--forest);
+}
+
+.filter-button:active {
+  background: rgba(6, 75, 53, 0.08);
   border-color: var(--forest);
 }
 
@@ -1451,6 +1549,11 @@ textarea:focus-visible {
   color: #fff;
   background: var(--forest);
   border-color: var(--forest);
+}
+
+.filter-button:disabled:hover {
+  background: #fff;
+  border-color: var(--line-control);
 }
 
 .filter-result {
@@ -3019,5 +3122,48 @@ textarea:focus-visible {
   .button:hover,
   .nav-cta:hover {
     transform: none;
+  }
+
+  /* Sur tactile, :hover reste colle au dernier element touche : sans cela le
+     bouton garde sa couleur de survol apres le tap. L'appui reste signale par
+     :active, qui lui a du sens ici. */
+  .button-primary:hover,
+  .nav-cta:hover {
+    background: var(--forest);
+    border-color: var(--forest);
+    box-shadow: none;
+  }
+
+  .button-ghost:hover {
+    background: transparent;
+    border-color: var(--line-control);
+  }
+
+  .button-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.52);
+  }
+
+  .button-light:hover {
+    background: #fff;
+    border-color: #fff;
+    box-shadow: none;
+  }
+
+  .button-dark:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    box-shadow: none;
+  }
+
+  .filter-button:not(.is-active):hover {
+    background: #fff;
+    border-color: var(--line-control);
+  }
+
+  .button:active,
+  .nav-cta:active,
+  .filter-button:active {
+    box-shadow: inset 0 2px 6px rgba(11, 25, 20, 0.22);
   }
 }
