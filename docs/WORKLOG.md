@@ -32,6 +32,7 @@
 | 2026-08-21 | Transition de chargement | Claude | Barre de progression et voile de marque au changement de page, injectes par `main.js` donc actifs sur toutes les pages FR, EN et dynamiques. Bilingue, mouvement reduit respecte, retour arriere et touche Echap geres. 37 cas verifies au protocole DevTools | Recette visuelle utilisateur, puis deployer |
 | 2026-08-21 | Deploiement production | Claude | Parite FR/EN et transition de chargement mises en ligne par FTPS : 52 fichiers envoyes, 0 supprime, `.env` serveur intact, sauvegarde prealable des 27 fichiers ecrases. Verifie en ligne sur les 12 pages FR et EN | Recette visuelle client |
 | 2026-08-21 | En-tete uniforme et hero allege | Claude | Traitement superpose de l'en-tete d'accueil supprime : meme fond, meme position partout. `--header-height` mobile corrige (68 -> 72px reels), bande d'acces rapide du hero retiree, hero mobile reduit a la promesse, une phrase et deux actions. 21 controles de rendu, deploye et verifie en ligne | Recette visuelle client |
+| 2026-08-22 | Menu lateral anime | Claude | Menu mobile/tablette (<=1000px) transforme en panneau lateral glissant depuis la droite, pleine hauteur, avec voile assombri, entree des liens en cascade et mouvement reduit respecte. CSS seul (`assets/css/styles.css`), donc valable aussi pour les pages PHP ecrites a la main. Verifie au CDP en local puis en ligne a 375, 900, 1200 et 1440 px. Deploye par FTPS : 135 fichiers envoyes, 0 supprime, sauvegarde prealable des 135 fichiers ecrases | Recette visuelle client |
 
 ## A faire
 
