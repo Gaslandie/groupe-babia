@@ -41,12 +41,16 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 16px);
 }
 
 body {
+  max-width: 100%;
   margin: 0;
+  overflow-x: clip;
   padding-bottom: var(--dock-space);
   background: var(--paper);
   color: var(--ink);
@@ -57,6 +61,13 @@ body {
 
 body.nav-open {
   overflow: hidden;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 
 .skip-link {
