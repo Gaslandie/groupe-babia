@@ -2025,7 +2025,8 @@ textarea:focus-visible {
 
 .media-band img {
   width: 100%;
-  min-height: 360px;
+  height: clamp(300px, 28vw, 460px);
+  min-height: 0;
   object-fit: cover;
   border-radius: var(--radius);
 }
@@ -2803,6 +2804,10 @@ textarea:focus-visible {
 
   .export-media img {
     min-height: 300px;
+  }
+
+  .media-band img {
+    height: clamp(220px, 68vw, 320px);
   }
 }
 
