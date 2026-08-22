@@ -2265,7 +2265,8 @@ textarea:focus-visible {
   }
 
   /* Etat revele. Meme specificite que l'etat cache, place apres pour l'emporter. */
-  html.js:not(.no-reveal) .is-visible {
+  html.js:not(.no-reveal) .is-visible,
+  html.js:not(.no-reveal) .media-band > img.is-visible {
     opacity: 1;
     transform: none;
   }
