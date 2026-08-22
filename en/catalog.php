@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>(function (root) { root.classList.add("js"); window.__babiaReveal = window.setTimeout(function () { root.classList.add("no-reveal"); }, 2000); })(document.documentElement);</script>
-    <meta name="description" content="Temporary catalog of Groupe Babia Guinea, awaiting validated product sheets, photos, availability and commercial information.">
+    <meta name="description" content="Import and export catalog of Groupe Babia Guinea: Jus Babia, Tomato Paste Babia, rice, sugar, onions, construction materials, cocoa, coffee, cashew, sesame, soybeans and honey.">
     <title>Agri-food catalog | Groupe Babia Guinea</title>
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -18,11 +18,11 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://www.groupebabia.com/en/catalog.php">
     <meta property="og:title" content="Agri-food catalog | Groupe Babia Guinea">
-    <meta property="og:description" content="Temporary catalog of Groupe Babia Guinea, awaiting validated product sheets, photos, availability and commercial information.">
+    <meta property="og:description" content="Import and export catalog of Groupe Babia Guinea: Jus Babia, Tomato Paste Babia, rice, sugar, onions, construction materials, cocoa, coffee, cashew, sesame, soybeans and honey.">
     <meta property="og:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Agri-food catalog | Groupe Babia Guinea">
-    <meta name="twitter:description" content="Temporary catalog of Groupe Babia Guinea, awaiting validated product sheets, photos, availability and commercial information.">
+    <meta name="twitter:description" content="Import and export catalog of Groupe Babia Guinea: Jus Babia, Tomato Paste Babia, rice, sugar, onions, construction materials, cocoa, coffee, cashew, sesame, soybeans and honey.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
 
   </head>
@@ -45,60 +45,93 @@
     </header>
     <main id="content" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="../assets/images/soja.webp" alt="" width="1080" height="796" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Catalog</span></li></ol></nav>
-          <p class="eyebrow">Temporary catalog</p>
-          <h1>Product catalog being updated</h1>
+          <p class="eyebrow">Import &amp; export</p>
+          <h1>Connecting Guinea to the world</h1>
           <p>
-            The final catalog will be completed with the products, photos, availability, packaging and commercial information validated by the client.
+            Groupe Babia Guinea imports high-demand products for local markets and exports high-quality Guinean agricultural commodities to regional and international buyers.
           </p>
           <div class="page-actions">
-            <a class="button button-primary" href="contact.php?need=agro">Send a request</a>
-            <a class="button button-secondary" href="/en/#catalog">Back to overview</a>
+            <a class="button button-primary" href="contact.php?need=import-export">Request a quotation</a>
+            <a class="button button-secondary" href="sectors.php">View sectors</a>
           </div>
         </div>
         <aside class="page-hero-card">
-          <strong>To be completed</strong>
-          <p>This page remains deliberately general to avoid publishing unconfirmed product sheets.</p>
+          <strong>Trade for growth</strong>
+          <p>Sourcing, customs, logistics and distribution are handled with compliance to international standards.</p>
         </aside>
+      </section>
+
+      <section class="section two-column">
+        <div class="section-heading">
+          <p class="eyebrow">Import activities</p>
+          <h2>Importing quality for Guinea</h2>
+        </div>
+        <div class="content-panel">
+          <h3>Products for markets, wholesalers, institutions and construction companies</h3>
+          <p>
+            We import high-demand products to supply commercial partners across Conakry and the interior of Guinea, working with certified international suppliers to ensure quality, competitive pricing and timely delivery.
+          </p>
+          <ul class="check-list">
+            <li>Food products under the Babia brand.</li>
+            <li>Staple food products for household and institutional use.</li>
+            <li>Construction materials for companies and projects.</li>
+          </ul>
+        </div>
       </section>
 
       <section class="section">
         <div class="section-heading">
-          <p class="eyebrow">Products to confirm</p>
-          <h2>A temporary selection before full validation</h2>
+          <p class="eyebrow">Import products</p>
+          <h2>Our import product families</h2>
         </div>
-        <p class="catalogue-hint">
-          The families below are temporary markers. They will be replaced or completed as soon as the client provides official information.
-        </p>
         <div class="product-grid">
           <article class="product-card">
-            <img src="../assets/images/agro-cajou.webp" alt="Agricultural products" width="736" height="736" loading="lazy" decoding="async">
+            <img src="../assets/images/boissons.webp" alt="Babia natural fruit juices" width="486" height="365" loading="lazy" decoding="async">
             <div>
-              <small>Export</small>
-              <h3>Agricultural products</h3>
-              <p>Families, origins, volumes and packaging to be confirmed.</p>
-              <ul class="tag-list"><li>To specify</li><li>Export</li><li>Professional request</li></ul>
+              <small>Babia brand</small>
+              <h3>Jus Babia</h3>
+              <p>Natural fruit juices for local markets and distribution channels.</p>
+              <ul class="tag-list"><li>Babia brand</li><li>Fruit juice</li><li>Import</li></ul>
             </div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/riz.jpeg" alt="Food products" width="554" height="554" loading="lazy" decoding="async">
+            <img src="../assets/images/tomates.jpeg" alt="Babia premium tomato paste" width="640" height="479" loading="lazy" decoding="async">
             <div>
-              <small>Supply</small>
-              <h3>Food products</h3>
-              <p>Final list, availability and formats to integrate after validation.</p>
-              <ul class="tag-list"><li>To confirm</li><li>Distribution</li><li>Volume</li></ul>
+              <small>Babia brand</small>
+              <h3>Tomato Paste Babia</h3>
+              <p>Premium quality tomato concentrate for household and professional food needs.</p>
+              <ul class="tag-list"><li>Tomato paste</li><li>Premium quality</li><li>Food product</li></ul>
             </div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/hero-agro-export-import.webp" alt="Agri-food products" width="1600" height="900" loading="lazy" decoding="async">
+            <img src="../assets/images/riz.jpeg" alt="Rice for household and institutional use" width="554" height="554" loading="lazy" decoding="async">
             <div>
-              <small>Catalog</small>
-              <h3>Detailed sheets coming soon</h3>
-              <p>Each sheet may include a photo, description, packaging, destination and commercial contact.</p>
-              <ul class="tag-list"><li>Photos</li><li>Sheets</li><li>WhatsApp</li></ul>
+              <small>Staple food</small>
+              <h3>Rice</h3>
+              <p>Various grades for household, institutional and distribution use.</p>
+              <ul class="tag-list"><li>Staple food</li><li>Volume</li><li>Supply</li></ul>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/oignons.jpeg" alt="Fresh onions for local markets" width="640" height="480" loading="lazy" decoding="async">
+            <div>
+              <small>Staple food</small>
+              <h3>Sugar &amp; onions</h3>
+              <p>Refined white sugar and fresh onions for local markets.</p>
+              <ul class="tag-list"><li>Sugar</li><li>Fresh onions</li><li>Local markets</li></ul>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/btp.webp" alt="Construction materials for projects" width="626" height="417" loading="lazy" decoding="async">
+            <div>
+              <small>Construction</small>
+              <h3>Construction materials</h3>
+              <p>Cement, iron rods, tiles and other building inputs for construction companies and projects.</p>
+              <ul class="tag-list"><li>Cement</li><li>Iron rods</li><li>Tiles</li></ul>
             </div>
           </article>
         </div>
@@ -106,23 +139,45 @@
 
       <section class="section dark-section">
         <div class="section-heading">
-          <p class="eyebrow">Useful information</p>
-          <h2>Data that will be added to product sheets</h2>
+          <p class="eyebrow">Export activities</p>
+          <h2>Exporting "Made in Guinea" to the world</h2>
+          <p class="section-lead">We source directly from Guinean farmers and cooperatives to export high-quality agricultural commodities with fair sourcing, quality control and traceability.</p>
         </div>
-        <div class="service-grid">
-          <article class="service-card"><small>01</small><h3>Product</h3><p>Name, family, photo, short description and commercial use.</p></article>
-          <article class="service-card"><small>02</small><h3>Availability</h3><p>Volumes, seasonality, packaging and useful documents.</p></article>
-          <article class="service-card"><small>03</small><h3>Contact</h3><p>WhatsApp or form path for each confirmed product.</p></article>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="../assets/images/agro-cacao.webp" alt="Premium grade cocoa beans" width="1080" height="656" loading="lazy" decoding="async">
+            <div><small>Agricultural commodity</small><h3>Cocoa beans</h3><p>Premium grade cocoa beans for export markets.</p><ul class="tag-list"><li>Premium grade</li><li>Export</li><li>Traceability</li></ul></div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/cafe.webp" alt="Robusta coffee beans" width="765" height="573" loading="lazy" decoding="async">
+            <div><small>Agricultural commodity</small><h3>Coffee beans</h3><p>Robusta coffee beans sourced for professional buyers.</p><ul class="tag-list"><li>Robusta</li><li>Export</li><li>Farm sourcing</li></ul></div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/agro-cajou.webp" alt="Raw cashew nuts in shells" width="736" height="736" loading="lazy" decoding="async">
+            <div><small>Agricultural commodity</small><h3>Raw cashew nuts in shells</h3><p>Raw cashew nuts for buyers and processors.</p><ul class="tag-list"><li>In shells</li><li>Export</li><li>Volume</li></ul></div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/sesame.webp" alt="Sesame seeds with high oil content" width="765" height="573" loading="lazy" decoding="async">
+            <div><small>Agricultural commodity</small><h3>Sesame seeds</h3><p>Sesame seeds with high oil content.</p><ul class="tag-list"><li>High oil content</li><li>Seeds</li><li>Export</li></ul></div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/soja.webp" alt="Soybeans for food and feed industries" width="1080" height="796" loading="lazy" decoding="async">
+            <div><small>Agricultural commodity</small><h3>Soybeans</h3><p>Soybeans for food and feed industries.</p><ul class="tag-list"><li>Food</li><li>Feed</li><li>Export</li></ul></div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/miel.webp" alt="Natural pure Guinean honey" width="800" height="600" loading="lazy" decoding="async">
+            <div><small>Agricultural commodity</small><h3>Honey</h3><p>Natural, pure Guinean honey for export markets.</p><ul class="tag-list"><li>Natural</li><li>Pure honey</li><li>Guinea</li></ul></div>
+          </article>
         </div>
       </section>
 
       <section class="contact-band">
         <div>
-          <p class="eyebrow">Product need</p>
-          <h2>Looking for a specific product?</h2>
-          <p>Send your request now, even if the product sheet has not been published yet.</p>
+          <p class="eyebrow">Import &amp; export request</p>
+          <h2>Need a product, price or availability confirmation?</h2>
+          <p>Send your quantity, destination, timeline and packaging expectations so the team can qualify your request.</p>
         </div>
-        <a class="button button-primary" href="contact.php?need=agro">Describe my need</a>
+        <a class="button button-primary" href="contact.php?need=import-export">Request a quotation</a>
       </section>
 
     </main>

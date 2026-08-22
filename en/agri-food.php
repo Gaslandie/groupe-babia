@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>(function (root) { root.classList.add("js"); window.__babiaReveal = window.setTimeout(function () { root.classList.add("no-reveal"); }, 2000); })(document.documentElement);</script>
-    <meta name="description" content="Temporary presentation of Groupe Babia Guinea's agri-food sector, awaiting client-approved product and supply-chain information.">
+    <meta name="description" content="Agriculture, agribusiness and agro-industries of Groupe Babia Guinea: production, value chains, processing and job creation.">
     <title>Agri-food | Groupe Babia Guinea</title>
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -18,11 +18,11 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://www.groupebabia.com/en/agri-food.php">
     <meta property="og:title" content="Agri-food | Groupe Babia Guinea">
-    <meta property="og:description" content="Temporary presentation of Groupe Babia Guinea's agri-food sector, awaiting client-approved product and supply-chain information.">
+    <meta property="og:description" content="Agriculture, agribusiness and agro-industries of Groupe Babia Guinea: production, value chains, processing and job creation.">
     <meta property="og:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Agri-food | Groupe Babia Guinea">
-    <meta name="twitter:description" content="Temporary presentation of Groupe Babia Guinea's agri-food sector, awaiting client-approved product and supply-chain information.">
+    <meta name="twitter:description" content="Agriculture, agribusiness and agro-industries of Groupe Babia Guinea: production, value chains, processing and job creation.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
 
   </head>
@@ -49,59 +49,70 @@
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Agri-food</span></li></ol></nav>
-          <p class="eyebrow">Agri-food sector</p>
-          <h1>An agri-food offer currently being structured</h1>
+          <p class="eyebrow">Agriculture, agribusiness &amp; agro-industries</p>
+          <h1>From food security to value-added production</h1>
           <p>
-            This page temporarily presents Groupe Babia Guinea's agri-food activity. Detailed information about products, volumes, packaging and commercial channels will be added after client validation.
+            Groupe Babia Guinea structures agricultural production, value chains and processing activities to reduce imports, increase farmer income and create industrial jobs.
           </p>
           <div class="page-actions">
-            <a class="button button-primary" href="contact.php?need=agro">Present a need</a>
-            <a class="button button-secondary" href="sectors.php">View sectors</a>
+            <a class="button button-primary" href="catalog.php">View products</a>
+            <a class="button button-secondary" href="contact.php?need=agri-food">Present a need</a>
           </div>
         </div>
         <aside class="page-hero-card">
-          <strong>Temporary content</strong>
-          <p>Product sheets and operational details will be updated as soon as the official elements are received.</p>
+          <strong>Core ambition</strong>
+          <p>Transform agriculture from subsistence into profitable, market-connected business.</p>
         </aside>
       </section>
 
-      <section class="section two-column">
+      <section class="section">
         <div class="section-heading">
-          <p class="eyebrow">General framework</p>
-          <h2>A sector connected to production, processing and trade</h2>
+          <p class="eyebrow">Three connected activities</p>
+          <h2>Agriculture, value chains and processing</h2>
         </div>
-        <div class="content-panel">
-          <h3>A clear base before final details</h3>
-          <p>
-            Groupe Babia Guinea aims to develop agri-food activities that support food security, local value creation and commercial exchange. Final content will specify the supply chains, products, capacities and collaboration methods.
-          </p>
-          <ul class="check-list">
-            <li>Products and supply chains to confirm with the client's official information.</li>
-            <li>Packaging, availability and volumes to add after validation.</li>
-            <li>Contact path maintained for buyers, partners and distributors.</li>
-          </ul>
+        <div class="service-grid">
+          <article class="service-card">
+            <small>01</small>
+            <h3>Modern agriculture</h3>
+            <p>Crop production, mechanization, irrigation, agricultural inputs, farmer training, land development and soil management.</p>
+          </article>
+          <article class="service-card">
+            <small>02</small>
+            <h3>Agribusiness</h3>
+            <p>Project structuring, financing, collection, storage, distribution, cooperative partnerships and market access programs.</p>
+          </article>
+          <article class="service-card">
+            <small>03</small>
+            <h3>Agro-industries</h3>
+            <p>Processing cereals, fruits and vegetables, packaging "Made in Guinea" products and ensuring international quality standards.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section soft-section">
-        <div class="section-heading">
-          <p class="eyebrow">Coming information</p>
-          <h2>Future updates will structure the page</h2>
-        </div>
-        <div class="service-grid">
-          <article class="service-card"><small>01</small><h3>Supply chains</h3><p>Presentation of the crops, processed products or commodities selected by the client.</p></article>
-          <article class="service-card"><small>02</small><h3>Commercial offer</h3><p>Information on volumes, formats, target markets and trade conditions.</p></article>
-          <article class="service-card"><small>03</small><h3>Quality</h3><p>Standards, controls and available documents will be added once provided.</p></article>
+      <section class="section media-band soft-section">
+        <img src="../assets/images/agro-industrie.webp" alt="Agro-industrial processing unit" width="1704" height="923" loading="lazy" decoding="async">
+        <div>
+          <p class="eyebrow">Impact</p>
+          <h2>Reducing imports and creating local value</h2>
+          <p>
+            The agri-food approach connects farmers, cooperatives, financing, technology and processing units to create stronger value chains.
+          </p>
+          <ul class="check-list">
+            <li>Increase productivity and farmer income.</li>
+            <li>Reduce post-harvest losses.</li>
+            <li>Create industrial jobs through local processing.</li>
+            <li>Prepare products for domestic and export markets.</li>
+          </ul>
         </div>
       </section>
 
       <section class="contact-band">
         <div>
           <p class="eyebrow">Agri-food request</p>
-          <h2>You can already send a request or partnership proposal.</h2>
-          <p>The team will direct your message, and this page will be enriched with client-approved information.</p>
+          <h2>Need a product, value-chain partner or processing discussion?</h2>
+          <p>Share your request with the Groupe Babia team.</p>
         </div>
-        <a class="button button-primary" href="contact.php?need=agro">Contact Groupe Babia</a>
+        <a class="button button-primary" href="contact.php?need=agri-food">Contact the team</a>
       </section>
 
     </main>

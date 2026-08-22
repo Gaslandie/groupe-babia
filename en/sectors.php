@@ -49,10 +49,10 @@
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Our sectors</span></li></ol></nav>
-          <p class="eyebrow">Our sectors</p>
-          <h1>Strategic sectors to build Guinea's future</h1>
+          <p class="eyebrow">Our 7 strategic sectors</p>
+          <h1>Diversified to build a stronger Guinea</h1>
           <p>
-            Groupe Babia Guinée SARLU operates in complementary sectors to build infrastructure, strengthen food security and create jobs across Guinea and Africa.
+            From the farm to the factory, from the port to the construction site, Groupe Babia Guinea operates across key industries driving Guinea's economic growth.
           </p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.php">Present a need</a>
@@ -60,108 +60,146 @@
           </div>
         </div>
         <aside class="page-hero-card">
-          <strong>7 strategic sectors</strong>
-          <p>Detailed pages will be completed as official information is provided by the client.</p>
+          <strong>National development</strong>
+          <p>Seven complementary sectors create synergies, manage risk and deliver integrated solutions with maximum economic impact.</p>
         </aside>
       </section>
 
       <section class="section">
         <div class="section-heading">
-          <p class="eyebrow">Activity map</p>
-          <h2>An organisation by business areas, with evolving content</h2>
-          <p class="section-lead">The sectors below give the website a clear structure. Detailed sheets will be enriched with client-approved texts, figures, references and visuals.</p>
+          <p class="eyebrow">Detailed sectors</p>
+          <h2>A diversified group for national development</h2>
+          <p class="section-lead">Groupe Babia Guinea SARLU operates in seven complementary sectors designed to support food security, industrialization, infrastructure and trade.</p>
         </div>
 
         <div class="activity-grid">
-          <article class="activity-card">
-            <img src="../assets/images/agro-cajou.webp" alt="Agricultural products" width="736" height="736" loading="lazy" decoding="async">
+          <article class="activity-card" id="agriculture">
+            <img src="../assets/images/riz.jpeg" alt="Rice production and food crops" width="554" height="554" loading="lazy" decoding="async">
             <div>
               <span>01</span>
-              <h3>Agriculture &amp; supply</h3>
-              <p>Production, local sourcing, agricultural partnerships and supply-chain structuring will be detailed after validation.</p>
-              <a href="agri-food.php">View the agri-food page</a>
+              <h3>Agriculture</h3>
+              <p><strong>Modern agriculture for food security.</strong> We invest in farming techniques, mechanization and irrigation to increase productivity.</p>
+              <ul class="check-list">
+                <li>Crop production: rice, maize, vegetables and cash crops.</li>
+                <li>Supply of agricultural inputs: seeds, fertilizers and equipment.</li>
+                <li>Support and training for farmers and cooperatives.</li>
+                <li>Land development and soil management.</li>
+              </ul>
+              <p><strong>Goal:</strong> reduce food imports and increase income for Guinean farmers.</p>
+              <a href="agri-food.php">View agri-food page</a>
             </div>
           </article>
 
-          <article class="activity-card">
-            <img src="../assets/images/agro-industrie.webp" alt="Agro-industrial processing" width="1704" height="923" loading="lazy" decoding="async">
+          <article class="activity-card" id="agribusiness">
+            <img src="../assets/images/agro-cajou.webp" alt="Agricultural commodities" width="736" height="736" loading="lazy" decoding="async">
             <div>
               <span>02</span>
-              <h3>Agro-industry</h3>
-              <p>Processing, packaging and local value addition around Guinean raw materials.</p>
+              <h3>Agribusiness</h3>
+              <p><strong>Structuring agricultural value chains.</strong> We connect farmers to markets, financing and technology.</p>
+              <ul class="check-list">
+                <li>Project structuring and financing for agricultural enterprises.</li>
+                <li>Collection, storage and distribution of agricultural products.</li>
+                <li>Partnerships with cooperatives and agri-SMEs.</li>
+                <li>Market access and contract farming programs.</li>
+              </ul>
+              <p><strong>Goal:</strong> transform agriculture from subsistence to profitable business.</p>
+              <a href="agri-food.php">Explore value chains</a>
+            </div>
+          </article>
+
+          <article class="activity-card" id="agro-industries">
+            <img src="../assets/images/agro-industrie.webp" alt="Agro-industrial processing unit" width="1704" height="923" loading="lazy" decoding="async">
+            <div>
+              <span>03</span>
+              <h3>Agro-industries</h3>
+              <p><strong>Adding value to Guinean products.</strong> We process local raw materials into finished goods for domestic and export markets.</p>
+              <ul class="check-list">
+                <li>Processing of cereals, fruits and vegetables.</li>
+                <li>Packaging and branding of "Made in Guinea" products.</li>
+                <li>Development of food processing units.</li>
+                <li>Quality control and compliance with international standards.</li>
+              </ul>
+              <p><strong>Goal:</strong> reduce post-harvest losses and create industrial jobs.</p>
               <a href="company.php#agro-industry">View agro-industry</a>
             </div>
           </article>
 
-          <article class="activity-card">
-            <img src="../assets/images/soja.webp" alt="Agri-food products" width="1080" height="796" loading="lazy" decoding="async">
-            <div>
-              <span>03</span>
-              <h3>Agri-food &amp; trade</h3>
-              <p>Export, import, distribution and product sheets will be completed with validated commercial information.</p>
-              <a href="catalog.php">View the temporary catalog</a>
-            </div>
-          </article>
-
-          <article class="activity-card">
-            <img src="../assets/images/btp.webp" alt="Construction project" width="626" height="417" loading="lazy" decoding="async">
+          <article class="activity-card" id="fishing">
+            <img src="../assets/images/peche.webp" alt="Fishing and seafood products" width="1536" height="1024" loading="lazy" decoding="async">
             <div>
               <span>04</span>
-              <h3>Construction &amp; public works</h3>
-              <p>Infrastructure, buildings and public works, with references and scopes to be completed.</p>
-              <a href="construction.php">View the construction page</a>
+              <h3>Fishing</h3>
+              <p><strong>Sustainable fisheries &amp; export.</strong> We promote responsible fishing and develop the cold chain to supply quality fish products.</p>
+              <ul class="check-list">
+                <li>Artisanal and industrial fishing operations.</li>
+                <li>Fish processing, freezing and packaging.</li>
+                <li>Cold storage and logistics.</li>
+                <li>Export of fishery products to regional and international markets.</li>
+              </ul>
+              <p><strong>Goal:</strong> ensure food security and earn foreign exchange through exports.</p>
+              <a href="company.php#fishing">View fishing activity</a>
             </div>
           </article>
 
-          <article class="activity-card">
-            <img src="../assets/images/mines.webp" alt="Mining sector" width="1600" height="1064" loading="lazy" decoding="async">
+          <article class="activity-card" id="construction-btp">
+            <img src="../assets/images/btp.webp" alt="Construction and infrastructure project" width="626" height="417" loading="lazy" decoding="async">
             <div>
               <span>05</span>
-              <h3>Mining sector</h3>
-              <p>Services, partnerships and operational information will be published after client validation.</p>
-              <a href="mining.php">View the mining page</a>
+              <h3>Construction &amp; BTP</h3>
+              <p><strong>Building infrastructure for Guinea.</strong> We design and execute public and private infrastructure projects to modern standards.</p>
+              <ul class="check-list">
+                <li>Modern markets, schools and administrative buildings.</li>
+                <li>Roads, drainage and urban development.</li>
+                <li>Residential and commercial buildings.</li>
+                <li>Renovation and maintenance services.</li>
+              </ul>
+              <p><strong>Flagship focus:</strong> Modern Market for Women, Gbessia, Conakry.</p>
+              <p><strong>Goal:</strong> deliver quality infrastructure that improves daily life.</p>
+              <a href="construction.php">View construction page</a>
             </div>
           </article>
 
-          <article class="activity-card">
-            <img src="../assets/images/peche.webp" alt="Seafood products" width="1536" height="1024" loading="lazy" decoding="async">
+          <article class="activity-card" id="mining">
+            <img src="../assets/images/mines.webp" alt="Mining sector support" width="1600" height="1064" loading="lazy" decoding="async">
             <div>
               <span>06</span>
-              <h3>Fishing &amp; seafood products</h3>
-              <p>Supply, preservation, quality and marketing will be specified with final content.</p>
-              <a href="company.php#fishing">View the fishing activity</a>
+              <h3>Mining</h3>
+              <p><strong>Support services for the mining sector.</strong> We provide essential services to Guinea's mining industry.</p>
+              <ul class="check-list">
+                <li>Logistics and transport services.</li>
+                <li>Supply of equipment, materials and consumables.</li>
+                <li>Site preparation and civil works.</li>
+                <li>Subcontracting and facility management for mining companies.</li>
+              </ul>
+              <p><strong>Goal:</strong> be a reliable local partner for major mining operators in Guinea.</p>
+              <a href="mining.php">View mining page</a>
             </div>
           </article>
 
-          <article class="activity-card">
-            <img src="../assets/images/partage-social.jpg" alt="Partnerships and development" width="1200" height="630" loading="lazy" decoding="async">
+          <article class="activity-card" id="import-export">
+            <img src="../assets/images/boissons.webp" alt="Import and export products" width="486" height="365" loading="lazy" decoding="async">
             <div>
               <span>07</span>
-              <h3>Partnerships &amp; development</h3>
-              <p>Cooperations, investments, regional trade and cross-sector projects will be structured with client information.</p>
-              <a href="contact.php">Present a partnership</a>
+              <h3>Import &amp; export</h3>
+              <p><strong>Connecting Guinea to the world.</strong> We ensure the availability of quality products in Guinea and promote "Made in Guinea" products internationally.</p>
+              <ul class="check-list">
+                <li>Import essential food products and construction materials.</li>
+                <li>Export Guinean agricultural products to generate value for farmers.</li>
+                <li>Handle sourcing, customs, logistics and distribution.</li>
+                <li>Operate with compliance to international standards.</li>
+              </ul>
+              <p><strong>Goal:</strong> facilitate trade for growth.</p>
+              <a href="catalog.php">View import &amp; export products</a>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section class="section soft-section">
-        <div class="section-heading">
-          <p class="eyebrow">To be completed</p>
-          <h2>Each sector will receive validated content</h2>
-        </div>
-        <div class="service-grid">
-          <article class="service-card"><small>01</small><h3>Official text</h3><p>Sector description, positioning, services and information the client wants to publish.</p></article>
-          <article class="service-card"><small>02</small><h3>Proofs &amp; visuals</h3><p>Photos, figures, references, capacities, areas of intervention and validated partners.</p></article>
-          <article class="service-card"><small>03</small><h3>Useful contact</h3><p>A request path adapted to each sector, by form or WhatsApp.</p></article>
         </div>
       </section>
 
       <section class="contact-band">
         <div>
-          <p class="eyebrow">Orientation</p>
-          <h2>Do you already know which sector interests you?</h2>
-          <p>Send a request now, even if the detailed page will be completed later.</p>
+          <p class="eyebrow">Integrated solutions</p>
+          <h2>Need to discuss a sector or partnership?</h2>
+          <p>Share your project, product need or partnership opportunity with the Groupe Babia team.</p>
         </div>
         <a class="button button-primary" href="contact.php">Contact Groupe Babia</a>
       </section>
