@@ -2025,7 +2025,7 @@ textarea:focus-visible {
 
 .media-band img {
   width: 100%;
-  height: clamp(300px, 28vw, 460px);
+  height: clamp(260px, 23vw, 380px);
   min-height: 0;
   object-fit: cover;
   border-radius: var(--radius);
@@ -2034,7 +2034,7 @@ textarea:focus-visible {
 .media-carousel {
   position: relative;
   width: 100%;
-  height: clamp(300px, 28vw, 460px);
+  height: clamp(260px, 23vw, 380px);
   min-height: 0;
   margin: 0;
   overflow: hidden;
@@ -3000,11 +3000,11 @@ textarea:focus-visible {
   }
 
   .media-band img {
-    height: clamp(220px, 68vw, 320px);
+    height: clamp(190px, 56vw, 260px);
   }
 
   .media-carousel {
-    height: clamp(220px, 68vw, 320px);
+    height: clamp(190px, 56vw, 260px);
   }
 
   .media-carousel-dots {

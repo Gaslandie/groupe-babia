@@ -25,7 +25,7 @@ $publicReadError = $publicationState['error'];
     <meta name="description" content="Découvrez les réalisations de Groupe Babia Guinée dans l'agroalimentaire, le BTP, les mines, la pêche et l'agro-industrie.">
     <title>Réalisations | Groupe Babia Guinée</title>
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260822-product-carousel">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260822-media-short">
     <link rel="canonical" href="https://www.groupebabia.com/realisations.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/projects.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/realisations.php">
