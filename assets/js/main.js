@@ -129,57 +129,57 @@ if (navToggle && nav) {
 
 const slidesFr = [
   {
-    kicker: "Agroalimentaire",
-    title: "Exportation et importation agroalimentaire",
-    text: "Export : cacao, café, cajou, soja, karité, miel, sésame et fruits. Import : jus, riz, tomates, oignons et huile alimentaire."
+    kicker: "Groupe Babia Guinée SARLU",
+    title: "Diversified group driving Guinea's growth",
+    text: "Building Guinea's future today through strategic sectors, infrastructure, food security and job creation across Guinea and Africa."
   },
   {
-    kicker: "Construction / BTP",
-    title: "Infrastructures modernes et durables",
-    text: "Bâtiments, travaux publics et projets d'infrastructures conçus pour soutenir le développement régional."
+    kicker: "Infrastructure",
+    title: "Building Guinea's future today",
+    text: "Strategic investments that connect projects, communities and productive capacity."
   },
   {
-    kicker: "Secteur minier",
-    title: "Valorisation des ressources locales",
-    text: "Exploration, logistique et approvisionnement au service d'opérations minières responsables et structurées."
+    kicker: "Food security",
+    title: "From farm to market",
+    text: "Integrated value chains designed to feed Guinea and serve regional markets."
   },
   {
-    kicker: "Pêche",
-    title: "Une filière halieutique structurée",
-    text: "Approvisionnement et commercialisation de produits de la pêche dans une démarche responsable et adaptée aux marchés."
+    kicker: "Local impact",
+    title: "Jobs, skills and communities",
+    text: "Every project is designed to create jobs, transfer skills and improve livelihoods."
   },
   {
-    kicker: "Agro-industrie",
-    title: "Transformer pour créer plus de valeur",
-    text: "Transformation, contrôle qualité et conditionnement des matières premières agricoles pour les marchés locaux et internationaux."
+    kicker: "Industrialization",
+    title: "Made in Guinea, built to global standards",
+    text: "Processing, packaging and adding value locally to create real wealth in Guinea."
   }
 ];
 
 const slidesEn = [
   {
-    kicker: "Agri-food",
-    title: "Agri-food export and import",
-    text: "Export: cocoa, coffee, cashew, soya, shea, honey, sesame and fruits. Import: juice, rice, tomatoes, onions and edible oil."
+    kicker: "Groupe Babia Guinée SARLU",
+    title: "Diversified group driving Guinea's growth",
+    text: "Building Guinea's future today through strategic sectors, infrastructure, food security and job creation across Guinea and Africa."
   },
   {
-    kicker: "Construction",
-    title: "Modern and durable infrastructure",
-    text: "Buildings, public works and infrastructure projects designed to support regional development."
+    kicker: "Infrastructure",
+    title: "Building Guinea's future today",
+    text: "Strategic investments that connect projects, communities and productive capacity."
   },
   {
-    kicker: "Mining sector",
-    title: "Adding value to local resources",
-    text: "Exploration, logistics and supply serving responsible, well-structured mining operations."
+    kicker: "Food security",
+    title: "From farm to market",
+    text: "Integrated value chains designed to feed Guinea and serve regional markets."
   },
   {
-    kicker: "Fishing",
-    title: "A structured fisheries value chain",
-    text: "Supply and marketing of fishing products, handled responsibly and adapted to each market."
+    kicker: "Local impact",
+    title: "Jobs, skills and communities",
+    text: "Every project is designed to create jobs, transfer skills and improve livelihoods."
   },
   {
-    kicker: "Agro-industry",
-    title: "Processing to create more value",
-    text: "Processing, quality control and packaging of agricultural raw materials for local and international markets."
+    kicker: "Industrialization",
+    title: "Made in Guinea, built to global standards",
+    text: "Processing, packaging and adding value locally to create real wealth in Guinea."
   }
 ];
 

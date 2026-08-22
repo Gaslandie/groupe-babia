@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>(function (root) { root.classList.add("js"); window.__babiaReveal = window.setTimeout(function () { root.classList.add("no-reveal"); }, 2000); })(document.documentElement);</script>
-    <meta name="description" content="Groupe Babia Guinea, a multisector partner in agriculture, agri-food, construction, mining and fishing in Guinea and West Africa.">
-    <title>Groupe Babia Guinea | Agriculture, Construction, Mining and Fishing</title>
+    <meta name="description" content="Groupe Babia Guinée SARLU is a diversified Guinean group building infrastructure, food security and jobs across Guinea and Africa.">
+    <title>Groupe Babia Guinée SARLU | Diversified Group Driving Guinea’s Growth</title>
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260822-home-product-carousel">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260822-client-copy">
     <link rel="canonical" href="https://www.groupebabia.com/en/">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/">
@@ -17,12 +17,12 @@
     <meta property="og:site_name" content="Groupe Babia Guinea">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://www.groupebabia.com/en/">
-    <meta property="og:title" content="Groupe Babia Guinea | Agriculture, Construction, Mining and Fishing">
-    <meta property="og:description" content="Groupe Babia Guinea, a multisector partner in agriculture, agri-food, construction, mining and fishing in Guinea and West Africa.">
+    <meta property="og:title" content="Groupe Babia Guinée SARLU | Diversified Group Driving Guinea’s Growth">
+    <meta property="og:description" content="Groupe Babia Guinée SARLU is a diversified Guinean group building infrastructure, food security and jobs across Guinea and Africa.">
     <meta property="og:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Groupe Babia Guinea | Agriculture, Construction, Mining and Fishing">
-    <meta name="twitter:description" content="Groupe Babia Guinea, a multisector partner in agriculture, agri-food, construction, mining and fishing in Guinea and West Africa.">
+    <meta name="twitter:title" content="Groupe Babia Guinée SARLU | Diversified Group Driving Guinea’s Growth">
+    <meta name="twitter:description" content="Groupe Babia Guinée SARLU is a diversified Guinean group building infrastructure, food security and jobs across Guinea and Africa.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
     <link rel="preload" href="../assets/images/hero-agro-export-import.webp" as="image" type="image/webp" fetchpriority="high">
     <script type="application/ld+json">
@@ -92,10 +92,10 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-          <p class="eyebrow" data-slide-kicker>Agri-food</p>
-          <h1 class="hero-title" data-slide-title>Agri-food export and import</h1>
+          <p class="eyebrow" data-slide-kicker>Groupe Babia Guinée SARLU</p>
+          <h1 class="hero-title" data-slide-title>Diversified group driving Guinea's growth</h1>
           <p class="hero-copy" data-slide-text>
-            Export: cocoa, coffee, cashew, soya, shea, honey, sesame and fruits. Import: juice, rice, tomatoes, onions and edible oil.
+            Building Guinea's future today through strategic sectors, infrastructure, food security and job creation across Guinea and Africa.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#activities">View our activities</a>
@@ -105,11 +105,11 @@
 
         <div class="hero-rail" role="group" aria-roledescription="carousel" aria-label="Business areas">
           <div class="slider-dots" role="group" aria-label="Choose a business area">
-            <button class="is-active" type="button" aria-label="Show Agri-food" data-dot="0"></button>
-            <button type="button" aria-label="Show Construction" data-dot="1"></button>
-            <button type="button" aria-label="Show Mining" data-dot="2"></button>
-            <button type="button" aria-label="Show Fishing" data-dot="3"></button>
-            <button type="button" aria-label="Show Agro-industry" data-dot="4"></button>
+            <button class="is-active" type="button" aria-label="Show Groupe Babia" data-dot="0"></button>
+            <button type="button" aria-label="Show infrastructure" data-dot="1"></button>
+            <button type="button" aria-label="Show food security" data-dot="2"></button>
+            <button type="button" aria-label="Show communities" data-dot="3"></button>
+            <button type="button" aria-label="Show industrialization" data-dot="4"></button>
           </div>
           <button class="slider-button slider-play" type="button" aria-label="Pause the slideshow" data-state="playing" data-slide-play>
             <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
@@ -120,22 +120,22 @@
         <div class="hero-marquee" aria-label="Groupe Babia highlights">
           <div class="hero-marquee-track" aria-hidden="true">
             <div class="hero-marquee-group">
-              <span>Buyers &amp; importers</span>
-              <span>Companies &amp; institutions</span>
-              <span>Industrial partners</span>
-              <span>5 structured business areas</span>
-              <span>Conakry</span>
+              <span>7 strategic sectors</span>
+              <span>Guinea's growth</span>
+              <span>Food security</span>
+              <span>Infrastructure</span>
+              <span>350+ direct jobs</span>
+              <span>2000+ farmers</span>
               <span>West Africa</span>
-              <span>Export / import</span>
             </div>
             <div class="hero-marquee-group">
-              <span>Buyers &amp; importers</span>
-              <span>Companies &amp; institutions</span>
-              <span>Industrial partners</span>
-              <span>5 structured business areas</span>
-              <span>Conakry</span>
+              <span>7 strategic sectors</span>
+              <span>Guinea's growth</span>
+              <span>Food security</span>
+              <span>Infrastructure</span>
+              <span>350+ direct jobs</span>
+              <span>2000+ farmers</span>
               <span>West Africa</span>
-              <span>Export / import</span>
             </div>
           </div>
         </div>
@@ -143,29 +143,29 @@
 
       <section class="section proof-section" aria-labelledby="proof-title">
         <div class="section-heading">
-          <p class="eyebrow">Trust markers</p>
-          <h2 id="proof-title">A clearer commercial relationship from the very first exchange</h2>
+          <p class="eyebrow">National impact</p>
+          <h2 id="proof-title">Building infrastructure, food security and jobs across Guinea</h2>
         </div>
         <div class="proof-grid">
           <article>
             <span>01</span>
-            <h3>Qualified requests</h3>
-            <p>Product, volume, destination, timing, available documents and constraints are clarified before any quotation.</p>
+            <h3>Infrastructure</h3>
+            <p>Projects designed to support growth, connect communities and strengthen productive capacity.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Traceable exchanges</h3>
-            <p>Every request can be followed by email, phone or WhatsApp so that a usable history is kept.</p>
+            <h3>Food security</h3>
+            <p>A commitment to local production, processing and reliable food access for Guinea and the region.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>Identified contact</h3>
-            <p>A single commercial entry point directs buyers, institutions and partners to the relevant business area.</p>
+            <h3>Jobs and skills</h3>
+            <p>Every project is designed to create employment, transfer skills and strengthen Guinean talent.</p>
           </article>
           <article>
             <span>04</span>
-            <h3>Relevant response</h3>
-            <p>The information you share allows us to prepare an answer consistent with logistical and operational realities.</p>
+            <h3>African outlook</h3>
+            <p>Strong local roots combined with international standards of quality, governance and execution.</p>
           </article>
         </div>
       </section>
@@ -197,28 +197,28 @@
 
       <section class="section intro-section" id="company">
         <div class="section-heading">
-          <p class="eyebrow">Our group</p>
-          <h2>Expertise that connects resources, projects and markets</h2>
+          <p class="eyebrow">About us</p>
+          <h2>Groupe Babia Guinée SARLU</h2>
         </div>
         <div class="intro-copy">
           <p>
-            From Conakry, Groupe Babia develops complementary activities in agriculture, agro-industry, construction, fishing and mining sector services. This structure allows us to bring the right skills to every opportunity.
+            Groupe Babia Guinée SARLU is a leading diversified Guinean company headquartered in Kaloum, Conakry. We are committed to accelerating Guinea's economic transformation through strategic investments in key growth sectors.
           </p>
           <p>
-            Our ambition is to build durable commercial relationships, based on field knowledge, quality of execution and a clear openness towards regional and international markets.
+            With a strong local presence and an international outlook, we combine Guinean expertise with global standards of quality, governance and execution. Our integrated business model allows us to create value across the entire supply chain, from farm to market, from concept to construction, from resource to export.
           </p>
           <div class="brand-proof" aria-label="Trust markers">
             <div>
-              <strong>Guinean roots</strong>
-              <span>Operational headquarters in Conakry and knowledge of local realities.</span>
+              <strong>Local impact</strong>
+              <span>Every project is designed to create jobs, transfer skills and improve livelihoods.</span>
             </div>
             <div>
-              <strong>Direct relationship</strong>
-              <span>Requests qualified by phone, WhatsApp, email or form.</span>
+              <strong>Global standards</strong>
+              <span>Quality, governance and execution aligned with serious international expectations.</span>
             </div>
             <div>
-              <strong>Structured approach</strong>
-              <span>Activities organised by business area to route each need quickly.</span>
+              <strong>Integrated model</strong>
+              <span>Value created across agriculture, industry, trade, construction and resources.</span>
             </div>
           </div>
         </div>
@@ -226,8 +226,8 @@
 
       <section class="section activities-section" id="activities">
         <div class="section-heading">
-          <p class="eyebrow">Business areas</p>
-          <h2>Five businesses, one shared ambition</h2>
+          <p class="eyebrow">Our sectors</p>
+          <h2>Strategic sectors, one national ambition</h2>
         </div>
 
         <div class="activity-grid">
@@ -345,29 +345,63 @@
         </div>
       </section>
 
-      <section class="section commitments-section" id="commitments">
+      <section class="section commitments-section vision-values-section" id="commitments">
         <div class="section-heading">
-          <p class="eyebrow">Our commitments</p>
-          <h2>Standards that structure every relationship</h2>
+          <p class="eyebrow">Our vision &amp; values</p>
+          <h2>Driving industrialization, food security and sustainable prosperity</h2>
+          <p class="section-lead">Our vision is to be West Africa's leading diversified group driving industrialization, food security and sustainable prosperity.</p>
         </div>
 
-        <div class="commitment-grid">
+        <div class="vision-quote">
+          <blockquote>"We are not just building a company. We are building a nation."</blockquote>
+          <cite>Alhassane Doukoure, Founder &amp; CEO</cite>
+        </div>
+
+        <div class="mission-grid">
           <article>
-            <h3>Traceability</h3>
-            <p>Origin, packaging and availability information is requested from the qualification stage onwards.</p>
+            <span>Vision</span>
+            <h3>A Guinea that feeds itself and exports to the region</h3>
+            <p>No one goes hungry, jobs are created at home, resources create wealth locally, and growth remains sustainable for communities and the environment.</p>
           </article>
           <article>
-            <h3>Reliability</h3>
-            <p>An identifiable contact, well-qualified needs and exchanges followed through to the commercial answer.</p>
+            <span>Mission</span>
+            <h3>Transform natural resources into products, infrastructure and opportunities</h3>
+            <p>We do this through integrated agriculture, industry and trade, from seed to shelf and from mine to market.</p>
+          </article>
+        </div>
+
+        <div class="commitment-grid value-grid">
+          <article>
+            <h3>Integrity</h3>
+            <p>Transparent, ethical and compliant business. No shortcuts. Trust is our currency with partners, government and communities.</p>
           </article>
           <article>
-            <h3>Responsibility</h3>
-            <p>Attention paid to field practices, producers, communities and compliance.</p>
+            <h3>Excellence</h3>
+            <p>We build to global standards, with quality products, on-time delivery and continuous improvement.</p>
           </article>
           <article>
-            <h3>Professionalism</h3>
-            <p>A rigorous approach, adapted to the requirements of buyers, companies and institutions.</p>
+            <h3>Industrialization</h3>
+            <p>We process, package and add value in Guinea instead of only trading raw materials.</p>
           </article>
+          <article>
+            <h3>Sustainability</h3>
+            <p>Renewable energy, zero-waste thinking, farmer support and profit with purpose.</p>
+          </article>
+          <article>
+            <h3>People first</h3>
+            <p>Our employees and partner farmers are our greatest asset. We invest in training, safety and fair wages.</p>
+          </article>
+          <article>
+            <h3>Patriotism</h3>
+            <p>We are 100% Guinean. "Produit de Guinée" is our pride and our commitment.</p>
+          </article>
+        </div>
+
+        <div class="commitment-grid commitment-focus">
+          <article><h3>To Guinea</h3><p>Reduce imports, create direct jobs and build infrastructure in Guinea and beyond.</p></article>
+          <article><h3>To customers</h3><p>Premium quality BABIA RICE and services: traceable, safe and affordable food.</p></article>
+          <article><h3>To partners</h3><p>A reliable partner for investors, banks and government, delivering what we promise.</p></article>
+          <article><h3>To the environment</h3><p>Biomass power, solar, water recycling and continuous carbon footprint reduction.</p></article>
         </div>
       </section>
 
@@ -424,7 +458,7 @@
         <div class="footer-main">
           <div class="footer-brand">
             <a class="footer-logo" href="/en/" aria-label="Groupe Babia Guinea home"><img src="../assets/images/logo.webp" alt="" width="128" height="128" decoding="async"><strong>Groupe Babia</strong></a>
-            <p>A Guinean multisector group active in agriculture, agri-food, construction, fishing and mining-related services for local and international partners.</p>
+            <p>A diversified Guinean group operating in strategic sectors to build infrastructure, ensure food security and create jobs across Guinea and Africa.</p>
             <div class="footer-socials" aria-label="Direct contacts"><a href="mailto:infobabiaguinee@gmail.com" aria-label="Email Groupe Babia" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="Call +224 655 903 333" title="Phone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="WhatsApp +224 620 903 333" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="Footer navigation">

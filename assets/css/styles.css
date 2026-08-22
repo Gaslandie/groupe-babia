@@ -781,6 +781,13 @@ textarea:focus-visible {
   max-width: 760px;
 }
 
+.section-lead {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
 .section-heading h2,
 .export-content h2,
 .contact-band h2 {
@@ -1056,6 +1063,83 @@ textarea:focus-visible {
 .commitment-grid article:hover h3,
 .commitment-grid article:hover p {
   color: #fff;
+}
+
+.vision-values-section .section-heading {
+  max-width: 920px;
+}
+
+.vision-quote {
+  max-width: 920px;
+  margin-top: 38px;
+  padding: clamp(28px, 4vw, 46px);
+  color: #fff;
+  background: var(--forest);
+  border-radius: var(--radius);
+}
+
+.vision-quote blockquote {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(1.7rem, 3vw, 3.1rem);
+  font-weight: 500;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.vision-quote cite {
+  display: block;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.72);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 34px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.mission-grid article {
+  min-height: 260px;
+  padding: clamp(24px, 3vw, 34px);
+  background: #fff;
+}
+
+.mission-grid span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mission-grid h3 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-family: var(--font-primary);
+  font-size: clamp(1.55rem, 2.5vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+.mission-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.value-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.commitment-focus {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 28px;
 }
 
 .contact-band {
@@ -2708,6 +2792,9 @@ textarea:focus-visible {
   .activity-grid,
   .proof-grid,
   .commitment-grid,
+  .value-grid,
+  .commitment-focus,
+  .mission-grid,
   .metric-grid,
   .service-grid,
   .news-grid,
@@ -2900,6 +2987,9 @@ textarea:focus-visible {
   .activity-grid,
   .proof-grid,
   .commitment-grid,
+  .value-grid,
+  .commitment-focus,
+  .mission-grid,
   .metric-grid,
   .service-grid,
   .news-grid,
