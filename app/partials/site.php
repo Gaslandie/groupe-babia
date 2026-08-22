@@ -25,6 +25,8 @@ function babia_render_page(array $page, array $site): string
     $alternateHref = (string) $page['alternate_canonical'];
     $navItems = $site['nav_items'];
     $assetPrefix = (string) ($site['asset_prefix'] ?? '../');
+    $assetVersion = (string) ($site['asset_version'] ?? '20260822-media-fix');
+    $stylesheetHref = e($assetPrefix . 'assets/css/styles.css?v=' . rawurlencode($assetVersion));
     $brandSmall = (string) ($site['brand_small'] ?? 'Guinea');
     $contentId = (string) ($site['content_id'] ?? 'content');
     $bodyClass = isset($page['body_class']) && $page['body_class'] !== '' ? ' class="' . e((string) $page['body_class']) . '"' : '';
@@ -45,7 +47,7 @@ function babia_render_page(array $page, array $site): string
     <link rel="icon" href="{$assetPrefix}assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="{$assetPrefix}assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{$assetPrefix}assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="{$assetPrefix}assets/css/styles.css">
+    <link rel="stylesheet" href="{$stylesheetHref}">
     <link rel="canonical" href="{$canonical}">
     <link rel="alternate" hreflang="{$page['alternate_lang']}" href="{$alternateHref}">
     <link rel="alternate" hreflang="{$site['lang']}" href="{$canonical}">
