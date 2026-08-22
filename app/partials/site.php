@@ -24,7 +24,7 @@ function babia_render_page(array $page, array $site): string
     $alternateHref = (string) $page['alternate_canonical'];
     $navItems = $site['nav_items'];
     $assetPrefix = (string) ($site['asset_prefix'] ?? '../');
-    $assetVersion = (string) ($site['asset_version'] ?? '20260822-language-fix');
+    $assetVersion = (string) ($site['asset_version'] ?? '20260822-sector-card-list');
     $stylesheetHref = e($assetPrefix . 'assets/css/styles.css?v=' . rawurlencode($assetVersion));
     $scriptHref = e($assetPrefix . 'assets/js/main.js?v=' . rawurlencode($assetVersion));
     $brandSmall = (string) ($site['brand_small'] ?? 'Guinea');
