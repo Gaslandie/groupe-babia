@@ -12,10 +12,10 @@ if ($realisation === null) {
 }
 
 $sectors = realisation_sectors();
-$title = $realisation === null ? 'Réalisation introuvable' : (string) $realisation['title'];
+$title = $realisation === null ? 'Actualité introuvable' : (string) $realisation['title'];
 $sector = $realisation === null ? '' : (string) ($realisation['sector'] ?? 'corporate');
-$sectorLabel = $realisation === null ? 'Réalisations' : ($sectors[$sector] ?? 'Groupe');
-$summary = $realisation === null ? 'Cette réalisation n’est pas disponible ou n’est pas publiée.' : (string) $realisation['summary'];
+$sectorLabel = $realisation === null ? 'Actualités' : ($sectors[$sector] ?? 'Groupe');
+$summary = $realisation === null ? 'Cette actualité n’est pas disponible ou n’est pas publiée.' : (string) $realisation['summary'];
 $body = $realisation === null ? '' : (string) $realisation['body'];
 $clientPartner = $realisation === null ? '' : trim((string) ($realisation['client_partner'] ?? ''));
 $date = $realisation === null ? '' : public_realisation_date((string) ($realisation['realised_at'] ?? $realisation['published_at'] ?? ''));
@@ -79,13 +79,13 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
         <img class="page-hero-media" src="<?= e($cover) ?>" alt="" width="1704" height="923" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
-          <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><a href="realisations.php">Réalisations</a></li><li><span aria-current="page"><?= e($title) ?></span></li></ol></nav>
+          <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><a href="realisations.php">Actualités</a></li><li><span aria-current="page"><?= e($title) ?></span></li></ol></nav>
           <p class="eyebrow"><?= e($sectorLabel) ?></p>
           <h1><?= e($title) ?></h1>
           <p><?= e($summary) ?></p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.html#formulaire">Échanger avec l'équipe</a>
-            <a class="button button-secondary" href="realisations.php">Voir les réalisations</a>
+            <a class="button button-secondary" href="realisations.php">Voir les actualités</a>
           </div>
         </div>
         <aside class="page-hero-card">
@@ -109,14 +109,14 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
       <section class="section two-column">
         <div class="section-heading">
           <p class="eyebrow">Détail</p>
-          <h2><?= $realisation === null ? 'Contenu indisponible' : 'Présentation de la réalisation' ?></h2>
+          <h2><?= $realisation === null ? 'Contenu indisponible' : 'Présentation de l’actualité' ?></h2>
         </div>
         <article class="content-panel realisation-detail">
           <?php if ($realisation === null): ?>
             <h3>Cette page ne peut pas être affichée.</h3>
-            <p>La réalisation demandée n'existe pas, n'est pas encore publiée ou la base de données n'est pas disponible sur cet environnement.</p>
+            <p>L'actualité demandée n'existe pas, n'est pas encore publiée ou la base de données n'est pas disponible sur cet environnement.</p>
             <div class="page-actions">
-              <a class="button button-primary" href="realisations.php">Retour aux réalisations</a>
+              <a class="button button-primary" href="realisations.php">Retour aux actualités</a>
               <a class="button button-secondary" href="contact.html">Contacter Groupe Babia</a>
             </div>
           <?php else: ?>
@@ -129,8 +129,8 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
       <section class="contact-band">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Vous souhaitez échanger sur une opération similaire ?</h2>
-          <p>Notre équipe qualifie votre besoin et vous oriente vers le pôle concerné.</p>
+          <h2>Vous souhaitez échanger avec l'équipe ?</h2>
+          <p>Notre équipe qualifie votre message et vous oriente vers le bon interlocuteur.</p>
         </div>
         <a class="button button-primary" href="contact.html#formulaire">Préparer une demande</a>
       </section>
@@ -144,12 +144,12 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
               <img src="assets/images/logo.webp" alt="" width="128" height="128" decoding="async">
               <strong>Groupe Babia</strong>
             </a>
-            <p>Groupe multisectoriel guinéen actif dans l'agriculture, l'agro-industrie, le BTP, la pêche et les services au secteur minier, au service de partenaires locaux et internationaux.</p>
+            <p>Groupe guinéen diversifié actif dans des secteurs stratégiques pour bâtir des infrastructures, renforcer la sécurité alimentaire et créer des emplois en Guinée et en Afrique.</p>
             <div class="footer-socials" aria-label="Contacts directs"><a href="mailto:infobabiaguinee@gmail.com" aria-label="Nous écrire par e-mail" title="E-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg></a><a href="tel:+224655903333" aria-label="Appeler le +224 655 903 333" title="Téléphone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></a><a href="https://wa.me/224620903333" aria-label="Écrire sur WhatsApp au +224 620 903 333" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg></a></div>
           </div>
           <nav class="footer-columns" aria-label="Navigation pied de page">
             <div><strong>Groupe</strong><a href="index.html">Accueil</a><a href="groupe.html">Le groupe</a><a href="contact.html">Contact</a></div>
-            <div><strong>Activités</strong><a href="agroalimentaire.html">Agroalimentaire</a><a href="btp.html">BTP</a><a href="mines.html">Mines</a><a href="catalogue.html">Catalogue</a><a href="realisations.php">Réalisations</a></div>
+            <div><strong>Activités</strong><a href="agroalimentaire.html">Agroalimentaire</a><a href="btp.html">BTP</a><a href="mines.html">Mines</a><a href="catalogue.html">Catalogue</a><a href="realisations.php">Actualités</a></div>
             <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">E-mail</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.html">Demander un devis</a><a href="catalogue.html">Sélection produits</a></div>
           </nav>
         </div>

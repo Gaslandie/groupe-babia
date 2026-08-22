@@ -102,7 +102,7 @@
           </div>
           <nav class="footer-columns" aria-label="Footer navigation">
             <div><strong>Company</strong><a href="/en/">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
-            <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">Projects</a></div>
+            <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">News</a></div>
             <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="catalog.php">Product selection</a></div>
           </nav>
         </div>

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>(function (root) { root.classList.add("js"); window.__babiaReveal = window.setTimeout(function () { root.classList.add("no-reveal"); }, 2000); })(document.documentElement);</script>
-    <meta name="description" content="References and activities published by Groupe Babia Guinea across agri-food, construction, mining, fishing and agro-industry.">
-    <title>Projects | Groupe Babia Guinea</title>
+    <meta name="description" content="News and updates published by Groupe Babia Guinea across its corporate activity and strategic sectors.">
+    <title>News | Groupe Babia Guinea</title>
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,12 +17,12 @@
     <meta property="og:site_name" content="Groupe Babia Guinea">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://www.groupebabia.com/en/projects.php">
-    <meta property="og:title" content="Projects | Groupe Babia Guinea">
-    <meta property="og:description" content="References and activities published by Groupe Babia Guinea across agri-food, construction, mining, fishing and agro-industry.">
+    <meta property="og:title" content="News | Groupe Babia Guinea">
+    <meta property="og:description" content="News and updates published by Groupe Babia Guinea across its corporate activity and strategic sectors.">
     <meta property="og:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Projects | Groupe Babia Guinea">
-    <meta name="twitter:description" content="References and activities published by Groupe Babia Guinea across agri-food, construction, mining, fishing and agro-industry.">
+    <meta name="twitter:title" content="News | Groupe Babia Guinea">
+    <meta name="twitter:description" content="News and updates published by Groupe Babia Guinea across its corporate activity and strategic sectors.">
     <meta name="twitter:image" content="https://www.groupebabia.com/assets/images/partage-social.jpg">
 
   </head>
@@ -48,34 +48,34 @@
         <img class="page-hero-media" src="../assets/images/agro-industrie.webp" alt="" width="1704" height="923" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
-          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Projects</span></li></ol></nav>
-          <p class="eyebrow">References &amp; activities</p>
-          <h1>Published company projects</h1>
-          <p>This page brings together the operations, references and activities that Groupe Babia Guinea chooses to make public across its agri-food, construction, mining, fishing and agro-industrial areas.</p>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">News</span></li></ol></nav>
+          <p class="eyebrow">Company news</p>
+          <h1>News and updates</h1>
+          <p>This page will bring together the public announcements, company updates and sector news that Groupe Babia Guinea chooses to share.</p>
           <div class="page-actions">
-            <a class="button button-primary" href="contact.php#formulaire">Present a project</a>
-            <a class="button button-secondary" href="catalog.php">View the catalog</a>
+            <a class="button button-primary" href="contact.php#formulaire">Contact the team</a>
+            <a class="button button-secondary" href="company.php">Discover the group</a>
           </div>
         </div>
         <aside class="page-hero-card">
-          <strong>Updates</strong>
-          <p>The content published here comes from the back office and stays visible only after validation.</p>
+          <strong>Back office</strong>
+          <p>The client will be able to publish news here from the same administration workflow.</p>
         </aside>
       </section>
 
       <section class="section soft-section">
         <div class="section-heading">
           <p class="eyebrow">Publications</p>
-          <h2>Completed activities</h2>
-          <p>A structured overview of the references the company wishes to share with its partners.</p>
+          <h2>Updates will appear here</h2>
+          <p>A structured space for official news, announcements and future client publications.</p>
         </div>
 
         <div class="empty-state">
           <p class="eyebrow">Coming soon</p>
-          <h3>The first public projects will be added from the back office.</h3>
+          <h3>The first news items will be added from the back office.</h3>
           <p>
-            No project has been published yet. Drafts stay invisible until they are validated. The
-            <a href="../realisations.php">French version of this page</a> lists the published references as soon as they go live.
+            No news item has been published yet. Drafts stay invisible until they are validated. The
+            <a href="../realisations.php">French version of this page</a> will list the same publications as soon as they go live.
           </p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.php#formulaire">Contact the team</a>
@@ -86,9 +86,9 @@
 
       <section class="contact-band">
         <div>
-          <p class="eyebrow">Partnership</p>
-          <h2>Would you like to present an operation or qualify a request?</h2>
-          <p>The Groupe Babia team directs every exchange to the relevant business area.</p>
+          <p class="eyebrow">Contact</p>
+          <h2>Would you like to send information or contact the team?</h2>
+          <p>The Groupe Babia team will direct each message to the relevant person.</p>
         </div>
         <a class="button button-primary" href="contact.php#formulaire">Request a discussion</a>
       </section>
@@ -104,7 +104,7 @@
           </div>
           <nav class="footer-columns" aria-label="Footer navigation">
             <div><strong>Company</strong><a href="/en/">Home</a><a href="company.php">Company</a><a href="contact.php">Contact</a></div>
-            <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">Projects</a></div>
+            <div><strong>Activities</strong><a href="agri-food.php">Agri-food</a><a href="construction.php">Construction</a><a href="mining.php">Mining</a><a href="catalog.php">Catalog</a><a href="projects.php">News</a></div>
             <div><strong>Contact</strong><a href="mailto:infobabiaguinee@gmail.com">Email</a><a href="tel:+224655903333">+224 655 903 333</a><a href="https://wa.me/224620903333">WhatsApp</a><a href="contact.php#formulaire">Request a quote</a><a href="catalog.php">Product selection</a></div>
           </nav>
         </div>
