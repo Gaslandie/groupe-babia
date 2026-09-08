@@ -4,6 +4,7 @@
 
 | Date | Sujet | Responsable | Niveau atteint | Prochaine etape |
 | --- | --- | --- | --- | --- |
+| 2026-09-05 | Maintenance temporaire FR/EN | Codex | Livre : page de maintenance responsive deployee par FTPS, 13 controles HTTP production valides, contenus conserves | Retirer le bloc maintenance du `.htaccess` sur demande de reouverture |
 | 2026-08-16 | Preparation du dossier projet | Codex | Depot vide clone dans `site-web/`, template GassTech copie, contexte initial documente | Attendre les consignes pour le cadrage ou le choix technique |
 | 2026-08-16 | Page d'accueil | Codex | Page statique creee, hero slider ajuste ; cadence actuelle : 5 secondes | Publie sur GitHub |
 | 2026-08-16 | Version multi-pages | Codex | Pages internes, catalogue interactif et contact ajoutés, vérifiés et prêts à pousser | Pousser sur GitHub |
@@ -44,6 +45,10 @@
 - Activer GitHub Pages si le site doit etre partage par URL publique.
 
 ## Fait
+
+- Maintenance 2026-09-05 : ajout de `maintenance.php`, de son entree dans `app/data/php_pages.php` et d'un bloc reversible dans `.htaccess`. Message de finalisation sans date de retour promise, traduit en anglais sous `/en/`. Mise a jour de `docs/PROJECT_CONTEXT.md` et `docs/livraison-maintenance/LIVRAISON_PRODUCTION.md` pour la reouverture.
+- Verification maintenance : `php -l maintenance.php`, `php build.php --with-admin`, `php scripts/verify-build.php` (77 fichiers OK), `node --check assets/js/main.js`. Rendu Chrome local a 390 et 1440 px, puis anglais mobile en production. Huit URL publiques FR/EN, anciennes HTML et fiche profonde renvoient 503 avec le bon message et les en-tetes de maintenance ; login admin, logo et robots.txt restent en 200 ; `app/config.php` et `database/` restent en 403. Les appels urllib ont echoue a obtenir le contenu attendu, les controles ont ete refaits avec curl et le navigateur.
+- Livraison maintenance : sauvegarde de la configuration distante avant envoi, verification de l'identite du repertoire FTP par le logo et `index.php`, envoi de deux fichiers seulement (`maintenance.php` puis `.htaccess`), comparaison exacte apres transfert. Aucune suppression, aucun commit ni push. L'acces au formulaire de connexion admin est verifie ; aucune connexion ni operation en base effectuee.
 
 - Lecture du cahier des charges client.
 - Analyse rapide du site actuel et des pages principales.

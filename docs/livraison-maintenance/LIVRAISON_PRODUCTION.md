@@ -1,5 +1,15 @@
 # Livraison production
 
+## Maintenance du 2026-09-05
+
+- Activation demandee par l'utilisateur : page de finalisation des travaux, invitation a revenir plus tard, FR et EN.
+- Livraison FTPS limitee a `maintenance.php`, puis `.htaccess` (activation en dernier). Les deux fichiers ont ete relus par FTP et compares au build apres envoi. Aucune suppression distante.
+- Le repertoire du compte FTP a ete confirme par comparaison exacte du logo et de `index.php` avec le projet avant toute ecriture.
+- Sauvegarde avant activation : `/tmp/babia-maintenance/backup/.htaccess` ; le fichier distant etait identique au fichier local avant ajout du bloc maintenance.
+- Reouverture : supprimer de `.htaccess` les six lignes entre « Maintenance temporaire » et « Fin de la maintenance temporaire » incluses, puis envoyer uniquement `.htaccess` par FTPS. Verifier ensuite `/`, `/en/`, le catalogue et le contact. La page `maintenance.php` peut rester presente sans etre appelee par les pages publiques.
+- Le delai `Retry-After` est une indication de nouvelle tentative HTTP, pas une date de reouverture annoncee aux visiteurs.
+- Ne pas utiliser le workflow GitHub Actions historique pour rouvrir le site.
+
 ## Version
 
 - Projet : Groupe Babia Guinee

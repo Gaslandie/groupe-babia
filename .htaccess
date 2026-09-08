@@ -20,6 +20,12 @@ DirectoryIndex index.php index.html
   RewriteCond %{HTTP_HOST} !^www\.groupebabia\.com$ [NC]
   RewriteRule ^ https://www.groupebabia.com%{REQUEST_URI} [R=301,L,NE]
 
+  # Maintenance temporaire : retirer uniquement ce bloc pour rouvrir le site.
+  # Conserver les ressources, l'administration et les protections des dossiers.
+  RewriteCond %{REQUEST_URI} !^/(assets|uploads|espace-gb|app|database)(/|$) [NC]
+  RewriteRule ^(?!maintenance\.php$|robots\.txt$|sitemap\.xml$|\.).* maintenance.php [END]
+  # Fin de la maintenance temporaire.
+
   # URLs publiques propres pour les fiches de realisations.
   RewriteRule ^realisations/([A-Za-z0-9-]+)/?$ realisation.php?slug=$1 [L,QSA]
 

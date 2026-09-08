@@ -84,6 +84,14 @@
 | 2026-08-21 | Etendre le template commun a la version francaise sans refonte visuelle. | La version francaise reste la reference UI/UX, mais elle devait rejoindre progressivement l'architecture partagee pour eviter deux sites divergents. | Les contenus `<main>` FR vivent dans `app/pages/fr/`, `app/pages/fr.php` porte la configuration francaise et `scripts/generate-fr-pages.php` regenere les miroirs HTML canoniques. |
 | 2026-08-22 | Publier les chiffres transmis par le client meme sans verification par un tiers. | Ces chiffres viennent du client lui-meme (rizerie 200 T/jour, 70% d'energies renouvelables, 350+ emplois, 2000+ agriculteurs, importations de riz reduites de plusieurs millions USD) : les taire affaiblissait les valeurs et les engagements sans proteger personne. Cela n'annule pas la regle du 2026-08-21 : on ne cree toujours aucun chiffre nous-memes. | Les chiffres apparaissent dans les valeurs et engagements de l'accueil et de Vision & valeurs, FR et EN. Ils sont sous la responsabilite du client : a rectifier s'il revient dessus. Le siege reste ecrit « Kaloum, Conakry » alors que le client a ecrit « Kalou » : correction d'une faute de frappe probable, a confirmer avec lui. |
 
+## Maintenance temporaire du 2026-09-05
+
+- Demande utilisateur : afficher une maintenance sobre pendant la finalisation du site, sans date de retour promise.
+- `maintenance.php` fournit le message FR/EN selon l'URL, en HTTP 503 avec `Retry-After: 86400` et `Cache-Control: no-store`.
+- Le bloc balise « Maintenance temporaire » dans `.htaccess` couvre les pages publiques, y compris les anciennes URL HTML. Les ressources, le back office et les protections des dossiers techniques restent accessibles selon leurs regles existantes.
+- La reouverture consiste a retirer ce seul bloc de `.htaccess` et a envoyer ce fichier par FTPS. Les contenus du site ne sont pas modifies.
+- Le registre `app/data/php_pages.php` inclut la page pour les prochains builds PHP. Ne pas relancer le workflow GitHub Actions historique.
+
 ## Non-objectifs
 
 - Ne pas inventer de stack technique sans cadrage.
