@@ -1,5 +1,20 @@
 # Livraison production
 
+## Reouverture du 2026-09-13
+
+- Demande utilisateur : retirer la maintenance pour permettre au client de voir son site.
+- Comparaison technique verifiee le 2026-09-13 : la [documentation Apache 2.4](https://httpd.apache.org/docs/2.4/rewrite/flags.html#flag_end) confirme que `[END]` arrete les reecritures dans `.htaccess`. Le [guide Google Search Central sur les interruptions](https://developers.google.com/search/blog/2011/01/how-to-deal-with-planned-site-downtime) reserve le statut 503 a une indisponibilite temporaire. Ces references restent pertinentes pour le mecanisme existant ; aucune adaptation graphique n'est necessaire.
+- Application au projet : retirer uniquement le bloc qui envoie les pages publiques vers `maintenance.php`, puis verifier le retour des pages normales en 200.
+- Sauvegarde avant intervention : `/tmp/babia-reopen-20260913/backup/.htaccess`. Identite du repertoire distant confirmee par comparaison exacte de `.htaccess` et `index.php` avec les fichiers locaux avant modification.
+- Controle local : `php build.php --with-admin`, `php scripts/verify-build.php`, `node --check assets/js/main.js` reussis. Difference verifiee : seul le bloc maintenance est retire.
+
+- Niveau atteint : livre. `.htaccess` envoye par FTPS puis relu, identique au fichier valide. Aucun autre fichier publie.
+- Verification production : 12 controles reussis. Accueil FR/EN, catalogue FR/EN et contact FR/EN en 200 ; ancienne URL catalogue redirige correctement ; login en 200 ; dossiers techniques en 403 ; URL inconnue en 404. Les contacts necessitent le cookie antirobot documente ci-dessous pour curl.
+- Fichiers touches : `.htaccess`, `docs/PROJECT_CONTEXT.md`, `docs/WORKLOG.md`, ce rapport ; `dist/` regenere en local.
+- Limites : aucun navigateur disponible pour verifier de nouveau le rendu mobile et ordinateur ; aucun message de test envoye.
+- Prochaine etape : le client peut consulter https://www.groupebabia.com/ ou https://www.groupebabia.com/en/.
+- Questions de suivi, sans blocage de cette livraison : qui regroupe les retours du client ? Quelle date vise-t-on pour ses retours ? Quelles pages souhaite-t-il verifier en premier ?
+
 ## Maintenance du 2026-09-05
 
 - Activation demandee par l'utilisateur : page de finalisation des travaux, invitation a revenir plus tard, FR et EN.

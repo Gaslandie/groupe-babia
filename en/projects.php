@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260822-contenus-client">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260917-contact-header-images">
     <link rel="canonical" href="https://www.groupebabia.com/en/projects.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/realisations.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/projects.php">
@@ -33,6 +33,10 @@
         <img src="../assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinea</small></span>
       </a>
+      <a class="nav-whatsapp" href="https://wa.me/224620903333" aria-label="WhatsApp +224 620 903 333">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>        <a href="/en/">Home</a>
         <a href="company.php">About us</a>
@@ -45,13 +49,13 @@
     </header>
     <main id="content" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="../assets/images/agro-industrie.webp" alt="" width="1704" height="923" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="../assets/images/agro-industrie.webp" alt="" width="1400" height="758" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">News</span></li></ol></nav>
           <p class="eyebrow">Company news</p>
           <h1>News and updates</h1>
-          <p>This page will bring together the public announcements, company updates and sector news that Groupe Babia Guinea chooses to share.</p>
+          <p>This page will bring together the group's completed projects &mdash; delivered works, sites and references &mdash; along with public announcements and sector news. The first projects will be published here shortly.</p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.php#formulaire">Contact the team</a>
             <a class="button button-secondary" href="company.php">Discover the group</a>
@@ -59,23 +63,24 @@
         </div>
         <aside class="page-hero-card">
           <strong>Official information</strong>
-          <p>Public announcements and important updates from Groupe Babia Guinea will be gathered in this space.</p>
+          <p>Completed projects, public announcements and important updates from Groupe Babia Guinea will be gathered in this space as they are published.</p>
         </aside>
       </section>
 
       <section class="section soft-section">
         <div class="section-heading">
           <p class="eyebrow">Publications</p>
-          <h2>Official publications will be available here</h2>
-          <p>This section centralizes the announcements, statements and updates that Groupe Babia Guinea chooses to make public.</p>
+          <h2>Our projects and official publications are coming</h2>
+          <p>This section will centralize the group's completed projects, one by one, together with official announcements and statements. The content is being prepared with our teams.</p>
         </div>
 
         <div class="empty-state">
           <p class="eyebrow">News</p>
-          <h3>No news has been published yet.</h3>
+          <h3>Our completed projects will be published here shortly.</h3>
           <p>
-            Official announcements from Groupe Babia Guinea will be available here as soon as they are published. The
-            <a href="../realisations.php">French version of this page</a> will list the same publications.
+            The group's completed projects and official announcements will be available here as soon as they are published.
+            In the meantime, our team answers your questions directly. The
+            <a href="../realisations.php">French version of this page</a> lists the same publications.
           </p>
           <div class="page-actions">
             <a class="button button-primary" href="contact.php#formulaire">Contact the team</a>
@@ -111,6 +116,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=20260822-contenus-client"></script>
+    <script src="../assets/js/main.js?v=20260917-contact-header-images"></script>
   </body>
 </html>

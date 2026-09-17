@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260822-contenus-client">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260917-contact-header-images">
     <link rel="canonical" href="https://www.groupebabia.com/en/catalog.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/catalogue.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/catalog.php">
@@ -33,6 +33,10 @@
         <img src="../assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinea</small></span>
       </a>
+      <a class="nav-whatsapp" href="https://wa.me/224620903333" aria-label="WhatsApp +224 620 903 333">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>        <a href="/en/">Home</a>
         <a href="company.php">About us</a>
@@ -45,7 +49,7 @@
     </header>
     <main id="content" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="" width="1400" height="788" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Catalog</span></li></ol></nav>
@@ -117,16 +121,25 @@
             </div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/oignons.jpeg" alt="Fresh onions for local markets" width="640" height="480" loading="lazy" decoding="async">
+            <img src="../assets/images/sucre.webp" alt="Refined white sugar" width="900" height="506" loading="lazy" decoding="async">
             <div>
               <small>Staple food</small>
-              <h3>Sugar &amp; onions</h3>
-              <p>Refined white sugar and fresh onions for local markets.</p>
-              <ul class="tag-list"><li>Sugar</li><li>Fresh onions</li><li>Local markets</li></ul>
+              <h3>Sugar</h3>
+              <p>Refined white sugar for households, institutions and distribution networks.</p>
+              <ul class="tag-list"><li>Refined white</li><li>Staple food</li><li>Volume</li></ul>
             </div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/btp.webp" alt="Construction materials for projects" width="626" height="417" loading="lazy" decoding="async">
+            <img src="../assets/images/oignons.jpeg" alt="Fresh onions for local markets" width="640" height="480" loading="lazy" decoding="async">
+            <div>
+              <small>Staple food</small>
+              <h3>Onions</h3>
+              <p>Fresh onions for local markets and distribution.</p>
+              <ul class="tag-list"><li>Fresh</li><li>Local markets</li><li>Distribution</li></ul>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/materiaux-construction.webp" alt="Cement, iron rods and construction materials" width="900" height="675" loading="lazy" decoding="async">
             <div>
               <small>Construction</small>
               <h3>Construction materials</h3>
@@ -161,7 +174,7 @@
             <div><small>Agricultural commodity</small><h3>Sesame seeds</h3><p>Sesame seeds with high oil content.</p><ul class="tag-list"><li>High oil content</li><li>Seeds</li><li>Export</li></ul></div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/soja.webp" alt="Soybeans for food and feed industries" width="1080" height="796" loading="lazy" decoding="async">
+            <img src="../assets/images/soja.webp" alt="Soybeans for food and feed industries" width="900" height="663" loading="lazy" decoding="async">
             <div><small>Agricultural commodity</small><h3>Soybeans</h3><p>Soybeans for food and feed industries.</p><ul class="tag-list"><li>Food</li><li>Feed</li><li>Export</li></ul></div>
           </article>
           <article class="product-card">
@@ -198,6 +211,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=20260822-contenus-client"></script>
+    <script src="../assets/js/main.js?v=20260917-contact-header-images"></script>
   </body>
 </html>

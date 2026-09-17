@@ -8,9 +8,16 @@
 - Langue du client : anglais. Le site français doit préparer une future version anglaise complète et naturelle.
 - Probleme : le site actuel ne reflete pas l'envergure du groupe, melange produits et secteurs, contient des incoherences de contact et n'a pas de vraie presence bilingue.
 - Proposition de valeur : presenter clairement les poles Agriculture, Agro-industrie, BTP, Mines et Peche, rassurer les partenaires avec une image professionnelle, faciliter les demandes de devis et soutenir le referencement export.
-- Produits agroalimentaires confirmes par le client :
-  - Exportation : feves de cacao, grains de cafe, noix de cajou brutes, graines de soja, beurre de karite, miel, graines de sesame, fruits.
-  - Importation : jus, riz, tomates, oignons, huile alimentaire.
+- Produits agroalimentaires confirmes par le client (liste WhatsApp du 22/08, reference
+  complete dans `docs/infoFourniesParClient.md`) :
+  - Exportation, 6 produits : feves de cacao (premium), grains de cafe (robusta), noix de
+    cajou brutes en coque, graines de sesame, graines de soja, miel.
+  - Importation, 6 produits : Jus Babia, Tomato Paste Babia, riz, sucre, oignons,
+    materiaux de construction.
+  - NE FIGURENT PAS dans la liste du client : beurre de karite, fruits, huile alimentaire.
+    Ils etaient listes ici par erreur. Ne pas les afficher comme produits tant que le
+    client ne les confirme pas. Les fichiers `karite.webp`, `fruits.jpeg` et `huile.webp`
+    restent sur le disque mais ne sont references par aucune page.
 
 ## Sources
 
@@ -82,7 +89,19 @@
 | 2026-08-21 | Basculer les pages publiques vers PHP comme cible canonique. | Le site dispose maintenant d'un socle PHP/MySQL fonctionnel ; conserver les liens `.html` comme cible principale limiterait l'evolution dynamique. | Les menus, canoniques, sitemap et redirections pointent vers `.php` ou `/`; les anciennes URLs `.html` redirigent en 301 vers les pages PHP. |
 | 2026-08-21 | Factoriser progressivement la version anglaise via un template PHP commun. | Le generateur anglais contenait le layout et les contenus dans un seul fichier, ce qui rendait l'alignement UI/UX avec la reference francaise fragile. | `app/partials/site.php` porte le chrome commun EN, `app/pages/en.php` porte les contenus par langue et `scripts/generate-en-pages.php` assemble les pages PHP plus miroirs HTML. |
 | 2026-08-21 | Etendre le template commun a la version francaise sans refonte visuelle. | La version francaise reste la reference UI/UX, mais elle devait rejoindre progressivement l'architecture partagee pour eviter deux sites divergents. | Les contenus `<main>` FR vivent dans `app/pages/fr/`, `app/pages/fr.php` porte la configuration francaise et `scripts/generate-fr-pages.php` regenere les miroirs HTML canoniques. |
+| 2026-09-17 | Exposer WhatsApp dans l'en-tete de toutes les pages, hors du menu deroulant. | WhatsApp est le canal de contact principal du groupe, mais il n'etait accessible que depuis le pied de page. Un visiteur mobile devait faire defiler tout le site pour le trouver. | Bouton `.nav-whatsapp` dans le gabarit commun et dans les deux pages ecrites a la main. Visible menu ferme, pastille ronde sous 640 px, contrastes WCAG AA verifies. |
+| 2026-09-17 | Plafonner les images de cartes a 900 px et les visuels plein ecran a 1400 px, en ne remplacant un fichier que si le gain depasse 12 %. | Le poids penalise les connexions mobiles guineennes, mais re-encoder une image deja bien compressee degrade la qualite sans gain reel. | Accueil ramene de 2119 Ko a 1627 Ko. Les attributs `width`/`height` doivent etre recalcules a chaque retraitement, sinon la mise en page saute au chargement. |
+| 2026-09-17 | Garder une seule action principale par hero et descendre « Orientation rapide » apres les secteurs. | Audit de l'accueil contre les principes Nielsen Norman Group : plusieurs appels a l'action de meme poids en haut de page diluent la decision. | Hero de la page secteurs ramene a 2 boutons. Ordre de l'accueil revu. Point faible restant : aucune preuve tierce (logos clients, etudes de cas, certifications), en attente du client. |
+| 2026-09-16 | Montrer les 12 produits en grille photo sur la page « Nos secteurs », et remplacer le carrousel produits de l'accueil par une grille integralement visible. | Le client a dit ne pas voir « cacao » ni « café ». Les deux textes etaient pourtant en ligne : ils etaient enfouis dans le catalogue, absent du menu impose par le client (6 entrees, sans entree produits), et sur l'accueil une seule photo etait visible a la fois. Benchmark Olam Agri (grille, tout visible) contre ETG (carrousel, produits enfouis) dans `docs/design-ux/BENCHMARK_VISIBILITE_PRODUITS.md`. | Secteur 07 de `secteurs.php` / `sectors.php` porte 6 cartes export et 6 cartes import avec photo. L'accueil affiche un mur de 12 produits nommes. Le catalogue reste une sous-page, atteignable depuis le hero et le bas de la page secteurs, sans 7e entree de menu. |
+| 2026-09-16 | Separer le sucre et les oignons en deux produits distincts. | Le client les liste en n°4 et n°5 ; le site les avait fusionnes en une carte « Sucre & oignons » illustree par une seule photo d'oignons. Le sucre n'avait aucune image. | Deux cartes produit, deux visuels, dans le catalogue et sur la page secteurs, FR et EN. |
+| 2026-09-16 | Utiliser des visuels temporaires de banque d'images en attendant les medias officiels. | Demande utilisateur : le client fournira ses vraies photos plus tard, mais le site doit etre vivant maintenant. | 10 visuels ajoutes dans `assets/images/` (sucre, materiaux-construction, mais, legumes, solaire, agriculteurs, cooperative, marche, logistique-port, equipe). Tous a remplacer par les medias du client. |
 | 2026-08-22 | Publier les chiffres transmis par le client meme sans verification par un tiers. | Ces chiffres viennent du client lui-meme (rizerie 200 T/jour, 70% d'energies renouvelables, 350+ emplois, 2000+ agriculteurs, importations de riz reduites de plusieurs millions USD) : les taire affaiblissait les valeurs et les engagements sans proteger personne. Cela n'annule pas la regle du 2026-08-21 : on ne cree toujours aucun chiffre nous-memes. | Les chiffres apparaissent dans les valeurs et engagements de l'accueil et de Vision & valeurs, FR et EN. Ils sont sous la responsabilite du client : a rectifier s'il revient dessus. Le siege reste ecrit « Kaloum, Conakry » alors que le client a ecrit « Kalou » : correction d'une faute de frappe probable, a confirmer avec lui. |
+
+## Reouverture du 2026-09-13
+
+- Maintenance retiree a la demande de Gassama pour permettre la consultation par le client.
+- Seul `.htaccess` a ete envoye par FTPS apres sauvegarde ; le bloc maintenance est absent en local et en production.
+- Accueil, catalogue et contact FR/EN accessibles en HTTP 200. La page `maintenance.php` reste disponible mais ne remplace plus les pages publiques.
 
 ## Maintenance temporaire du 2026-09-05
 

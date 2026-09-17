@@ -186,6 +186,43 @@ textarea:focus-visible {
   font-size: 0.82rem;
 }
 
+/* Contact direct dans l'en-tete.
+   WhatsApp est le canal principal du groupe : il doit rester atteignable sur
+   toutes les pages, y compris quand le menu mobile est ferme. Le `margin-left:auto`
+   le colle a droite avec la navigation, sans toucher au `space-between` de l'en-tete. */
+.nav-whatsapp {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-left: auto;
+  padding: 0 16px;
+  border: 1px solid #0f7a41;
+  border-radius: 999px;
+  background: #25d366;
+  color: #04331c;
+  font-size: 0.86rem;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.nav-whatsapp svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.nav-whatsapp:hover,
+.nav-whatsapp:focus-visible {
+  background: #0f7a41;
+  color: #fff;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -435,57 +472,6 @@ textarea:focus-visible {
   line-height: 1.2;
 }
 
-.hero-marquee {
-  position: absolute;
-  z-index: 3;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(3, 15, 11, 0.82);
-  color: #fff;
-}
-
-.hero-marquee-track {
-  display: flex;
-  width: max-content;
-  animation: hero-marquee 30s linear infinite;
-}
-
-.hero-marquee-group {
-  display: flex;
-  align-items: center;
-}
-
-.hero-marquee span {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  min-height: 58px;
-  padding: 0 24px;
-  white-space: nowrap;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0;
-}
-
-.hero-marquee span::after {
-  position: absolute;
-  right: -2px;
-  width: 4px;
-  height: 4px;
-  content: "";
-  border-radius: 50%;
-  background: var(--gold);
-}
-
-
-
-
-
 .slider-button,
 .slider-dots button {
   cursor: pointer;
@@ -583,7 +569,6 @@ textarea:focus-visible {
   transform: translateY(-50%);
 }
 
-
 .slider-dots {
   display: flex;
   flex-direction: column;
@@ -642,12 +627,6 @@ textarea:focus-visible {
 @keyframes slide-progress {
   to {
     transform: translateX(-50%) scaleY(1);
-  }
-}
-
-@keyframes hero-marquee {
-  to {
-    transform: translateX(-50%);
   }
 }
 
@@ -1009,6 +988,68 @@ textarea:focus-visible {
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: 20px 20px 0 rgba(212, 166, 58, 0.22);
+}
+
+/* Mur de produits de l'accueil.
+   Remplace l'ancien carrousel : le visiteur doit voir toutes les marchandises
+   d'un seul coup d'oeil, sans attendre de rotation ni cliquer. */
+.product-wall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-wall li {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+}
+
+.export-media .product-wall img {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 500ms ease;
+}
+
+.product-wall li:hover img {
+  transform: scale(1.06);
+}
+
+.product-wall span {
+  display: block;
+  padding: 9px 10px 11px;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.product-wall small {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--gold);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .export-media .product-wall img,
+  .product-wall li:hover img {
+    transition: none;
+    transform: none;
+  }
 }
 
 .export-content p {
@@ -2860,7 +2901,23 @@ textarea:focus-visible {
   }
 
   .site-header {
+    gap: 10px;
     padding: 12px 16px;
+  }
+
+  .nav-whatsapp {
+    width: 44px;
+    gap: 0;
+    padding: 0;
+  }
+
+  .nav-whatsapp span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
   }
 
   .site-nav {
@@ -2914,15 +2971,9 @@ textarea:focus-visible {
     transform: none;
   }
 
-  .hero-marquee-track {
-    animation-duration: 24s;
-  }
+  
 
-  .hero-marquee span {
-    min-height: 46px;
-    padding: 0 18px;
-    font-size: 0.76rem;
-  }
+  
 
   .slider-dots {
     flex-direction: row;
@@ -3130,6 +3181,11 @@ textarea:focus-visible {
     min-height: 300px;
   }
 
+  .product-wall {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
   .export-media .media-carousel {
     height: clamp(300px, 76vw, 380px);
   }
@@ -3192,12 +3248,6 @@ textarea:focus-visible {
 
   .hero-rail {
     padding-bottom: 8px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-marquee-track {
-    animation: none;
   }
 }
 

@@ -24,7 +24,7 @@ function babia_render_page(array $page, array $site): string
     $alternateHref = (string) $page['alternate_canonical'];
     $navItems = $site['nav_items'];
     $assetPrefix = (string) ($site['asset_prefix'] ?? '../');
-    $assetVersion = (string) ($site['asset_version'] ?? '20260822-contenus-client');
+    $assetVersion = (string) ($site['asset_version'] ?? '20260917-contact-header-images');
     $stylesheetHref = e($assetPrefix . 'assets/css/styles.css?v=' . rawurlencode($assetVersion));
     $scriptHref = e($assetPrefix . 'assets/js/main.js?v=' . rawurlencode($assetVersion));
     $brandSmall = (string) ($site['brand_small'] ?? 'Guinea');
@@ -70,6 +70,10 @@ function babia_render_page(array $page, array $site): string
       <a class="brand" href="{$site['home_href']}" aria-label="{$site['home_label']}">
         <img src="{$assetPrefix}assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>{$brandSmall}</small></span>
+      </a>
+      <a class="nav-whatsapp" href="https://wa.me/224620903333" aria-label="{$site['whatsapp_label']}">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg>
+        <span>WhatsApp</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{$site['menu_label']}" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>

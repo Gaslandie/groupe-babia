@@ -25,7 +25,7 @@ $publicReadError = $publicationState['error'];
     <meta name="description" content="Actualités et mises à jour publiées par Groupe Babia Guinée.">
     <title>Actualités | Groupe Babia Guinée</title>
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260822-contenus-client">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260917-contact-header-images">
     <link rel="canonical" href="https://www.groupebabia.com/realisations.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/projects.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/realisations.php">
@@ -41,47 +41,51 @@ $publicReadError = $publicationState['error'];
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu principal</a>
     <header class="site-header" data-header>
-      <a class="brand" href="index.html" aria-label="Accueil Groupe Babia Guinée">
+      <a class="brand" href="/" aria-label="Accueil Groupe Babia Guinée">
         <img src="assets/images/logo.webp" alt="" class="brand-logo" width="128" height="128" decoding="async">
         <span><strong>Groupe Babia</strong><small>Guinée</small></span>
       </a>
+      <a class="nav-whatsapp" href="https://wa.me/224620903333" aria-label="Écrire sur WhatsApp au +224 620 903 333">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13.6 13.6 0 0 1-5.3-4.6c-.4-.6-.9-1.4-.9-2.3 0-.9.5-1.3.7-1.5.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 3.4 3c.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6 0 .9Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu" data-nav-toggle><span></span><span></span><span></span></button>
       <nav class="site-nav" id="site-nav" data-nav>
-        <a href="index.html">Accueil</a>
-        <a href="groupe.html">À propos</a>
+        <a href="/">Accueil</a>
+        <a href="groupe.php">À propos</a>
         <a class="is-active" href="realisations.php">Actualités</a>
         <a href="vision-valeurs.php">Vision & valeurs</a>
         <a href="secteurs.php">Nos secteurs</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.php">Contact</a>
         <a class="language-link" href="en/projects.php" hreflang="en">EN</a>
       </nav>
     </header>
 
     <main id="contenu" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="assets/images/agro-industrie.webp" alt="" width="1704" height="923" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="assets/images/agro-industrie.webp" alt="" width="1400" height="758" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
-          <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><span aria-current="page">Actualités</span></li></ol></nav>
+          <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li><span aria-current="page">Actualités</span></li></ol></nav>
           <p class="eyebrow">Actualités du groupe</p>
           <h1>Actualités et mises à jour</h1>
-          <p>Cette page rassemblera les annonces publiques, informations corporate et nouvelles sectorielles que Groupe Babia Guinée souhaite partager.</p>
+          <p>Cette page rassemblera les réalisations du groupe &mdash; projets livrés, chantiers et références &mdash; ainsi que les annonces publiques et les nouvelles sectorielles. Les premières réalisations seront publiées ici prochainement.</p>
           <div class="page-actions">
-            <a class="button button-primary" href="contact.html#formulaire">Contacter l'équipe</a>
-            <a class="button button-secondary" href="groupe.html">Découvrir le groupe</a>
+            <a class="button button-primary" href="contact.php#formulaire">Contacter l'équipe</a>
+            <a class="button button-secondary" href="groupe.php">Découvrir le groupe</a>
           </div>
         </div>
         <aside class="page-hero-card">
           <strong>Information officielle</strong>
-          <p>Les annonces publiques et mises à jour importantes de Groupe Babia Guinée seront regroupées dans cet espace.</p>
+          <p>Les réalisations, les annonces publiques et les mises à jour importantes de Groupe Babia Guinée seront regroupées dans cet espace, au fur et à mesure de leur publication.</p>
         </aside>
       </section>
 
       <section class="section soft-section">
         <div class="section-heading">
           <p class="eyebrow">Publications</p>
-          <h2>Les publications officielles seront disponibles ici</h2>
-          <p>Cette rubrique centralise les annonces, communiqués et mises à jour que Groupe Babia Guinée souhaite rendre publics.</p>
+          <h2>Nos réalisations et publications officielles arrivent</h2>
+          <p>Cette rubrique centralisera les réalisations du groupe, projet par projet, avec les annonces et communiqués officiels. Le contenu est en cours de préparation avec nos équipes.</p>
         </div>
 
         <?php if ($realisations !== []): ?>
@@ -89,19 +93,19 @@ $publicReadError = $publicationState['error'];
         <?php else: ?>
           <div class="empty-state">
             <p class="eyebrow">Actualités</p>
-            <h3>Aucune actualité publiée pour le moment.</h3>
+            <h3>Nos réalisations seront publiées ici prochainement.</h3>
             <p>
               <?php if ($publicReadError): ?>
                 Les publications ne peuvent pas être affichées pour le moment. Merci de revenir un peu plus tard.
               <?php elseif (!$databaseAvailable): ?>
-                Les prochaines annonces officielles de Groupe Babia Guinée seront consultables ici dès leur publication.
+                Les réalisations du groupe et les prochaines annonces officielles seront consultables ici dès leur publication. En attendant, l'équipe répond directement à vos questions.
               <?php else: ?>
-                Les prochaines annonces officielles de Groupe Babia Guinée seront consultables ici dès leur publication.
+                Les réalisations du groupe et les prochaines annonces officielles seront consultables ici dès leur publication. En attendant, l'équipe répond directement à vos questions.
               <?php endif; ?>
             </p>
             <div class="page-actions">
-              <a class="button button-primary" href="contact.html#formulaire">Contacter l'équipe</a>
-              <a class="button button-secondary" href="groupe.html">Découvrir le groupe</a>
+              <a class="button button-primary" href="contact.php#formulaire">Contacter l'équipe</a>
+              <a class="button button-secondary" href="groupe.php">Découvrir le groupe</a>
             </div>
           </div>
         <?php endif; ?>
@@ -113,7 +117,7 @@ $publicReadError = $publicationState['error'];
           <h2>Vous souhaitez transmettre une information ou contacter l'équipe ?</h2>
           <p>L'équipe Groupe Babia oriente chaque message vers le bon interlocuteur.</p>
         </div>
-        <a class="button button-primary" href="contact.html#formulaire">Demander un échange</a>
+        <a class="button button-primary" href="contact.php#formulaire">Demander un échange</a>
       </section>
     </main>
 
@@ -121,7 +125,7 @@ $publicReadError = $publicationState['error'];
       <div class="footer-card">
         <div class="footer-main">
           <div class="footer-brand">
-            <a class="footer-logo" href="index.html" aria-label="Accueil Groupe Babia Guinée">
+            <a class="footer-logo" href="/" aria-label="Accueil Groupe Babia Guinée">
               <img src="assets/images/logo.webp" alt="" width="128" height="128" decoding="async">
               <strong>Groupe Babia</strong>
             </a>
@@ -131,16 +135,16 @@ $publicReadError = $publicationState['error'];
           <nav class="footer-columns" aria-label="Navigation pied de page">
             <div>
               <strong>Groupe</strong>
-              <a href="index.html">Accueil</a>
-              <a href="groupe.html">Le groupe</a>
-              <a href="contact.html">Contact</a>
+              <a href="/">Accueil</a>
+              <a href="groupe.php">Le groupe</a>
+              <a href="contact.php">Contact</a>
             </div>
             <div>
               <strong>Activités</strong>
-              <a href="agroalimentaire.html">Agroalimentaire</a>
-              <a href="btp.html">BTP</a>
-              <a href="mines.html">Mines</a>
-              <a href="catalogue.html">Catalogue</a>
+              <a href="agroalimentaire.php">Agroalimentaire</a>
+              <a href="btp.php">BTP</a>
+              <a href="mines.php">Mines</a>
+              <a href="catalogue.php">Catalogue</a>
               <a href="realisations.php">Actualités</a>
             </div>
             <div>
@@ -148,20 +152,20 @@ $publicReadError = $publicationState['error'];
               <a href="mailto:infobabiaguinee@gmail.com">E-mail</a>
               <a href="tel:+224655903333">+224 655 903 333</a>
               <a href="https://wa.me/224620903333">WhatsApp</a>
-              <a href="contact.html">Demander un devis</a>
-              <a href="catalogue.html">Sélection produits</a>
+              <a href="contact.php">Demander un devis</a>
+              <a href="catalogue.php">Sélection produits</a>
             </div>
           </nav>
         </div>
         <div class="footer-bottom">
           <p>© 2026 Groupe Babia Guinée. Tous droits réservés.</p>
           <div>
-            <a href="mentions-legales.html">Mentions légales</a>
-            <a href="confidentialite.html">Confidentialité</a>
+            <a href="mentions-legales.php">Mentions légales</a>
+            <a href="confidentialite.php">Confidentialité</a>
           </div>
         </div>
       </div>
     </footer>
-    <script src="assets/js/main.js?v=20260822-contenus-client"></script>
+    <script src="assets/js/main.js?v=20260917-contact-header-images"></script>
   </body>
 </html>
