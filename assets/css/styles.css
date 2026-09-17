@@ -1012,6 +1012,7 @@ textarea:focus-visible {
 .export-media .product-wall img {
   display: block;
   width: 100%;
+  height: auto;
   min-height: 0;
   max-height: none;
   aspect-ratio: 4 / 3;
@@ -1667,6 +1668,22 @@ textarea:focus-visible {
 .dark-section .section-heading h2,
 .dark-section h3 {
   color: #fff;
+}
+
+/* Une carte garde son fond blanc meme posee dans une section sombre. Sans ce
+   rappel, son titre et sa description heritent du blanc de `.dark-section` :
+   texte blanc sur fond blanc, donc invisible, avec un grand vide a la place.
+   Constate en production le 2026-09-17 sur le catalogue et la page secteurs. */
+.dark-section .product-card h3,
+.dark-section .news-card h3,
+.dark-section .activity-card h3 {
+  color: var(--ink);
+}
+
+.dark-section .product-card p,
+.dark-section .news-card p,
+.dark-section .activity-card p {
+  color: var(--muted);
 }
 
 .dark-section p,

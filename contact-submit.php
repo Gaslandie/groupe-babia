@@ -64,9 +64,9 @@ function contact_translate_errors(array $errors): array
 
 function contact_recipient_email(): string
 {
-    $email = env_value('CONTACT_RECIPIENT_EMAIL', 'infobabiaguinee@gmail.com');
+    $email = env_value('CONTACT_RECIPIENT_EMAIL', 'contact@groupebabia.com');
 
-    return filter_var($email, FILTER_VALIDATE_EMAIL) ? $email : 'infobabiaguinee@gmail.com';
+    return filter_var($email, FILTER_VALIDATE_EMAIL) ? $email : 'contact@groupebabia.com';
 }
 
 function contact_email_body(array $data): string

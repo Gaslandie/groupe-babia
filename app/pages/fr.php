@@ -54,7 +54,7 @@ $site = [
         [
             'title' => 'Contact',
             'links' => [
-                ['label' => 'E-mail', 'href' => 'mailto:infobabiaguinee@gmail.com'],
+                ['label' => 'E-mail', 'href' => 'mailto:contact@groupebabia.com'],
                 ['label' => '+224 655 903 333', 'href' => 'tel:+224655903333'],
                 ['label' => 'WhatsApp', 'href' => 'https://wa.me/224620903333'],
                 ['label' => 'Demander un devis', 'href' => 'contact.php'],
@@ -78,7 +78,7 @@ $structuredData = <<<'HTML'
   "logo": "https://www.groupebabia.com/assets/images/logo.png",
   "image": "https://www.groupebabia.com/assets/images/partage-social.jpg",
   "description": "Groupe guinéen diversifié actif dans des secteurs stratégiques pour bâtir des infrastructures, renforcer la sécurité alimentaire et créer des emplois.",
-  "email": "infobabiaguinee@gmail.com",
+  "email": "contact@groupebabia.com",
   "telephone": "+224655903333",
   "address": {
     "@type": "PostalAddress",

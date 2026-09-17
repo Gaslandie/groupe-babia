@@ -4,7 +4,7 @@ document.documentElement.classList.add("js");
 // demarre pas. Il est desamorce ici, en toute premiere instruction.
 window.clearTimeout(window.__babiaReveal);
 
-const CONTACT_EMAIL = "infobabiaguinee@gmail.com";
+const CONTACT_EMAIL = "contact@groupebabia.com";
 const WHATSAPP_NUMBER = "224620903333";
 const SLIDE_DURATION = 5000;
 const MEDIA_CAROUSEL_DURATION = 4200;
@@ -1111,6 +1111,14 @@ document.addEventListener("click", (event) => {
   const link = event.target instanceof Element ? event.target.closest("a[href]") : null;
 
   if (link && routeShouldIntercept(event, link)) {
+    // Remonter la page courante avant qu'elle ne soit remplacee. Sans cela, le
+    // visiteur qui ouvre le menu en bas de page continue de voir l'ancienne page
+    // a sa position de defilement pendant tout le chargement, puis atterrit
+    // brutalement en haut de la suivante.
+    // Le saut est instantane et non anime : la navigation n'etant pas
+    // interceptee, le navigateur part aussitot et couperait un defilement doux
+    // en plein milieu.
+    window.scrollTo(0, 0);
     routeStart();
   }
 });
