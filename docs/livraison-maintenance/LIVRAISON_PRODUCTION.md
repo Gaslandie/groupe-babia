@@ -1,5 +1,50 @@
 # Livraison production
 
+## Livraison du 2026-09-17 (2) - correctifs mobile et adresse officielle
+
+- Deux envois FTPS successifs, meme procedure que la livraison precedente : identite du
+  repertoire distant verifiee, `.env` exclu, sauvegarde avant ecrasement, aucune suppression,
+  ressources avant pages, `.htaccess` en dernier, relecture de chaque fichier apres envoi.
+  - Correctifs mobile : **43 / 43 envoyes, 0 echec, 43 / 43 relus identiques**. 43 fichiers
+    distants sauvegardes.
+  - Adresse officielle : **53 / 53 envoyes, 0 echec, 53 / 53 relus identiques**. 53 fichiers
+    distants sauvegardes.
+- Commit `c8688f0`, pousse sur `main`.
+
+### Verification en production
+
+- 22 pages publiques FR et EN en **200**, contact inclus avec le cookie `humans_21909=1`.
+- Protections inchangees : `/docs/` en **404**, `/app/config.php`, `/database/`, `/uploads/` et
+  `/.env` en **403**, `/espace-gb/login.php` en **200**, URL inconnue en **404**.
+- Correctifs servis : `height: auto` present sur les vignettes du mur produits, regle
+  `.dark-section .product-card h3` presente, `window.scrollTo(0, 0)` present dans `main.js`.
+- Adresse : `contact@groupebabia.com` presente sur l'accueil, les deux pages contact, les pages
+  legales FR et EN, dans `main.js` et dans les donnees structurees. **`infobabiaguinee@gmail.com`
+  ne figure plus nulle part** (0 occurrence sur chacune des pages controlees).
+- Version d'assets servie : `20260917-contact-email` pour `styles.css` et `main.js`.
+- Les 10 visuels ajoutes repondent 200.
+
+### Reserves ouvertes sur l'adresse
+
+- La boite `contact@groupebabia.com` doit exister chez OVH. Le domaine est en formule MX Plan a
+  une seule boite ; un **alias** suffirait et ne consommerait pas cette boite. Non verifiable
+  d'ici sans envoyer un message reel.
+- Le `.env` du serveur peut porter `CONTACT_RECIPIENT_EMAIL` avec l'ancienne valeur : il
+  ecraserait alors la valeur par defaut du code. **Le `.env` distant n'a pas ete touche**, aucune
+  modification n'ayant ete demandee ; il porte aussi les acces MySQL et le mot de passe admin.
+- Consequence si l'une des deux reserves n'est pas levee : les notifications e-mail partent
+  ailleurs ou rebondissent. Les demandes restent enregistrees en base et consultables dans
+  `espace-gb/messages.php` : aucune demande n'est perdue.
+
+### Limites
+
+- Aucune verification visuelle en navigateur : elle reste a faire cote utilisateur, sur les
+  ecrans qui avaient revele les trois defauts.
+- Aucun formulaire soumis, aucune operation en base, aucun message de test envoye.
+- Les visuels restent temporaires, a remplacer par les medias du client.
+- Rollback : restaurer les fichiers des deux sauvegardes FTP de session, ou revenir au commit
+  `ac9b108`, rebatir `dist/` et renvoyer.
+
 ## Livraison du 2026-09-17 - produits visibles, contact et allegement
 
 - Demande utilisateur : commit, push et deploiement, apres correction du signalement client
