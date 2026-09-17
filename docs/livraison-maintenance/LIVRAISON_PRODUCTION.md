@@ -1,5 +1,70 @@
 # Livraison production
 
+## Livraison du 2026-09-17 - produits visibles, contact et allegement
+
+- Demande utilisateur : commit, push et deploiement, apres correction du signalement client
+  (« je n'ai pas vu cacao, je n'ai pas vu cafe ») et l'audit de la page d'accueil.
+- Commit `ac9b108` sur `sauvegarde/pc-ubuntu-2026-09-08`, puis `main` avance en avance rapide
+  jusqu'a ce commit. Les deux branches poussees sur `origin`. Aucun historique reecrit.
+- Verification avant push : le declenchement automatique de `.github/workflows/deploy.yml` est
+  commente (seul `workflow_dispatch` subsiste). Pousser sur `main` ne declenche donc pas le
+  workflow qui, en l'etat, supprimerait les points d'entree PHP du serveur.
+
+### Faille corrigee dans la meme livraison
+
+- Constate le 2026-09-17 en production : `/docs/WORKLOG.md` et `/docs/PROJECT_CONTEXT.md`
+  repondaient **200**. La documentation interne etait donc publiquement lisible : hebergeur,
+  domaine, chemin du back office `/espace-gb/login.php`, adresse e-mail du client, cookie
+  antirobot et decisions internes. `/docs/technique/...` repondait deja 404 : seule une copie
+  partielle, issue d'un ancien envoi, se trouvait sur le serveur. `docs/` n'est pas dans le build.
+- Correction : `RedirectMatch 404 ^/docs(/|$)` ajoute en tete de `.htaccess`. Le 404 est prefere
+  au 403 car il ne revele pas l'existence du repertoire.
+- **Les fichiers restent physiquement sur le serveur.** Rien n'a ete supprime a distance, aucune
+  suppression n'ayant ete demandee. La suppression reste souhaitable : a arbitrer avec Gassama.
+
+### Deploiement
+
+- Procedure : `php build.php --with-admin`, puis envoi FTPS du contenu de `dist/` vers la racine
+  du compte FTP cloisonne. On ecrase, on ne supprime jamais.
+- Identite du repertoire distant confirmee avant toute ecriture : `index.php` et `.htaccess`
+  distants portent bien la marque `groupebabia`, taille du logo identique au fichier local.
+- `.env` present a distance, explicitement exclu de l'envoi : il porte les acces MySQL et le mot
+  de passe admin. Il n'est pas dans le build.
+- Comparaison prealable des 158 fichiers du build avec la production : 72 identiques, 86 a envoyer.
+  Seuls ces 86 ont ete transmis.
+- Sauvegarde avant ecrasement : 76 fichiers distants recuperes par FTP (2,2 Mo), conserves dans le
+  repertoire de session, hors depot. Les 10 autres fichiers etaient nouveaux, sans version a sauver.
+- Ordre d'envoi : ressources (CSS, JS, images) d'abord, pages ensuite, `.htaccess` en dernier.
+  Une coupure en cours d'envoi laisse ainsi le site servable, et une erreur de `.htaccess` ne
+  survient qu'apres que tout le reste soit en place.
+- Resultat : **86 / 86 envoyes, 0 echec**. Chaque fichier relu apres envoi : 86 / 86 identiques a
+  la source au hash SHA-256.
+
+### Verification en production
+
+- 22 pages publiques FR et EN en **200**, y compris les deux pages contact (avec le cookie
+  antirobot `humans_21909=1`, sans lequel Bluehost repond 409).
+- Protections : `/docs/` et `/docs/WORKLOG.md` en **404** (etaient en 200 avant la livraison) ;
+  `/app/config.php`, `/database/`, `/uploads/` et `/.env` en **403** ; `/.deploy.local` en 404 ;
+  `/espace-gb/login.php` toujours en **200** ; URL inconnue en **404**.
+- Contenu : `secteurs.php` et `en/sectors.php` portent chacun **12 cartes produit**, les douze
+  produits du client nommes ; l'accueil porte **12 vignettes** dans le mur produits ; le bandeau
+  defilant est absent (`hero-marquee` : 0) ; le bouton WhatsApp est present sur l'accueil FR et EN ;
+  la mention « les realisations arrivent » est en ligne dans les deux langues ; la version d'assets
+  servie est bien `20260917-contact-header-images`.
+- Les 10 nouveaux visuels repondent 200.
+
+### Niveau atteint, limites, rollback
+
+- Niveau atteint : **livre et verifie par requetes HTTP**.
+- Limite : **aucune verification visuelle en navigateur**, aucun navigateur disponible ici. Le rendu
+  mobile et ordinateur reste a controler cote utilisateur, en priorite l'en-tete a 360 px de large
+  (marque + bouton WhatsApp + bouton menu sur une seule ligne) et le mur produits de l'accueil.
+- Limite : aucun formulaire de contact soumis, aucune operation en base, aucun message de test.
+- Limite : les visuels sont temporaires (banque d'images libre), a remplacer par les medias du client.
+- Rollback : restaurer les 76 fichiers de la sauvegarde FTP de session, ou revenir au commit
+  `9521a38`, rebatir `dist/` et renvoyer.
+
 ## Reouverture du 2026-09-13
 
 - Demande utilisateur : retirer la maintenance pour permettre au client de voir son site.

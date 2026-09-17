@@ -5,6 +5,13 @@ DirectoryIndex index.php index.html
   Require all denied
 </FilesMatch>
 
+# Documentation interne du projet : jamais servie publiquement.
+# Constate le 2026-09-17 : /docs/WORKLOG.md et /docs/PROJECT_CONTEXT.md repondaient
+# 200 en production. Ils decrivent l'infrastructure, le chemin du back office, les
+# adresses de contact et les decisions internes. `docs/` n'est pas dans le build :
+# cette copie vient d'un ancien envoi. On la neutralise ici sans rien supprimer.
+RedirectMatch 404 ^/docs(/|$)
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
