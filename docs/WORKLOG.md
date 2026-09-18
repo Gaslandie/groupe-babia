@@ -4,6 +4,7 @@
 
 | Date | Sujet | Responsable | Niveau atteint | Prochaine etape |
 | --- | --- | --- | --- | --- |
+| 2026-09-18 | Visuel cajou fourni par le client | Claude | Photo client en ligne (relue identique). Cache-busting `?v=20260918` commite mais **pas encore deploye** : l'envoi FTPS des 12 pages est bloque | Autoriser l'envoi FTPS des pages, ou deployer autrement |
 | 2026-09-13 | Reouverture du site FR/EN | Codex | Livre : maintenance retiree par FTPS, configuration relue identique, 12 controles HTTP valides | Consultation du site par le client |
 | 2026-09-05 | Maintenance temporaire FR/EN | Codex | Livre : page de maintenance responsive deployee par FTPS, 13 controles HTTP production valides, contenus conserves | Retirer le bloc maintenance du `.htaccess` sur demande de reouverture |
 | 2026-08-16 | Preparation du dossier projet | Codex | Depot vide clone dans `site-web/`, template GassTech copie, contexte initial documente | Attendre les consignes pour le cadrage ou le choix technique |
@@ -141,3 +142,26 @@
 - Factorisation francaise 2026-08-21 : extraction des contenus `<main>` dans `app/pages/fr/`, configuration FR dans `app/pages/fr.php`, generateur `scripts/generate-fr-pages.php`, regeneration des miroirs HTML et validation du build.
 - Contenus client 2026-08-22 : audit du site (FR, EN, build local et pages en ligne) contre `docs/infoFourniesParClient.md`. Les 7 secteurs, l'import/export et le texte « About us » etaient conformes ; six ecarts corriges : chiffres client remis dans les valeurs (rizerie 200 T/jour, installations solaires, 70% d'energies renouvelables, 350+ employes, 2000+ agriculteurs, « Talent guineen, impact mondial »), engagements chiffres (« importations de riz de plusieurs millions USD », « 350+ emplois directs »), « BABIA RICE » et « l'Etat » harmonises entre l'accueil et Vision & valeurs, 4e pilier de mission « Impacter » ajoute a la timeline de la page A propos, accroche du hero remise sur « 7 secteurs strategiques » et « en Guinee et en Afrique ». Verifications : `scripts/verify-build.php` vert sur 76 fichiers, `node --check assets/js/main.js`, 12 pages en HTTP 200 en local, texte du hero identique entre le HTML et `slidesFr`/`slidesEn` de `main.js`, parite de sections FR/EN inchangee (9/9, 7/7, 5/5).
 - Livraison 2026-08-22 : envoi FTPS de 48 fichiers de `dist/` (assets/js/main.js en premier, puis les pages), sans aucune suppression cote serveur. Version d'assets passee de `20260822-sector-card-list` a `20260822-contenus-client` dans `app/partials/site.php`, `realisations.php` et `realisation.php` : sans ce changement, le nouveau `main.js` serait reste dans le cache navigateur pendant 7 jours et l'accroche du hero aurait change toute seule apres le premier defilement. Sauvegarde prealable des 48 fichiers ecrases prise par FTP. Le certificat FTPS de Bluehost porte `*.bluehost.com` et ne couvre pas `ftp.fnk.srw.mybluehost.me` : la connexion reste chiffree mais le nom d'hote n'est pas verifiable, `curl -k` est necessaire. Post-check : 11 pages FR et 12 pages EN en ligne identiques octet a octet au build, `main.js` identique, `/realisations.php` et `/espace-gb/login.php` en 200, une URL inconnue toujours en 404.
+
+- Visuel cajou 2026-09-18 : le client a fourni sa propre photo de sechage des noix de cajou brutes
+  en coque (765 x 1020). Recadree au carre centre puis reduite en 736 x 736 WebP, exactement les
+  dimensions declarees dans les pages : aucun HTML a toucher pour l'image elle-meme, aucune autre
+  image modifiee. `assets/images/agro-cajou.webp` passe de 84 Ko a 115 Ko. Commit `c86d009`.
+- Cache du visuel cajou : les images sont servies avec `max-age=15552000` (180 jours) et l'URL du
+  fichier n'a pas change. Un visiteur deja venu, **le client compris**, aurait donc garde l'ancienne
+  photo pendant des mois. Corrige par `?v=20260918` sur les dix references, ajoute dans les fragments
+  de `app/pages/` puis repercute par les deux generateurs. Meme convention que `styles.css` et
+  `main.js`, dont le mecanisme de version ne couvre pas les images. Commit `77f86d6`.
+- Deploiement partiel 2026-09-18 : **seule l'image a ete envoyee** (FTPS, identite du repertoire
+  distant verifiee, ancienne image sauvegardee, relecture identique au hash). L'envoi des 12 pages
+  portant `?v=20260918` a ete refuse par le garde-fou local de Claude Code, motif « TLS/Auth
+  Weaken ». La production reste coherente : les pages servies pointent vers l'URL sans version et
+  le fichier a cette URL est bien la nouvelle photo. Consequence du blocage : les nouveaux
+  visiteurs voient la photo du client, ceux qui avaient deja charge l'ancienne la gardent.
+- Certificat FTPS Bluehost, limite confirmee le 2026-09-18 : le serveur presente `*.bluehost.com`
+  (Sectigo, valide) alors que l'hote FTP est `ftp.fnk.srw.mybluehost.me`. `groupebabia.com`,
+  `www.groupebabia.com` et `fnk.srw.mybluehost.me` pointent tous sur 50.6.153.225 et presentent le
+  meme certificat : **aucun nom d'hote verifiable n'est disponible**, la banniere Pure-FTPd n'en
+  revele aucun. La connexion reste chiffree et la chaine verifiable, mais le nom d'hote non. Le
+  script de livraison controle en plus l'empreinte SHA-256 du certificat
+  (`2662C9...F274`) et s'arrete si elle change.

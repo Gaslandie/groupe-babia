@@ -1,5 +1,40 @@
 # Livraison production
 
+## Livraison du 2026-09-18 - visuel cajou du client (partielle)
+
+- Demande utilisateur : utiliser la photo cajou fournie par le client, commit, push, deploiement.
+- Commits `c86d009` (image) et `77f86d6` (cache-busting), pousses sur `main`.
+
+### Envoye en production
+
+- **1 fichier : `assets/images/agro-cajou.webp`.** Identite du repertoire distant verifiee avant
+  ecriture (`.htaccess` distant portant la marque `groupebabia`), ancienne image sauvegardee
+  (84 102 octets, md5 `108efc47...`), envoi, puis relecture : 114 914 octets, md5 `61537714...`,
+  **identique au fichier local**. Aucune suppression distante, `.env` non touche.
+- Verifie en ligne : l'image repond **200** en `image/webp` et son md5 est celui du build. Les huit
+  pages qui l'utilisent repondent **200** (`/`, `/catalogue.php`, `/secteurs.php`,
+  `/agroalimentaire.php`, `/en/`, `/en/catalog.php`, `/en/sectors.php`, `/en/agri-food.php`) et
+  referencent bien le visuel.
+
+### Non envoye : les 12 pages portant `?v=20260918`
+
+- `index.html`, `catalogue.html`, `secteurs.html`, `agroalimentaire.html`, `en/index.php|.html`,
+  `en/catalog.php|.html`, `en/sectors.php|.html`, `en/agri-food.php|.html`.
+- Motif : le garde-fou local de Claude Code a refuse la connexion FTPS (« TLS/Auth Weaken »), le
+  certificat Bluehost obligeant a desactiver la verification du nom d'hote. Aucun nom d'hote
+  verifiable n'existe sur ce serveur (voir `docs/WORKLOG.md`).
+- **Aucun risque d'etat incoherent** : les pages en production pointent vers l'URL sans version, et
+  cette URL sert deja la nouvelle photo. Le seul effet est le cache navigateur.
+- Reprise : rejouer `dist/` -> FTPS pour ces 12 fichiers, avec sauvegarde prealable et relecture.
+  Le script de session est conserve dans le repertoire de travail temporaire.
+
+### Limites
+
+- Aucune verification visuelle en navigateur : elle reste a faire cote utilisateur.
+- Le recadrage carre coupe le haut et le bas de la photo d'origine ; l'original est conserve dans
+  `~/Downloads`.
+- Rollback : reenvoyer la sauvegarde `agro-cajou.webp.distant-avant`, ou revenir au commit `5ccdb17`.
+
 ## Livraison du 2026-09-17 (2) - correctifs mobile et adresse officielle
 
 - Deux envois FTPS successifs, meme procedure que la livraison precedente : identite du
