@@ -228,7 +228,7 @@
             </div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/agro-cajou.webp" alt="Raw cashew nuts in shells" width="736" height="736" loading="lazy" decoding="async">
+            <img src="../assets/images/agro-cajou.webp?v=20260918" alt="Raw cashew nuts in shells" width="736" height="736" loading="lazy" decoding="async">
             <div>
               <small>Agricultural commodity</small>
               <h3>Raw cashew nuts in shells</h3>

@@ -313,7 +313,7 @@
               <span><small>Export</small>Coffee beans</span>
             </li>
             <li>
-              <img src="../assets/images/agro-cajou.webp" alt="Cashew nuts" width="736" height="736" loading="lazy" decoding="async">
+              <img src="../assets/images/agro-cajou.webp?v=20260918" alt="Cashew nuts" width="736" height="736" loading="lazy" decoding="async">
               <span><small>Export</small>Cashew nuts</span>
             </li>
             <li>
@@ -440,7 +440,7 @@
         </div>
         <div class="news-grid">
           <article class="news-card">
-            <img src="../assets/images/agro-cajou.webp" alt="Agri-food products" width="736" height="736" loading="lazy" decoding="async">
+            <img src="../assets/images/agro-cajou.webp?v=20260918" alt="Agri-food products" width="736" height="736" loading="lazy" decoding="async">
             <div>
               <small>Export</small>
               <h3>A structured export and import offer</h3>

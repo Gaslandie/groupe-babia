@@ -166,7 +166,7 @@
             <div><small>Agricultural commodity</small><h3>Coffee beans</h3><p>Robusta coffee beans sourced for professional buyers.</p><ul class="tag-list"><li>Robusta</li><li>Export</li><li>Farm sourcing</li></ul></div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/agro-cajou.webp" alt="Raw cashew nuts in shells" width="736" height="736" loading="lazy" decoding="async">
+            <img src="../assets/images/agro-cajou.webp?v=20260918" alt="Raw cashew nuts in shells" width="736" height="736" loading="lazy" decoding="async">
             <div><small>Agricultural commodity</small><h3>Raw cashew nuts in shells</h3><p>Raw cashew nuts for buyers and processors.</p><ul class="tag-list"><li>In shells</li><li>Export</li><li>Volume</li></ul></div>
           </article>
           <article class="product-card">
