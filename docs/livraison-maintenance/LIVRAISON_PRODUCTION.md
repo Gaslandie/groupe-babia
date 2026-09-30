@@ -1,5 +1,55 @@
 # Livraison production
 
+## Livraison du 2026-09-30 - faille formulaire, visuels secteurs, Agro-business, chargement
+
+- Demandes de Gassama : images Agriculture, Agro-business et Agro-industries ; « Agro-business »
+  en francais ; chargement de page remplace par un simple cercle ; push et deploiement.
+- Commits `cd5c26e` (faille formulaire), `3dc0652` (visuels et libelle), `fa96cf3` (chargement),
+  pousses sur `main`. Le declenchement automatique du workflow reste desactive.
+
+### Faille corrigee
+
+- `contact-submit.php` placait le nom du visiteur tel quel dans l'en-tete `Reply-To` de `mail()`.
+  Un nom contenant `\r\nBcc: ...` ajoutait des destinataires caches : le site pouvait envoyer du
+  spam au nom de `groupebabia.com`. Prouve en local (sendmail redirige vers un fichier), corrige
+  (caracteres de controle retires du nom et du sujet, nom encode en RFC 2047 sans `mbstring`),
+  puis reteste : plus aucun en-tete ajoute, accents conserves.
+
+### Deploiement
+
+- **Connexion FTPS avec verification TLS complete** : l'hote `box4100.bluehost.com` (banniere SMTP
+  du serveur) est couvert par le certificat `*.bluehost.com`, contrairement a
+  `ftp.fnk.srw.mybluehost.me`. Plus besoin de desactiver la verification du nom d'hote.
+- Identite du repertoire distant verifiee avant ecriture (`.htaccess` marque `groupebabia`, logo
+  identique). Comparaison de tout `dist/` au serveur : **58 fichiers envoyes** (3 nouveaux), dont
+  les 12 pages `?v=20260918` du visuel cajou restees en attente depuis le 18/09.
+- Sauvegarde des 55 fichiers distants remplaces, dans le repertoire de session. Ressources puis
+  pages ; ni `.htaccess`, ni `.env`, ni `espace-gb/` dans l'envoi. Aucune suppression.
+- **58 / 58 relus identiques** au hash SHA-256.
+
+### Verification en production
+
+- 10 pages publiques FR/EN en **200** (cookie `humans_21909=1`), URL inconnue en **404**.
+- Protections inchangees : `/.env` et `/app/config.php` en **403**, `/docs/` en **404**,
+  `/espace-gb/login.php` en **200**.
+- Version d'assets servie : `20260930-chargement` ; `main.js` en ligne porte `route-loader` et plus
+  aucun reste de l'ancien voile ; `styles.css` porte `route-spin`.
+- Les 3 visuels repondent **200** en `image/webp` ; « Agro-business » present sur l'accueil,
+  « Agribusiness » absent de `secteurs.php`.
+- `contact-submit.php` repond **422** a un envoi vide.
+
+### Limites
+
+- Aucun message de test soumis : l'enregistrement en base et l'arrivee de l'e-mail restent a
+  verifier. L'e-mail part de Bluehost alors que le SPF n'autorise qu'OVH (`-all`) : il risque
+  d'arriver en spam ou d'etre refuse ; les demandes restent visibles dans `espace-gb/messages.php`.
+- Aucune limite d'envoi contre le spam en masse, a part le champ piege.
+- Chargement verifie dans Chrome sans ecran (etats, delai de 120 ms, Echap, liens exclus,
+  mouvement reduit) ; le rendu visuel reste a controler cote utilisateur.
+- Licence des trois photos a confirmer.
+- Rollback : restaurer les 55 fichiers sauvegardes, ou revenir au commit `1c43d7e`, rebatir
+  `dist/` avec `--with-admin` et renvoyer.
+
 ## Livraison du 2026-09-18 - visuel cajou du client (partielle)
 
 - Demande utilisateur : utiliser la photo cajou fournie par le client, commit, push, deploiement.
