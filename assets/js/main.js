@@ -912,123 +912,49 @@ if (!("IntersectionObserver" in window)) {
 /* ------------------------------------------------------------------ */
 
 /* Le site sert des pages completes : entre le clic et l'arrivee, le navigateur
-   n'affiche rien et l'ancienne page reste figee. On rend cette attente lisible
-   sans la rallonger — la barre demarre au depart, le voile ne vient qu'apres un
-   delai, et l'arrivee referme la boucle par un balayage court. */
+   laisse l'ancienne page figee. Un seul indicateur, un cercle qui tourne sur un
+   fond clair qui masque l'ancienne page, et rien a l'arrivee : la nouvelle page
+   s'affiche directement. */
 
-// En-deca de ce delai, la page suivante arrive avant le voile : l'afficher
+// En-deca de ce delai, la page suivante arrive avant le cercle : l'afficher
 // produirait un clignotement plus genant que l'attente qu'il masque.
-const ROUTE_VEIL_DELAY = reduceMotionQuery.matches ? 420 : 220;
+const ROUTE_LOADER_DELAY = 120;
 // Navigation abandonnee par le navigateur (telechargement, protocole inconnu,
-// annulation) : sans ce filet, le voile resterait affiche indefiniment.
+// annulation) : sans ce filet, le cercle resterait affiche indefiniment.
 const ROUTE_SAFETY_DELAY = 12000;
-const ROUTE_PROGRESS_CEILING = 92;
 
 const routeText = isEnglishPage ? "Loading…" : "Chargement en cours…";
 
-let routeProgressNode;
-let routeBarNode;
-let routeVeilNode;
-let routeVeilTimer;
-let routeCreepTimer;
+let routeLoaderNode;
+let routeShowTimer;
 let routeSafetyTimer;
-let routeResetTimer;
-let routeValue = 0;
 let routeIsRunning = false;
 
-function buildRouteIndicator() {
-  const progress = document.createElement("div");
-  progress.className = "route-progress";
-  progress.setAttribute("aria-hidden", "true");
+function buildRouteLoader() {
+  const loader = document.createElement("div");
+  loader.className = "route-loader";
+  loader.setAttribute("role", "status");
+  loader.setAttribute("aria-live", "polite");
 
-  const bar = document.createElement("span");
-  bar.className = "route-progress-bar";
-  progress.append(bar);
+  const spinner = document.createElement("span");
+  spinner.className = "route-spinner";
+  spinner.setAttribute("aria-hidden", "true");
 
-  const veil = document.createElement("div");
-  veil.className = "route-veil";
-  veil.setAttribute("role", "status");
-  veil.setAttribute("aria-live", "polite");
-
-  const card = document.createElement("div");
-  card.className = "route-veil-card";
-
-  // Le logo est repris de l'en-tete : sa source est deja correcte pour le
-  // contexte de la page (racine, /en/, ou fiche servie sous <base href>).
-  const headerLogo = document.querySelector(".brand-logo");
-  const logoSource = headerLogo?.getAttribute("src");
-
-  if (logoSource) {
-    const mark = document.createElement("img");
-    mark.className = "route-veil-mark";
-    mark.src = logoSource;
-    mark.alt = "";
-    mark.width = 128;
-    mark.height = 128;
-    mark.decoding = "async";
-    card.append(mark);
-  }
-
-  const title = document.createElement("p");
-  title.className = "route-veil-title";
-  title.textContent = "Groupe Babia";
-
-  const text = document.createElement("p");
-  text.className = "route-veil-text";
+  // Texte lu par les lecteurs d'ecran seulement : visuellement, le cercle suffit.
+  const text = document.createElement("span");
+  text.className = "visually-hidden";
   text.textContent = routeText;
 
-  const line = document.createElement("span");
-  line.className = "route-veil-line";
-
-  card.append(title, text, line);
-  veil.append(card);
-  document.body.append(progress, veil);
-
-  routeProgressNode = progress;
-  routeBarNode = bar;
-  routeVeilNode = veil;
-}
-
-function routeSetWidth(percent) {
-  routeValue = percent;
-  routeBarNode.style.width = `${percent}%`;
-}
-
-/* Progression simulee : le navigateur ne publie aucun avancement pour une
-   navigation de document. On approche donc le plafond sans jamais l'atteindre,
-   par pas decroissants — seule l'arrivee de la page suivante termine la barre. */
-function routeCreep() {
-  const remaining = ROUTE_PROGRESS_CEILING - routeValue;
-  routeSetWidth(routeValue + Math.max(0.4, remaining * 0.12));
-  routeCreepTimer = window.setTimeout(routeCreep, 260);
-}
-
-function routeClearTimers() {
-  window.clearTimeout(routeVeilTimer);
-  window.clearTimeout(routeCreepTimer);
-  window.clearTimeout(routeSafetyTimer);
-  window.clearTimeout(routeResetTimer);
-}
-
-function routeHide() {
-  routeProgressNode.classList.remove("is-active");
-  routeVeilNode.classList.remove("is-active");
-
-  // La remise a zero attend la fin du fondu : sinon on verrait la barre
-  // revenir a gauche avant d'avoir disparu.
-  routeResetTimer = window.setTimeout(() => {
-    routeBarNode.style.transition = "none";
-    routeSetWidth(0);
-    window.requestAnimationFrame(() => {
-      routeBarNode.style.transition = "";
-    });
-  }, 260);
+  loader.append(spinner, text);
+  document.body.append(loader);
+  routeLoaderNode = loader;
 }
 
 function routeReset() {
   routeIsRunning = false;
-  routeClearTimers();
-  routeHide();
+  window.clearTimeout(routeShowTimer);
+  window.clearTimeout(routeSafetyTimer);
+  routeLoaderNode.classList.remove("is-active");
 }
 
 function routeStart() {
@@ -1037,30 +963,8 @@ function routeStart() {
   }
 
   routeIsRunning = true;
-  routeClearTimers();
-
-  routeBarNode.style.transition = "none";
-  routeSetWidth(0);
-  routeProgressNode.classList.add("is-active");
-
-  window.requestAnimationFrame(() => {
-    routeBarNode.style.transition = "";
-    // Depart franc : une barre qui rampe depuis zero se lit comme un blocage.
-    routeSetWidth(18);
-  });
-
-  routeCreepTimer = window.setTimeout(routeCreep, 320);
-  routeVeilTimer = window.setTimeout(() => routeVeilNode.classList.add("is-active"), ROUTE_VEIL_DELAY);
+  routeShowTimer = window.setTimeout(() => routeLoaderNode.classList.add("is-active"), ROUTE_LOADER_DELAY);
   routeSafetyTimer = window.setTimeout(routeReset, ROUTE_SAFETY_DELAY);
-}
-
-/* Balayage d'arrivee : la page precedente a laisse une barre en cours, celle-ci
-   la termine. Sur une premiere visite, il se lit comme une entree soignee. */
-function routeComplete() {
-  routeProgressNode.classList.add("is-active");
-
-  window.requestAnimationFrame(() => routeSetWidth(100));
-  routeResetTimer = window.setTimeout(routeHide, 420);
 }
 
 function routeShouldIntercept(event, link) {
@@ -1069,7 +973,7 @@ function routeShouldIntercept(event, link) {
   }
 
   // Clic modifie : le navigateur ouvre un onglet ou une fenetre, la page
-  // courante reste affichee. Aucun voile a poser.
+  // courante reste affichee. Aucun cercle a poser.
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
     return false;
   }
@@ -1104,29 +1008,19 @@ function routeShouldIntercept(event, link) {
   );
 }
 
-buildRouteIndicator();
-routeComplete();
+buildRouteLoader();
 
 document.addEventListener("click", (event) => {
   const link = event.target instanceof Element ? event.target.closest("a[href]") : null;
 
   if (link && routeShouldIntercept(event, link)) {
-    // Remonter la page courante avant qu'elle ne soit remplacee. Sans cela, le
-    // visiteur qui ouvre le menu en bas de page continue de voir l'ancienne page
-    // a sa position de defilement pendant tout le chargement, puis atterrit
-    // brutalement en haut de la suivante.
-    // Le saut est instantane et non anime : la navigation n'etant pas
-    // interceptee, le navigateur part aussitot et couperait un defilement doux
-    // en plein milieu.
-    window.scrollTo(0, 0);
     routeStart();
   }
 });
 
 document.addEventListener("keydown", (event) => {
-  // Echap annule la navigation cote navigateur : sans ce rappel, le voile
-  // resterait pose sur une page qui, elle, ne part plus, jusqu'au filet de
-  // securite. C'est le geste naturel pour renoncer a un chargement trop long.
+  // Echap annule la navigation cote navigateur : sans ce rappel, le cercle
+  // resterait sur une page qui, elle, ne part plus, jusqu'au filet de securite.
   if (event.key === "Escape" && routeIsRunning) {
     routeReset();
   }
@@ -1134,7 +1028,7 @@ document.addEventListener("keydown", (event) => {
 
 window.addEventListener("pageshow", (event) => {
   // Retour arriere depuis le cache : la page revient telle qu'elle etait
-  // partie, voile compris. Il faut la rendre a son etat normal.
+  // partie, cercle compris. Il faut la rendre a son etat normal.
   if (event.persisted) {
     routeReset();
   }

@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260917-contact-email">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260930-chargement">
     <link rel="canonical" href="https://www.groupebabia.com/en/contact.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/contact.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/contact.php">
@@ -71,6 +71,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=20260917-contact-email"></script>
+    <script src="../assets/js/main.js?v=20260930-chargement"></script>
   </body>
 </html>
