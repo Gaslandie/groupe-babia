@@ -1,5 +1,14 @@
 # Livraison production
 
+## Livraison du 2026-09-30 - page Facebook
+
+- Demande de Gassama : ajouter https://www.facebook.com/profile.php?id=61594743999325 à côté des autres réseaux, partout. Commit `9154d4c` poussé sur `main`, avec `78896ab` (menu mobile et titres des secteurs, déjà en ligne mais pas encore commités).
+- FTPS avec certificat TLS vérifié via `box4100.bluehost.com`. Identité du dossier confirmée par `.htaccess`, `index.php` et le logo, identiques au build.
+- 98 fichiers publics comparés : **40 pages envoyées**, exactement celles qui portent le lien. Sauvegarde préalable dans `/tmp/babia-facebook-20260930-bBgG`. **40 / 40 relus identiques** au hash SHA-256. Aucun fichier supprimé ; ni `.htaccess`, `.env`, `app/`, `database/`, `espace-gb/` ni `uploads/` envoyés.
+- Contrôles HTTP : accueil, groupe, secteurs, contact, actualités FR et accueil, contact, projects EN en 200, lien Facebook présent sur chacune. `/.env` et `/app/config.php` en 403, `/docs/WORKLOG.md` et une URL inconnue en 404, login admin en 200.
+- Limite : pas de recette visuelle de l'icône sur mobile/desktop.
+- Rollback : restaurer les 40 fichiers du dossier de sauvegarde, en FTPS vérifié.
+
 ## Livraison du 2026-09-30 - menu mobile et titres des secteurs
 
 - Demande de Gassama : le menu latéral doit s'ouvrir sans faire remonter la page sur téléphone ou tablette. Correctif de traduction ciblée des titres Agro-business / Agribusiness et Agro-industries, préparé juste avant.
