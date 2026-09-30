@@ -91,15 +91,23 @@ function contact_email_body(array $data): string
     ]);
 }
 
+// Retire retours à la ligne et caractères de contrôle : sans cela, un nom contenant
+// « \r\nBcc: ... » ajoute des en-têtes et fait envoyer l'e-mail à des tiers.
+function contact_header_text(string $value): string
+{
+    return trim((string) preg_replace('/[\x00-\x1F\x7F]+/u', ' ', $value));
+}
+
 function notify_contact_recipient(array $data): bool
 {
     $recipient = contact_recipient_email();
-    $subject = 'Nouvelle demande Groupe Babia - ' . (string) $data['need'];
+    $subject = 'Nouvelle demande Groupe Babia - ' . contact_header_text((string) $data['need']);
+    $replyName = str_replace(['"', '\\'], '', contact_header_text((string) $data['name']));
     $headers = [
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
         'From: Groupe Babia <no-reply@groupebabia.com>',
-        'Reply-To: ' . (string) $data['name'] . ' <' . (string) $data['email'] . '>',
+        'Reply-To: =?UTF-8?B?' . base64_encode($replyName) . '?= <' . (string) $data['email'] . '>',
     ];
 
     return mail($recipient, $subject, contact_email_body($data), implode("\r\n", $headers));
