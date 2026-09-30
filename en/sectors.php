@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260930-chargement">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260930-menu-position">
     <link rel="canonical" href="https://www.groupebabia.com/en/sectors.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/secteurs.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/sectors.php">
@@ -98,7 +98,7 @@
             <img src="../assets/images/agro-business-silos.webp" alt="Tractor, storage silos and irrigation system beside a field" width="900" height="600" loading="lazy" decoding="async">
             <div>
               <span>02</span>
-              <h3>Agribusiness</h3>
+              <h3 translate="no" class="notranslate">Agribusiness</h3>
               <p><strong>Structuring agricultural value chains.</strong> We connect farmers to markets, financing and technology.</p>
               <ul class="check-list">
                 <li>Project structuring and financing for agricultural enterprises.</li>
@@ -115,7 +115,7 @@
             <img src="../assets/images/agro-industrie-serre.webp" alt="Team member holding a crate of freshly harvested lettuce" width="900" height="593" loading="lazy" decoding="async">
             <div>
               <span>03</span>
-              <h3>Agro-industries</h3>
+              <h3 translate="no" class="notranslate">Agro-industries</h3>
               <p><strong>Adding value to Guinean products.</strong> We process local raw materials into finished goods for domestic and export markets.</p>
               <ul class="check-list">
                 <li>Processing of cereals, fruits and vegetables.</li>
@@ -124,7 +124,7 @@
                 <li>Quality control and compliance with international standards.</li>
               </ul>
               <p><strong>Goal:</strong> reduce post-harvest losses and create industrial jobs.</p>
-              <a href="company.php#agro-industry">View agro-industry</a>
+              <a href="company.php#agro-industry" translate="no" class="notranslate">View agro-industry</a>
             </div>
           </article>
 
@@ -364,6 +364,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=20260930-chargement"></script>
+    <script src="../assets/js/main.js?v=20260930-menu-position"></script>
   </body>
 </html>

@@ -59,10 +59,6 @@ body {
   letter-spacing: 0;
 }
 
-body.nav-open {
-  overflow: hidden;
-}
-
 @supports not (overflow: clip) {
   html,
   body {

@@ -1,5 +1,15 @@
 # Livraison production
 
+## Livraison du 2026-09-30 - menu mobile et titres des secteurs
+
+- Demande de Gassama : le menu latéral doit s'ouvrir sans faire remonter la page sur téléphone ou tablette. Correctif de traduction ciblée des titres Agro-business / Agribusiness et Agro-industries, préparé juste avant.
+- Vérifications locales : `node --check`, génération FR/EN, build PHP/admin, comparaison du build, simulation d'ouverture/fermeture à 1 400 px, fond bloqué et panneau libre de défiler. La simulation ne remplace pas un essai sur téléphone réel.
+- FTPS avec certificat TLS vérifié, via `box4100.bluehost.com`. Identité du dossier confirmée par `.htaccess`, `index.php` et le logo, tous identiques au build avant écriture.
+- **49 fichiers publics** comparés, sauvegardés dans `/tmp/babia-menu-20260930-047kkh0a`, envoyés puis relus identiques au hash SHA-256. Aucun fichier supprimé. Aucun envoi de `.env`, `app/`, `database/`, `espace-gb/` ni de documentation. Aucun commit ni push.
+- Contrôles HTTP après envoi : accueil et secteurs FR/EN en 200 avec la nouvelle version d'assets et les deux titres distincts ; CSS/JS en 200 avec le correctif ; `/.env` et `/app/config.php` en 403, `/docs/WORKLOG.md` et une URL inconnue en 404, login admin en 200.
+- Limite : aucun navigateur connecté ni essai sur le téléphone du client. Le résultat visuel mobile/tablette et la traduction automatique du client restent à confirmer.
+- Rollback si besoin : restaurer les 49 fichiers du dossier de sauvegarde ci-dessus, en FTPS vérifié, sans toucher aux autres fichiers du serveur.
+
 ## Livraison du 2026-09-30 - faille formulaire, visuels secteurs, Agro-business, chargement
 
 - Demandes de Gassama : images Agriculture, Agro-business et Agro-industries ; « Agro-business »

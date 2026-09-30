@@ -70,7 +70,7 @@ if (navToggle && nav) {
     }
     setNavigation(false);
     if (restoreFocus) {
-      navToggle.focus();
+      navToggle.focus({ preventScroll: true });
     }
   }
 
@@ -80,9 +80,19 @@ if (navToggle && nav) {
     const isOpen = !nav.classList.contains("is-open");
     setNavigation(isOpen);
     if (isOpen) {
-      navItems[0]?.focus();
+      navItems[0]?.focus({ preventScroll: true });
     }
   });
+
+  // Ne pas modifier l'overflow de body : cela déplace son en-tête sticky sur
+  // certains navigateurs mobiles. Bloquer seulement les gestes hors du panneau.
+  for (const eventName of ["touchmove", "wheel"]) {
+    document.addEventListener(eventName, (event) => {
+      if (nav.classList.contains("is-open") && !nav.contains(event.target)) {
+        event.preventDefault();
+      }
+    }, { passive: false });
+  }
 
   nav.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {

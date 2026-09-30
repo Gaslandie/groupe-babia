@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260930-chargement">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260930-menu-position">
     <link rel="canonical" href="https://www.groupebabia.com/en/">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/">
@@ -206,11 +206,11 @@
             <img src="../assets/images/agro-business-silos.webp" alt="Tractor, storage silos and irrigation system beside a field" width="900" height="600" loading="lazy" decoding="async">
             <div>
               <span>02</span>
-              <h3>Agribusiness</h3>
+              <h3 translate="no" class="notranslate">Agribusiness</h3>
               <p>
                 Value chain structuring, collection, storage, distribution and partnerships with cooperatives and agri-SMEs.
               </p>
-              <a href="sectors.php#agribusiness">View agribusiness</a>
+              <a href="sectors.php#agribusiness" translate="no" class="notranslate">View agribusiness</a>
             </div>
           </article>
 
@@ -218,11 +218,11 @@
             <img src="../assets/images/agro-industrie-serre.webp" alt="Team member holding a crate of freshly harvested lettuce" width="900" height="593" loading="lazy" decoding="async">
             <div>
               <span>03</span>
-              <h3>Agro-industries</h3>
+              <h3 translate="no" class="notranslate">Agro-industries</h3>
               <p>
                 Processing, packaging and upgrading agricultural raw materials into higher value-added finished products.
               </p>
-              <a href="sectors.php#agro-industries">Explore agro-industries</a>
+              <a href="sectors.php#agro-industries" translate="no" class="notranslate">Explore agro-industries</a>
             </div>
           </article>
 
@@ -498,6 +498,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=20260930-chargement"></script>
+    <script src="../assets/js/main.js?v=20260930-menu-position"></script>
   </body>
 </html>

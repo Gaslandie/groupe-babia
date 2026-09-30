@@ -99,6 +99,19 @@
 | 2026-09-16 | Utiliser des visuels temporaires de banque d'images en attendant les medias officiels. | Demande utilisateur : le client fournira ses vraies photos plus tard, mais le site doit etre vivant maintenant. | 10 visuels ajoutes dans `assets/images/` (sucre, materiaux-construction, mais, legumes, solaire, agriculteurs, cooperative, marche, logistique-port, equipe). Tous a remplacer par les medias du client. |
 | 2026-08-22 | Publier les chiffres transmis par le client meme sans verification par un tiers. | Ces chiffres viennent du client lui-meme (rizerie 200 T/jour, 70% d'energies renouvelables, 350+ emplois, 2000+ agriculteurs, importations de riz reduites de plusieurs millions USD) : les taire affaiblissait les valeurs et les engagements sans proteger personne. Cela n'annule pas la regle du 2026-08-21 : on ne cree toujours aucun chiffre nous-memes. | Les chiffres apparaissent dans les valeurs et engagements de l'accueil et de Vision & valeurs, FR et EN. Ils sont sous la responsabilite du client : a rectifier s'il revient dessus. Le siege reste ecrit « Kaloum, Conakry » alors que le client a ecrit « Kalou » : correction d'une faute de frappe probable, a confirmer avec lui. |
 
+## Menu mobile et position de défilement — 2026-09-30
+
+- Le panneau latéral s'ouvrait après un retour apparent en haut sur téléphone ou tablette. La règle `body.nav-open { overflow: hidden; }` crée un nouveau conteneur de défilement et peut rompre le positionnement `sticky` de l'en-tête. Le focus automatique sur le premier lien pouvait aussi provoquer un défilement.
+- Conserver le défilement actuel à l'ouverture et à la fermeture : retirer cette règle, employer `focus({ preventScroll: true })`, et bloquer les gestes de défilement sur le fond pendant que le panneau est ouvert. L'intérieur du panneau reste défilable.
+- Incrémenter la version de CSS/JS pour éviter que le téléphone charge les anciens fichiers en cache. Détails et références dans `docs/qualite-securite/MENU_MOBILE_2026-09-30.md`. Correction publiée par FTPS et contrôlée en production le 2026-09-30.
+
+## Noms des secteurs et traduction automatique — 2026-09-30
+
+- La capture client montre « Agribusiness » sur les cartes 02 et 03 de l'accueil. Les sources FR/EN distinguent les deux activités ; une traduction automatique est probable, pas reproduite sur son téléphone.
+- Protéger les titres et les liens des deux activités avec `translate="no"` et `class="notranslate"`, dans les fragments FR/EN de l'accueil, des secteurs et du pôle agroalimentaire. Les descriptions restent traduisibles et le sélecteur FR/EN reste disponible.
+- Garder les attributs dans les sources `app/pages/`, puis régénérer les pages. Ne pas bloquer la traduction de tout le site.
+- Comparaison W3C / MDN et vérifications : `docs/qualite-securite/TRADUCTION_SECTEURS_2026-09-30.md`. Correction publiée avec le menu mobile par FTPS et contrôlée en production le 2026-09-30.
+
 ## Reouverture du 2026-09-13
 
 - Maintenance retiree a la demande de Gassama pour permettre la consultation par le client.
