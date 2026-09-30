@@ -20,6 +20,8 @@ $site = [
     'phone_title' => 'Téléphone',
     'whatsapp_label' => 'Écrire sur WhatsApp au +224 620 903 333',
     'whatsapp_title' => 'WhatsApp',
+    'facebook_label' => 'Suivre Groupe Babia sur Facebook',
+    'facebook_title' => 'Facebook',
     'footer_nav_label' => 'Navigation pied de page',
     'footer_text' => 'Groupe guinéen diversifié actif dans des secteurs stratégiques pour bâtir des infrastructures, renforcer la sécurité alimentaire et créer des emplois en Guinée et en Afrique.',
     'copyright' => '© 2026 Groupe Babia Guinée. Tous droits réservés.',
@@ -57,6 +59,7 @@ $site = [
                 ['label' => 'E-mail', 'href' => 'mailto:contact@groupebabia.com'],
                 ['label' => '+224 655 903 333', 'href' => 'tel:+224655903333'],
                 ['label' => 'WhatsApp', 'href' => 'https://wa.me/224620903333'],
+                ['label' => 'Facebook', 'href' => 'https://www.facebook.com/profile.php?id=61594743999325'],
                 ['label' => 'Demander un devis', 'href' => 'contact.php'],
                 ['label' => 'Sélection produits', 'href' => 'catalogue.php'],
             ],
@@ -80,6 +83,9 @@ $structuredData = <<<'HTML'
   "description": "Groupe guinéen diversifié actif dans des secteurs stratégiques pour bâtir des infrastructures, renforcer la sécurité alimentaire et créer des emplois.",
   "email": "contact@groupebabia.com",
   "telephone": "+224655903333",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61594743999325"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Kaloum",

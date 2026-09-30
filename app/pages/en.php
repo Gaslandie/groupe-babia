@@ -20,6 +20,8 @@ $site = [
     'phone_title' => 'Phone',
     'whatsapp_label' => 'WhatsApp +224 620 903 333',
     'whatsapp_title' => 'WhatsApp',
+    'facebook_label' => 'Follow Groupe Babia on Facebook',
+    'facebook_title' => 'Facebook',
     'footer_nav_label' => 'Footer navigation',
     'footer_text' => 'A diversified Guinean group operating in strategic sectors to build infrastructure, ensure food security and create jobs across Guinea and Africa.',
     'copyright' => '© 2026 Groupe Babia Guinea. All rights reserved.',
@@ -57,6 +59,7 @@ $site = [
                 ['label' => 'Email', 'href' => 'mailto:contact@groupebabia.com'],
                 ['label' => '+224 655 903 333', 'href' => 'tel:+224655903333'],
                 ['label' => 'WhatsApp', 'href' => 'https://wa.me/224620903333'],
+                ['label' => 'Facebook', 'href' => 'https://www.facebook.com/profile.php?id=61594743999325'],
                 ['label' => 'Request a quote', 'href' => 'contact.php#formulaire'],
                 ['label' => 'Product selection', 'href' => 'catalog.php'],
             ],
@@ -80,6 +83,9 @@ $structuredData = <<<'HTML'
   "description": "A diversified Guinean group operating in strategic sectors to build infrastructure, strengthen food security and create jobs.",
   "email": "contact@groupebabia.com",
   "telephone": "+224655903333",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61594743999325"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Kaloum",
