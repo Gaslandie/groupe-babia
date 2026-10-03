@@ -550,6 +550,8 @@ if (contactForm) {
   const messageField = contactForm.elements.namedItem("message");
 
   const NEED_BY_PARAM = {
+    hevea: isEnglishContact ? "Import/export request" : "Demande import/export",
+    cotton: isEnglishContact ? "Import/export request" : "Demande import/export",
     agro: isEnglishContact ? "Agri-food export/import request" : "Demande agroalimentaire export/import",
     construction: isEnglishContact ? "Construction project" : "Projet BTP",
     btp: isEnglishContact ? "Construction project" : "Projet BTP",
@@ -799,10 +801,23 @@ if (contactForm) {
 
   // Pre-remplissage : pole d'origine (?besoin=btp).
   const params = new URLSearchParams(window.location.search);
-  const requestedNeed = NEED_BY_PARAM[params.get("besoin") ?? params.get("need") ?? ""];
+  const requestKey = params.get("besoin") ?? params.get("need") ?? "";
+  const requestedNeed = Object.hasOwn(NEED_BY_PARAM, requestKey) ? NEED_BY_PARAM[requestKey] : undefined;
 
   if (requestedNeed && needField instanceof HTMLSelectElement) {
     needField.value = requestedNeed;
+  }
+
+  const PRODUCT_REQUESTS = {
+    hevea: isEnglishContact
+      ? "Natural rubber price request (FOB / CFR)\nProduct: Cup Lump Rubber / TSR 10 / TSR 20 / RSS\nQuantity (minimum 1 × 40 ft container):\nDRC (dry rubber content):\nOther specifications:\nDestination and timing:"
+      : "Demande de prix caoutchouc naturel (FOB / CFR)\nProduit : Cup Lump Rubber / TSR 10 / TSR 20 / RSS\nQuantité (minimum 1 conteneur de 40 pieds) :\nDRC (teneur en caoutchouc sec) :\nAutres spécifications :\nDestination et calendrier :",
+    cotton: isEnglishContact
+      ? "Cotton price request (FOB Conakry)\nProduct: Cotton Lint (225 kg bales) / Seed Cotton / Cotton Seeds\nQuantity (minimum 1 × 40 ft container):\nStaple length, micronaire, strength, grade:\nRequired documents:\nDestination and timing:"
+      : "Demande de prix coton (FOB Conakry)\nProduit : Coton fibre (balles de 225 kg) / Coton graine / Graines de coton\nQuantité (minimum 1 conteneur de 40 pieds) :\nLongueur de fibre, micronaire, résistance, grade :\nDocuments nécessaires :\nDestination et calendrier :"
+  };
+  if (Object.hasOwn(PRODUCT_REQUESTS, requestKey) && messageField instanceof HTMLTextAreaElement && !messageField.value) {
+    messageField.value = PRODUCT_REQUESTS[requestKey];
   }
 
   syncWhatsApp();

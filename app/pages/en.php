@@ -176,8 +176,8 @@ $pages = [
     'catalog' => [
         'file' => 'catalog.php',
         'fr' => '../catalogue.php',
-        'title' => 'Agri-food catalog | Groupe Babia Guinea',
-        'description' => 'Import and export catalog of Groupe Babia Guinea: Jus Babia, Tomato Paste Babia, rice, sugar, onions, construction materials, cocoa, coffee, cashew, sesame, soybeans and honey.',
+        'title' => 'Import & export catalog | Groupe Babia Guinea',
+        'description' => 'Import and export catalog of Groupe Babia Guinea: Jus Babia, Tomato Paste Babia, rice, sugar, onions, construction materials, cocoa, coffee, cashew, sesame, soybeans, honey, natural rubber and cotton.',
         'active' => 'sectors',
         'body' => $body('catalog.html'),
     ],

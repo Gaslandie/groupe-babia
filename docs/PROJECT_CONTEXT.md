@@ -10,14 +10,21 @@
 - Proposition de valeur : presenter clairement les poles Agriculture, Agro-industrie, BTP, Mines et Peche, rassurer les partenaires avec une image professionnelle, faciliter les demandes de devis et soutenir le referencement export.
 - Produits agroalimentaires confirmes par le client (liste WhatsApp du 22/08, reference
   complete dans `docs/infoFourniesParClient.md`) :
-  - Exportation, 6 produits : feves de cacao (premium), grains de cafe (robusta), noix de
-    cajou brutes en coque, graines de sesame, graines de soja, miel.
+  - Exportation, 8 produits : feves de cacao (premium), grains de cafe (robusta), noix de
+    cajou brutes en coque, graines de sesame, graines de soja, miel, hévéa / caoutchouc naturel et coton.
   - Importation, 6 produits : Jus Babia, Tomato Paste Babia, riz, sucre, oignons,
     materiaux de construction.
   - NE FIGURENT PAS dans la liste du client : beurre de karite, fruits, huile alimentaire.
     Ils etaient listes ici par erreur. Ne pas les afficher comme produits tant que le
     client ne les confirme pas. Les fichiers `karite.webp`, `fruits.jpeg` et `huile.webp`
     restent sur le disque mais ne sont references par aucune page.
+
+## Produits exportés ajoutés le 3 octobre 2026
+
+- Hévéa : Guinée, Côte d’Ivoire et Liberia ; Cup Lump Rubber (principal), TSR 10 / TSR 20, RSS ; 800+ agriculteurs ; minimum un conteneur de 40 pieds ; ports Conakry, Abidjan, Monrovia ; toute l’année, pic mars–octobre ; prix FOB / CFR sur demande.
+- Coton : origine 100 % Guinée ; coton fibre (balles de 225 kg), coton graine, graines de coton ; 500+ agriculteurs ; récolte manuelle, faible contamination, sans OGM ; minimum un conteneur de 40 pieds ; port Conakry ; décembre–juin ; certificat d’origine, phytosanitaire, fumigation, SGS sur demande ; prix FOB Conakry.
+- Source : demande explicite et quatre photos du client transmises par Gassama. Fiches FR/EN sur le catalogue, cartes secteurs et accueil. Ne pas présenter tous les exports comme uniquement guinéens.
+- Photos clarifiées avec imagegen, optimisées en WebP ; reconstruction de textures par IA, originaux conservés. Benchmark et prompts : `docs/design-ux/BENCHMARK_HEVEA_COTON_2026-10-03.md`.
 
 ## Sources
 

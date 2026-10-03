@@ -1803,6 +1803,52 @@ textarea:focus-visible {
   margin-top: 26px;
 }
 
+.export-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.export-product-photos {
+  display: grid;
+  gap: 18px;
+}
+
+.export-product-photos figure {
+  margin: 0;
+}
+
+.export-product-photos img {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.export-product-photos figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.export-product-detail {
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+.product-wall a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .export-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .product-card img,
 .news-card img {
   width: 100%;

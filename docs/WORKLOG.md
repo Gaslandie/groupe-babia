@@ -4,6 +4,7 @@
 
 | Date | Sujet | Responsable | Niveau atteint | Prochaine etape |
 | --- | --- | --- | --- | --- |
+| 2026-10-03 | Hévéa et coton à l’export | Codex | Intégrés FR/EN, quatre photos clarifiées, build et 11 cas Chrome réussis | Push GitHub et livraison FTPS autorisés, en cours |
 | 2026-09-30 | Menu mobile sans remontée en haut | Codex | Livré par FTPS : 49 fichiers sauvegardés, envoyés et relus ; contrôles HTTP réussis ; test visuel réel restant | Vérifier sur téléphone et tablette après publication |
 | 2026-09-30 | Protection des noms de secteurs contre la traduction automatique | Codex | Livré avec la correction du menu ; titres FR/EN vérifiés sur le site public | Publier le correctif puis vérifier sur le téléphone du client |
 | 2026-09-18 | Visuel cajou fourni par le client | Claude | Photo client en ligne (relue identique). Cache-busting `?v=20260918` commite mais **pas encore deploye** : l'envoi FTPS des 12 pages est bloque | Autoriser l'envoi FTPS des pages, ou deployer autrement |

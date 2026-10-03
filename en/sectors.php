@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260930-menu-position">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20261003-hevea-cotton">
     <link rel="canonical" href="https://www.groupebabia.com/en/sectors.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/secteurs.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/sectors.php">
@@ -202,9 +202,9 @@
       <section class="section dark-section" id="export-products">
         <div class="section-heading">
           <p class="eyebrow">Sector 07 — Export</p>
-          <h2>Exporting "Made in Guinea" to the world</h2>
+          <h2>Exporting from Guinea and West Africa</h2>
           <p>
-            We source directly from Guinean farmers and cooperatives to export high-quality agricultural
+            We source directly from farmers and cooperatives in Guinea and West Africa to export high-quality agricultural
             products. We are committed to fair sourcing, quality control and traceability.
           </p>
         </div>
@@ -261,6 +261,20 @@
               <h3>Honey</h3>
               <p>Natural, pure Guinean honey for export markets.</p>
               <ul class="tag-list"><li>Natural</li><li>Pure honey</li><li>Guinea</li></ul>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/hevea-cup-lump.webp" alt="Hevea / natural rubber" width="900" height="1110" loading="lazy" decoding="async">
+            <div><small>West Africa</small><h3>Hevea / natural rubber</h3><p>Cup Lump Rubber, TSR 10 / TSR 20 and RSS. Direct from 800+ farmers in Guinea, Ivory Coast and Liberia.</p>
+              <ul class="tag-list"><li>MOQ: 1 × 40 ft</li><li>Export</li></ul>
+              <div class="card-actions"><a class="button button-primary" href="catalog.php#hevea">Product details</a></div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="../assets/images/cotton-field.webp" alt="Cotton" width="900" height="589" loading="lazy" decoding="async">
+            <div><small>100% Guinea origin</small><h3>Cotton</h3><p>Cotton lint, seed cotton and cotton seeds. Direct from 500+ farmers in Guinea.</p>
+              <ul class="tag-list"><li>MOQ: 1 × 40 ft</li><li>Export</li></ul>
+              <div class="card-actions"><a class="button button-primary" href="catalog.php#cotton">Product details</a></div>
             </div>
           </article>
         </div>
@@ -364,6 +378,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=20260930-menu-position"></script>
+    <script src="../assets/js/main.js?v=20261003-hevea-cotton"></script>
   </body>
 </html>

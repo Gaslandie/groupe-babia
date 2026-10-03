@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260930-menu-position">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20261003-hevea-cotton">
     <link rel="canonical" href="https://www.groupebabia.com/en/">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/">
@@ -332,6 +332,12 @@
               <span><small>Export</small>Honey</span>
             </li>
             <li>
+              <a href="catalog.php#hevea"><img src="../assets/images/hevea-cup-lump.webp" alt="Hevea / natural rubber" width="900" height="1110" loading="lazy" decoding="async"><span><small>Export</small>Hevea / natural rubber</span></a>
+            </li>
+            <li>
+              <a href="catalog.php#cotton"><img src="../assets/images/cotton-field.webp" alt="Cotton" width="900" height="589" loading="lazy" decoding="async"><span><small>Export</small>Cotton</span></a>
+            </li>
+            <li>
               <img src="../assets/images/boissons.webp" alt="Jus Babia" width="486" height="365" loading="lazy" decoding="async">
               <span><small>Import</small>Jus Babia</span>
             </li>
@@ -359,12 +365,12 @@
         </div>
         <div class="export-content">
           <p class="eyebrow">Import &amp; export catalog</p>
-          <h2>Readable products to import into Guinea and export Made in Guinea</h2>
+          <h2>Readable products to import into Guinea and export from West Africa</h2>
           <p>
             Our import & export offer answers the needs of markets, wholesalers, institutions, construction companies and international buyers.
           </p>
           <ul class="check-list">
-            <li>Export: premium cocoa beans, Robusta coffee beans, raw cashew nuts in shells, sesame seeds, soybeans and natural Guinean honey.</li>
+            <li>Export: premium cocoa beans, Robusta coffee beans, raw cashew nuts in shells, sesame seeds, soybeans, natural Guinean honey, natural rubber and cotton.</li>
             <li>Import: Jus Babia, Tomato Paste Babia, rice, sugar, onions and construction materials.</li>
             <li>Quotation requests available by WhatsApp and by email.</li>
             <li>Commercial exchanges adapted to local and international partners.</li>
@@ -501,6 +507,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=20260930-menu-position"></script>
+    <script src="../assets/js/main.js?v=20261003-hevea-cotton"></script>
   </body>
 </html>
