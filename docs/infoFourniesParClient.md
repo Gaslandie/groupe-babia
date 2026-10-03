@@ -252,4 +252,12 @@ increase farmer incomes and position Guinea as a reliable supplier in global mar
   `docs/PROJECT_CONTEXT.md` mais PAS dans cette liste client. Ne pas les afficher
   comme produits import/export tant qu'il ne les confirme pas.
 - Images : toutes les photos produits et secteurs sont temporaires (banques d'images
-  libres). À remplacer par les médias officiels du client.
+  libres) dans la liste initiale. La photo cajou a été remplacée en septembre ; quatre photos hévéa/coton ont été fournies par le client et clarifiées en octobre 2026.
+
+## Ajout transmis par Gassama le 3 octobre 2026
+
+Ces informations commerciales viennent du client. Les références du benchmark ne valident pas les chiffres ni les garanties du fournisseur.
+
+- **HEVEA — NATURAL RUBBER FROM WEST AFRICA** : Guinea, Ivory Coast & Liberia. Groupe Babia Guinee SARLU supplies natural rubber directly from 800+ farmers. Products: Cup Lump Rubber (main product), TSR 10 / TSR 20, RSS. Supply as per buyer's specifications; buyer to share DRC and other requirements. MOQ: 1x40ft. Ports: Conakry, Abidjan, Monrovia. Season: year-round, peak March — October. FOB / CFR price on request.
+- **COTTON — 100% GUINEA ORIGIN** : premium cotton from Guinea, directly from 500+ farmers. Hand-picked, low contamination, GMO-free. Products: Cotton Lint (225kg bales), Seed Cotton, Cotton Seeds. Supply as per buyer's specifications; buyer to share staple length, micronaire, strength, grade. MOQ: 1x40ft. Port: Conakry, Guinea. Season: December — June. Documents: Certificate of Origin, Phytosanitary, Fumigation, SGS on request. FOB Conakry price on request.
+- Quatre photos jointes : balles de coton, champ de coton, collecte de latex en plantation et Cup Lump Rubber. Originaux non modifiés ; versions clarifiées par IA utilisées comme illustrations sur le site.

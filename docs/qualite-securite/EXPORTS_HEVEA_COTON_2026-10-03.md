@@ -28,7 +28,11 @@ La retouche par IA reconstruit des textures ; les photos ne prouvent pas le stoc
 
 ## Livraison
 
-En préparation. Envoi limité aux fichiers concernés du build, par FTPS avec certificat vérifié. Destination confirmée par `.htaccess`, `index.php` et le logo. Sauvegarde des fichiers remplacés avant écriture, relecture après transfert ; aucune suppression ni modification du `.env` serveur. Le workflow historique GitHub Actions reste désactivé.
+Niveau atteint : livré. Commit `ab9e0d5` poussé sur `main`. 55 fichiers concernés du build envoyés par FTPS avec certificat vérifié ; 55/55 relus identiques au SHA-256. Destination confirmée par `.htaccess`, `index.php` et le logo. 51 fichiers existants sauvegardés dans `/tmp/babia-exports-20261003-z8khluta` avant écriture ; quatre images nouvelles. Aucune suppression ni modification du `.env` serveur. Le workflow historique GitHub Actions reste désactivé.
+
+22 contrôles HTTP après livraison réussis : huit pages publiques FR/EN, quatre photos et deux ressources CSS/JS, huit parcours de protection. Les catalogues contiennent les caractéristiques client ; les six ressources servies sont identiques au build. `.env`, `app/config.php`, `database/` refusés (403), documentation interne et configuration de déploiement inaccessibles (404), URL inconnue en 404 ; connexion admin accessible, messages admin renvoyés vers la connexion sans authentification. Quatre pages publiques contrôlées dans Chrome à 390 et 1440 px après chargement complet : catalogue FR/EN, accueil FR, secteurs EN. Aucun débordement, image cassée ou exception JavaScript. Captures de la fiche hévéa ordinateur et de toute la fiche coton mobile anglais consultées ; photos, spécifications et boutons lisibles.
+
+Retour arrière : restaurer les 51 fichiers de la sauvegarde par FTPS vérifié. Les quatre nouvelles images peuvent rester non référencées. Le dossier `/tmp` est une sauvegarde de session, à archiver pour un retour arrière durable.
 
 ## Suivi sans blocage
 

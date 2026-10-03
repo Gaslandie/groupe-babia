@@ -4,7 +4,7 @@
 
 | Date | Sujet | Responsable | Niveau atteint | Prochaine etape |
 | --- | --- | --- | --- | --- |
-| 2026-10-03 | Hévéa et coton à l’export | Codex | Intégrés FR/EN, quatre photos clarifiées, build et 11 cas Chrome réussis | Push GitHub et livraison FTPS autorisés, en cours |
+| 2026-10-03 | Hévéa et coton à l’export | Codex | Livré : commit ab9e0d5 poussé ; 55 fichiers FTPS envoyés et relus, 51 sauvegardés ; 22 contrôles HTTP réussis | Client : essayer les fiches et le bouton « Demander un prix » |
 | 2026-09-30 | Menu mobile sans remontée en haut | Codex | Livré par FTPS : 49 fichiers sauvegardés, envoyés et relus ; contrôles HTTP réussis ; test visuel réel restant | Vérifier sur téléphone et tablette après publication |
 | 2026-09-30 | Protection des noms de secteurs contre la traduction automatique | Codex | Livré avec la correction du menu ; titres FR/EN vérifiés sur le site public | Publier le correctif puis vérifier sur le téléphone du client |
 | 2026-09-18 | Visuel cajou fourni par le client | Claude | Photo client en ligne (relue identique). Cache-busting `?v=20260918` commite mais **pas encore deploye** : l'envoi FTPS des 12 pages est bloque | Autoriser l'envoi FTPS des pages, ou deployer autrement |
@@ -50,6 +50,9 @@
 - Activer GitHub Pages si le site doit etre partage par URL publique.
 
 ## Fait
+
+- Hévéa/coton 2026-10-03 : catalogue export porté à huit produits, accueil et secteurs FR/EN mis à jour ; informations commerciales fournies par le client, quatre photos clarifiées avec imagegen et optimisées en WebP. Préremplissage sécurisé des demandes produit ; valeurs inconnues ignorées. Build (77 fichiers), syntaxe PHP/JS, 217 images et liens publics vérifiés ; onze cas Chrome locaux réussis. Livraison : 55 fichiers envoyés et relus identiques, 51 sauvegardés, aucune suppression ni changement des secrets. 22 contrôles HTTP publics/protégés et quatre pages Chrome en production réussis ; captures mobile/ordinateur consultées. Rapport : `docs/qualite-securite/EXPORTS_HEVEA_COTON_2026-10-03.md`.
+
 
 - Correctifs mobile 2026-09-17 : trois defauts signales par Gassama sur telephone, captures a l'appui, apres la premiere livraison.
   1. **Titres et descriptions invisibles dans les cartes produit.** `.dark-section` impose `color: #fff` a ses `h3` et `p`. Les cartes gardent pourtant un fond blanc (`var(--surface)`) : le texte etait donc blanc sur blanc, laissant un grand vide entre le sur-titre et les etiquettes. Defaut **preexistant** sur `catalogue.php`, reproduit le 2026-09-16 sur `secteurs.php` en reutilisant la meme structure. Corrige par des regles de rappel `.dark-section .product-card h3` (et `news-card`, `activity-card`), qui l'emportent par specificite. Les etiquettes n'etaient pas touchees : `.tag-list li` est declare apres `.dark-section li` a specificite egale.

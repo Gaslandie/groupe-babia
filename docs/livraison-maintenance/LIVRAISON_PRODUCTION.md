@@ -1,5 +1,15 @@
 # Livraison production
 
+## Livraison du 2026-10-03 — hévéa et coton
+
+- Demande explicite de Gassama : clarifier les quatre photos, ajouter les produits exportés, pousser sur GitHub et déployer. Commit `ab9e0d5` poussé sur `main`.
+- Catalogue, accueil et secteurs FR/EN mis à jour. Huit exports et six imports ; conditions commerciales exactes du client dans les deux fiches ; demande de prix préremplie et WhatsApp.
+- FTPS avec certificat TLS vérifié via `box4100.bluehost.com` et canal de données protégé. Identité du dossier confirmée par `.htaccess`, `index.php` et le logo.
+- **55 fichiers envoyés et relus identiques**, **51 fichiers existants sauvegardés** dans `/tmp/babia-exports-20261003-z8khluta`. Quatre images nouvelles. Aucun fichier supprimé, aucun secret envoyé ni modifié, aucun fichier admin ou de base envoyé. Les seuls fichiers internes envoyés sont les contenus et gabarits publics nécessaires dans `app/`, dont l’accès direct reste interdit.
+- Build et onze cas Chrome locaux réussis. Après livraison : **22 contrôles HTTP réussis**, huit pages publiques FR/EN, six ressources identiques au build et huit parcours de protection, dont l’accès aux messages admin sans connexion qui renvoie au login.
+- Chrome production : quatre pages à 390 / 1440 px, aucun débordement ni image cassée. Captures hévéa ordinateur et fiche coton mobile entière consultées.
+- Rollback : restaurer les 51 fichiers sauvegardés. Archiver le dossier de session pour le conserver durablement. Rapport complet et limites : `docs/qualite-securite/EXPORTS_HEVEA_COTON_2026-10-03.md`.
+
 ## Livraison du 2026-09-30 - page Facebook
 
 - Demande de Gassama : ajouter https://www.facebook.com/profile.php?id=61594743999325 à côté des autres réseaux, partout. Commit `9154d4c` poussé sur `main`, avec `78896ab` (menu mobile et titres des secteurs, déjà en ligne mais pas encore commités).
