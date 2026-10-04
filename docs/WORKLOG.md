@@ -4,7 +4,7 @@
 
 | Date | Sujet | Responsable | Niveau atteint | Prochaine etape |
 | --- | --- | --- | --- | --- |
-| 2026-10-04 | Présentation uniforme des huit exports | Codex | Code et 24 cas Chrome locaux vérifiés | Push et livraison corrective en cours |
+| 2026-10-04 | Présentation uniforme des huit exports | Codex | Livré : fa89187 poussé ; 47 fichiers sauvegardés, envoyés et relus ; 22 contrôles HTTP et 4 cas Chrome production réussis | Client : vérifier les huit cartes et leurs informations à déplier |
 | 2026-10-03 | Hévéa et coton à l’export | Codex | Livré : commit ab9e0d5 poussé ; 55 fichiers FTPS envoyés et relus, 51 sauvegardés ; 22 contrôles HTTP réussis | Client : essayer les fiches et le bouton « Demander un prix » |
 | 2026-09-30 | Menu mobile sans remontée en haut | Codex | Livré par FTPS : 49 fichiers sauvegardés, envoyés et relus ; contrôles HTTP réussis ; test visuel réel restant | Vérifier sur téléphone et tablette après publication |
 | 2026-09-30 | Protection des noms de secteurs contre la traduction automatique | Codex | Livré avec la correction du menu ; titres FR/EN vérifiés sur le site public | Publier le correctif puis vérifier sur le téléphone du client |

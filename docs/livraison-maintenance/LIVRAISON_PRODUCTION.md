@@ -1,5 +1,13 @@
 # Livraison production
 
+## Livraison du 2026-10-04 — présentation uniforme des exports
+
+- Correction demandée par Gassama : même carte et mêmes commandes pour les huit produits exportés, sans deux fiches séparées en bas du catalogue. Informations hévéa/coton conservées dans leurs cartes. FR/EN, catalogue et secteurs, préremplissage des huit demandes. Commit `fa89187` poussé.
+- Local : build (77 fichiers), liens/dimensions de 217 images, 24 cas Chrome et navigation catalogue → formulaire réussis.
+- FTPS Python interrompu avant écriture ; livraison cURL avec TLS et certificat exigés et reprises réseau. 47 fichiers sauvegardés dans `/tmp/babia-uniform-ftps-20261004-4s3wzdiz/backup`, 47 envoyés et relus identiques au SHA-256, aucun fichier supprimé ni secret modifié.
+- Production : 22 contrôles HTTP et quatre cas Chrome mobile/ordinateur réussis. Huit cartes uniformes, deux anciens blocs absents, caractéristiques conservées, accès techniques protégés, back-office messages refusé sans connexion.
+- Retour arrière : restaurer les 47 fichiers sauvegardés. Rapport détaillé, sources et limites : `docs/qualite-securite/EXPORTS_UNIFORMES_2026-10-04.md`.
+
 ## Livraison du 2026-10-03 — hévéa et coton
 
 - Demande explicite de Gassama : clarifier les quatre photos, ajouter les produits exportés, pousser sur GitHub et déployer. Commit `ab9e0d5` poussé sur `main`.

@@ -18,6 +18,10 @@ Références reconnues relues le 4 octobre 2026, pour vérifier la pertinence de
 
 Accès textuels réussis ; aucun audit visuel des références. La présentation uniforme suit la correction explicite de Gassama et le patron des cartes du site. Les chiffres et garanties restent uniquement ceux du client.
 
+## Fichiers concernés
+
+Fragments catalogue/secteurs dans `app/pages/fr/` et `app/pages/en/`, CSS/JS, version des ressources dans `app/partials/site.php`, `realisation.php`, `realisations.php`, miroirs HTML/PHP régénérés et documentation de suivi. Aucun changement d’image. Version publiée : `20261004-export-uniform`.
+
 ## Vérifications
 
 - Génération FR/EN, `php build.php --with-admin`, comparaison du build (77 fichiers), `node --check assets/js/main.js`, `git diff --check` réussis.
@@ -32,7 +36,15 @@ Préremplissage limité aux noms de produits autorisés, avec `Object.hasOwn` et
 
 ## Livraison
 
-En cours : sauvegarde avant remplacement, FTPS avec certificat vérifié, relecture SHA-256 après chaque envoi, aucune suppression ni modification des secrets. Le premier essai FTPS de lecture a dépassé son délai ; aucun fichier n’avait été envoyé. Le deuxième essai confirme la destination avec `.htaccess`, `index.php` et le logo.
+Niveau atteint : livré. Commit `fa89187` poussé sur `main`. Destination confirmée par trois fichiers existants. Les tentatives Python FTPS ont échoué avant toute écriture (délais TLS, route réseau indisponible), y compris avec réutilisation de session TLS. Livraison réussie avec cURL, certificat et chiffrement exigés, reprises des erreurs réseau, sans option d’affaiblissement TLS.
+
+47 fichiers sauvegardés dans `/tmp/babia-uniform-ftps-20261004-4s3wzdiz/backup`, puis 47/47 envoyés et relus identiques au SHA-256. Aucun fichier supprimé et aucun secret modifié. Les identifiants n’ont pas été placés dans les arguments du processus ; leur configuration temporaire privée a été retirée après le transfert.
+
+22 contrôles HTTP après livraison réussis : huit pages publiques, six ressources et huit accès publics/protégés. Huit volets produit présents sur catalogue et secteurs FR/EN, anciens blocs et boutons « Voir la fiche produit » absents. Données client conservées, ressources identiques au build. Secrets/dossiers privés en 403 ou 404 ; messages admin renvoyés vers la connexion sans authentification. Quatre cas Chrome production à 390 / 1440 px réussis, avec volets clavier/clic, commandes identiques, aucune image manquante ni débordement ni erreur JS. Capture mobile du coton déplié consultée en production.
+
+Retour arrière : restaurer les 47 fichiers sauvegardés en FTPS vérifié. Le dossier de sauvegarde `/tmp` est une sauvegarde de session à archiver pour une conservation durable.
+
+Références techniques relues le 4 octobre : [Python SSLSession](https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.session) et [cURL](https://curl.se/docs/manpage.html#--ssl-reqd), pour conserver un transfert chiffré et authentifié et reprendre les erreurs réseau.
 
 ## Suite et questions de suivi
 
