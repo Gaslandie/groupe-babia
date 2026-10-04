@@ -1803,50 +1803,60 @@ textarea:focus-visible {
   margin-top: 26px;
 }
 
-.export-detail-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 28px;
-  align-items: start;
+/* Every export product uses the same inline information and contact controls. */
+.product-specifications {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
 }
 
-.export-product-photos {
-  display: grid;
-  gap: 18px;
+.product-specifications summary {
+  color: var(--forest);
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.export-product-photos figure {
-  margin: 0;
+.product-specifications h4 {
+  margin: 18px 0 10px;
+  color: var(--forest);
 }
 
-.export-product-photos img {
-  width: 100%;
-  height: auto;
-  max-height: 360px;
-  object-fit: cover;
-  border-radius: 18px;
+.product-specifications p {
+  margin-top: 14px;
 }
 
-.export-product-photos figcaption {
-  margin-top: 8px;
+.product-facts {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+.product-facts li {
+  margin-bottom: 8px;
   color: var(--muted);
-  font-size: 0.9rem;
 }
 
-.export-product-detail {
+.product-card .product-specifications img {
+  height: auto;
+  max-height: 220px;
+  margin-top: 12px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-card[id] {
   scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+.product-card .card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .product-wall a {
   display: block;
   color: inherit;
   text-decoration: none;
-}
-
-@media (max-width: 760px) {
-  .export-detail-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
 
 .product-card img,

@@ -26,6 +26,13 @@
 - Source : demande explicite et quatre photos du client transmises par Gassama. Fiches FR/EN sur le catalogue, cartes secteurs et accueil. Ne pas présenter tous les exports comme uniquement guinéens.
 - Photos clarifiées avec imagegen, optimisées en WebP ; reconstruction de textures par IA, originaux conservés. Benchmark et prompts : `docs/design-ux/BENCHMARK_HEVEA_COTON_2026-10-03.md`.
 
+## Présentation uniforme des exports — 4 octobre 2026
+
+- Correction explicite de Gassama : les huit exports doivent être listés de la même façon. Aucun produit ne reçoit une fiche séparée en bas du catalogue.
+- Catalogue et secteurs FR/EN : même structure de carte, volet natif « Informations produit », demande de prix et WhatsApp. Détails hévéa/coton conservés dans les cartes. Les liens `#hevea` / `#cotton` ciblent les cartes.
+- Préremplissage de prix étendu aux huit produits via une liste fermée ; ne pas inventer de MOQ, origine ou certification pour les autres produits.
+- Rapport : `docs/qualite-securite/EXPORTS_UNIFORMES_2026-10-04.md`.
+
 ## Sources
 
 - Cahier des charges : `/home/mohamed-gassama/Desktop/Cahier des charges clients/Audit-et-Proposition-Refonte-Groupe-Babia.pdf`

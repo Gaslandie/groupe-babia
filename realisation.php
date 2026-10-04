@@ -41,7 +41,7 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
     <title><?= e($title) ?> | Groupe Babia Guinée</title>
     <base href="/">
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261003-hevea-cotton">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261004-export-uniform">
     <?php if ($realisation !== null): ?>
       <link rel="canonical" href="https://www.groupebabia.com/realisations/<?= e($canonicalSlug) ?>">
     <?php endif; ?>
@@ -163,6 +163,6 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
         </div>
       </div>
     </footer>
-    <script src="assets/js/main.js?v=20261003-hevea-cotton"></script>
+    <script src="assets/js/main.js?v=20261004-export-uniform"></script>
   </body>
 </html>

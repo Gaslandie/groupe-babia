@@ -550,6 +550,13 @@ if (contactForm) {
   const messageField = contactForm.elements.namedItem("message");
 
   const NEED_BY_PARAM = {
+    cocoa: isEnglishContact ? "Import/export request" : "Demande import/export",
+    coffee: isEnglishContact ? "Import/export request" : "Demande import/export",
+    cashew: isEnglishContact ? "Import/export request" : "Demande import/export",
+    sesame: isEnglishContact ? "Import/export request" : "Demande import/export",
+    soybeans: isEnglishContact ? "Import/export request" : "Demande import/export",
+    honey: isEnglishContact ? "Import/export request" : "Demande import/export",
+
     hevea: isEnglishContact ? "Import/export request" : "Demande import/export",
     cotton: isEnglishContact ? "Import/export request" : "Demande import/export",
     agro: isEnglishContact ? "Agri-food export/import request" : "Demande agroalimentaire export/import",
@@ -809,6 +816,13 @@ if (contactForm) {
   }
 
   const PRODUCT_REQUESTS = {
+    cocoa: isEnglishContact ? "Price request: Cocoa beans\nQuantity:\nPackaging and quality specifications:\nDestination and timing:" : "Demande de prix : Fèves de cacao\nQuantité :\nConditionnement et exigences de qualité :\nDestination et calendrier :",
+    coffee: isEnglishContact ? "Price request: Coffee beans\nQuantity:\nPackaging and quality specifications:\nDestination and timing:" : "Demande de prix : Grains de café\nQuantité :\nConditionnement et exigences de qualité :\nDestination et calendrier :",
+    cashew: isEnglishContact ? "Price request: Raw cashew nuts in shells\nQuantity:\nPackaging and quality specifications:\nDestination and timing:" : "Demande de prix : Noix de cajou brutes en coque\nQuantité :\nConditionnement et exigences de qualité :\nDestination et calendrier :",
+    sesame: isEnglishContact ? "Price request: Sesame seeds\nQuantity:\nPackaging and quality specifications:\nDestination and timing:" : "Demande de prix : Graines de sésame\nQuantité :\nConditionnement et exigences de qualité :\nDestination et calendrier :",
+    soybeans: isEnglishContact ? "Price request: Soybeans\nQuantity:\nPackaging and quality specifications:\nDestination and timing:" : "Demande de prix : Graines de soja\nQuantité :\nConditionnement et exigences de qualité :\nDestination et calendrier :",
+    honey: isEnglishContact ? "Price request: Honey\nQuantity:\nPackaging and quality specifications:\nDestination and timing:" : "Demande de prix : Miel\nQuantité :\nConditionnement et exigences de qualité :\nDestination et calendrier :",
+
     hevea: isEnglishContact
       ? "Natural rubber price request (FOB / CFR)\nProduct: Cup Lump Rubber / TSR 10 / TSR 20 / RSS\nQuantity (minimum 1 × 40 ft container):\nDRC (dry rubber content):\nOther specifications:\nDestination and timing:"
       : "Demande de prix caoutchouc naturel (FOB / CFR)\nProduit : Cup Lump Rubber / TSR 10 / TSR 20 / RSS\nQuantité (minimum 1 conteneur de 40 pieds) :\nDRC (teneur en caoutchouc sec) :\nAutres spécifications :\nDestination et calendrier :",
