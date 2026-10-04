@@ -49,7 +49,13 @@ Contenu public fixe, sans nouvelle entrée utilisateur ni insertion de HTML prov
 
 ## Livraison
 
-Niveau atteint : testé localement, livraison en préparation. Plan limité à 45 fichiers publics du build avec leurs empreintes SHA-256. Livraison prévue par FTPS chiffré avec certificat vérifié, destination reconnue par trois fichiers existants, sauvegarde de tous les fichiers remplacés et relecture après chaque envoi. Aucune suppression. Le workflow historique n’est pas lancé.
+Niveau atteint : livré. Commit `79a37ef` poussé sur `main`. 45 fichiers publics sauvegardés, envoyés en FTPS chiffré avec certificat vérifié, puis relus identiques à leurs empreintes SHA-256. Destination reconnue par `.htaccess`, `index.php` et le logo existants avant toute écriture. Aucune suppression. Le workflow historique n’a pas été lancé ; secrets, données et back office non envoyés. La configuration privée temporaire des identifiants a été retirée après le transfert.
+
+Sauvegarde de session : `/tmp/babia-hero-ftps-20261004-zkpdxt59/backup`. Archive durable privée, hors dépôt Git : `/home/mohamed-gassama/Desktop/Projets Clients/Groupe-babia/.livraisons/20261004-home-hero-avant-79a37ef.tar.gz`. Les 45 fichiers contenus dans l’archive ont été comparés aux empreintes des fichiers sauvegardés. Retour arrière : restaurer ces 45 fichiers par FTPS avec certificat vérifié.
+
+22 contrôles HTTP production réussis : huit pages publiques, six ressources et huit vérifications d’accès. Les deux bandeaux correspondent mot pour mot aux textes attendus ; ressources identiques au build, produits existants conservés. Secrets et dossiers privés en 403/404 ; consultation des messages administrateur renvoyée vers la connexion sans authentification.
+
+Huit cas Chrome production FR/EN aux quatre tailles ci-dessus réussis : texte exact, cinq images, commandes clavier, défilement automatique, aucun texte coupé, chevauchement, débordement, visuel du bandeau manquant ou exception JS. Captures production ordinateur FR et téléphone EN consultées.
 
 ## Suite et questions de suivi
 

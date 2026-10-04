@@ -24,6 +24,7 @@
 - Demande client : nom en majuscules, texte anglais repris exactement ; traduction française fidèle dans les fragments d’accueil.
 - Le message reste fixe pendant les cinq images du diaporama. Le HTML est la source unique des textes ; le JavaScript pilote uniquement les images et leurs commandes.
 - Sur tablette (641–1100 px), réserver la place des commandes verticales pour éviter le chevauchement du titre. Version des ressources : `20261004-home-hero-client`.
+- Publié le 4 octobre : commit `79a37ef`, 45 fichiers FTPS sauvegardés et relus identiques, archive durable hors Git ; 22 contrôles HTTP et huit cas Chrome production réussis.
 - Références, texte complet et vérifications : `docs/qualite-securite/HERO_ACCUEIL_2026-10-04.md`.
 
 ## Produits exportés ajoutés le 3 octobre 2026

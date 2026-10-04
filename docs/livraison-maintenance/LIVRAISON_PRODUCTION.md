@@ -312,3 +312,11 @@ rejouer la requete avec `curl -b "humans_21909=1"`.
 - Condition de rollback : page inaccessible, navigation bloquee, erreur formulaire, mauvaise information client.
 - Procedure : restaurer le commit stable precedent puis pousser.
 - Responsable : equipe web / maintenance.
+
+## Bandeau d’accueil client — 4 octobre 2026
+
+Commit `79a37ef` poussé : texte anglais exact, traduction française, message fixe pendant le diaporama et espace réservé aux commandes sur tablette. Version des ressources `20261004-home-hero-client`.
+
+45 fichiers publics sauvegardés puis envoyés en FTPS avec certificat vérifié et relus identiques au SHA-256 ; aucune suppression ni modification des secrets/données. Archive de retour arrière privée hors Git : `../.livraisons/20261004-home-hero-avant-79a37ef.tar.gz`, 45 contenus vérifiés. Configuration temporaire des identifiants supprimée après envoi.
+
+22 contrôles HTTP et huit cas Chrome production FR/EN téléphone/tablette/ordinateur réussis. Rapport : `docs/qualite-securite/HERO_ACCUEIL_2026-10-04.md`.
