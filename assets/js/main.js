@@ -139,74 +139,14 @@ if (navToggle && nav) {
 /* Hero anime de la page d'accueil                                     */
 /* ------------------------------------------------------------------ */
 
-const slidesFr = [
-  {
-    kicker: "Groupe Babia Guinée SARLU",
-    title: "Groupe diversifié au service de la croissance guinéenne",
-    text: "Bâtir dès aujourd'hui l'avenir du pays : 7 secteurs stratégiques au service des infrastructures, de la sécurité alimentaire et de l'emploi en Guinée et en Afrique."
-  },
-  {
-    kicker: "Infrastructures",
-    title: "Bâtir l'avenir de la Guinée dès aujourd'hui",
-    text: "Des investissements stratégiques qui relient projets, communautés et capacités productives."
-  },
-  {
-    kicker: "Sécurité alimentaire",
-    title: "De la ferme au marché",
-    text: "Des chaînes de valeur intégrées pour nourrir la Guinée et servir les marchés régionaux."
-  },
-  {
-    kicker: "Impact local",
-    title: "Emplois, compétences et communautés",
-    text: "Chaque projet est pensé pour créer des emplois, transférer des compétences et améliorer les conditions de vie."
-  },
-  {
-    kicker: "Industrialisation",
-    title: "Fabriqué en Guinée, aux standards mondiaux",
-    text: "Transformer, conditionner et ajouter de la valeur localement pour créer une richesse réelle en Guinée."
-  }
-];
-
-const slidesEn = [
-  {
-    kicker: "Groupe Babia Guinée SARLU",
-    title: "Diversified group driving Guinea's growth",
-    text: "Building Guinea's future today: 7 strategic sectors serving infrastructure, food security and job creation across Guinea and Africa."
-  },
-  {
-    kicker: "Infrastructure",
-    title: "Building Guinea's future today",
-    text: "Strategic investments that connect projects, communities and productive capacity."
-  },
-  {
-    kicker: "Food security",
-    title: "From farm to market",
-    text: "Integrated value chains designed to feed Guinea and serve regional markets."
-  },
-  {
-    kicker: "Local impact",
-    title: "Jobs, skills and communities",
-    text: "Every project is designed to create jobs, transfer skills and improve livelihoods."
-  },
-  {
-    kicker: "Industrialization",
-    title: "Made in Guinea, built to global standards",
-    text: "Processing, packaging and adding value locally to create real wealth in Guinea."
-  }
-];
-
-const slides = isEnglishPage ? slidesEn : slidesFr;
-
+// Le message client reste dans le HTML ; seules les images défilent.
 const slideNodes = Array.from(document.querySelectorAll("[data-slide]"));
 const dotNodes = Array.from(document.querySelectorAll("[data-dot]"));
-const kickerNode = document.querySelector("[data-slide-kicker]");
-const titleNode = document.querySelector("[data-slide-title]");
-const textNode = document.querySelector("[data-slide-text]");
 const nextButton = document.querySelector("[data-next]");
 const prevButton = document.querySelector("[data-prev]");
 const playButton = document.querySelector("[data-slide-play]");
 
-if (slideNodes.length && kickerNode) {
+if (slideNodes.length) {
   const hero = document.querySelector(".hero");
   let activeSlide = 0;
   let slideTimer;
@@ -236,7 +176,7 @@ if (slideNodes.length && kickerNode) {
   }
 
   function updateSlide(index) {
-    activeSlide = (index + slides.length) % slides.length;
+    activeSlide = (index + slideNodes.length) % slideNodes.length;
 
     // L'utilisateur peut devancer le chargement differe en cliquant une puce.
     chargerVisuel(slideNodes[activeSlide]);
@@ -251,16 +191,6 @@ if (slideNodes.length && kickerNode) {
       dot.classList.toggle("is-active", isActive);
       dot.setAttribute("aria-pressed", String(isActive));
     });
-
-    kickerNode.textContent = slides[activeSlide].kicker;
-
-    // Presents seulement si le gabarit affiche un panneau descriptif.
-    if (titleNode) {
-      titleNode.textContent = slides[activeSlide].title;
-    }
-    if (textNode) {
-      textNode.textContent = slides[activeSlide].text;
-    }
   }
 
   function canAutoplay() {

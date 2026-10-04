@@ -398,6 +398,13 @@ textarea:focus-visible {
   color: #fff;
 }
 
+/* Sur tablette, réserver la place des commandes verticales du diaporama. */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .hero-content {
+    padding-right: calc(var(--gutter) + 64px);
+  }
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--gold);

@@ -4,6 +4,7 @@
 
 | Date | Sujet | Responsable | Niveau atteint | Prochaine etape |
 | --- | --- | --- | --- | --- |
+| 2026-10-04 | Texte client du bandeau d’accueil FR/EN | Codex | Testé : build 77 fichiers, huit cas Chrome téléphone/tablette/ordinateur ; cinq images et texte fixe | Pousser et livrer les 45 fichiers publics après sauvegarde |
 | 2026-10-04 | Présentation uniforme des huit exports | Codex | Livré : fa89187 poussé ; 47 fichiers sauvegardés, envoyés et relus ; 22 contrôles HTTP et 4 cas Chrome production réussis | Client : vérifier les huit cartes et leurs informations à déplier |
 | 2026-10-03 | Hévéa et coton à l’export | Codex | Livré : commit ab9e0d5 poussé ; 55 fichiers FTPS envoyés et relus, 51 sauvegardés ; 22 contrôles HTTP réussis | Client : essayer les fiches et le bouton « Demander un prix » |
 | 2026-09-30 | Menu mobile sans remontée en haut | Codex | Livré par FTPS : 49 fichiers sauvegardés, envoyés et relus ; contrôles HTTP réussis ; test visuel réel restant | Vérifier sur téléphone et tablette après publication |

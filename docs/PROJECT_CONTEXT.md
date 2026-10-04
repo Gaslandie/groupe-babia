@@ -19,6 +19,13 @@
     client ne les confirme pas. Les fichiers `karite.webp`, `fruits.jpeg` et `huile.webp`
     restent sur le disque mais ne sont references par aucune page.
 
+## Message du bandeau d’accueil — 4 octobre 2026
+
+- Demande client : nom en majuscules, texte anglais repris exactement ; traduction française fidèle dans les fragments d’accueil.
+- Le message reste fixe pendant les cinq images du diaporama. Le HTML est la source unique des textes ; le JavaScript pilote uniquement les images et leurs commandes.
+- Sur tablette (641–1100 px), réserver la place des commandes verticales pour éviter le chevauchement du titre. Version des ressources : `20261004-home-hero-client`.
+- Références, texte complet et vérifications : `docs/qualite-securite/HERO_ACCUEIL_2026-10-04.md`.
+
 ## Produits exportés ajoutés le 3 octobre 2026
 
 - Hévéa : Guinée, Côte d’Ivoire et Liberia ; Cup Lump Rubber (principal), TSR 10 / TSR 20, RSS ; 800+ agriculteurs ; minimum un conteneur de 40 pieds ; ports Conakry, Abidjan, Monrovia ; toute l’année, pic mars–octobre ; prix FOB / CFR sur demande.

@@ -25,7 +25,7 @@ $publicReadError = $publicationState['error'];
     <meta name="description" content="Actualités et mises à jour publiées par Groupe Babia Guinée.">
     <title>Actualités | Groupe Babia Guinée</title>
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261004-export-uniform">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261004-home-hero-client">
     <link rel="canonical" href="https://www.groupebabia.com/realisations.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/projects.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/realisations.php">
@@ -167,6 +167,6 @@ $publicReadError = $publicationState['error'];
         </div>
       </div>
     </footer>
-    <script src="assets/js/main.js?v=20261004-export-uniform"></script>
+    <script src="assets/js/main.js?v=20261004-home-hero-client"></script>
   </body>
 </html>
