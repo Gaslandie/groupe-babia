@@ -51,13 +51,13 @@
 
 - Gassama remplace le visuel du produit « Agricultural commodity / Cocoa beans » par sa photo WhatsApp du 5 octobre. Version WebP sans métadonnées EXIF : `assets/images/agro-cacao-20261006.webp`, 1065 × 1280 pixels, 200 392 octets. Original intact.
 - Accueil, secteurs et catalogue FR/EN : même nouvelle photo, dimensions réelles, cadrage CSS conservé. Le bandeau décoratif des mentions légales reste hors périmètre. Nouvelle URL pour éviter l'ancienne photo en cache.
-- Niveau : intégré, construit et testé localement ; pas publié. Références et contrôles : `docs/design-ux/BENCHMARK_PHOTO_CACAO_2026-10-06.md` et `docs/qualite-securite/PHOTO_CACAO_2026-10-06.md`.
+- Niveau : publié le 6 octobre, commit `09ad228` poussé ; livraison commune cacao/Agriculture de 17 fichiers, 15 sauvegardés, tous relus identiques, 20 contrôles HTTP et 20 cas photo Chrome production réussis. Références et contrôles : `docs/design-ux/BENCHMARK_PHOTO_CACAO_2026-10-06.md`, `docs/qualite-securite/PHOTO_CACAO_2026-10-06.md` et `docs/qualite-securite/LIVRAISON_PHOTOS_2026-10-06.md`.
 
 ## Photo « 01 Agriculture » — 6 octobre 2026
 
 - Gassama choisit sa photo WhatsApp du 5 octobre à 21:20:07 pour la carte Agriculture de Nos secteurs / Our sectors. Nouvelle image : `assets/images/agriculture-champ-client-20261006.webp`, 765 × 1020 pixels, 168 282 octets, sans EXIF ; original intact.
 - Carte FR/EN uniquement. Description fidèle d'un agriculteur dans un champ ; textes commerciaux inchangés. Cadrage `object-position: center 40%` limité à cette image pour garder la tête visible. Nouvelle URL pour éviter l'ancienne image en cache.
-- Intégré, construit et testé localement, pas publié. Huit cas Chrome FR/EN à 320, 390, 768 et 1440 pixels réussis ; captures téléphone/ordinateur consultées. Rapport : `docs/qualite-securite/PHOTO_AGRICULTURE_2026-10-06.md`.
+- Publié le 6 octobre avec la photo du cacao, commit `09ad228` poussé. Huit cas Chrome Agriculture production FR/EN à 320, 390, 768 et 1440 pixels réussis ; captures téléphone/ordinateur consultées. Sauvegarde privée hors Git : `.livraisons/20261006-photos-avant-publication.tar.gz`. Rapports : `docs/qualite-securite/PHOTO_AGRICULTURE_2026-10-06.md` et `docs/qualite-securite/LIVRAISON_PHOTOS_2026-10-06.md`. La photo « L'humain d'abord », déjà en ligne, est également enregistrée dans ce commit sans nouvel envoi.
 
 ## Sources
 

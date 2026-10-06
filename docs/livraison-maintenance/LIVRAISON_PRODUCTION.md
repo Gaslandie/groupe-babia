@@ -1,5 +1,13 @@
 # Livraison production
 
+## Livraison du 2026-10-06 — photos cacao et Agriculture
+
+- Commit, push et déploiement demandés par Gassama. Commit `09ad228` poussé sur `main` : nouvelles photos du cacao et de la carte « 01 Agriculture » FR/EN ; photo « L'humain d'abord » déjà publiée également enregistrée dans Git.
+- 77 fichiers du build vérifiés ; syntaxe PHP/JS et différences contrôlées. Neuf contrôles HTTP avant envoi réussis. Destination FTPS reconnue par `.htaccess`, `index.php` et le logo identiques.
+- 17 fichiers envoyés en FTPS avec TLS et certificat exigés, puis relus identiques au SHA-256. 15 fichiers existants sauvegardés ; deux nouvelles images. Six fichiers « L'humain d'abord » déjà identiques, non renvoyés. Archive privée durable vérifiée, hors Git : `../.livraisons/20261006-photos-avant-publication.tar.gz`.
+- Production : 20 contrôles HTTP, 20 cas photo Chrome FR/EN téléphone/tablette/ordinateur et deux parcours de formulaire cacao prérempli réussis, sans envoi de message. Quatre captures téléphone/ordinateur consultées. Paramètre de test `need=__proto__` refusé par l'hébergeur en 403 ; aucune protection modifiée pour le faire passer.
+- Aucun secret, donnée ou fichier admin envoyé, aucune suppression. Retour arrière : restaurer les 15 fichiers archivés par FTPS vérifié. Rapport : `docs/qualite-securite/LIVRAISON_PHOTOS_2026-10-06.md`.
+
 ## Livraison du 2026-10-04 — photo « L’humain d’abord »
 
 - Publication explicitement demandée par Gassama. Photo choisie intégrée dans Vision & valeurs FR/EN ; cadrage complet et descriptions accessibles ; aucun autre texte modifié.

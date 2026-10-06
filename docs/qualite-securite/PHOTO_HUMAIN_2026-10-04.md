@@ -35,6 +35,10 @@ Sauvegarde de session : `/tmp/babia-humain-ftps-20261004-barsokdo/backup`. Archi
 
 `BABIA_PHOTO_BASE=https://www.groupebabia.com node /tmp/babia-photo-humain-check.cjs` : huit cas Chrome headless production FR/EN, 320/390/768/1440 px, réussis. Photo chargée, cadrage intégral, description accessible, aucun débordement ni exception JavaScript. Captures production FR ordinateur et téléphone consultées visuellement. Aucun test sur téléphone physique ni Safari. Niveau atteint : publié et vérifié sur le site public. Prochaine étape : retour visuel du client.
 
+## Enregistrement Git — 6 octobre 2026
+
+À la demande de Gassama de commiter, pousser et déployer les changements, cette photo déjà en ligne est enregistrée dans le commit `09ad228`, poussé sur `main`. Ses six fichiers sont identiques à la production et n'ont pas été renvoyés. Les pages Vision & valeurs FR/EN répondent 200 et la photo publique reste identique au build. Voir `LIVRAISON_PHOTOS_2026-10-06.md`.
+
 ## Questions de suivi du projet
 
 1. Quand publier cette photo sur le site public ?

@@ -4,8 +4,8 @@
 
 | Date | Sujet | Responsable | Niveau atteint | Prochaine etape |
 | --- | --- | --- | --- | --- |
-| 2026-10-06 | Photo client « 01 Agriculture » dans Nos secteurs / Our sectors | Codex | Intégré, construit et testé localement : huit cas Chrome FR/EN à 320/390/768/1440 px ; cadrage validé ; pas publié | Prochaine étape : publication ; voir `docs/qualite-securite/PHOTO_AGRICULTURE_2026-10-06.md` |
-| 2026-10-06 | Photo client du produit cacao FR/EN | Codex | Intégré, construit et testé localement : 12 cas Chrome à 390/1440 px, 15 références produit validées ; pas publié | Prochaine étape : publication ; voir `docs/qualite-securite/PHOTO_CACAO_2026-10-06.md` |
+| 2026-10-06 | Photo client « 01 Agriculture » dans Nos secteurs / Our sectors | Codex | Livré : `09ad228` poussé ; 17 fichiers communs avec le cacao livrés et relus, 15 sauvegardés ; huit cas Chrome Agriculture production FR/EN à 320/390/768/1440 px réussis | Retour visuel client ; voir `docs/qualite-securite/LIVRAISON_PHOTOS_2026-10-06.md` |
+| 2026-10-06 | Photo client du produit cacao FR/EN | Codex | Livré : `09ad228` poussé ; 20 contrôles HTTP et 12 cas Chrome cacao production réussis ; formulaire prérempli FR/EN vérifié sans envoi | Retour visuel client ; voir `docs/qualite-securite/LIVRAISON_PHOTOS_2026-10-06.md` |
 | 2026-10-04 | Photo choisie pour « L’humain d’abord » FR/EN | Codex | Publié : six fichiers FTPS relus identiques, cinq sauvegardés ; douze contrôles HTTP et huit cas Chrome production réussis | Retour visuel client ; voir `docs/qualite-securite/PHOTO_HUMAIN_2026-10-04.md` |
 | 2026-10-04 | Texte client du bandeau d’accueil FR/EN | Codex | Livré : 79a37ef poussé ; 45 fichiers sauvegardés, envoyés et relus ; 22 contrôles HTTP et huit cas Chrome production réussis | Client : lire le texte FR/EN et laisser les images changer |
 | 2026-10-04 | Présentation uniforme des huit exports | Codex | Livré : fa89187 poussé ; 47 fichiers sauvegardés, envoyés et relus ; 22 contrôles HTTP et 4 cas Chrome production réussis | Client : vérifier les huit cartes et leurs informations à déplier |

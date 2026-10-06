@@ -1,6 +1,6 @@
 # Photo cacao — 6 octobre 2026
 
-La photo envoyée par Gassama remplace celle des fèves de cacao sur l'accueil, les secteurs et le catalogue, en français et en anglais. Original intact. Nouvelle URL pour éviter l'ancienne photo en cache. Niveau atteint : intégré, construit et testé localement ; pas publié, aucun commit ni push.
+La photo envoyée par Gassama remplace celle des fèves de cacao sur l'accueil, les secteurs et le catalogue, en français et en anglais. Original intact. Nouvelle URL pour éviter l'ancienne photo en cache. Niveau final : publié le 6 octobre, commit `09ad228` poussé. Livraison, sauvegarde et contrôles production : [rapport commun](LIVRAISON_PHOTOS_2026-10-06.md). Les vérifications ci-dessous décrivent la préparation locale.
 
 ## Fichiers touchés
 
@@ -22,7 +22,7 @@ La photo envoyée par Gassama remplace celle des fèves de cacao sur l'accueil, 
 
 Comparaison préalable : [benchmark photo cacao](../design-ux/BENCHMARK_PHOTO_CACAO_2026-10-06.md), sources W3C et web.dev relues le 6 octobre 2026. Le JPEG est décodé puis réencodé en fichier raster sans EXIF. Aucun accès aux secrets, aucun changement aux sessions, droits, données privées, formulaires ou dépendances. Aucun test d'autorisation serveur ou de compte nécessaire à ce changement d'image ; ces mécanismes ne sont pas modifiés. Aucune promesse de sécurité absolue.
 
-Les tests portent sur Chrome local, sans téléphone physique ni Safari. Pas de vérification en production ni d'envoi réel de demande de prix. La prochaine étape est la publication des seuls fichiers nécessaires, avec sauvegarde préalable et contrôles publics/protégés.
+La préparation a été testée sur Chrome local, puis la production a été contrôlée après publication : 12 cas photo Chrome cacao, préremplissage de demande de prix FR/EN sans envoi, captures téléphone/ordinateur consultées. Les 20 contrôles HTTP communs à la livraison comprennent les accès publics et refusés. Pas de téléphone physique ni de Safari ; aucun envoi réel de demande de prix. Prochaine étape : retour visuel du client.
 
 ## Trois questions de suivi
 

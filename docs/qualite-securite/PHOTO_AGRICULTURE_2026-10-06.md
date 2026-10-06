@@ -1,6 +1,6 @@
 # Photo « 01 Agriculture » — 6 octobre 2026
 
-La photo choisie par Gassama remplace celle de la carte Agriculture dans Nos secteurs / Our sectors FR/EN. Le cadrage garde la tête visible. Textes inchangés, original intact. Niveau atteint : intégré, construit et testé localement ; pas publié, aucun commit ni push.
+La photo choisie par Gassama remplace celle de la carte Agriculture dans Nos secteurs / Our sectors FR/EN. Le cadrage garde la tête visible. Textes inchangés, original intact. Niveau final : publié le 6 octobre, commit `09ad228` poussé. Livraison, sauvegarde et contrôles production : [rapport commun](LIVRAISON_PHOTOS_2026-10-06.md). Les vérifications ci-dessous décrivent la préparation locale.
 
 ## Fichiers touchés
 
@@ -20,7 +20,7 @@ La photo choisie par Gassama remplace celle de la carte Agriculture dans Nos sec
 
 [Benchmark préalable](../design-ux/BENCHMARK_PHOTO_AGRICULTURE_2026-10-06.md) : références W3C et Google web.dev relues le 6 octobre 2026. Décodage du fichier fourni puis réencodage raster sans métadonnées EXIF. Aucune modification des droits, sessions, secrets, formulaires, données privées, dépendances ou protections serveur. Aucun test de compte ou de droits révoqués effectué : ces mécanismes sont hors du périmètre du changement et restent inchangés.
 
-Vérification locale Chrome, sans téléphone physique ni Safari. Pas de publication ni de vérification du site public. Aucun nouvel envoi de formulaire. La photo ne prouve ni l'identité de la personne ni une relation d'emploi avec Babia. Prochaine étape : publier les fichiers nécessaires avec sauvegarde préalable, puis vérifier les pages et protections en production.
+Vérification locale puis huit cas Chrome production FR/EN à 320, 390, 768 et 1440 pixels réussis ; captures téléphone/ordinateur consultées. Les 20 contrôles HTTP communs à la livraison comprennent les accès publics et refusés. Pas de téléphone physique ni de Safari. Aucun nouvel envoi de formulaire. La photo ne prouve ni l'identité de la personne ni une relation d'emploi avec Babia. Prochaine étape : retour visuel du client.
 
 ## Trois questions de suivi
 
