@@ -1,5 +1,12 @@
 # Livraison production
 
+## Livraison du 2026-10-04 — photo « L’humain d’abord »
+
+- Publication explicitement demandée par Gassama. Photo choisie intégrée dans Vision & valeurs FR/EN ; cadrage complet et descriptions accessibles ; aucun autre texte modifié.
+- Six fichiers envoyés par FTPS avec certificat vérifié et TLS exigé, puis relus identiques au SHA-256. Destination confirmée avant écriture. Cinq fichiers existants sauvegardés ; archive privée vérifiée, hors Git : `../.livraisons/20261004-photo-humain-avant-publication.tar.gz`.
+- Douze contrôles HTTP production et huit cas Chrome FR/EN à 320/390/768/1440 px réussis. Captures ordinateur/téléphone consultées. Photo exacte servie ; accès privés refusés, messages admin renvoyés au login sans connexion.
+- Aucune suppression, donnée ou secret envoyé ; aucun commit ni push Git. Retour arrière : restaurer les cinq fichiers archivés par FTPS vérifié. Rapport : `docs/qualite-securite/PHOTO_HUMAIN_2026-10-04.md`.
+
 ## Livraison du 2026-10-04 — présentation uniforme des exports
 
 - Correction demandée par Gassama : même carte et mêmes commandes pour les huit produits exportés, sans deux fiches séparées en bas du catalogue. Informations hévéa/coton conservées dans leurs cartes. FR/EN, catalogue et secteurs, préremplissage des huit demandes. Commit `fa89187` poussé.

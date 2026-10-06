@@ -121,7 +121,7 @@
       </section>
 
       <section class="section media-band soft-section" id="people-first">
-        <img src="../assets/images/equipe.webp" alt="Group team on site wearing safety equipment" width="900" height="600" loading="lazy" decoding="async">
+        <img src="../assets/images/humain-agriculteurs-20261004.webp" alt="Two smiling farmers in a field giving a thumbs-up" width="1080" height="601" style="height: auto" loading="lazy" decoding="async">
         <div>
           <p class="eyebrow">People first</p>
           <h2>350+ employees and 2000+ farmers, our greatest asset</h2>

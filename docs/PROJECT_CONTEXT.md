@@ -41,6 +41,24 @@
 - Préremplissage de prix étendu aux huit produits via une liste fermée ; ne pas inventer de MOQ, origine ou certification pour les autres produits.
 - Rapport : `docs/qualite-securite/EXPORTS_UNIFORMES_2026-10-04.md`.
 
+## Photo « L’humain d’abord » — 4 octobre 2026
+
+- Gassama choisit la capture `Screenshot From 2026-10-04 19-26-52.png`, dans `Pictures/Screenshots`. Original intact ; version WebP 1080 × 601, 176 392 octets : `assets/images/humain-agriculteurs-20261004.webp`.
+- Le bloc Vision & valeurs FR/EN utilise cette photo et conserve son cadrage complet. Description accessible fidèle à la scène, sans identifier les personnes comme employés du groupe.
+- Sources FR/EN et trois sorties régénérées ; aucun autre bloc modifié. Benchmark : `docs/design-ux/BENCHMARK_PHOTO_HUMAIN_2026-10-04.md`. Publié à la demande de Gassama : six fichiers FTPS relus identiques, cinq sauvegardés ; douze contrôles HTTP et huit cas Chrome production réussis. Archive privée hors Git dans `.livraisons/20261004-photo-humain-avant-publication.tar.gz`. Pas de commit ni push Git.
+
+## Photo du cacao — 6 octobre 2026
+
+- Gassama remplace le visuel du produit « Agricultural commodity / Cocoa beans » par sa photo WhatsApp du 5 octobre. Version WebP sans métadonnées EXIF : `assets/images/agro-cacao-20261006.webp`, 1065 × 1280 pixels, 200 392 octets. Original intact.
+- Accueil, secteurs et catalogue FR/EN : même nouvelle photo, dimensions réelles, cadrage CSS conservé. Le bandeau décoratif des mentions légales reste hors périmètre. Nouvelle URL pour éviter l'ancienne photo en cache.
+- Niveau : intégré, construit et testé localement ; pas publié. Références et contrôles : `docs/design-ux/BENCHMARK_PHOTO_CACAO_2026-10-06.md` et `docs/qualite-securite/PHOTO_CACAO_2026-10-06.md`.
+
+## Photo « 01 Agriculture » — 6 octobre 2026
+
+- Gassama choisit sa photo WhatsApp du 5 octobre à 21:20:07 pour la carte Agriculture de Nos secteurs / Our sectors. Nouvelle image : `assets/images/agriculture-champ-client-20261006.webp`, 765 × 1020 pixels, 168 282 octets, sans EXIF ; original intact.
+- Carte FR/EN uniquement. Description fidèle d'un agriculteur dans un champ ; textes commerciaux inchangés. Cadrage `object-position: center 40%` limité à cette image pour garder la tête visible. Nouvelle URL pour éviter l'ancienne image en cache.
+- Intégré, construit et testé localement, pas publié. Huit cas Chrome FR/EN à 320, 390, 768 et 1440 pixels réussis ; captures téléphone/ordinateur consultées. Rapport : `docs/qualite-securite/PHOTO_AGRICULTURE_2026-10-06.md`.
+
 ## Sources
 
 - Cahier des charges : `/home/mohamed-gassama/Desktop/Cahier des charges clients/Audit-et-Proposition-Refonte-Groupe-Babia.pdf`
