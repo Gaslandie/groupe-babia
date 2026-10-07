@@ -41,7 +41,7 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
     <title><?= e($title) ?> | Groupe Babia Guinée</title>
     <base href="/">
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261004-home-hero-client">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261007-interface-produits">
     <?php if ($realisation !== null): ?>
       <link rel="canonical" href="https://www.groupebabia.com/realisations/<?= e($canonicalSlug) ?>">
     <?php endif; ?>
@@ -80,10 +80,7 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
 
     <main id="contenu" tabindex="-1">
       <section class="page-hero">
-        <?php if ($realisation !== null && trim((string) ($realisation['cover_image'] ?? '')) !== ''): ?>
-        <img class="page-hero-media" src="<?= e($cover) ?>" alt="" width="1704" height="923" fetchpriority="high" decoding="async">
-        <?php endif; ?>
-        <div class="page-hero-overlay"></div>
+
         <div>
           <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li><a href="realisations.php">Actualités</a></li><li><span aria-current="page"><?= e($title) ?></span></li></ol></nav>
           <p class="eyebrow"><?= e($sectorLabel) ?></p>
@@ -165,6 +162,6 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
         </div>
       </div>
     </footer>
-    <script src="assets/js/main.js?v=20261004-home-hero-client"></script>
+    <script src="assets/js/main.js?v=20261007-interface-produits"></script>
   </body>
 </html>

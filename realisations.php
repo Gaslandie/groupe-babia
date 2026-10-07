@@ -25,7 +25,7 @@ $publicReadError = $publicationState['error'];
     <meta name="description" content="Actualités et mises à jour publiées par Groupe Babia Guinée.">
     <title>Actualités | Groupe Babia Guinée</title>
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261004-home-hero-client">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261007-interface-produits">
     <link rel="canonical" href="https://www.groupebabia.com/realisations.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/projects.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/realisations.php">
@@ -63,8 +63,7 @@ $publicReadError = $publicationState['error'];
 
     <main id="contenu" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="assets/images/agriculture-champs.webp" alt="" width="860" height="573" fetchpriority="high" decoding="async">
-        <div class="page-hero-overlay"></div>
+
         <div>
           <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li><span aria-current="page">Actualités</span></li></ol></nav>
           <p class="eyebrow">Actualités du groupe</p>
@@ -75,10 +74,6 @@ $publicReadError = $publicationState['error'];
             <a class="button button-secondary" href="groupe.php">Découvrir le groupe</a>
           </div>
         </div>
-        <aside class="page-hero-card">
-          <strong>Information officielle</strong>
-          <p>Les réalisations, les annonces publiques et les mises à jour importantes de Groupe Babia Guinée seront regroupées dans cet espace, au fur et à mesure de leur publication.</p>
-        </aside>
       </section>
 
       <section class="section soft-section">
@@ -167,6 +162,6 @@ $publicReadError = $publicationState['error'];
         </div>
       </div>
     </footer>
-    <script src="assets/js/main.js?v=20261004-home-hero-client"></script>
+    <script src="assets/js/main.js?v=20261007-interface-produits"></script>
   </body>
 </html>

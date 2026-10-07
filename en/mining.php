@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/images/favicon.png" sizes="32x32">
     <link rel="preload" href="../assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20261004-home-hero-client">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20261007-interface-produits">
     <link rel="canonical" href="https://www.groupebabia.com/en/mining.php">
     <link rel="alternate" hreflang="fr" href="https://www.groupebabia.com/mines.php">
     <link rel="alternate" hreflang="en" href="https://www.groupebabia.com/en/mining.php">
@@ -49,8 +49,7 @@
     </header>
     <main id="content" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="../assets/images/mines.webp" alt="" width="1400" height="931" fetchpriority="high" decoding="async">
-        <div class="page-hero-overlay"></div>
+
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Mining</span></li></ol></nav>
           <p class="eyebrow">Mining sector</p>
@@ -109,6 +108,6 @@
         <div class="footer-bottom"><p>© 2026 Groupe Babia Guinea. All rights reserved.</p><p>Website designed by GassTech Solutions.</p><div><a href="legal.php">Legal notice</a><a href="privacy.php">Privacy</a></div></div>
       </div>
     </footer>
-    <script src="../assets/js/main.js?v=20261004-home-hero-client"></script>
+    <script src="../assets/js/main.js?v=20261007-interface-produits"></script>
   </body>
 </html>

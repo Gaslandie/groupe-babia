@@ -141,16 +141,12 @@ if (navToggle && nav) {
 
 // Le message client reste dans le HTML ; seules les images défilent.
 const slideNodes = Array.from(document.querySelectorAll("[data-slide]"));
-const dotNodes = Array.from(document.querySelectorAll("[data-dot]"));
-const nextButton = document.querySelector("[data-next]");
-const prevButton = document.querySelector("[data-prev]");
-const playButton = document.querySelector("[data-slide-play]");
 
 if (slideNodes.length) {
   const hero = document.querySelector(".hero");
+  const hoverQuery = window.matchMedia("(hover: hover)");
   let activeSlide = 0;
   let slideTimer;
-  let isPaused = false;
 
   hero?.style.setProperty("--slide-duration", `${SLIDE_DURATION}ms`);
 
@@ -178,7 +174,7 @@ if (slideNodes.length) {
   function updateSlide(index) {
     activeSlide = (index + slideNodes.length) % slideNodes.length;
 
-    // L'utilisateur peut devancer le chargement differe en cliquant une puce.
+    // Charger le visuel avant chaque changement de diapositive.
     chargerVisuel(slideNodes[activeSlide]);
 
     slideNodes.forEach((slide, slideIndex) => {
@@ -186,15 +182,12 @@ if (slideNodes.length) {
       slide.setAttribute("aria-hidden", String(slideIndex !== activeSlide));
     });
 
-    dotNodes.forEach((dot, dotIndex) => {
-      const isActive = dotIndex === activeSlide;
-      dot.classList.toggle("is-active", isActive);
-      dot.setAttribute("aria-pressed", String(isActive));
-    });
   }
 
   function canAutoplay() {
-    return !isPaused && !reduceMotionQuery.matches && !document.hidden;
+    return !reduceMotionQuery.matches && !document.hidden
+      && !(hoverQuery.matches && hero?.matches(":hover"))
+      && !hero?.matches(":focus-within");
   }
 
   function startSlider() {
@@ -205,7 +198,7 @@ if (slideNodes.length) {
       return;
     }
 
-    // Redemarrage force de l'animation de progression du point actif.
+    // Relancer le cycle de défilement.
     void hero?.offsetWidth;
     hero?.classList.add("is-playing");
     slideTimer = window.setInterval(() => updateSlide(activeSlide + 1), SLIDE_DURATION);
@@ -221,29 +214,6 @@ if (slideNodes.length) {
     startSlider();
   }
 
-  nextButton?.addEventListener("click", () => goTo(activeSlide + 1));
-  prevButton?.addEventListener("click", () => goTo(activeSlide - 1));
-  dotNodes.forEach((dot) => dot.addEventListener("click", () => goTo(Number(dot.dataset.dot))));
-
-  // WCAG 2.2.2 : un contenu qui defile seul doit pouvoir etre mis en pause,
-  // y compris au doigt (le survol ne suffit pas sur mobile).
-  if (playButton) {
-    if (reduceMotionQuery.matches) {
-      playButton.hidden = true;
-    }
-
-    playButton.addEventListener("click", () => {
-      isPaused = !isPaused;
-      playButton.setAttribute("aria-label", isPaused ? "Reprendre le défilement" : "Mettre le défilement en pause");
-      playButton.setAttribute("data-state", isPaused ? "paused" : "playing");
-      if (isPaused) {
-        stopSlider();
-      } else {
-        startSlider();
-      }
-    });
-  }
-
   hero?.addEventListener("mouseenter", stopSlider);
   hero?.addEventListener("mouseleave", startSlider);
   hero?.addEventListener("focusin", stopSlider);
@@ -257,7 +227,7 @@ if (slideNodes.length) {
     }
   });
 
-  // Balayage horizontal sur mobile : les fleches sont petites au doigt.
+  // Conserver le balayage horizontal sur mobile.
   let touchStartX = null;
   hero?.addEventListener("touchstart", (event) => {
     touchStartX = event.changedTouches[0].clientX;
@@ -286,9 +256,6 @@ if (slideNodes.length) {
   });
 
   reduceMotionQuery.addEventListener?.("change", () => {
-    if (playButton) {
-      playButton.hidden = reduceMotionQuery.matches;
-    }
     startSlider();
   });
 

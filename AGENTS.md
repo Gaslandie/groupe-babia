@@ -62,3 +62,7 @@ When scaffolding is truly required:
 - Remove or clean it up if it is no longer needed.
 
 Violating this rule (creating unnecessary scaffolding) is considered a failure to follow instructions.
+
+## Serveur local permanent — 7 octobre 2026
+
+Gassama vérifie le projet sur `http://127.0.0.1:4173/`. Maintenir le service utilisateur `groupe-babia-local.service` démarré pendant le travail et après la conversation. Vérifier sa disponibilité avant de lui demander une vérification locale ; le relancer si nécessaire. Le serveur reste limité à cet ordinateur et utilise `scripts/local-router.php` pour protéger les fichiers privés.
