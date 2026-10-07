@@ -88,7 +88,7 @@
           <img data-src="../assets/images/btp.webp" alt="Construction site and safety helmet" width="626" height="417" decoding="async">
         </div>
         <div class="hero-slide" data-slide>
-          <img data-src="../assets/images/mines.webp" alt="Mining equipment on site" width="1400" height="931" decoding="async">
+          <img data-src="../assets/images/logistique-port.webp" alt="Port cranes for logistics and transport" width="900" height="675" decoding="async">
         </div>
         <div class="hero-slide" data-slide>
           <img data-src="../assets/images/peche.webp" alt="Professional fishing activity" width="1400" height="933" decoding="async">
@@ -342,15 +342,15 @@
               <span><small>Import</small>Jus Babia</span>
             </li>
             <li>
-              <img src="../assets/images/tomates.jpeg" alt="Tomato Paste Babia" width="640" height="479" loading="lazy" decoding="async">
+              <img src="../assets/images/tomates-babia-20261007.jpeg" alt="Tomato Paste Babia" width="1280" height="853" loading="lazy" decoding="async">
               <span><small>Import</small>Tomato Paste Babia</span>
             </li>
             <li>
-              <img src="../assets/images/riz.jpeg" alt="Rice" width="554" height="554" loading="lazy" decoding="async">
+              <img src="../assets/images/riz-babia-20261007.jpeg" alt="Rice" width="853" height="1280" loading="lazy" decoding="async">
               <span><small>Import</small>Rice</span>
             </li>
             <li>
-              <img src="../assets/images/sucre.webp" alt="Sugar" width="900" height="506" loading="lazy" decoding="async">
+              <img src="../assets/images/sucre-babia-20261007.jpeg" alt="Sugar" width="938" height="1280" loading="lazy" decoding="async">
               <span><small>Import</small>Sugar</span>
             </li>
             <li>

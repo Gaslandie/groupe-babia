@@ -49,7 +49,7 @@
     </header>
     <main id="content" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="../assets/images/agro-industrie.webp" alt="" width="1400" height="758" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="../assets/images/agriculture-champs.webp" alt="" width="860" height="573" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">News</span></li></ol></nav>

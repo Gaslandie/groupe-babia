@@ -63,7 +63,7 @@ $publicReadError = $publicationState['error'];
 
     <main id="contenu" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="assets/images/agro-industrie.webp" alt="" width="1400" height="758" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="assets/images/agriculture-champs.webp" alt="" width="860" height="573" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li><span aria-current="page">Actualités</span></li></ol></nav>

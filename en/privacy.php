@@ -49,7 +49,7 @@
     </header>
     <main id="content" tabindex="-1">
       <section class="page-hero legal-hero">
-        <img class="page-hero-media" src="../assets/images/mines.webp" alt="" width="1400" height="931" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="../assets/images/hevea-plantation.webp" alt="" width="900" height="571" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Privacy</span></li></ol></nav>

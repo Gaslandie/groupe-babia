@@ -80,7 +80,9 @@ $canonicalSlug = $realisation === null ? '' : rawurlencode((string) $realisation
 
     <main id="contenu" tabindex="-1">
       <section class="page-hero">
+        <?php if ($realisation !== null && trim((string) ($realisation['cover_image'] ?? '')) !== ''): ?>
         <img class="page-hero-media" src="<?= e($cover) ?>" alt="" width="1704" height="923" fetchpriority="high" decoding="async">
+        <?php endif; ?>
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li><a href="realisations.php">Actualités</a></li><li><span aria-current="page"><?= e($title) ?></span></li></ol></nav>

@@ -50,7 +50,7 @@
     </header>
     <main id="content" tabindex="-1">
       <section class="page-hero legal-hero">
-        <img class="page-hero-media" src="../assets/images/agro-cacao.webp" alt="" width="1080" height="656" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="../assets/images/mais.webp" alt="" width="900" height="600" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Page not found</span></li></ol></nav>

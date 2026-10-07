@@ -49,7 +49,7 @@
     </header>
     <main id="content" tabindex="-1">
       <section class="page-hero">
-        <img class="page-hero-media" src="../assets/images/hero-agro-export-import.webp" alt="" width="1400" height="788" fetchpriority="high" decoding="async">
+        <img class="page-hero-media" src="../assets/images/cafe.webp" alt="" width="765" height="573" fetchpriority="high" decoding="async">
         <div class="page-hero-overlay"></div>
         <div>
           <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><span aria-current="page">Catalog</span></li></ol></nav>
@@ -103,7 +103,7 @@
             </div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/tomates.jpeg" alt="Babia premium tomato paste" width="640" height="479" loading="lazy" decoding="async">
+            <img src="../assets/images/tomates-babia-20261007.jpeg" alt="Babia premium tomato paste" width="1280" height="853" loading="lazy" decoding="async">
             <div>
               <small>Babia brand</small>
               <h3>Tomato Paste Babia</h3>
@@ -112,7 +112,7 @@
             </div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/riz.jpeg" alt="Rice for household and institutional use" width="554" height="554" loading="lazy" decoding="async">
+            <img src="../assets/images/riz-babia-20261007.jpeg" alt="Rice for household and institutional use" width="853" height="1280" loading="lazy" decoding="async">
             <div>
               <small>Staple food</small>
               <h3>Rice</h3>
@@ -121,7 +121,7 @@
             </div>
           </article>
           <article class="product-card">
-            <img src="../assets/images/sucre.webp" alt="Refined white sugar" width="900" height="506" loading="lazy" decoding="async">
+            <img src="../assets/images/sucre-babia-20261007.jpeg" alt="Refined white sugar" width="938" height="1280" loading="lazy" decoding="async">
             <div>
               <small>Staple food</small>
               <h3>Sugar</h3>
